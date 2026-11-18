@@ -1,0 +1,72 @@
+name: Verify and stage WTT dataset
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-wtt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download OSF archive and verify its published checksum
+        run: |
+          python - <<'PY'
+          import hashlib, urllib.request
+          url = "https://osf.io/download/3f6ak/"
+          req = urllib.request.Request(url, headers={"User-Agent": "TableTennisSim-research/1.0"})
+          with urllib.request.urlopen(req, timeout=90) as r:
+              data = r.read()
+          expected = "5246b5fe1ba5d1d71edcef0e23ef0ee93d7289508dd0545fc124ed569f991409"
+          actual = hashlib.sha256(data).hexdigest()
+          print("Downloaded bytes:", len(data))
+          print("SHA256:", actual)
+          if actual != expected:
+              raise SystemExit("SHA256 DOES NOT MATCH OSF metadata")
+          open("racket_sports_standardized_final.zip", "wb").write(data)
+          PY
+      - name: Inspect archive and validate WTT CSV files
+        run: |
+          python - <<'PY'
+          import csv, hashlib, json, zipfile
+          from pathlib import PurePosixPath
+          z = zipfile.ZipFile("racket_sports_standardized_final.zip")
+          names = z.namelist()
+          print("Archive members:")
+          for n in names: print(n)
+          targets = [n for n in names if PurePosixPath(n).name in {
+              "table_tennis_wtt_men_std.csv", "table_tennis_wtt_women_std.csv"}]
+          if len(targets) != 2:
+              raise SystemExit(f"Expected exactly two WTT CSVs, found {targets}")
+          expected = {
+              "table_tennis_wtt_men_std.csv": 5442,
+              "table_tennis_wtt_women_std.csv": 4850,
+          }
+          import os
+          os.makedirs("wtt", exist_ok=True)
+          for name in targets:
+              base = PurePosixPath(name).name
+              raw = z.read(name)
+              with open("wtt/" + base, "wb") as f: f.write(raw)
+              text = raw.decode("utf-8-sig")
+              rows = list(csv.DictReader(text.splitlines()))
+              headers = list(rows[0].keys()) if rows else []
+              print(json.dumps({
+                  "file": base, "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest(),
+                  "rows": len(rows), "columns": headers,
+                  "missing_by_column": {h: sum(not (r.get(h) or "").strip() for r in rows) for h in headers},
+                  "sample_rows": rows[:3],
+              }, ensure_ascii=False))
+              if len(rows) != expected[base]:
+                  raise SystemExit(f"Unexpected row count in {base}: {len(rows)}")
+              if len(headers) < 5:
+                  raise SystemExit(f"Too few columns in {base}: {headers}")
+          print("PASS: both advertised WTT files present and row counts match.")
+          PY
+      - name: Upload verified WTT CSVs for inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-wtt-csvs
+          path: wtt/*.csv
+          retention-days: 30
