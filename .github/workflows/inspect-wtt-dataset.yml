@@ -2,6 +2,9 @@ name: Inspect public WTT dataset files
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/inspect-wtt-dataset.yml"
 
 permissions:
   contents: read
