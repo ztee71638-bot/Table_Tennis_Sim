@@ -32,6 +32,7 @@ SOURCES = [
         "url": "https://raw.githubusercontent.com/SCOREnetworkorg/sports-data-repository/main/data/table_tennis-sept2022.csv",
         "filename": "table_tennis-sept2022.csv",
         "kind": "named",
+        "default_competition": "Setka Cup",
     },
     {
         "key": "lathise_elo_sample",
@@ -151,6 +152,17 @@ def get(row: dict, *names: str):
             return value
     return None
 
+def normalize_date(value):
+    if value in (None, ""):
+        return None
+    value = str(value).strip()
+    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%d/%m/%Y"):
+        try:
+            return datetime.strptime(value, fmt).date().isoformat()
+        except ValueError:
+            pass
+    return value
+
 def as_int(value):
     try:
         return int(float(value)) if value not in (None, "") else None
@@ -258,9 +270,9 @@ def load_source(conn, source, raw_bytes):
                 ) VALUES(?,?,?,?,?,?,?,?,?,?,?)""",
                 (
                     source_id, str(match_id),
-                    get(row, "Date", "match_date", "date"),
+                    normalize_date(get(row, "Date", "match_date", "date")),
                     get(row, "Time", "match_time", "time"),
-                    get(row, "League", "competition", "tournament"),
+                    get(row, "League", "competition", "tournament") or source.get("default_competition"),
                     pa, pb, sets_a, sets_b, winner, payload,
                 ),
             ).lastrowid
