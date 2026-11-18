@@ -36,7 +36,7 @@ SOURCES = [
     {
         "key": "lathise_elo_sample",
         "name": "Lathise public Elo sample",
-        "url": "https://huggingface.co/datasets/lathise/table-tennis-pre-match-elo-ratings/resolve/main/data/tt_ratings_sample_2000.csv",
+        "url": "https://huggingface.co/datasets/lathise/table-tennis-pre-match-elo-ratings/resolve/main/tt_ratings_sample_2000.csv",
         "filename": "tt_ratings_sample_2000.csv",
         "kind": "elo",
     },
