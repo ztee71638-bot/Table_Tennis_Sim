@@ -2,6 +2,11 @@ name: Build table-tennis database
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_database.py"
+      - ".github/workflows/build-database.yml"
 
 permissions:
   contents: read
