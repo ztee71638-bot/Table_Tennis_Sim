@@ -1,0 +1,32 @@
+name: Build table-tennis database
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download source CSVs and build SQLite database
+        run: python scripts/build_database.py
+
+      - name: Upload database and original source files
+        uses: actions/upload-artifact@v4
+        with:
+          name: table-tennis-database-build
+          path: |
+            data/database/table_tennis.sqlite
+            data/raw/*.csv
+          if-no-files-found: error
+          retention-days: 30
