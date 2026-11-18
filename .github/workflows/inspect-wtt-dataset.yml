@@ -1,0 +1,45 @@
+name: Inspect public WTT dataset files
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-osf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Query public OSF project metadata and storage files
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+
+          urls = [
+              "https://api.osf.io/v2/nodes/pjuw8/",
+              "https://api.osf.io/v2/nodes/pjuw8/files/",
+              "https://api.osf.io/v2/nodes/pjuw8/files/osfstorage/",
+          ]
+
+          for url in urls:
+              print("\\n===== " + url + " =====")
+              request = urllib.request.Request(
+                  url,
+                  headers={
+                      "User-Agent": "TableTennisSim-research/1.0",
+                      "Accept": "application/vnd.api+json",
+                  },
+              )
+              try:
+                  with urllib.request.urlopen(request, timeout=30) as response:
+                      payload = response.read()
+                      print("HTTP", response.status, "bytes", len(payload))
+                      try:
+                          parsed = json.loads(payload)
+                          print(json.dumps(parsed, indent=2)[:30000])
+                      except Exception:
+                          print(payload[:30000].decode("utf-8", "replace"))
+              except Exception as exc:
+                  print("REQUEST FAILED:", repr(exc))
+          PY
