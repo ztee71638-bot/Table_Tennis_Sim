@@ -24,7 +24,7 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 <label for="source">Dataset</label><select id="source"></select>
 <div class="grid"><div><label for="a">Player A</label><input id="a" list="players" placeholder="Search player A" autocomplete="off"></div><div><label for="b">Player B</label><input id="b" list="players" placeholder="Search player B" autocomplete="off"></div></div>
 <datalist id="players"></datalist>
-<label for="competition">Competition (optional)</label><input id="competition" placeholder="Use exact competition name, or leave blank">
+<label for="competition">Competition (optional)</label><input id="competition" list="competitions" placeholder="Use exact competition name, or leave blank"><datalist id="competitions"></datalist>
 <button class="btn" id="run">Run 100,000 simulations</button>
 <p class="muted">Names are source-specific. If a name is duplicated, use the source player ID shown in the search list.</p>
 </div></section>
@@ -42,7 +42,7 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 const $=id=>document.getElementById(id);let pools={},model={};
 const avg=a=>a&&a.length?a.reduce((s,x)=>s+x,0)/a.length:0;
 const sigmoid=z=>1/(1+Math.exp(-Math.max(-30,Math.min(30,z))));
-function resolve(pool,s){if(pool[s])return s;const ids=Object.keys(pool).filter(id=>pool[id].display_name===s);return ids.length===1?ids[0]:null}
+function resolve(pool,s){if(pool[s])return s;const m=s.match(/^(.*) \\[([^\\]]+)\\]$/);if(m&&pool[m[2]]&&pool[m[2]].display_name===m[1])return m[2];const ids=Object.keys(pool).filter(id=>pool[id].display_name===s);return ids.length===1?ids[0]:null}
 function fmt(x){return (100*x).toFixed(1)+'%'}
 function mean(arr){return arr.length?avg(arr):0}
 function simulate(aid,bid,comp){
@@ -69,7 +69,7 @@ const warns=[];if(r.da>120)warns.push('Player A last recorded match was '+r.da+'
 $('h2h').innerHTML=r.details.length?'<p>'+r.details.length+' shared opponents with comparable records.</p><ul>'+r.details.slice(0,30).map(d=>'<li>'+String(d.id).replaceAll('<','&lt;')+': A '+d.x.wins+'-'+d.x.losses+', B '+d.y.wins+'-'+d.y.losses+'</li>').join('')+'</ul>':'<p>No shared opponents with usable prior records were found.</p>';
 }
 async function init(){try{const [s,m]=await Promise.all([fetch('./data/current_player_states.json'),fetch('./data/prediction_model.json')]);if(!s.ok||!m.ok)throw Error('The published player data is not available yet.');pools=await s.json();model=await m.json();const keys=Object.keys(pools);$('source').innerHTML=keys.map(k=>'<option value="'+k+'">'+k+'</option>').join('');$('source').addEventListener('change',fill);fill();$('load').hidden=true;$('form').hidden=false;$('freshness').textContent='Model data: '+(model.holdout_start||'unknown')+' through '+(model.holdout_end||'unknown')+'. Dataset may not include current results.';}catch(e){$('load').textContent=e.message;$('load').className='error';}}
-function fill(){const p=pools[$('source').value]||{};const opts=Object.entries(p).map(([id,x])=>({id,name:x.display_name||'(unnamed)',label:(x.display_name||'(unnamed)')+' — '+id})).sort((a,b)=>a.name.localeCompare(b.name));$('players').innerHTML=opts.map(x=>'<option value="'+x.name.replaceAll('&','&amp;').replaceAll('"','&quot;')+'"></option>').join('');}
+function fill(){const p=pools[$('source').value]||{};const opts=Object.entries(p).map(([id,x])=>({id,name:x.display_name||'(unnamed)'})).sort((a,b)=>a.name.localeCompare(b.name));$('players').innerHTML=opts.map(x=>'<option value="'+(x.name+' ['+x.id+']').replaceAll('&','&amp;').replaceAll('"','&quot;')+'"></option>').join('');const comps=[...new Set(opts.flatMap(x=>Object.keys(p[x.id].competition_form||{})))].sort();$('competitions').innerHTML=comps.map(x=>'<option value="'+x.replaceAll('&','&amp;').replaceAll('"','&quot;')+'"></option>').join('');}
 $('run').addEventListener('click',()=>{const pool=pools[$('source').value],a=resolve(pool,$('a').value.trim()),b=resolve(pool,$('b').value.trim());if(!a||!b){alert('Choose an exact, unique player name from the suggestions.');return}if(a===b){alert('Choose two different players.');return}$('run').disabled=true;$('run').textContent='Simulating…';try{show(simulate(a,b,$('competition').value.trim()||'UNKNOWN'));}catch(e){alert('Unable to simulate: '+e.message)}finally{$('run').disabled=false;$('run').textContent='Run 100,000 simulations';}});
 init();
 </script></body></html>
