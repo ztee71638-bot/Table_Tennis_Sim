@@ -63,7 +63,7 @@ class IdentityEvidenceAuditTests(unittest.TestCase):
         self.assertTrue(all(r["independent_evidence_status"] == "match_level_records_correlated" for r in audit))
         self.assertTrue(all(r["source_player_id_link_status"] == "unverified" for r in audit))
         self.assertTrue(all(r["decision"] == "HOLD" for r in audit))
-        self.assertEqual(sum(int(r["matched_independent_result_count"]) for r in audit), 5)
+        self.assertEqual(sum(int(r["matched_independent_result_count"]) for r in audit), 6)
 
     def test_wrong_score_does_not_correlate(self):
         evidence = MODULE.MATCH_LEVEL_EVIDENCE[0]
