@@ -65,3 +65,22 @@ For each competition, document provider, date coverage, score depth, player-name
 The current WTT source audit flags four winner-versus-set-score disagreements and three records with fewer than three set wins (six distinct matches; one record meets both conditions). The WTT source's `best_of=7` field conflicts with the common observed 3-win match endings, so it is documented rather than blindly enforced.
 
 The first simple Elo benchmark is a baseline only. It is not a fitted machine-learning model and should not be used as a standalone betting signal. The next modeling phase should compare this benchmark with a strictly chronological holdout, calibration checks, player inactivity/recency, and competition-specific form features before any pick is considered.
+
+
+## Live-update phase status (2026-11-20)
+
+### Implemented: supplementary source monitoring
+- Added `scripts/probe_pongiq.py` to call the documented public PongIQ events endpoint, validate the response envelope and event list, preserve the raw response, and emit a health report.
+- Added `.github/workflows/monitor-pongiq.yml`: scheduled every six hours, with manual dispatch and a push-triggered test. The workflow uploads the snapshot and report as a 14-day artifact.
+- This is a source-health/discovery monitor, not a live professional-results importer. It does not change player records or feed community matches into the WTT prediction model.
+- 11EDGE is not an automated source: its 2026-04-19 terms prohibit scraping, copying, or massive redistribution. No automated extraction is permitted by this project.
+
+### Remaining before true record updates
+1. Confirm a stable, permitted feed for professional match results across the target leagues.
+2. Validate event and match schema with real completed records, including retirements, walkovers, doubles/team ties, and format variations.
+3. Add a separate source-scoped incremental importer with idempotent match keys, immutable raw snapshots, duplicate checks, and rollback on invalid batches.
+4. Recompute player records, recent form, head-to-head, shared-opponent history, and Elo strictly as of each match timestamp.
+5. Add a freshness status and last-successful-import timestamp to prediction outputs.
+6. Enable scheduled imports only after the source adapter passes fixture tests and a live dry-run.
+
+**Current status: monitoring workflow implemented; automatic player-record updates are not yet enabled.** This avoids falsely advertising the database as live or contaminating the professional training set with unverified community events.
