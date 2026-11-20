@@ -28,7 +28,7 @@ TEAM_TOKENS = (
     "cd ", "ks ", "ask ", "asrtt", "hodonin", "metz tt",
     "saint-quentin",
 )
-INITIAL_NAME = re.compile(r".+\s+[A-ZА-ЯЁ]\\.$")
+INITIAL_NAME = re.compile(r".+\s+[A-ZА-ЯЁ]\.$")
 
 
 def classify(fixture):
