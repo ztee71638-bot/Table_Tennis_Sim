@@ -41,3 +41,14 @@ These exact match fingerprints are strong corroboration, not final approval. All
 The PongData player page and its 2026 match archive list four 19 November results for Jan Szotkowski that match DataSportsAPI fixture records exactly by date, opponent source ID, and every set score: Tadeas Zika (fixture 1140596), Ondrej Paril (1140589), Radovan Polasek (1140575), and Michael Sedlacek (1140604). All four map to candidate source ID 633703 (displayed as “Szotkowski J.”); the other candidate ID 629357 (“Jan S.”) does not match these four fingerprints. Reference: https://pongdata.com/players/szotkowski-j-98geod1q0w/matches?year=2026
 
 This is materially stronger evidence for candidate 633703, but the profile does not publish the DataSportsAPI ID. Because the Polymarket name still has two candidate rows and the source ID namespaces are separate, the automated audit deliberately leaves both candidates unverified and the decision HOLD. A reviewer must make the final identity decision; no source ID or simulator record is changed by this evidence.
+
+
+## Extending match-level checks across competitions
+
+The match fingerprint validator now reads the competition name from each independently researched record rather than assuming every result belongs to Czech Liga Pro. This enables safe source-isolated checks for Setka Cup as well.
+
+Additional evidence added in this phase:
+- Michal Regner: one 19 November 2026 match against Sebastian Kasnik, exact date/opponent/set scores correlated to DataSportsAPI fixture 1140674. Independent record: https://pongdata.com/players/regner-m-lvnv22cdhn/matches?year=2026
+- Kozachuk Ivan: two 19 November 2026 Setka Cup results, against Denys Shcherbak and Denys Pesternikov, exact date/opponent/all set scores correlated to fixtures 1141253 and 1141267. Independent record: https://24live.com/page/sport/participant/table-tennis-22/1006413
+
+The Setka Cup results demonstrate that the evidence validator now checks the candidate's own competition scope, rather than applying a Czech-only restriction. All three new result correlations remain human-review evidence only; no ID is verified, approved, or merged.
