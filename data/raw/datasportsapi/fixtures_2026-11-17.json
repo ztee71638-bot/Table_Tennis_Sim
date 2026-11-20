@@ -148270,123 +148270,6 @@
             "attendance": null,
             "awarded": false,
             "away": {
-              "code": "SEM",
-              "id": 51782,
-              "image": "https://cdn.datasportsapi.com/v2/teams/51782/logo",
-              "name": "Semenets S.",
-              "shortName": null,
-              "slug": "semenets-sergey"
-            },
-            "awayManager": null,
-            "awayRanking": null,
-            "awayScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "awaySeed": null,
-            "battingSide": null,
-            "bonus": null,
-            "clock": null,
-            "discipline": null,
-            "downAndDistance": null,
-            "durations": null,
-            "fightCard": null,
-            "fightDiscipline": null,
-            "fightResult": null,
-            "finalResultOnly": false,
-            "firstToServe": null,
-            "home": {
-              "code": "YAK",
-              "id": 278222,
-              "image": "https://cdn.datasportsapi.com/v2/teams/278222/logo",
-              "name": "Yakimenko S.",
-              "shortName": null,
-              "slug": "yakimenko-stefan"
-            },
-            "homeManager": null,
-            "homeRanking": null,
-            "homeScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "homeSeed": null,
-            "id": 1093853,
-            "inningState": null,
-            "league": {
-              "category": "Ukraine",
-              "country": {
-                "code": "UA",
-                "flag": "https://cdn.datasportsapi.com/v2/countries/UA/flag",
-                "name": "Ukraine"
-              },
-              "id": 190,
-              "image": "https://cdn.datasportsapi.com/v2/leagues/190/logo",
-              "name": "Setka Cup",
-              "priority": 0,
-              "slug": "setka-cup",
-              "sport": "table-tennis"
-            },
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
-            "matchFormat": null,
-            "matchesInTie": null,
-            "note": null,
-            "previousLegFixtureId": null,
-            "referee": null,
-            "round": null,
-            "season": {
-              "endYear": 2026,
-              "id": 189,
-              "name": "2026",
-              "startYear": 2026,
-              "year": "2026"
-            },
-            "servedFirst": null,
-            "serving": null,
-            "sport": "table-tennis",
-            "startTime": "2026-11-17T18:40:00.000Z",
-            "status": {
-              "code": 0,
-              "description": "Not started",
-              "finish": null,
-              "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
-            },
-            "surface": null,
-            "timeouts": null,
-            "toss": null,
-            "tvUmpire": null,
-            "umpires": null,
-            "varCheck": null,
-            "venue": null,
-            "winner": null
-          },
-          {
-            "aggregateWinner": null,
-            "attendance": null,
-            "awarded": false,
-            "away": {
               "code": "BAD",
               "id": 4350,
               "image": "https://cdn.datasportsapi.com/v2/teams/4350/logo",
@@ -157525,7 +157408,7 @@
         ],
         "meta": {
           "complete": true,
-          "count": 522,
+          "count": 521,
           "date": "2026-11-17",
           "hasNextPage": false,
           "leagueCount": 2,
@@ -157533,8 +157416,8 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "219fc85ec1cc62f1d98f882e41fb49d81231076bf52ba285707580d7a138a803"
+      "sha256": "c344cbbcda5bcd21d2f81e3e89d87d3185657e02e31d2c120c2dfc499199e84b"
     }
   ],
-  "retrieved_at": "2026-11-20T04:26:37.976038+00:00"
+  "retrieved_at": "2026-11-20T04:32:50.945585+00:00"
 }
