@@ -31,7 +31,7 @@ def main():
         data=z.read(filename); (RAW/filename).write_bytes(data)
         digest=hashlib.sha256(data).hexdigest()
         rows=list(csv.DictReader(io.StringIO(data.decode("utf-8-sig"))))
-        expected_rows=5442 if key.endswith("men_2022_2025") else 4850
+        expected_rows=5442 if "_men_" in filename else 4850
         if len(rows)!=expected_rows: raise ValueError(f"{filename}: expected {expected_rows}, got {len(rows)}")
         c.execute("""INSERT INTO sources(source_key,source_name,source_url,retrieved_at,sha256,row_count,notes)
           VALUES(?,?,?,?,?,?,?) ON CONFLICT(source_key) DO UPDATE SET source_name=excluded.source_name,
