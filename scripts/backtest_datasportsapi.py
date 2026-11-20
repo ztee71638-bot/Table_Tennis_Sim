@@ -69,7 +69,7 @@ def main():
     dates=sorted({r["date"] for r in rows})
     report={"source":SOURCE,"singles_rows_considered":len(matches),"clean_matches":len(rows),"excluded_invalid_results":excluded,
       "unique_competitors":len(states),"dates": {"first":dates[0] if dates else None,"last":dates[-1] if dates else None},
-      "classification":dict(c.execute("SELECT match_type,confidence,COUNT(*) FROM datasportsapi_match_classification GROUP BY match_type,confidence").fetchall()),
+      "classification":[{"match_type":r[0],"confidence":r[1],"count":r[2]} for r in c.execute("SELECT match_type,confidence,COUNT(*) FROM datasportsapi_match_classification GROUP BY match_type,confidence").fetchall()],
       "database_integrity":c.execute("PRAGMA integrity_check").fetchone()[0]}
     if len(rows)>=500 and len(dates)>=10:
       cut=dates[max(1,min(len(dates)-1,int(len(dates)*.75)))]
