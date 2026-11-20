@@ -31,8 +31,11 @@ def main():
    raise SystemExit(f"--as-of predates {label} latest recorded match; refusing to use future data in a historical simulation.")
  def days(s): return (as_of-date.fromisoformat(s["last_date"])).days if s["last_date"] else 36500
  age_a,age_b=days(x),days(y)
- stale_limit_days=120
- stale_players=[label for label,age in (("player_a",age_a),("player_b",age_b)) if age>stale_limit_days]
+ # A long gap alone is not proof of poor form: it may be an off-season,
+ # injury, or simply missing coverage. Flag it for review, but do not
+ # automatically reject a player on elapsed time alone.
+ extended_absence_review_days=120
+ extended_absence_review=[label for label,age in (("player_a",age_a),("player_b",age_b)) if age>extended_absence_review_days]
  comp=a.competition
  feats={"elo_diff_400":(x["elo"]-y["elo"])/400,
   "form_diff_10":mean(x["recent_form_last10"])-mean(y["recent_form_last10"]),
@@ -73,8 +76,8 @@ def main():
   else: score_b+=1
  sim=wins/a.simulations; se=math.sqrt(sim*(1-sim)/a.simulations)
  improved=model["holdout_metrics"]["enhanced"]["brier"]<model["holdout_metrics"]["elo"]["brier"]
- eligible=x["matches"]>=10 and y["matches"]>=10 and improved and max(p,1-p)>=.65 and not stale_players
+ eligible=x["matches"]>=10 and y["matches"]>=10 and improved and max(p,1-p)>=.65
  result="PASS"
  if eligible: result="MODEL LEAN: "+(x["display_name"] or aid) if p>=.5 else "MODEL LEAN: "+(y["display_name"] or bid)
- print(json.dumps({"decision":result,"source_key":a.source_key,"player_a":{"id":aid,"name":x["display_name"],"prior_matches":x["matches"],"elo":x["elo"]},"player_b":{"id":bid,"name":y["display_name"],"prior_matches":y["matches"],"elo":y["elo"]},"competition":comp,"data_freshness":{"as_of":a.as_of,"player_a_days_since_last_match":age_a,"player_b_days_since_last_match":age_b,"maximum_allowed_days":stale_limit_days,"stale_players":stale_players},"model_probability_a":round(p,5),"elo_probability_a":round(elo_p,5),"best_of":5,"simulations":a.simulations,"simulated_win_rate_a":round(sim,5),"monte_carlo_95pct_interval":[round(max(0,sim-1.96*se),5),round(min(1,sim+1.96*se),5)],"features":feats,"shared_opponent_comparison":{"number_of_common_opponents":len(summary),"player_a_wins":common_a_wins,"player_a_losses":common_a_losses,"player_b_wins":common_b_wins,"player_b_losses":common_b_losses,"opponents":summary},"holdout_brier_enhanced":model["holdout_metrics"]["enhanced"]["brier"],"holdout_brier_elo":model["holdout_metrics"]["elo"]["brier"],"guardrail":"PASS unless both players have at least 10 prior matches, both have played within 120 days of --as-of, enhanced model beats Elo holdout Brier, and model probability is at least 65% for the selected side. Historical --as-of dates before either player's latest recorded match are rejected to prevent future-data leakage. Interval reflects simulation noise only, not model uncertainty."},indent=2))
+ print(json.dumps({"decision":result,"source_key":a.source_key,"player_a":{"id":aid,"name":x["display_name"],"prior_matches":x["matches"],"elo":x["elo"]},"player_b":{"id":bid,"name":y["display_name"],"prior_matches":y["matches"],"elo":y["elo"]},"competition":comp,"data_freshness":{"as_of":a.as_of,"player_a_days_since_last_match":age_a,"player_b_days_since_last_match":age_b,"extended_absence_review_threshold_days":extended_absence_review_days,"players_needing_context_review":extended_absence_review,"note":"An extended gap does not automatically trigger PASS. It may reflect an off-season, injury, or incomplete source coverage; verify current schedule and player availability when possible."},"model_probability_a":round(p,5),"elo_probability_a":round(elo_p,5),"best_of":5,"simulations":a.simulations,"simulated_win_rate_a":round(sim,5),"monte_carlo_95pct_interval":[round(max(0,sim-1.96*se),5),round(min(1,sim+1.96*se),5)],"features":feats,"shared_opponent_comparison":{"number_of_common_opponents":len(summary),"player_a_wins":common_a_wins,"player_a_losses":common_a_losses,"player_b_wins":common_b_wins,"player_b_losses":common_b_losses,"opponents":summary},"holdout_brier_enhanced":model["holdout_metrics"]["enhanced"]["brier"],"holdout_brier_elo":model["holdout_metrics"]["elo"]["brier"],"guardrail":"PASS unless both players have at least 10 prior matches, enhanced model beats Elo holdout Brier, and model probability is at least 65% for the selected side. Extended inactivity over 120 days is a context-review warning, not an automatic PASS; it may be an off-season, injury, or incomplete source coverage. Historical --as-of dates before either player's latest recorded match are rejected to prevent future-data leakage. Interval reflects simulation noise only, not model uncertainty."},indent=2))
 if __name__=="__main__": main()
