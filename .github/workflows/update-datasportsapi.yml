@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - "scripts/import_datasportsapi.py"
+      - "scripts/classify_datasportsapi.py"
+      - "scripts/analyze_datasportsapi.py"
       - ".github/workflows/update-datasportsapi.yml"
       - "docs/new_source_import_acceptance.md"
 
@@ -41,11 +43,14 @@ jobs:
           DATASPORTSAPI_KEY: ${{ secrets.DATASPORTSAPI_KEY }}
         run: python scripts/import_datasportsapi.py
 
-      - name: Build source-isolated DataSportsAPI player records
+      - name: Classify singles, doubles, team, and ambiguous fixtures
+        run: python scripts/classify_datasportsapi.py
+
+      - name: Build individual player records from singles only
         run: python scripts/analyze_datasportsapi.py
 
-      - name: Compile import and analysis scripts
-        run: python -m py_compile scripts/import_datasportsapi.py scripts/analyze_datasportsapi.py
+      - name: Compile import, classification, and analysis scripts
+        run: python -m py_compile scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py
 
       - name: Persist refreshed daily source snapshots
         run: |
