@@ -259,6 +259,13 @@ def reconcile(events: list[dict], history: list[dict], source_info: dict) -> tup
                 "competition_scope": scope,
                 "database_status": status(cands_a if name == name_a else cands_b, stat),
                 **stat,
+                "candidate_count": len(cands_a if name == name_a else cands_b),
+                "candidate_options": json.dumps([
+                    {"source_player_id": c["source_player_id"], "database_name": c["display_name"],
+                     "match_type": c["match_type"], "competition_matches": len(c["relevant_matches"]),
+                     "last_match_date": max((m["match_date"] or "" for m in c["matches"]), default="")}
+                    for c in (cands_a if name == name_a else cands_b)
+                ], ensure_ascii=False),
                 "identity_decision": "review only; no automatic cross-source identity merge",
             }
 

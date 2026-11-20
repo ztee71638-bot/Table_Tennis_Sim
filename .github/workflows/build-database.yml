@@ -7,8 +7,10 @@ on:
     paths:
       - "scripts/scan_polymarket_table_tennis.py"
       - "scripts/reconcile_polymarket_players.py"
+      - "scripts/review_polymarket_identity_candidates.py"
       - "tests/test_polymarket_scan.py"
       - "tests/test_polymarket_reconciliation.py"
+      - "tests/test_polymarket_identity_review.py"
       - "docs/polymarket_us_integration.md"
       - "docs/domestic_league_coverage.md"
       - "SOURCES.md"
@@ -24,6 +26,7 @@ on:
       - "scripts/smoke_test_simulator.py"
       - "scripts/scan_polymarket_table_tennis.py"
       - "scripts/reconcile_polymarket_players.py"
+      - "scripts/review_polymarket_identity_candidates.py"
       - "scripts/import_datasportsapi.py"
       - "scripts/classify_datasportsapi.py"
       - "scripts/analyze_datasportsapi.py"
@@ -31,6 +34,7 @@ on:
       - "scripts/backtest_datasportsapi.py"
       - "tests/test_polymarket_scan.py"
       - "tests/test_polymarket_reconciliation.py"
+      - "tests/test_polymarket_identity_review.py"
       - "docs/polymarket_us_integration.md"
       - "docs/domestic_league_coverage.md"
       - ".github/workflows/build-database.yml"
@@ -89,8 +93,11 @@ jobs:
       - name: Reconcile Polymarket players against recent league histories
         run: python scripts/reconcile_polymarket_players.py
 
+      - name: Build manual Polymarket identity review queue
+        run: python scripts/review_polymarket_identity_candidates.py
+
       - name: Compile prediction and data scripts
-        run: python -m py_compile scripts/train_prediction_model.py scripts/simulate_match.py scripts/smoke_test_simulator.py scripts/scan_polymarket_table_tennis.py scripts/reconcile_polymarket_players.py scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/audit_datasportsapi_classification.py scripts/backtest_datasportsapi.py
+        run: python -m py_compile scripts/review_polymarket_identity_candidates.py scripts/train_prediction_model.py scripts/simulate_match.py scripts/smoke_test_simulator.py scripts/scan_polymarket_table_tennis.py scripts/reconcile_polymarket_players.py scripts/review_polymarket_identity_candidates.py scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/audit_datasportsapi_classification.py scripts/backtest_datasportsapi.py
 
       - name: Run 100000-simulation smoke test
         run: python scripts/smoke_test_simulator.py
@@ -120,5 +127,6 @@ jobs:
             data/processed/polymarket_datasportsapi_player_coverage.csv
             data/processed/polymarket_datasportsapi_matchup_evidence.csv
             data/processed/polymarket_datasportsapi_reconciliation_report.json
+            data/processed/polymarket_identity_review_queue.csv
           if-no-files-found: error
           retention-days: 30

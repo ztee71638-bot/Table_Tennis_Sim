@@ -34,6 +34,7 @@ If the key is not configured, the build warns and emits `source_not_loaded` stat
 - `polymarket_datasportsapi_player_coverage.csv`: candidate player IDs, competition-specific match counts, W-L record, and latest recorded date.
 - `polymarket_datasportsapi_matchup_evidence.csv`: each listed Polymarket matchup, competition scope, both candidate records, and same-competition historical head-to-head count/date.
 - `polymarket_datasportsapi_reconciliation_report.json`: source availability and summary counts.
+- `polymarket_identity_review_queue.csv`: unresolved initial/ambiguous name candidates, all candidate source IDs, and blank reviewer decision fields.
 
 Names are normalized for accents and order, and a surname-plus-initial candidate is allowed only when all name tokens align. Candidates are scoped to the listed competition where possible. Exact names are preferred over initial-only candidates. Multiple possible IDs remain ambiguous.
 
@@ -56,3 +57,8 @@ The reconciliation tests cover:
 - Aggregating a player's complete available match history.
 - Attaching H2H evidence without auto-merging identities.
 - Explicitly reporting when the DataSportsAPI source was not loaded.
+
+
+## Identity review phase
+
+The build emits a manual review queue for initial-abbreviation and ambiguous candidates. Each row includes the full candidate option list, source-scoped player IDs, competition scope, and blank fields for the reviewer to record independent evidence, a decision, and reviewer details. The queue never preselects or approves an identity. Name similarity and head-to-head history alone are not sufficient evidence. No player links or match rows are modified.
