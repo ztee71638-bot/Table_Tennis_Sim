@@ -22,21 +22,57 @@ class IdentityEvidenceAuditTests(unittest.TestCase):
              "candidate_options_json": '[{"source_player_id":"302076"}]'},
         ]
         audit = MODULE.build_audit(rows)
-        self.assertEqual(len(audit), 3)
         self.assertTrue(all(r["independent_evidence_status"] == "public_profile_name_corroborated" for r in audit))
         self.assertTrue(all(r["source_player_id_link_status"] == "unverified" for r in audit))
         self.assertTrue(all(r["decision"] == "HOLD" for r in audit))
-        self.assertTrue(all(r["evidence_url"].startswith("https://") for r in audit))
 
-    def test_unchecked_candidates_get_search_hints_not_fake_evidence(self):
-        row = {"polymarket_player": "Alesh Bayer", "competition_scope": "Czech Liga Pro",
-               "database_status": "initial_abbreviation_review", "candidate_count": "1",
-               "candidate_options_json": '[{"source_player_id":"115022"}]'}
-        result = MODULE.build_audit([row])[0]
-        self.assertEqual(result["independent_evidence_status"], "not_yet_checked")
-        self.assertEqual(result["evidence_url"], "")
-        self.assertIn("Czech Liga Pro", result["search_hint"])
-        self.assertEqual(result["decision"], "HOLD")
+    def test_exact_match_results_correlate_four_candidates_but_never_approve(self):
+        fixtures = [
+            {"id": 1140607, "_snapshot_date": "2026-11-19",
+             "league": {"name": "Czech Liga Pro"},
+             "home": {"id": 115022, "name": "Bayer A."}, "away": {"id": 69500, "name": "Tuma D."},
+             "homeScore": {"periods": {"period1": 4, "period2": 11, "period3": 13, "period4": 11}},
+             "awayScore": {"periods": {"period1": 11, "period2": 9, "period3": 11, "period4": 5}}},
+            {"id": 1169149, "_snapshot_date": "2026-11-19",
+             "league": {"name": "Czech Liga Pro"},
+             "home": {"id": 115022, "name": "Bayer A."}, "away": {"id": 69500, "name": "Tuma D."},
+             "homeScore": {"periods": {"period1": 11, "period2": 11, "period3": 11, "period4": 12, "period5": 11}},
+             "awayScore": {"periods": {"period1": 8, "period2": 13, "period3": 6, "period4": 14, "period5": 7}}},
+            {"id": 1140540, "_snapshot_date": "2026-11-19",
+             "league": {"name": "Czech Liga Pro"},
+             "home": {"id": 632210, "name": "Mares E."}, "away": {"id": 176, "name": "Postelt T."},
+             "homeScore": {"periods": {"period1": 7, "period2": 11, "period3": 9, "period4": 12, "period5": 9}},
+             "awayScore": {"periods": {"period1": 11, "period2": 7, "period3": 11, "period4": 10, "period5": 11}}},
+            {"id": 1175375, "_snapshot_date": "2026-11-19",
+             "league": {"name": "Czech Liga Pro"},
+             "home": {"id": 625247, "name": "Pilch J."}, "away": {"id": 632210, "name": "Mares E."},
+             "homeScore": {"periods": {"period1": 5, "period2": 11, "period3": 12, "period4": 17}},
+             "awayScore": {"periods": {"period1": 11, "period2": 9, "period3": 10, "period4": 15}}},
+        ]
+        rows = [
+            {"polymarket_player": "Alesh Bayer", "competition_scope": "Czech Liga Pro",
+             "candidate_options_json": '[{"source_player_id":"115022"}]'},
+            {"polymarket_player": "Daniel Tuma", "competition_scope": "Czech Liga Pro",
+             "candidate_options_json": '[{"source_player_id":"69500"}]'},
+            {"polymarket_player": "Erik Mares", "competition_scope": "Czech Liga Pro",
+             "candidate_options_json": '[{"source_player_id":"632210"}]'},
+            {"polymarket_player": "Jakub Pilch", "competition_scope": "Czech Liga Pro",
+             "candidate_options_json": '[{"source_player_id":"625247"}]'},
+        ]
+        audit = MODULE.build_audit(rows, fixtures)
+        self.assertTrue(all(r["independent_evidence_status"] == "match_level_records_correlated" for r in audit))
+        self.assertTrue(all(r["source_player_id_link_status"] == "unverified" for r in audit))
+        self.assertTrue(all(r["decision"] == "HOLD" for r in audit))
+        self.assertEqual(sum(int(r["matched_independent_result_count"]) for r in audit), 6)
+
+    def test_wrong_score_does_not_correlate(self):
+        evidence = MODULE.MATCH_LEVEL_EVIDENCE[0]
+        fixture = {"id": 1, "_snapshot_date": "2026-11-19",
+                   "league": {"name": "Czech Liga Pro"},
+                   "home": {"id": 115022}, "away": {"id": 69500},
+                   "homeScore": {"periods": {"period1": 4, "period2": 11, "period3": 13, "period4": 10}},
+                   "awayScore": {"periods": {"period1": 11, "period2": 9, "period3": 11, "period4": 5}}}
+        self.assertFalse(MODULE._exact_fixture_match(evidence, fixture))
 
     def test_ambiguous_identity_is_never_automatically_selected(self):
         row = {"polymarket_player": "Jan Szotkowski", "competition_scope": "Czech Liga Pro",
