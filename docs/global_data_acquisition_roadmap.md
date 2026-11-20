@@ -52,3 +52,16 @@ For each competition, document provider, date coverage, score depth, player-name
 - Track best-of-five vs best-of-seven and team-tie rubbers separately.
 - Use chronological train/test splits; never allow future results or pre-match ratings to leak into past predictions.
 - Do not produce a confident pick when sample size, player identity, score completeness, or form evidence is weak; mark it PASS.
+
+
+## Completed engineering steps (2026-11-20)
+
+1. Imported and checksum-verified WTT men's (5,442) and women's (4,850) source rows.
+2. Verified SQLite integrity and foreign keys; duplicate source match IDs are checked in the generated audit.
+3. Added persistent `match_quality_flags`; source values remain untouched and suspicious rows are excluded from the baseline.
+4. Added chronological, source-separated WTT Elo pre-match features. Matches on the same date share prior-date ratings to avoid same-day leakage.
+5. Added automated audit and feature exports to the GitHub Actions database artifact.
+
+The current WTT source audit flags four winner-versus-set-score disagreements and three records with fewer than three set wins (six distinct matches; one record meets both conditions). The WTT source's `best_of=7` field conflicts with the common observed 3-win match endings, so it is documented rather than blindly enforced.
+
+The first simple Elo benchmark is a baseline only. It is not a fitted machine-learning model and should not be used as a standalone betting signal. The next modeling phase should compare this benchmark with a strictly chronological holdout, calibration checks, player inactivity/recency, and competition-specific form features before any pick is considered.
