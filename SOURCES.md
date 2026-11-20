@@ -25,9 +25,14 @@ This project is free-only. A source is not automatically imported just because i
 ### Racket Sports Multi-Dataset (WTT men and women)
 - Repository: https://github.com/Li02003121/racket-sports-dataset
 - Dataset DOI: https://doi.org/10.17605/OSF.IO/PJUW8
-- The project README reports 5,442 men's and 4,850 women's WTT match records for 2022-2025.
-- README states data license CC BY 4.0 and code license CC0 1.0.
-- Important limitation: the GitHub repository currently contains documentation/scripts, not the advertised match CSV files. Locate and verify the OSF downloadable files and metadata before automating import. Do not treat this as imported yet.
+- Download archive: https://osf.io/download/3f6ak/
+- Imported by `scripts/import_wtt.py` as two separate source tables.
+- Men's CSV: 5,442 match rows; women's CSV: 4,850 match rows; 2022-2025.
+- Data license: CC BY 4.0; code license: CC0 1.0. Attribute the dataset to the Racket Sports Multi-Dataset project and DOI.
+- OSF archive SHA-256 is checked before extraction. Expected row counts are checked before import.
+- Source-native player IDs are retained separately for men and women; no cross-source identity merging is performed.
+- Rankings/ranking points and several auxiliary fields are blank in the supplied CSVs. Match scores are parsed into set and game-point fields; the complete original row is preserved.
+- GitHub Actions builds the database and imports these WTT rows into SQLite on each manual build.
 
 ### ITTF World Championships historical results
 - Landing page: https://www.ittf.com/history/documents/past-world-championships-results/
