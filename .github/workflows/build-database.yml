@@ -2,6 +2,14 @@ name: Build table-tennis database
 
 on:
   workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/scan_polymarket_table_tennis.py"
+      - "tests/test_polymarket_scan.py"
+      - "docs/polymarket_us_integration.md"
+      - "SOURCES.md"
+      - ".github/workflows/build-database.yml"
   push:
     branches: [main]
     paths:
