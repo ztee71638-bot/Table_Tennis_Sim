@@ -29,7 +29,7 @@ SEARCH_TERMS = (
     "Czech Liga Pro",
     "TT Cup",
 )
-VS_RE = re.compile(r"^(.+?)\\s+(?:vs?\\.?|versus)\\s+(.+?)\\s*$", re.IGNORECASE)
+VS_RE = re.compile(r"^(.+?)\s+(?:vs?\\.?|versus)\s+(.+?)\s*$", re.IGNORECASE)
 
 
 def norm_name(value: str) -> str:
@@ -41,7 +41,7 @@ def extract_player_pair(title: str | None) -> tuple[str | None, str | None]:
     """Extract a pair only when a title explicitly uses a vs/versus separator."""
     if not title:
         return None, None
-    cleaned = re.sub(r"^(who will win|winner:?)\\s*", "", str(title).strip(), flags=re.I)
+    cleaned = re.sub(r"^(who will win|winner:?)\s*", "", str(title).strip(), flags=re.I)
     match = VS_RE.match(cleaned)
     if not match:
         return None, None
