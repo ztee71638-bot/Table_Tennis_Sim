@@ -94,6 +94,40 @@ class IdentityEvidenceAuditTests(unittest.TestCase):
         self.assertEqual(result["source_player_id_link_status"], "unverified")
         self.assertEqual(result["decision"], "HOLD")
 
+    def test_regner_exact_independent_result_correlates_but_stays_on_hold(self):
+        fixture = {"id": 1140674, "_snapshot_date": "2026-11-19",
+                   "league": {"name": "Czech Liga Pro"},
+                   "home": {"id": 632087}, "away": {"id": 625295},
+                   "homeScore": {"periods": {"period1": 10, "period2": 11, "period3": 11, "period4": 11}},
+                   "awayScore": {"periods": {"period1": 12, "period2": 5, "period3": 8, "period4": 8}}}
+        row = {"polymarket_player": "Michal Regner", "competition_scope": "Czech Liga Pro",
+               "candidate_options_json": '[{"source_player_id":"625295"}]'}
+        result = MODULE.build_audit([row], [fixture])[0]
+        self.assertEqual(result["independent_evidence_status"], "match_level_records_correlated")
+        self.assertEqual(result["matched_fixture_ids"], "1140674")
+        self.assertEqual(result["source_player_id_link_status"], "unverified")
+        self.assertEqual(result["decision"], "HOLD")
+
+    def test_setka_cup_match_fingerprints_are_checked_in_their_own_competition(self):
+        fixtures = [
+            {"id": 1141253, "_snapshot_date": "2026-11-19", "league": {"name": "Setka Cup"},
+             "home": {"id": 278226}, "away": {"id": 4355},
+             "homeScore": {"periods": {"period1": 11, "period2": 11, "period3": 5, "period4": 10, "period5": 11}},
+             "awayScore": {"periods": {"period1": 6, "period2": 9, "period3": 11, "period4": 12, "period5": 6}}},
+            {"id": 1141267, "_snapshot_date": "2026-11-19", "league": {"name": "Setka Cup"},
+             "home": {"id": 4355}, "away": {"id": 278225},
+             "homeScore": {"periods": {"period1": 11, "period2": 11, "period3": 11}},
+             "awayScore": {"periods": {"period1": 2, "period2": 6, "period3": 5}}},
+        ]
+        row = {"polymarket_player": "Kozachuk Ivan", "competition_scope": "Setka Cup",
+               "candidate_options_json": '[{"source_player_id":"4355"}]'}
+        result = MODULE.build_audit([row], fixtures)[0]
+        self.assertEqual(result["independent_evidence_status"], "match_level_records_correlated")
+        self.assertEqual(result["matched_fixture_ids"], "1141253;1141267")
+        self.assertEqual(result["matched_independent_result_count"], 2)
+        self.assertEqual(result["source_player_id_link_status"], "unverified")
+        self.assertEqual(result["decision"], "HOLD")
+
     def test_wrong_score_does_not_correlate(self):
         evidence = MODULE.MATCH_LEVEL_EVIDENCE[0]
         fixture = {"id": 1, "_snapshot_date": "2026-11-19",
