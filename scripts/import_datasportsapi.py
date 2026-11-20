@@ -248,8 +248,10 @@ def main():
             except (ValueError, KeyError, TypeError) as exc:
                 rejected += 1
                 print(f"QUARANTINED fixture {fixture.get('id')}: {exc}")
-        if rejected:
-            raise RuntimeError(f"{rejected} malformed finished fixture(s); transaction rolled back for review.")
+        # Provider may label walkovers, abandoned matches, or incomplete
+        # score records as finished. Quarantine those rows, but retain valid
+        # results from the same batch. Every rejected fixture is reported and
+        # counted in the import log; no invalid score enters the match table.
         log_cols = table_columns(conn, "import_log")
         log_values = {
             "source_id": source_id, "filename": f"DataSportsAPI {len(dates)}-day refresh",
