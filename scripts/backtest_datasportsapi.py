@@ -10,7 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 DB=ROOT/"data/database/table_tennis.sqlite"
 OUT=ROOT/"data/processed"
 SOURCE="datasportsapi_table_tennis"
-FEATURES=("elo_diff","form_diff","h2h_diff","competition_form_diff","inactivity_diff")
+FEATURES=("elo_diff","form_diff","h2h_diff","competition_form_diff","inactivity_diff","common_opponent_diff")
 
 def sigmoid(z):
     return 1/(1+math.exp(-max(-30,min(30,z))))
