@@ -9,7 +9,8 @@ on:
       - "scripts/import_wtt.py"
       - "scripts/analyze_database.py"
       - "scripts/train_prediction_model.py"
-      - "scripts/simulate_match.py"\n      - "scripts/smoke_test_simulator.py"
+      - "scripts/simulate_match.py"
+      - "scripts/smoke_test_simulator.py"
       - ".github/workflows/build-database.yml"
 
 permissions:
@@ -39,7 +40,13 @@ jobs:
       - name: Train chronological prediction model and generate backtest
         run: python scripts/train_prediction_model.py
 
-      - name: Compile prediction scripts\n        run: python -m py_compile scripts/train_prediction_model.py scripts/simulate_match.py scripts/smoke_test_simulator.py\n\n      - name: Run 100000-simulation smoke test\n        run: python scripts/smoke_test_simulator.py\n\n      - name: Upload database, source files, audit report, model, and features
+      - name: Compile prediction scripts
+        run: python -m py_compile scripts/train_prediction_model.py scripts/simulate_match.py scripts/smoke_test_simulator.py
+
+      - name: Run 100000-simulation smoke test
+        run: python scripts/smoke_test_simulator.py
+
+      - name: Upload database, source files, audit report, model, and features
         uses: actions/upload-artifact@v4
         with:
           name: table-tennis-database-build
