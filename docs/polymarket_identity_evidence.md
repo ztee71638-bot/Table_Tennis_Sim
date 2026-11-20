@@ -22,3 +22,15 @@ Outputs:
 - `polymarket_identity_evidence_report.json`: counts and safety summary.
 
 The public references are research leads, not endorsements or proof of a database identity link.
+
+
+## Match-level corroboration added
+
+The evidence generator now checks researched independent result records against the raw DataSportsAPI snapshots. It requires the same competition date, both source-scoped participant IDs, opponent, and every set score in order. The current research set contains four candidate names (Alesh Bayer, Daniel Tuma, Erik Mares, and Jakub Pilch) and six candidate-perspective match correlations across the two Bayer–Tuma meetings, Mares–Postelt, and Pilch–Mares.
+
+Independent references used for this initial batch:
+- Score-Tennis: Bayer–Tuma results on 19 November 2026: https://score-tennis.com/games/alesh-bayer-daniel-tuma-1171995/ and https://score-tennis.com/games/alesh-bayer-daniel-tuma-1171681/
+- Score-Tennis: Mares–Postelt result on 19 November 2026: https://score-tennis.com/games/erik-maresh-tomas-postelt-1171068/
+- PongData: Pilch match archive: https://pongdata.com/players/pilch-j-10xql5o5bp8/matches?year=2026
+
+These exact match fingerprints are strong corroboration, not final approval. All four candidate IDs remain `unverified` and `HOLD` pending human review. The script does not update player identities or simulator records.
