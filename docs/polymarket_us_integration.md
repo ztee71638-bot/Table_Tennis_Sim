@@ -31,6 +31,19 @@ It searches public listings for table tennis, ping pong, WTT, Setka Cup, TT Elit
 - `data/processed/polymarket_us_player_coverage.csv`: exact name matches, possible spelling matches for manual review, and players not found in the current database.
 - `data/processed/polymarket_us_scan_report.json`: counts, unparsed titles, and safety notes.
 
+## Domestic-league player reconciliation
+
+The main database build also imports the rolling DataSportsAPI results when the existing `DATASPORTSAPI_KEY` secret is configured. The reconciliation step compares each Polymarket player against source-scoped DataSportsAPI player IDs, prioritizing the event's competition tag.
+
+It produces:
+- `data/processed/polymarket_datasportsapi_player_coverage.csv`
+- `data/processed/polymarket_datasportsapi_matchup_evidence.csv`
+- `data/processed/polymarket_datasportsapi_reconciliation_report.json`
+
+The report includes each candidate's match volume, competition-specific W-L record, last recorded match date, and same-competition historical H2H evidence where both candidates are unique. Initial-only and ambiguous matches remain review-only. No identity links are created and no simulator results or predictions are changed. If the API secret is absent, the report clearly marks the source as not loaded.
+
+See `docs/domestic_league_coverage.md` for league counts, date coverage, and free-data limits.
+
 ## Interpretation limits
 
 - Search results may omit listings or return false positives; only active, non-closed events with Polymarket's explicit Table Tennis category/sport tag are retained. The report counts excluded search noise.

@@ -6,8 +6,11 @@ on:
     branches: [main]
     paths:
       - "scripts/scan_polymarket_table_tennis.py"
+      - "scripts/reconcile_polymarket_players.py"
       - "tests/test_polymarket_scan.py"
+      - "tests/test_polymarket_reconciliation.py"
       - "docs/polymarket_us_integration.md"
+      - "docs/domestic_league_coverage.md"
       - "SOURCES.md"
       - ".github/workflows/build-database.yml"
   push:
@@ -20,7 +23,16 @@ on:
       - "scripts/simulate_match.py"
       - "scripts/smoke_test_simulator.py"
       - "scripts/scan_polymarket_table_tennis.py"
+      - "scripts/reconcile_polymarket_players.py"
+      - "scripts/import_datasportsapi.py"
+      - "scripts/classify_datasportsapi.py"
+      - "scripts/analyze_datasportsapi.py"
+      - "scripts/audit_datasportsapi_classification.py"
+      - "scripts/backtest_datasportsapi.py"
       - "tests/test_polymarket_scan.py"
+      - "tests/test_polymarket_reconciliation.py"
+      - "docs/polymarket_us_integration.md"
+      - "docs/domestic_league_coverage.md"
       - ".github/workflows/build-database.yml"
 
 permissions:
@@ -50,6 +62,21 @@ jobs:
       - name: Import WTT men's and women's historical matches
         run: python scripts/import_wtt.py
 
+      - name: Import recent domestic-league results and build source-isolated player histories
+        if: github.event_name != 'pull_request'
+        env:
+          DATASPORTSAPI_KEY: ${{ secrets.DATASPORTSAPI_KEY }}
+        run: |
+          if [ -z "$DATASPORTSAPI_KEY" ]; then
+            echo "::warning::DATASPORTSAPI_KEY is not configured; domestic-league reconciliation will report source_not_loaded."
+          else
+            python scripts/import_datasportsapi.py
+            python scripts/classify_datasportsapi.py
+            python scripts/audit_datasportsapi_classification.py
+            python scripts/analyze_datasportsapi.py
+            python scripts/backtest_datasportsapi.py
+          fi
+
       - name: Audit database and generate chronological WTT features
         run: python scripts/analyze_database.py
 
@@ -59,8 +86,11 @@ jobs:
       - name: Train chronological prediction model and generate backtest
         run: python scripts/train_prediction_model.py
 
-      - name: Compile prediction scripts
-        run: python -m py_compile scripts/train_prediction_model.py scripts/simulate_match.py scripts/smoke_test_simulator.py scripts/scan_polymarket_table_tennis.py
+      - name: Reconcile Polymarket players against recent league histories
+        run: python scripts/reconcile_polymarket_players.py
+
+      - name: Compile prediction and data scripts
+        run: python -m py_compile scripts/train_prediction_model.py scripts/simulate_match.py scripts/smoke_test_simulator.py scripts/scan_polymarket_table_tennis.py scripts/reconcile_polymarket_players.py scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/audit_datasportsapi_classification.py scripts/backtest_datasportsapi.py
 
       - name: Run 100000-simulation smoke test
         run: python scripts/smoke_test_simulator.py
@@ -83,5 +113,12 @@ jobs:
             data/processed/polymarket_us_markets.csv
             data/processed/polymarket_us_player_coverage.csv
             data/processed/polymarket_us_scan_report.json
+            data/raw/datasportsapi/*.json
+            data/processed/datasportsapi_player_records.json
+            data/processed/datasportsapi_classification_audit.json
+            data/processed/datasportsapi_quality_backtest.json
+            data/processed/polymarket_datasportsapi_player_coverage.csv
+            data/processed/polymarket_datasportsapi_matchup_evidence.csv
+            data/processed/polymarket_datasportsapi_reconciliation_report.json
           if-no-files-found: error
           retention-days: 30

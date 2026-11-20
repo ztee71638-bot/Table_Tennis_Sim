@@ -32,6 +32,14 @@ The artifact contains:
 - `database_quality_report.json` — integrity, coverage, anomalies, and baseline evaluation
 - `wtt_pre_match_features.csv` — chronological pre-match Elo features for clean WTT results
 
+## Recent domestic-league coverage
+
+The main build now also refreshes the latest seven days of DataSportsAPI results when the existing `DATASPORTSAPI_KEY` secret is configured. The feed covers Czech Liga Pro, Setka Cup, TT Elite Series, TT Cup, and Liga Pro, among other competitions. Its player records remain source-isolated and descriptive; the WTT prediction model is not silently retrained on these leagues.
+
+The build also compares Polymarket's current table-tennis listings with recent player histories and exports competition-specific records, last-played dates, and historical head-to-head evidence. Initial-only and ambiguous name matches remain manual-review candidates. No player identities are automatically merged.
+
+See [Domestic league coverage](docs/domestic_league_coverage.md) and [Polymarket integration](docs/polymarket_us_integration.md).
+
 ## Quality and modeling safeguards
 
 - Source rows are retained; suspicious results are flagged, not silently corrected.
