@@ -7,10 +7,10 @@ on:
     paths:
       - "scripts/scan_polymarket_table_tennis.py"
       - "scripts/reconcile_polymarket_players.py"
-      - "scripts/review_polymarket_identity_candidates.py"
+      - "scripts/review_polymarket_identity_candidates.py"\n      - "scripts/verify_polymarket_identity_evidence.py"
       - "tests/test_polymarket_scan.py"
       - "tests/test_polymarket_reconciliation.py"
-      - "tests/test_polymarket_identity_review.py"
+      - "tests/test_polymarket_identity_review.py"\n      - "tests/test_polymarket_identity_evidence.py"
       - "docs/polymarket_us_integration.md"
       - "docs/domestic_league_coverage.md"
       - "SOURCES.md"
@@ -127,6 +127,6 @@ jobs:
             data/processed/polymarket_datasportsapi_player_coverage.csv
             data/processed/polymarket_datasportsapi_matchup_evidence.csv
             data/processed/polymarket_datasportsapi_reconciliation_report.json
-            data/processed/polymarket_identity_review_queue.csv
+            data/processed/polymarket_identity_review_queue.csv\n            data/processed/polymarket_identity_evidence_audit.csv\n            data/processed/polymarket_identity_evidence_report.json
           if-no-files-found: error
           retention-days: 30
