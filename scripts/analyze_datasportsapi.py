@@ -21,9 +21,15 @@ def main():
         FROM matches m JOIN sources s USING(source_id)
         JOIN players a ON a.player_pk=m.player_a_pk
         JOIN players b ON b.player_pk=m.player_b_pk
+        JOIN datasportsapi_match_classification dc ON dc.match_pk=m.match_pk
         WHERE s.source_key=? AND m.winner_player_pk IS NOT NULL
+          AND dc.match_type='singles'
         ORDER BY m.match_date,m.match_pk
     """, (SOURCE_KEY,)).fetchall()
+    classification_counts = dict(c.execute(
+        "SELECT match_type,COUNT(*) FROM datasportsapi_match_classification "
+        "GROUP BY match_type"
+    ).fetchall())
     states = defaultdict(lambda: {
         "matches": 0, "wins": 0, "losses": 0, "last_date": None,
         "recent": [], "competitions": defaultdict(lambda: {"matches": 0, "wins": 0, "losses": 0}),
@@ -72,10 +78,12 @@ def main():
             "elo_descriptive_only": round(s["elo"], 2),
         }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps({"source": SOURCE_KEY, "matches": len(rows),
+    OUT.write_text(json.dumps({"source": SOURCE_KEY, "individual_singles_matches": len(rows),
+                               "classification_counts": classification_counts,
                                "competitors": len(output), "records": output},
                               indent=2, ensure_ascii=False), encoding="utf-8")
-    print(json.dumps({"source": SOURCE_KEY, "matches": len(rows), "competitors": len(output),
+    print(json.dumps({"source": SOURCE_KEY, "individual_singles_matches": len(rows),
+                      "classification_counts": classification_counts, "competitors": len(output),
                       "database_integrity": c.execute("PRAGMA integrity_check").fetchone()[0],
                       "output": str(OUT)}, indent=2))
     c.close()
