@@ -13,6 +13,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import unicodedata
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -23,7 +24,29 @@ BASE = "https://api.datasportsapi.com/v2/fixtures"
 SOURCE_KEY = "datasportsapi_table_tennis"
 SOURCE_NAME = "DataSportsAPI table-tennis fixtures and results"
 SOURCE_URL = "https://datasportsapi.com/sports/table-tennis/"
-API_KEY = os.environ.get("DATASPORTSAPI_KEY", "").strip()
+def normalize_api_key(raw):
+    # Mobile copy/paste can insert BOMs, zero-width formatting characters,
+    # non-ASCII whitespace, or surrounding smart quotes. Remove only these
+    # transport artifacts; never alter ordinary token characters.
+    value = raw.strip().strip('"\\'“”‘’').strip()
+    value = "".join(
+        ch for ch in value
+        if unicodedata.category(ch) != "Cf" and not (
+            ch.isspace() and ch not in (" ", "\\t")
+        )
+    )
+    try:
+        value.encode("ascii")
+    except UnicodeEncodeError as exc:
+        raise SystemExit(
+            "DATASPORTSAPI_KEY contains non-ASCII characters. "
+            "The key was not sent. Re-copy only the raw API key (no label or quotes) "
+            "into the GitHub Actions secret DATASPORTSAPI_KEY."
+        ) from exc
+    return value
+
+
+API_KEY = normalize_api_key(os.environ.get("DATASPORTSAPI_KEY", ""))
 
 
 def request_page(date, page):
