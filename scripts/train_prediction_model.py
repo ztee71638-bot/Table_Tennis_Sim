@@ -15,13 +15,13 @@ def fit(rows,cut):
  if len(t)<100: raise ValueError("Insufficient chronological training rows")
  mu={f:avg([r[f] for r in t]) for f in FEATURES}
  sd={f:(statistics.pstdev([r[f] for r in t]) or 1) for f in FEATURES}
- X=[[1]+[(r[f]-mu[f])/sd[f] for f in FEATURES] for r in t]; Y=[r["y"] for r in t]; w=[0.0]*6
+ X=[[1]+[(r[f]-mu[f])/sd[f] for f in FEATURES] for r in t]; Y=[r["y"] for r in t]; w=[0.0]*(len(FEATURES)+1)
  for _ in range(500):
-  g=[0.0]*6
+  g=[0.0]*len(w)
   for x,y in zip(X,Y):
    p=sig(sum(a*b for a,b in zip(w,x)))
-   for j in range(6): g[j]+=(p-y)*x[j]
-  for j in range(6): w[j]-=.08*(g[j]/len(Y)+(.002*w[j] if j else 0))
+   for j in range(len(w)): g[j]+=(p-y)*x[j]
+  for j in range(len(w)): w[j]-=.08*(g[j]/len(Y)+(.002*w[j] if j else 0))
  return {"intercept":w[0],"weights":dict(zip(FEATURES,w[1:])),"means":mu,"scales":sd,"training_matches":len(t)}
 def pred(m,r):
  return sig(m["intercept"]+sum(m["weights"][f]*(r[f]-m["means"][f])/m["scales"][f] for f in FEATURES))
@@ -41,7 +41,7 @@ def main():
    source=m["source_key"]; comp=m["competition"] or "UNKNOWN"; st=states.setdefault(source,{})
    aid,bid=str(m["aid"]),str(m["bid"])
    a=st.setdefault(aid,{"elo":1500.0,"form":[],"comp":{},"h2h":{},"vs":{},"last":None,"n":0})
-   b=st.setdefault(bid,{"elo":1500.0,"form":[],"comp":{},"h2h":{},"last":None,"n":0})
+   b=st.setdefault(bid,{"elo":1500.0,"form":[],"comp":{},"h2h":{},"vs":{},"last":None,"n":0})
    da=(date.fromisoformat(day)-date.fromisoformat(a["last"])).days if a["last"] else 365
    db=(date.fromisoformat(day)-date.fromisoformat(b["last"])).days if b["last"] else 365
    y=1 if winner==1 else 0; pe=sig((a["elo"]-b["elo"])*math.log(10)/400)
