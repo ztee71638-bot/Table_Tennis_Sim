@@ -10,6 +10,7 @@ on:
       - "scripts/import_datasportsapi.py"
       - "scripts/classify_datasportsapi.py"
       - "scripts/analyze_datasportsapi.py"
+      - "scripts/audit_datasportsapi_classification.py"
       - ".github/workflows/update-datasportsapi.yml"
       - "docs/new_source_import_acceptance.md"
 
@@ -46,6 +47,9 @@ jobs:
       - name: Classify singles, doubles, team, and ambiguous fixtures
         run: python scripts/classify_datasportsapi.py
 
+      - name: Audit classification reasons and representative examples
+        run: python scripts/audit_datasportsapi_classification.py
+
       - name: Build individual player records from singles only
         run: python scripts/analyze_datasportsapi.py
 
@@ -53,7 +57,7 @@ jobs:
         run: python scripts/backtest_datasportsapi.py
 
       - name: Compile import, classification, analysis, and backtest scripts
-        run: python -m py_compile scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/backtest_datasportsapi.py
+        run: python -m py_compile scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/backtest_datasportsapi.py scripts/audit_datasportsapi_classification.py
 
       - name: Persist refreshed daily source snapshots
         run: |
@@ -76,6 +80,7 @@ jobs:
             data/database/table_tennis.sqlite
             data/raw/datasportsapi/*.json
             data/processed/datasportsapi_player_records.json
+            data/processed/datasportsapi_classification_audit.json
             data/processed/datasportsapi_quality_backtest.json
           if-no-files-found: error
           retention-days: 30
