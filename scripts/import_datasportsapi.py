@@ -28,7 +28,10 @@ def normalize_api_key(raw):
     # Mobile copy/paste can insert BOMs, zero-width formatting characters,
     # non-ASCII whitespace, or surrounding smart quotes. Remove only these
     # transport artifacts; never alter ordinary token characters.
-    value = raw.strip().strip('"\\'“”‘’').strip()
+    value = raw.strip()
+    quote_pairs = {'"': '"', "'": "'", "“": "”", "‘": "’"}
+    if len(value) >= 2 and value[0] in quote_pairs and value[-1] == quote_pairs[value[0]]:
+        value = value[1:-1].strip()
     value = "".join(
         ch for ch in value
         if unicodedata.category(ch) != "Cf" and not (
