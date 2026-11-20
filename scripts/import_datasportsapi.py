@@ -116,7 +116,7 @@ def import_fixture(conn, source_id, fixture):
                player_b_pk=?,sets_a=?,sets_b=?,winner_player_pk=?,raw_row_json=?,imported_at=CURRENT_TIMESTAMP
                WHERE match_pk=?""",
             (match_date, match_time, competition, player_a, player_b, sets_a, sets_b,
-             winner_pk if False else (player_a if winner_side == "home" else player_b),
+             player_a if winner_side == "home" else player_b,
              raw, match_pk),
         )
         conn.execute("DELETE FROM match_games WHERE match_pk=?", (match_pk,))
