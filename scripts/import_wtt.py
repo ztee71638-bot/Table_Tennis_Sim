@@ -2,12 +2,41 @@
 """Import the licensed WTT men's and women's CSVs into the shared SQLite schema."""
 import csv, hashlib, io, json, sqlite3, urllib.request, zipfile
 from datetime import datetime, timezone
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data/raw"
 DB = ROOT / "data/database/table_tennis.sqlite"
 URL = "https://osf.io/download/3f6ak/"
+EXPECTED_ARCHIVE_SHA256 = "5246b5fe1ba5d1d71edcef0e23ef0ee93d7289508dd0545fc124ed569f991409"
+
+
+def download_archive(url, attempts=4):
+    """Download the OSF archive with a long timeout and bounded retries."""
+    last_error = None
+    for attempt in range(1, attempts + 1):
+        try:
+            req = urllib.request.Request(url, headers={
+                "User-Agent": "TableTennisSim/1.0",
+                "Accept": "application/zip, application/octet-stream, */*",
+            })
+            with urllib.request.urlopen(req, timeout=300) as response:
+                data = response.read()
+            if not data:
+                raise IOError("OSF returned an empty archive")
+            actual = hashlib.sha256(data).hexdigest()
+            if actual != EXPECTED_ARCHIVE_SHA256:
+                raise ValueError(f"OSF archive checksum mismatch: {actual}")
+            return data
+        except (TimeoutError, OSError, urllib.error.URLError) as exc:
+            last_error = exc
+            if attempt == attempts:
+                break
+            delay = min(15 * (2 ** (attempt - 1)), 120)
+            print(f"OSF download attempt {attempt}/{attempts} failed: {exc}; retrying in {delay}s", flush=True)
+            time.sleep(delay)
+    raise RuntimeError(f"Could not download verified OSF archive after {attempts} attempts: {last_error}")
 FILES = {
     "wtt_men_2022_2025": ("table_tennis_wtt_men_std.csv", "WTT men's matches 2022-2025"),
     "wtt_women_2022_2025": ("table_tennis_wtt_women_std.csv", "WTT women's matches 2022-2025"),
@@ -37,13 +66,7 @@ def player_source_id(row, side, filename):
 def main():
     RAW.mkdir(parents=True, exist_ok=True)
     DB.parent.mkdir(parents=True, exist_ok=True)
-    req = urllib.request.Request(URL, headers={"User-Agent": "TableTennisSim/1.0"})
-    with urllib.request.urlopen(req, timeout=90) as r:
-        archive = r.read()
-    expected = "5246b5fe1ba5d1d71edcef0e23ef0ee93d7289508dd0545fc124ed569f991409"
-    actual = hashlib.sha256(archive).hexdigest()
-    if actual != expected:
-        raise ValueError(f"OSF archive checksum mismatch: {actual}")
+    archive = download_archive(URL)
     z = zipfile.ZipFile(io.BytesIO(archive))
     c = sqlite3.connect(DB)
     c.execute("PRAGMA foreign_keys=ON")
