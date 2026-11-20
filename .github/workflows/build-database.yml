@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "scripts/build_database.py"
+      - "scripts/import_wtt.py"
       - ".github/workflows/build-database.yml"
 
 permissions:
@@ -23,8 +24,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Download source CSVs and build SQLite database
+      - name: Download original sources and build base database
         run: python scripts/build_database.py
+
+      - name: Import WTT men's and women's historical matches
+        run: python scripts/import_wtt.py
 
       - name: Upload database and original source files
         uses: actions/upload-artifact@v4
