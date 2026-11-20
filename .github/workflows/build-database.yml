@@ -7,6 +7,7 @@ on:
     paths:
       - "scripts/build_database.py"
       - "scripts/import_wtt.py"
+      - "scripts/analyze_database.py"
       - ".github/workflows/build-database.yml"
 
 permissions:
@@ -30,12 +31,17 @@ jobs:
       - name: Import WTT men's and women's historical matches
         run: python scripts/import_wtt.py
 
-      - name: Upload database and original source files
+      - name: Audit database and generate chronological WTT features
+        run: python scripts/analyze_database.py
+
+      - name: Upload database, source files, audit report, and features
         uses: actions/upload-artifact@v4
         with:
           name: table-tennis-database-build
           path: |
             data/database/table_tennis.sqlite
             data/raw/*.csv
+            data/processed/database_quality_report.json
+            data/processed/wtt_pre_match_features.csv
           if-no-files-found: error
           retention-days: 30
