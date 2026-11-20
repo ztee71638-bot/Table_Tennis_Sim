@@ -21,13 +21,32 @@ class PolymarketScanTests(unittest.TestCase):
     def test_does_not_guess_pair_without_separator(self):
         self.assertEqual(MODULE.extract_player_pair("WTT Champions Men's Singles"), (None, None))
 
-    def test_exact_database_match(self):
+    def test_requires_explicit_table_tennis_tag(self):
+        self.assertTrue(MODULE.is_table_tennis_event({
+            "tags": [{"slug": "table-tennis", "label": "Table Tennis"}]
+        }))
+        self.assertFalse(MODULE.is_table_tennis_event({
+            "tags": [{"slug": "tennis", "label": "Tennis"}]
+        }))
+        self.assertFalse(MODULE.is_table_tennis_event({
+            "tags": [{"slug": "ebattles", "label": "eBattles"}]
+        }))
+
+    def test_exact_database_match_ignores_name_order(self):
         self.assertEqual(
-            MODULE.find_database_match("Fan Zhendong", ["Fan Zhendong", "Wang Chuqin"]),
-            ("exact", "Fan Zhendong", 1.0),
+            MODULE.find_database_match("Jingkun Liang", ["LIANG Jingkun", "Wang Chuqin"]),
+            ("exact_name_match_order_insensitive", "LIANG Jingkun", 1.0),
         )
 
-    def test_near_match_is_review_only(self):
+    def test_initial_abbreviation_is_review_only(self):
+        status, candidate, score = MODULE.find_database_match(
+            "Dukhovenko Oleksandr", ["Dukhovenko O.", "Wang Chuqin"]
+        )
+        self.assertEqual(status, "possible_name_match_review_only")
+        self.assertEqual(candidate, "Dukhovenko O.")
+        self.assertGreaterEqual(score, 0.90)
+
+    def test_typo_is_review_only(self):
         status, candidate, score = MODULE.find_database_match(
             "Fan Zhendongg", ["Fan Zhendong", "Wang Chuqin"]
         )

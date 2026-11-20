@@ -33,8 +33,8 @@ It searches public listings for table tennis, ping pong, WTT, Setka Cup, TT Elit
 
 ## Interpretation limits
 
-- Search results may omit listings or return non-table-tennis false positives; review the raw event titles and market payloads.
+- Search results may omit listings or return false positives; only active, non-closed events with Polymarket's explicit Table Tennis category/sport tag are retained. The report counts excluded search noise.
 - Player-pair parsing is attempted only when a title explicitly contains a `vs` or `versus` separator.
 - A Polymarket market listing is not proof that a player is active in a particular professional league.
-- Exact display-name matches do not prove two source records are the same person.
+- Name comparison ignores token order and can flag initial-abbreviation or close spelling matches for manual review. Even exact display-name matches do not prove two source records are the same person.
 - This first integration is a one-time scan per database-build run. It does not yet stream live prices or automatically alter simulator predictions.
