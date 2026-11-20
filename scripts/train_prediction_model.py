@@ -16,7 +16,7 @@ def fit(rows,cut):
  mu={f:avg([r[f] for r in t]) for f in FEATURES}
  sd={f:(statistics.pstdev([r[f] for r in t]) or 1) for f in FEATURES}
  X=[[1]+[(r[f]-mu[f])/sd[f] for f in FEATURES] for r in t]; Y=[r["y"] for r in t]; w=[0.0]*6
- for _ in range(1600):
+ for _ in range(500):
   g=[0.0]*6
   for x,y in zip(X,Y):
    p=sig(sum(a*b for a,b in zip(w,x)))
