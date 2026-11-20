@@ -1,0 +1,51 @@
+name: Deploy phone-friendly match simulator
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "scripts/export_web_app.py"
+      - "scripts/build_database.py"
+      - "scripts/import_wtt.py"
+      - "scripts/analyze_database.py"
+      - "scripts/train_prediction_model.py"
+      - ".github/workflows/deploy-simulator.yml"
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild validated database and model
+        run: |
+          python scripts/build_database.py
+          python scripts/import_wtt.py
+          python scripts/analyze_database.py
+          python scripts/train_prediction_model.py
+          python scripts/export_web_app.py
+      - name: Add Pages metadata
+        run: touch site/.nojekyll
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
