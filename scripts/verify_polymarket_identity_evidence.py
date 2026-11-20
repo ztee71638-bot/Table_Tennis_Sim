@@ -95,6 +95,34 @@ MATCH_LEVEL_EVIDENCE = [
         "source": "PongData independent match archive",
         "url": "https://pongdata.com/players/pilch-j-10xql5o5bp8/matches?year=2026",
     },
+    {
+        "candidate": "Jan Szotkowski", "source_player_id": "633703",
+        "opponent": "Tadeas Zika", "opponent_source_player_id": "168877",
+        "date": "2026-11-19", "sets": [(11, 8), (11, 2), (11, 8)],
+        "source": "PongData independent player match archive",
+        "url": "https://pongdata.com/players/szotkowski-j-98geod1q0w/matches?year=2026",
+    },
+    {
+        "candidate": "Jan Szotkowski", "source_player_id": "633703",
+        "opponent": "Ondrej Paril", "opponent_source_player_id": "51742",
+        "date": "2026-11-19", "sets": [(11, 4), (10, 12), (11, 6), (11, 4)],
+        "source": "PongData independent player match archive",
+        "url": "https://pongdata.com/players/szotkowski-j-98geod1q0w/matches?year=2026",
+    },
+    {
+        "candidate": "Jan Szotkowski", "source_player_id": "633703",
+        "opponent": "Radovan Polasek", "opponent_source_player_id": "51741",
+        "date": "2026-11-19", "sets": [(11, 9), (11, 6), (11, 7)],
+        "source": "PongData independent player match archive",
+        "url": "https://pongdata.com/players/szotkowski-j-98geod1q0w/matches?year=2026",
+    },
+    {
+        "candidate": "Jan Szotkowski", "source_player_id": "633703",
+        "opponent": "Michael Sedlacek", "opponent_source_player_id": "760418",
+        "date": "2026-11-19", "sets": [(11, 8), (11, 5), (11, 6)],
+        "source": "PongData independent player match archive",
+        "url": "https://pongdata.com/players/szotkowski-j-98geod1q0w/matches?year=2026",
+    },
 ]
 
 FIELDS = [
