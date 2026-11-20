@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only Polymarket US table-tennis market discovery and database coverage audit.
-
-This script uses only the public Polymarket US API through the official SDK.
-It does not access account data, place orders, or modify the simulator database.
-"""
+"""Read-only Polymarket US table-tennis discovery and database coverage audit."""
 from __future__ import annotations
 
 import csv
@@ -21,24 +17,38 @@ RAW_DIR = ROOT / "data/raw"
 OUT_DIR = ROOT / "data/processed"
 SOURCE_URL = "https://gateway.polymarket.us"
 SEARCH_TERMS = (
-    "table tennis",
-    "ping pong",
-    "WTT",
-    "Setka Cup",
-    "TT Elite",
-    "Czech Liga Pro",
-    "TT Cup",
+    "table tennis", "ping pong", "WTT", "Setka Cup",
+    "TT Elite", "Czech Liga Pro", "TT Cup",
 )
 VS_RE = re.compile(r"^(.+?)\s+(?:vs?\.?|versus)\s+(.+?)\s*$", re.IGNORECASE)
 
 
+def name_tokens(value: str) -> list[str]:
+    return re.findall(r"[a-z0-9]+", value.casefold())
+
+
 def norm_name(value: str) -> str:
-    """Normalize a display name for conservative comparison, not identity merging."""
-    return " ".join(re.findall(r"[a-z0-9]+", value.casefold()))
+    return " ".join(name_tokens(value))
+
+
+def is_table_tennis_event(event: dict) -> bool:
+    """Require Polymarket's explicit Table Tennis sport/category tag."""
+    tags = event.get("tags") if isinstance(event.get("tags"), list) else []
+    for tag in tags:
+        if not isinstance(tag, dict):
+            continue
+        sport = tag.get("sport") if isinstance(tag.get("sport"), dict) else {}
+        if (
+            str(tag.get("slug", "")).casefold() == "table-tennis"
+            or str(tag.get("label", "")).casefold() == "table tennis"
+            or str(sport.get("slug", "")).casefold() == "table-tennis"
+            or str(sport.get("name", "")).casefold() == "table tennis"
+        ):
+            return True
+    return False
 
 
 def extract_player_pair(title: str | None) -> tuple[str | None, str | None]:
-    """Extract a pair only when a title explicitly uses a vs/versus separator."""
     if not title:
         return None, None
     cleaned = re.sub(r"^(who will win|winner:?)\s*", "", str(title).strip(), flags=re.I)
@@ -58,12 +68,12 @@ def as_list(response: Any, key: str) -> list[dict]:
     return []
 
 
-def discover_events() -> list[dict]:
-    """Search several table-tennis phrases and deduplicate by stable event ID/slug."""
+def discover_events() -> tuple[list[dict], dict]:
+    """Search several phrases, then filter to active, tagged table-tennis events."""
     from polymarket_us import PolymarketUS
 
     client = PolymarketUS()
-    found: dict[str, dict] = {}
+    candidates: dict[str, dict] = {}
     try:
         for term in SEARCH_TERMS:
             response = client.search.query({"query": term, "limit": 100, "status": "active"})
@@ -71,22 +81,40 @@ def discover_events() -> list[dict]:
                 if not isinstance(event, dict):
                     continue
                 key = str(event.get("id") or event.get("slug") or json.dumps(event, sort_keys=True))
-                event_copy = dict(event)
-                event_copy.setdefault("_matched_search_terms", [])
-                event_copy["_matched_search_terms"] = sorted(
-                    set(event_copy["_matched_search_terms"]) | {term}
-                )
-                if key in found:
-                    event_copy["_matched_search_terms"] = sorted(
-                        set(found[key].get("_matched_search_terms", [])) | {term}
+                if key not in candidates:
+                    candidates[key] = dict(event)
+                    candidates[key]["_matched_search_terms"] = [term]
+                else:
+                    current = candidates[key]
+                    current["_matched_search_terms"] = sorted(
+                        set(current.get("_matched_search_terms", [])) | {term}
                     )
-                    # Prefer the response with the most complete event payload.
-                    if len(json.dumps(event_copy, default=str)) < len(json.dumps(found[key], default=str)):
-                        event_copy = found[key] | {"_matched_search_terms": event_copy["_matched_search_terms"]}
-                found[key] = event_copy
+                    if len(json.dumps(event, default=str)) > len(json.dumps(current, default=str)):
+                        merged_terms = current["_matched_search_terms"]
+                        candidates[key] = dict(event)
+                        candidates[key]["_matched_search_terms"] = merged_terms
     finally:
         client.close()
-    return sorted(found.values(), key=lambda e: (str(e.get("startTime") or ""), str(e.get("title") or "")))
+
+    events = []
+    excluded_non_table_tennis = 0
+    excluded_inactive_or_closed = 0
+    for event in candidates.values():
+        if not is_table_tennis_event(event):
+            excluded_non_table_tennis += 1
+            continue
+        if event.get("active") is False or event.get("closed") is True:
+            excluded_inactive_or_closed += 1
+            continue
+        events.append(event)
+
+    events.sort(key=lambda e: (str(e.get("startTime") or ""), str(e.get("title") or "")))
+    stats = {
+        "unique_search_results": len(candidates),
+        "excluded_non_table_tennis": excluded_non_table_tennis,
+        "excluded_inactive_or_closed_table_tennis": excluded_inactive_or_closed,
+    }
+    return events, stats
 
 
 def load_database_names() -> list[str]:
@@ -95,8 +123,7 @@ def load_database_names() -> list[str]:
     conn = sqlite3.connect(DB_PATH)
     try:
         rows = conn.execute(
-            """SELECT DISTINCT TRIM(display_name)
-               FROM players
+            """SELECT DISTINCT TRIM(display_name) FROM players
                WHERE display_name IS NOT NULL AND TRIM(display_name) <> ''
                ORDER BY display_name"""
         ).fetchall()
@@ -105,34 +132,63 @@ def load_database_names() -> list[str]:
         conn.close()
 
 
+def token_name_match(polymarket_name: str, database_name: str) -> str | None:
+    """Match tokens independent of order; allow one-letter initials for review."""
+    left = name_tokens(polymarket_name)
+    right = name_tokens(database_name)
+    if not left or len(left) != len(right):
+        return None
+    remaining = list(right)
+    used_initial = False
+    for token in sorted(left, key=len, reverse=True):
+        exact_index = next((i for i, candidate in enumerate(remaining) if candidate == token), None)
+        if exact_index is not None:
+            remaining.pop(exact_index)
+            continue
+        initial_index = next(
+            (i for i, candidate in enumerate(remaining)
+             if (len(candidate) == 1 and token.startswith(candidate))
+             or (len(token) == 1 and candidate.startswith(token))),
+            None,
+        )
+        if initial_index is None:
+            return None
+        used_initial = True
+        remaining.pop(initial_index)
+    return "initial" if used_initial else "exact"
+
+
 def find_database_match(name: str, database_names: list[str]) -> tuple[str, str, float | None]:
     target = norm_name(name)
-    exact = {norm_name(candidate): candidate for candidate in database_names}
-    if target in exact:
-        return "exact", exact[target], 1.0
-    close = difflib.get_close_matches(target, list(exact), n=1, cutoff=0.90)
+    for candidate in database_names:
+        if target == norm_name(candidate):
+            return "exact", candidate, 1.0
+
+    for candidate in database_names:
+        match_type = token_name_match(name, candidate)
+        if match_type == "exact":
+            return "exact_name_match_order_insensitive", candidate, 1.0
+        if match_type == "initial":
+            return "possible_name_match_review_only", candidate, 0.95
+
+    target_sorted = " ".join(sorted(name_tokens(name)))
+    candidate_keys = {" ".join(sorted(name_tokens(candidate))): candidate for candidate in database_names}
+    close = difflib.get_close_matches(target_sorted, list(candidate_keys), n=1, cutoff=0.90)
     if close:
-        candidate = close[0]
-        score = difflib.SequenceMatcher(None, target, candidate).ratio()
-        return "possible_name_match_review_only", exact[candidate], round(score, 4)
+        candidate_key = close[0]
+        score = difflib.SequenceMatcher(None, target_sorted, candidate_key).ratio()
+        return "possible_name_match_review_only", candidate_keys[candidate_key], round(score, 4)
     return "not_found", "", None
 
 
-def build_outputs(events: list[dict], database_names: list[str]) -> dict:
+def build_outputs(events: list[dict], database_names: list[str], discovery_stats: dict | None = None) -> dict:
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     retrieved_at = datetime.now(timezone.utc).isoformat()
-
     raw_path = RAW_DIR / "polymarket_us_table_tennis_events.json"
-    raw_path.write_text(
-        json.dumps(
-            {"source": SOURCE_URL, "retrieved_at_utc": retrieved_at, "events": events},
-            ensure_ascii=False,
-            indent=2,
-            default=str,
-        ),
-        encoding="utf-8",
-    )
+    raw_path.write_text(json.dumps({
+        "source": SOURCE_URL, "retrieved_at_utc": retrieved_at, "events": events
+    }, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
 
     event_rows: list[dict] = []
     market_rows: list[dict] = []
@@ -159,10 +215,17 @@ def build_outputs(events: list[dict], database_names: list[str]) -> dict:
             names = [pair[0], pair[1]]
             parsed_player_names.update(names)
 
+        tags = event.get("tags") if isinstance(event.get("tags"), list) else []
+        competition_tags = [
+            str(tag.get("label")) for tag in tags
+            if isinstance(tag, dict)
+            and str(tag.get("slug", "")).casefold() not in {"sports", "games", "table-tennis"}
+        ]
         event_rows.append({
             "event_id": event.get("id", ""),
             "event_slug": event.get("slug", ""),
             "event_title": event_title,
+            "competition_tags": ";".join(competition_tags),
             "start_time": event.get("startTime", ""),
             "end_time": event.get("endTime", ""),
             "active": event.get("active", ""),
@@ -172,7 +235,6 @@ def build_outputs(events: list[dict], database_names: list[str]) -> dict:
             "player_a": names[0] if len(names) > 0 else "",
             "player_b": names[1] if len(names) > 1 else "",
         })
-
         for market in markets:
             if not isinstance(market, dict):
                 continue
@@ -198,7 +260,11 @@ def build_outputs(events: list[dict], database_names: list[str]) -> dict:
             "database_status": status,
             "possible_database_name": match,
             "similarity": score if score is not None else "",
-            "identity_action": "none; manual verification required" if status != "exact" else "existing exact-name record; source identity still unverified",
+            "identity_action": (
+                "manual verification required; no automatic identity merge"
+                if status != "exact" else
+                "same normalized display name; source identity still unverified"
+            ),
         })
 
     def write_csv(path: Path, rows: list[dict]) -> None:
@@ -223,7 +289,10 @@ def build_outputs(events: list[dict], database_names: list[str]) -> dict:
         "events_with_unparsed_title": len(unparsed_titles),
         "distinct_polymarket_players_parsed": len(parsed_player_names),
         "database_player_names_checked": len(database_names),
-        "exact_name_matches": sum(r["database_status"] == "exact" for r in coverage_rows),
+        "exact_name_matches": sum(
+            r["database_status"] in {"exact", "exact_name_match_order_insensitive"}
+            for r in coverage_rows
+        ),
         "possible_name_matches_for_manual_review": sum(
             r["database_status"] == "possible_name_match_review_only" for r in coverage_rows
         ),
@@ -234,6 +303,7 @@ def build_outputs(events: list[dict], database_names: list[str]) -> dict:
         "access": "public read-only API; no API key or account credentials",
         "retrieved_at_utc": retrieved_at,
         "search_terms": list(SEARCH_TERMS),
+        "discovery_filter_stats": discovery_stats or {},
         "counts": counts,
         "unparsed_event_titles": unparsed_titles,
         "outputs": {
@@ -243,10 +313,11 @@ def build_outputs(events: list[dict], database_names: list[str]) -> dict:
             "player_coverage_csv": str(coverage_csv.relative_to(ROOT)),
         },
         "safety": [
+            "Only events carrying Polymarket's explicit Table Tennis category/sport tag are retained.",
+            "Only active, non-closed events are retained for this current-listings scan.",
             "No account, portfolio, wallet, or order endpoints were accessed.",
             "No orders were placed and no simulator database rows were changed.",
-            "Name similarity is a review hint only; no cross-source player identities were merged.",
-            "Event titles that do not explicitly identify a player pair are retained for manual review.",
+            "Name similarity and initial matches are review hints only; no player identities were merged.",
         ],
     }
     report_path = OUT_DIR / "polymarket_us_scan_report.json"
@@ -256,14 +327,10 @@ def build_outputs(events: list[dict], database_names: list[str]) -> dict:
 
 
 def main() -> None:
-    events = discover_events()
+    events, discovery_stats = discover_events()
     if not events:
-        raise RuntimeError(
-            "Polymarket US search returned no events for the configured table-tennis terms. "
-            "The scan is stopped rather than reporting an empty success."
-        )
-    names = load_database_names()
-    build_outputs(events, names)
+        raise RuntimeError("No active, explicitly tagged Polymarket US table-tennis events found.")
+    build_outputs(events, load_database_names(), discovery_stats)
 
 
 if __name__ == "__main__":
