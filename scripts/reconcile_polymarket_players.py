@@ -149,7 +149,9 @@ def player_candidates(name: str, history: list[dict], scope: str) -> list[dict]:
             "scope_match": bool(relevant),
         })
     scoped = [c for c in candidates if c["scope_match"]]
-    return scoped if scoped else candidates
+    usable = scoped if scoped else candidates
+    exact = [c for c in usable if c["match_type"] == "exact"]
+    return exact if exact else usable
 
 
 def summarize_candidate(candidate: dict | None, ambiguous: bool = False) -> dict:
