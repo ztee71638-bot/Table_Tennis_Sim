@@ -34,3 +34,10 @@ Independent references used for this initial batch:
 - PongData: Pilch match archive: https://pongdata.com/players/pilch-j-10xql5o5bp8/matches?year=2026
 
 These exact match fingerprints are strong corroboration, not final approval. All four candidate IDs remain `unverified` and `HOLD` pending human review. The script does not update player identities or simulator records.
+
+
+## Ambiguous Jan Szotkowski candidate: additional independent result correlations
+
+The PongData player page and its 2026 match archive list four 19 November results for Jan Szotkowski that match DataSportsAPI fixture records exactly by date, opponent source ID, and every set score: Tadeas Zika (fixture 1140596), Ondrej Paril (1140589), Radovan Polasek (1140575), and Michael Sedlacek (1140604). All four map to candidate source ID 633703 (displayed as “Szotkowski J.”); the other candidate ID 629357 (“Jan S.”) does not match these four fingerprints. Reference: https://pongdata.com/players/szotkowski-j-98geod1q0w/matches?year=2026
+
+This is materially stronger evidence for candidate 633703, but the profile does not publish the DataSportsAPI ID. Because the Polymarket name still has two candidate rows and the source ID namespaces are separate, the automated audit deliberately leaves both candidates unverified and the decision HOLD. A reviewer must make the final identity decision; no source ID or simulator record is changed by this evidence.
