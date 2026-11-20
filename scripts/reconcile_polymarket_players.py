@@ -108,31 +108,15 @@ def load_source_history(conn: sqlite3.Connection) -> tuple[list[dict], dict]:
     rows = conn.execute(
         """SELECT m.match_date,m.match_time,m.competition,m.source_match_id,
                   m.sets_a,m.sets_b,m.winner_player_pk,
-                  a.source_player_id AS a_id,a.display_name AS a_name,
-                  b.source_player_id AS b_id,b.display_name AS b_name
-           FROM matches m
-           JOIN players a ON a.player_pk=m.player_a_pk
-           JOIN players b ON b.player_pk=m.player_b_pk
-           WHERE m.source_id=? AND m.winner_player_pk IS NOT NULL
-           ORDER BY m.match_date,m.match_time,m.match_pk""",
-        (source_id,),
-    ).fetchall()
-    history = []
-    for row in rows:
-        item = dict(row)
-        item["a_won"] = item["winner_player_pk"] == item["player_a_pk"] if "player_a_pk" in item else None
-        history.append(item)
-    # Re-read winner side using player IDs because the first projection is intentionally source-scoped.
-    rows = conn.execute(
-        """SELECT m.match_date,m.match_time,m.competition,m.source_match_id,
-                  m.sets_a,m.sets_b,m.winner_player_pk,
                   m.player_a_pk,m.player_b_pk,
                   a.player_pk AS a_pk,a.source_player_id AS a_id,a.display_name AS a_name,
                   b.player_pk AS b_pk,b.source_player_id AS b_id,b.display_name AS b_name
            FROM matches m
            JOIN players a ON a.player_pk=m.player_a_pk
            JOIN players b ON b.player_pk=m.player_b_pk
+           JOIN datasportsapi_match_classification dc ON dc.match_pk=m.match_pk
            WHERE m.source_id=? AND m.winner_player_pk IS NOT NULL
+             AND dc.match_type='singles'
            ORDER BY m.match_date,m.match_time,m.match_pk""",
         (source_id,),
     ).fetchall()
@@ -145,11 +129,11 @@ def player_candidates(name: str, history: list[dict], scope: str) -> list[dict]:
     for match in history:
         for side in ("a", "b"):
             pid = match[f"{side}_id"]
-            player_map[pid] = {
+            player_map.setdefault(pid, {
                 "source_player_id": pid,
                 "display_name": match[f"{side}_name"],
                 "matches": [],
-            }
+            })
             player_map[pid]["matches"].append(match)
 
     candidates = []
