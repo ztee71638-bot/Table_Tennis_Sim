@@ -138,7 +138,5 @@ jobs:
             data/processed/polymarket_identity_review_queue.csv
             data/processed/polymarket_identity_evidence_audit.csv
             data/processed/polymarket_identity_evidence_report.json
-            data/processed/polymarket_identity_evidence_audit.csv
-            data/processed/polymarket_identity_evidence_report.json
           if-no-files-found: error
           retention-days: 30
