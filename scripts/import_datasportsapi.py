@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Incrementally import recent DataSportsAPI table-tennis results.
 
-The API key is read only from DATASPORTSAPI_KEY. Raw API pages are retained
-as dated JSON snapshots; provider IDs remain source-scoped.
+The key is read only from DATASPORTSAPI_KEY. Daily raw snapshots are committed
+to the repository so results older than the provider's seven-day API window
+remain available on subsequent ephemeral GitHub runners.
 """
 import hashlib
 import json
@@ -39,7 +40,7 @@ def request_page(date, page):
             payload = json.loads(body.decode("utf-8"))
             if not isinstance(payload, dict) or not isinstance(payload.get("data"), list):
                 raise ValueError(f"Unexpected API response envelope for {date} page {page}")
-            return payload, body
+            return payload, hashlib.sha256(body).hexdigest()
         except urllib.error.HTTPError as exc:
             detail = exc.read().decode("utf-8", errors="replace")[:1000]
             if exc.code in (401, 403):
@@ -77,11 +78,8 @@ def get_player(conn, source_id, participant):
     ).fetchone()[0]
 
 
-def parse_completed(conn, source_id, fixture):
-    if fixture.get("sport") != "table-tennis":
-        return "skip"
-    status = (fixture.get("status") or {}).get("type")
-    if status != "finished":
+def import_fixture(conn, source_id, fixture):
+    if fixture.get("sport") != "table-tennis" or (fixture.get("status") or {}).get("type") != "finished":
         return "skip"
     home, away = fixture.get("home"), fixture.get("away")
     if not home or not away:
@@ -98,16 +96,13 @@ def parse_completed(conn, source_id, fixture):
         winner_side = "home" if sets_a > sets_b else "away"
     if (winner_side == "home") != (sets_a > sets_b):
         raise ValueError("Winner conflicts with final set totals")
-    player_a = get_player(conn, source_id, home)
-    player_b = get_player(conn, source_id, away)
-    winner_pk = player_a if winner_side == "home" else player_b
+    player_a, player_b = get_player(conn, source_id, home), get_player(conn, source_id, away)
     start = fixture.get("startTime")
-    match_date = start[:10] if isinstance(start, str) and len(start) >= 10 else None
-    if not match_date:
+    if not isinstance(start, str) or len(start) < 10:
         raise ValueError("Finished fixture missing ISO startTime")
+    match_date = start[:10]
     match_time = start[11:19] if len(start) >= 19 else None
-    league = fixture.get("league") or {}
-    competition = league.get("name") or "Unknown competition"
+    competition = (fixture.get("league") or {}).get("name") or "Unknown competition"
     match_id = str(fixture["id"])
     raw = json.dumps(fixture, ensure_ascii=False, sort_keys=True)
     existing = conn.execute(
@@ -121,22 +116,23 @@ def parse_completed(conn, source_id, fixture):
                player_b_pk=?,sets_a=?,sets_b=?,winner_player_pk=?,raw_row_json=?,imported_at=CURRENT_TIMESTAMP
                WHERE match_pk=?""",
             (match_date, match_time, competition, player_a, player_b, sets_a, sets_b,
-             winner_pk, raw, match_pk),
+             winner_pk if False else (player_a if winner_side == "home" else player_b),
+             raw, match_pk),
         )
         conn.execute("DELETE FROM match_games WHERE match_pk=?", (match_pk,))
+        outcome = "updated"
     else:
         cur = conn.execute(
             """INSERT INTO matches(source_id,source_match_id,match_date,match_time,competition,
                player_a_pk,player_b_pk,sets_a,sets_b,winner_player_pk,raw_row_json)
                VALUES(?,?,?,?,?,?,?,?,?,?,?)""",
             (source_id, match_id, match_date, match_time, competition, player_a, player_b,
-             sets_a, sets_b, winner_pk, raw),
+             sets_a, sets_b, player_a if winner_side == "home" else player_b, raw),
         )
-        match_pk = cur.lastrowid
-    periods_a = hs.get("periods") or {}
-    periods_b = aws.get("periods") or {}
+        match_pk, outcome = cur.lastrowid, "inserted"
+    periods_a, periods_b = hs.get("periods") or {}, aws.get("periods") or {}
     keys = sorted(set(periods_a) & set(periods_b),
-                  key=lambda k: int(k.replace("period", "")) if k.startswith("period") and k[6:].isdigit() else 999)
+                  key=lambda k: int(k[6:]) if k.startswith("period") and k[6:].isdigit() else 999)
     for index, key in enumerate(keys, 1):
         pa, pb = periods_a[key], periods_b[key]
         if isinstance(pa, (int, float)) and isinstance(pb, (int, float)):
@@ -144,7 +140,7 @@ def parse_completed(conn, source_id, fixture):
                 "INSERT INTO match_games(match_pk,game_number,points_a,points_b) VALUES(?,?,?,?)",
                 (match_pk, index, int(pa), int(pb)),
             )
-    return "updated" if existing else "inserted"
+    return outcome
 
 
 def main():
@@ -155,35 +151,45 @@ def main():
     RAW.mkdir(parents=True, exist_ok=True)
     today = datetime.now(timezone.utc).date()
     dates = [(today - timedelta(days=i)).isoformat() for i in reversed(range(7))]
-    snapshots = []
-    fixtures_by_id = {}
     calls = 0
     for date in dates:
-        page = 0
+        pages, page = [], 0
         while True:
-            payload, body = request_page(date, page)
+            payload, digest = request_page(date, page)
             calls += 1
-            snapshots.append({"date": date, "page": page, "payload": payload,
-                              "sha256": hashlib.sha256(body).hexdigest()})
-            for fixture in payload["data"]:
-                if isinstance(fixture, dict) and fixture.get("id") is not None:
-                    fixtures_by_id[str(fixture["id"])] = fixture
+            pages.append({"page": page, "sha256": digest, "payload": payload})
             meta = payload.get("meta") or {}
-            if not meta.get("complete", True):
+            if meta.get("complete") is False:
                 raise RuntimeError(f"Provider marked {date} page {page} incomplete; refusing partial import.")
             if not meta.get("hasNextPage", False):
                 break
             page += 1
             if page > 99:
                 raise RuntimeError(f"Pagination exceeded documented page limit for {date}.")
-            time.sleep(6)  # Free plan rate limit is 10 requests/minute.
+            time.sleep(6)
+        snapshot = {"date": date, "retrieved_at": datetime.now(timezone.utc).isoformat(), "pages": pages}
+        path = RAW / f"fixtures_{date}.json"
+        path.write_text(json.dumps(snapshot, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8")
         if date != dates[-1]:
             time.sleep(6)
 
-    snapshot_path = RAW / f"fixtures_{today.isoformat()}.json"
-    snapshot_bytes = (json.dumps(snapshots, ensure_ascii=False, sort_keys=True, indent=2) + "\n").encode()
-    snapshot_path.write_bytes(snapshot_bytes)
-    snapshot_hash = hashlib.sha256(snapshot_bytes).hexdigest()
+    # Rebuild from every retained daily snapshot, not just the latest seven-day
+    # API window. The workflow commits these files so history survives runners.
+    fixtures_by_id = {}
+    for path in sorted(RAW.glob("fixtures_????-??-??.json")):
+        snapshot = json.loads(path.read_text(encoding="utf-8"))
+        for page in snapshot.get("pages", []):
+            payload = page.get("payload", {})
+            if not isinstance(payload.get("data"), list):
+                raise ValueError(f"Malformed retained snapshot: {path}")
+            for fixture in payload["data"]:
+                if isinstance(fixture, dict) and fixture.get("id") is not None:
+                    fixtures_by_id[str(fixture["id"])] = fixture
+
+    snapshot_hashes = []
+    for path in sorted(RAW.glob("fixtures_????-??-??.json")):
+        snapshot_hashes.append(hashlib.sha256(path.read_bytes()).hexdigest())
+    combined_hash = hashlib.sha256("".join(snapshot_hashes).encode()).hexdigest()
 
     conn = sqlite3.connect(DB)
     conn.execute("PRAGMA foreign_keys=ON")
@@ -192,10 +198,10 @@ def main():
         source_values = {
             "source_key": SOURCE_KEY, "source_name": SOURCE_NAME, "source_url": SOURCE_URL,
             "retrieved_at": datetime.now(timezone.utc).isoformat(),
-            "sha256": snapshot_hash, "row_count": len(fixtures_by_id),
-            "notes": "Free DataSportsAPI plan; provider-native fixture and competitor IDs; raw dated JSON pages retained. API terms permit own analysis/products but prohibit raw data redistribution.",
+            "sha256": combined_hash, "row_count": len(fixtures_by_id),
+            "notes": "Free DataSportsAPI plan; provider-native fixture and competitor IDs; daily raw JSON snapshots retained in repository. Terms permit own analysis/products but prohibit raw data redistribution.",
             "license_notes": "DataSportsAPI Terms of Service (2026-11-16): data may be used in own apps/products/analysis; raw data feed resale/redistribution prohibited.",
-            "access_notes": "Free plan; 7-day history; 1,000 requests/day during beta, then 100/day; 10 requests/minute. API key stored in GitHub Actions secret.",
+            "access_notes": "Free plan; 7-day API history; 1,000 requests/day during beta, then 100/day; 10 requests/minute. API key stored in GitHub Actions secret.",
         }
         values = {k: v for k, v in source_values.items() if k in source_cols}
         columns = list(values)
@@ -209,7 +215,7 @@ def main():
         inserted = updated = skipped = rejected = 0
         for fixture in fixtures_by_id.values():
             try:
-                outcome = parse_completed(conn, source_id, fixture)
+                outcome = import_fixture(conn, source_id, fixture)
                 if outcome == "inserted": inserted += 1
                 elif outcome == "updated": updated += 1
                 else: skipped += 1
@@ -220,19 +226,20 @@ def main():
             raise RuntimeError(f"{rejected} malformed finished fixture(s); transaction rolled back for review.")
         log_cols = table_columns(conn, "import_log")
         log_values = {
-            "source_id": source_id, "filename": snapshot_path.name, "sha256": snapshot_hash,
-            "file_sha256": snapshot_hash, "imported_at": datetime.now(timezone.utc).isoformat(),
+            "source_id": source_id, "filename": f"DataSportsAPI {len(dates)}-day refresh",
+            "sha256": combined_hash, "file_sha256": combined_hash,
+            "imported_at": datetime.now(timezone.utc).isoformat(),
             "rows_seen": len(fixtures_by_id), "rows_loaded": inserted + updated,
-            "status": "success", "notes": f"{calls} API calls; {inserted} inserted; {updated} updated; {skipped} non-finished/other-sport rows skipped; {rejected} quarantined.",
+            "status": "success", "notes": f"{calls} API calls; {len(snapshot_hashes)} retained daily snapshots; {inserted} inserted; {updated} updated; {skipped} non-finished/other-sport rows skipped; {rejected} quarantined.",
         }
         lv = {k: v for k, v in log_values.items() if k in log_cols}
         lc = list(lv)
         conn.execute(f"INSERT INTO import_log({','.join(lc)}) VALUES({','.join('?' for _ in lc)})",
                      [lv[k] for k in lc])
         conn.commit()
-        print(json.dumps({"provider": SOURCE_KEY, "dates_checked": dates, "api_calls": calls,
-                          "fixtures_seen": len(fixtures_by_id), "inserted": inserted, "updated": updated,
-                          "skipped": skipped, "rejected": rejected, "snapshot_sha256": snapshot_hash,
+        print(json.dumps({"provider": SOURCE_KEY, "dates_refreshed": dates, "api_calls": calls,
+                          "retained_daily_snapshots": len(snapshot_hashes), "fixtures_seen": len(fixtures_by_id),
+                          "inserted": inserted, "updated": updated, "skipped": skipped, "rejected": rejected,
                           "database_integrity": conn.execute("PRAGMA integrity_check").fetchone()[0]},
                          indent=2))
     except Exception:
