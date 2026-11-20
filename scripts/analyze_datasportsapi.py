@@ -26,6 +26,20 @@ def main():
           AND dc.match_type='singles'
         ORDER BY m.match_date,m.match_pk
     """, (SOURCE_KEY,)).fetchall()
+    # Keep only coherent completed singles results in every player statistic.
+    valid_rows = []
+    excluded_invalid = 0
+    for r in rows:
+        sa, sb = r["sets_a"], r["sets_b"]
+        winner_ok = r["winner_player_pk"] in (r["player_a_pk"], r["player_b_pk"])
+        score_ok = isinstance(sa, int) and isinstance(sb, int) and sa >= 0 and sb >= 0 and sa != sb and max(sa, sb) >= 3
+        side_ok = winner_ok and ((r["winner_player_pk"] == r["player_a_pk"]) == (sa > sb))
+        if score_ok and side_ok and r["match_date"]:
+            valid_rows.append(r)
+        else:
+            excluded_invalid += 1
+    rows = valid_rows
+
     classification_counts = dict(c.execute(
         "SELECT match_type,COUNT(*) FROM datasportsapi_match_classification "
         "GROUP BY match_type"
@@ -40,6 +54,7 @@ def main():
     for r in rows:
         by_id[r["aid"]] = r["aname"]
         by_id[r["bid"]] = r["bname"]
+    for r in rows:
         a_won = r["winner_player_pk"] == r["player_a_pk"]
         for pid, opp, won in ((r["aid"], r["bid"], a_won), (r["bid"], r["aid"], not a_won)):
             s = states[pid]
@@ -79,10 +94,12 @@ def main():
         }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps({"source": SOURCE_KEY, "individual_singles_matches": len(rows),
+                               "excluded_invalid_results": excluded_invalid,
                                "classification_counts": classification_counts,
                                "competitors": len(output), "records": output},
                               indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps({"source": SOURCE_KEY, "individual_singles_matches": len(rows),
+                      "excluded_invalid_results": excluded_invalid,
                       "classification_counts": classification_counts, "competitors": len(output),
                       "database_integrity": c.execute("PRAGMA integrity_check").fetchone()[0],
                       "output": str(OUT)}, indent=2))
