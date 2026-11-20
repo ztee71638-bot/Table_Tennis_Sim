@@ -7,7 +7,9 @@ on:
     paths:
       - "scripts/build_database.py"
       - "scripts/import_wtt.py"
-      - "scripts/analyze_database.py"\n      - "scripts/train_prediction_model.py"\n      - "scripts/simulate_match.py"
+      - "scripts/analyze_database.py"
+      - "scripts/train_prediction_model.py"
+      - "scripts/simulate_match.py"
       - ".github/workflows/build-database.yml"
 
 permissions:
@@ -34,7 +36,10 @@ jobs:
       - name: Audit database and generate chronological WTT features
         run: python scripts/analyze_database.py
 
-      - name: Train chronological prediction model and generate backtest\n        run: python scripts/train_prediction_model.py\n\n      - name: Upload database, source files, audit report, model, and features
+      - name: Train chronological prediction model and generate backtest
+        run: python scripts/train_prediction_model.py
+
+      - name: Upload database, source files, audit report, model, and features
         uses: actions/upload-artifact@v4
         with:
           name: table-tennis-database-build
@@ -42,6 +47,10 @@ jobs:
             data/database/table_tennis.sqlite
             data/raw/*.csv
             data/processed/database_quality_report.json
-            data/processed/wtt_pre_match_features.csv\n            data/processed/wtt_enhanced_features.csv\n            data/processed/prediction_model.json\n            data/processed/current_player_states.json\n            data/processed/prediction_backtest_report.json
+            data/processed/wtt_pre_match_features.csv
+            data/processed/wtt_enhanced_features.csv
+            data/processed/prediction_model.json
+            data/processed/current_player_states.json
+            data/processed/prediction_backtest_report.json
           if-no-files-found: error
           retention-days: 30
