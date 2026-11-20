@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+"""Import the licensed WTT men's and women's CSVs into the shared SQLite schema."""
+import csv, hashlib, io, json, sqlite3, urllib.request, zipfile
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+RAW = ROOT / "data/raw"
+DB = ROOT / "data/database/table_tennis.sqlite"
+URL = "https://osf.io/download/3f6ak/"
+FILES = {
+    "wtt_men_2022_2025": ("table_tennis_wtt_men_std.csv", "WTT men's matches 2022-2025"),
+    "wtt_women_2022_2025": ("table_tennis_wtt_women_std.csv", "WTT women's matches 2022-2025"),
+}
+def get_player(c, sid, pid, name):
+    c.execute("""INSERT INTO players(source_id,source_player_id,display_name)
+                 VALUES(?,?,?) ON CONFLICT(source_id,source_player_id)
+                 DO UPDATE SET display_name=excluded.display_name""", (sid,str(pid),name))
+    return c.execute("SELECT player_pk FROM players WHERE source_id=? AND source_player_id=?",(sid,str(pid))).fetchone()[0]
+def main():
+    RAW.mkdir(parents=True,exist_ok=True); DB.parent.mkdir(parents=True,exist_ok=True)
+    req=urllib.request.Request(URL,headers={"User-Agent":"TableTennisSim/1.0"})
+    with urllib.request.urlopen(req,timeout=90) as r: archive=r.read()
+    expected="5246b5fe1ba5d1d71edcef0e23ef0ee93d7289508dd0545fc124ed569f991409"
+    actual=hashlib.sha256(archive).hexdigest()
+    if actual != expected: raise ValueError(f"OSF archive checksum mismatch: {actual}")
+    z=zipfile.ZipFile(io.BytesIO(archive))
+    c=sqlite3.connect(DB); c.execute("PRAGMA foreign_keys=ON")
+    try:
+      for key,(filename,label) in FILES.items():
+        data=z.read(filename); (RAW/filename).write_bytes(data)
+        digest=hashlib.sha256(data).hexdigest()
+        rows=list(csv.DictReader(io.StringIO(data.decode("utf-8-sig"))))
+        expected_rows=5442 if key.endswith("men_2022_2025") else 4850
+        if len(rows)!=expected_rows: raise ValueError(f"{filename}: expected {expected_rows}, got {len(rows)}")
+        c.execute("""INSERT INTO sources(source_key,source_name,source_url,retrieved_at,sha256,row_count,notes)
+          VALUES(?,?,?,?,?,?,?) ON CONFLICT(source_key) DO UPDATE SET source_name=excluded.source_name,
+          source_url=excluded.source_url,retrieved_at=excluded.retrieved_at,sha256=excluded.sha256,
+          row_count=excluded.row_count,notes=excluded.notes""",
+          (key,label,URL,datetime.now(timezone.utc).isoformat(),digest,len(rows),
+           "CC BY 4.0; OSF DOI 10.17605/OSF.IO/PJUW8; source-native IDs retained."))
+        sid=c.execute("SELECT source_id FROM sources WHERE source_key=?",(key,)).fetchone()[0]
+        c.execute("DELETE FROM raw_import_rows WHERE source_id=?",(sid,))
+        c.execute("DELETE FROM matches WHERE source_id=?",(sid,))
+        c.execute("DELETE FROM players WHERE source_id=? AND player_pk NOT IN (SELECT player_pk_a FROM identity_links UNION SELECT player_pk_b FROM identity_links)",(sid,))
+        for n,row in enumerate(rows,1):
+          payload=json.dumps(row,ensure_ascii=False,sort_keys=True)
+          c.execute("INSERT INTO raw_import_rows(source_id,row_number,payload_json) VALUES(?,?,?)",(sid,n,payload))
+          a=get_player(c,sid,row["a_id_raw"],row["player1_name"])
+          b=get_player(c,sid,row["x_id_raw"],row["player2_name"])
+          games=[]
+          for part in row["score"].split(","):
+            bits=part.strip().split("-")
+            if len(bits)==2:
+              try: games.append((int(bits[0]),int(bits[1])))
+              except ValueError: pass
+          sa=sum(x>y for x,y in games); sb=sum(y>x for x,y in games)
+          winner = a if row["winner"]=="1" else b if row["winner"]=="2" else None
+          mid=row["match_id"]
+          c.execute("""INSERT INTO matches(source_id,source_match_id,match_date,competition,
+            player_a_pk,player_b_pk,sets_a,sets_b,winner_player_pk,raw_row_json)
+            VALUES(?,?,?,?,?,?,?,?,?,?)""",
+            (sid,mid,row["event_date"],row["event_name"],a,b,sa,sb,winner,payload))
+          mpk=c.execute("SELECT last_insert_rowid()").fetchone()[0]
+          for i,(pa,pb) in enumerate(games,1):
+            c.execute("INSERT INTO match_games(match_pk,game_number,points_a,points_b) VALUES(?,?,?,?)",(mpk,i,pa,pb))
+        c.execute("""INSERT INTO import_log(source_id,filename,sha256,imported_at,rows_seen,rows_loaded,status,notes)
+          VALUES(?,?,?,?,?,?,?,?)""",(sid,filename,digest,datetime.now(timezone.utc).isoformat(),len(rows),len(rows),"success","Rows preserved; set and game scores parsed from score field."))
+        print(f"{key}: {len(rows)} matches loaded; {len(set(r['a_id_raw'] for r in rows)|set(r['x_id_raw'] for r in rows))} source player IDs")
+      c.commit()
+    except:
+      c.rollback(); raise
+    finally: c.close()
+if __name__=="__main__": main()
