@@ -41,14 +41,17 @@ This project is free-only. A source is not automatically imported just because i
 
 ### 11EDGE
 - https://11edge.io/
-- Site advertises 109,000+ matches since 2017, 5,000+ players, and 180+ competitions, including WTT and national leagues; full history is available with a free account.
-- Free bulk export, automation permission, and reuse terms are not yet verified. Do not scrape or bulk-download until confirmed.
+- Site advertises 109,000+ matches since 2017, 5,000+ players, and 180+ competitions, including WTT and national leagues.
+- Terms of service (updated 2026-04-19): read access is public, but scraping, copying, or massively redistributing content is prohibited; raw sports data remains owned by third parties. This project therefore does not scrape, bulk-copy, or automate extraction from 11EDGE.
+- It may be used for manual research and source discovery only. No export or redistribution rights are assumed.
 
 ### PongIQ public API (supplementary, not assumed professional)
 - Developer documentation: https://www.pongiq.app/developers
-- Free, read-only API with no key currently required; exposes published events, categories, match scores, and rankings.
-- Coverage depends on events using PongIQ; it is not a comprehensive professional-league feed. Keep any imported records tagged as community/tournament data unless competition status is independently verified.
-- Respect caching guidance and future rate limits.
+- Free, read-only API; no API key required at the time checked. Published events, categories, match scores, and rankings are documented.
+- Coverage depends on organisers using PongIQ; it is not a comprehensive professional-league feed. Example data includes local/community events and demonstration match payloads.
+- The repository now runs a source-health probe every six hours and on manual dispatch. It saves a raw events snapshot and health report as a short-retention GitHub Actions artifact.
+- The probe does not import these records into the professional WTT database. Event authenticity, category, match score schema, and reuse terms must be independently checked before a separate supplementary import is approved.
+- Respect the provider's caching guidance and future rate limits.
 
 ## Useful for discovery, but not free historical bulk feeds
 
