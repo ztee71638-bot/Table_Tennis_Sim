@@ -2,6 +2,14 @@ name: Build table-tennis database
 
 on:
   workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/scan_polymarket_table_tennis.py"
+      - "tests/test_polymarket_scan.py"
+      - "docs/polymarket_us_integration.md"
+      - "SOURCES.md"
+      - ".github/workflows/build-database.yml"
   push:
     branches: [main]
     paths:
@@ -11,6 +19,8 @@ on:
       - "scripts/train_prediction_model.py"
       - "scripts/simulate_match.py"
       - "scripts/smoke_test_simulator.py"
+      - "scripts/scan_polymarket_table_tennis.py"
+      - "tests/test_polymarket_scan.py"
       - ".github/workflows/build-database.yml"
 
 permissions:
@@ -28,6 +38,12 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install read-only Polymarket US SDK
+        run: python -m pip install --upgrade pip polymarket-us
+
+      - name: Run Polymarket scanner unit tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v
+
       - name: Download original sources and build base database
         run: python scripts/build_database.py
 
@@ -37,27 +53,35 @@ jobs:
       - name: Audit database and generate chronological WTT features
         run: python scripts/analyze_database.py
 
+      - name: Scan public Polymarket US table-tennis listings and compare player coverage
+        run: python scripts/scan_polymarket_table_tennis.py
+
       - name: Train chronological prediction model and generate backtest
         run: python scripts/train_prediction_model.py
 
       - name: Compile prediction scripts
-        run: python -m py_compile scripts/train_prediction_model.py scripts/simulate_match.py scripts/smoke_test_simulator.py
+        run: python -m py_compile scripts/train_prediction_model.py scripts/simulate_match.py scripts/smoke_test_simulator.py scripts/scan_polymarket_table_tennis.py
 
       - name: Run 100000-simulation smoke test
         run: python scripts/smoke_test_simulator.py
 
-      - name: Upload database, source files, audit report, model, and features
+      - name: Upload database, source files, audit reports, Polymarket scan, model, and features
         uses: actions/upload-artifact@v4
         with:
           name: table-tennis-database-build
           path: |
             data/database/table_tennis.sqlite
             data/raw/*.csv
+            data/raw/polymarket_us_table_tennis_events.json
             data/processed/database_quality_report.json
             data/processed/wtt_pre_match_features.csv
             data/processed/wtt_enhanced_features.csv
             data/processed/prediction_model.json
             data/processed/current_player_states.json
             data/processed/prediction_backtest_report.json
+            data/processed/polymarket_us_events.csv
+            data/processed/polymarket_us_markets.csv
+            data/processed/polymarket_us_player_coverage.csv
+            data/processed/polymarket_us_scan_report.json
           if-no-files-found: error
           retention-days: 30
