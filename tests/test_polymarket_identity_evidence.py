@@ -65,6 +65,35 @@ class IdentityEvidenceAuditTests(unittest.TestCase):
         self.assertTrue(all(r["decision"] == "HOLD" for r in audit))
         self.assertEqual(sum(int(r["matched_independent_result_count"]) for r in audit), 6)
 
+    def test_szotkowski_profile_correlates_four_exact_results_but_keeps_ambiguous_ids_on_hold(self):
+        fixtures = [
+            {"id": 1140596, "_snapshot_date": "2026-11-19", "league": {"name": "Czech Liga Pro"},
+             "home": {"id": 168877}, "away": {"id": 633703},
+             "homeScore": {"periods": {"period1": 8, "period2": 2, "period3": 8}},
+             "awayScore": {"periods": {"period1": 11, "period2": 11, "period3": 11}}},
+            {"id": 1140589, "_snapshot_date": "2026-11-19", "league": {"name": "Czech Liga Pro"},
+             "home": {"id": 633703}, "away": {"id": 51742},
+             "homeScore": {"periods": {"period1": 11, "period2": 10, "period3": 11, "period4": 11}},
+             "awayScore": {"periods": {"period1": 4, "period2": 12, "period3": 6, "period4": 4}}},
+            {"id": 1140575, "_snapshot_date": "2026-11-19", "league": {"name": "Czech Liga Pro"},
+             "home": {"id": 51741}, "away": {"id": 633703},
+             "homeScore": {"periods": {"period1": 9, "period2": 6, "period3": 7}},
+             "awayScore": {"periods": {"period1": 11, "period2": 11, "period3": 11}}},
+            {"id": 1140604, "_snapshot_date": "2026-11-19", "league": {"name": "Czech Liga Pro"},
+             "home": {"id": 760418}, "away": {"id": 633703},
+             "homeScore": {"periods": {"period1": 8, "period2": 5, "period3": 6}},
+             "awayScore": {"periods": {"period1": 11, "period2": 11, "period3": 11}}},
+        ]
+        row = {"polymarket_player": "Jan Szotkowski", "competition_scope": "Czech Liga Pro",
+               "database_status": "ambiguous_candidate", "candidate_count": "2",
+               "candidate_options_json": '[{"source_player_id":"629357"},{"source_player_id":"633703"}]'}
+        result = MODULE.build_audit([row], fixtures)[0]
+        self.assertEqual(result["independent_evidence_status"], "match_level_records_correlated")
+        self.assertEqual(result["matched_fixture_ids"], "1140575;1140589;1140596;1140604")
+        self.assertEqual(result["matched_independent_result_count"], 4)
+        self.assertEqual(result["source_player_id_link_status"], "unverified")
+        self.assertEqual(result["decision"], "HOLD")
+
     def test_wrong_score_does_not_correlate(self):
         evidence = MODULE.MATCH_LEVEL_EVIDENCE[0]
         fixture = {"id": 1, "_snapshot_date": "2026-11-19",
