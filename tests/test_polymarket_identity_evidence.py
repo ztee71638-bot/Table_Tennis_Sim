@@ -35,7 +35,7 @@ class IdentityEvidenceAuditTests(unittest.TestCase):
         result = MODULE.build_audit([row])[0]
         self.assertEqual(result["independent_evidence_status"], "not_yet_checked")
         self.assertEqual(result["evidence_url"], "")
-        self.assertIn("site:", result["search_hint"])
+        self.assertIn("Czech Liga Pro", result["search_hint"])
         self.assertEqual(result["decision"], "HOLD")
 
     def test_ambiguous_identity_is_never_automatically_selected(self):
