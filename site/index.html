@@ -42,7 +42,7 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 const $=id=>document.getElementById(id);let pools={},model={};
 const avg=a=>a&&a.length?a.reduce((s,x)=>s+x,0)/a.length:0;
 const sigmoid=z=>1/(1+Math.exp(-Math.max(-30,Math.min(30,z))));
-function resolve(pool,s){if(pool[s])return s;const m=s.match(/^(.*) \\[([^\\]]+)\\]$/);if(m&&pool[m[2]]&&pool[m[2]].display_name===m[1])return m[2];const ids=Object.keys(pool).filter(id=>pool[id].display_name===s);return ids.length===1?ids[0]:null}
+function resolve(pool,s){if(pool[s])return s;const i=s.lastIndexOf(' [');if(i>0&&s.endsWith(']')){const id=s.slice(i+2,-1);if(pool[id]&&pool[id].display_name===s.slice(0,i))return id;}const ids=Object.keys(pool).filter(id=>pool[id].display_name===s);return ids.length===1?ids[0]:null}
 function fmt(x){return (100*x).toFixed(1)+'%'}
 function mean(arr){return arr.length?avg(arr):0}
 function simulate(aid,bid,comp){
