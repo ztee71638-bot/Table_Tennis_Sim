@@ -1,0 +1,44 @@
+name: Monitor supplementary table-tennis results source
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/probe_pongiq.py"
+      - ".github/workflows/monitor-pongiq.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pongiq-source-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Probe documented public events endpoint
+        run: python scripts/probe_pongiq.py
+
+      - name: Upload source snapshot and health report
+        uses: actions/upload-artifact@v4
+        with:
+          name: pongiq-source-monitor
+          path: |
+            data/source_monitor/pongiq_events_latest.json
+            data/source_monitor/pongiq_source_health.json
+          if-no-files-found: error
+          retention-days: 14
