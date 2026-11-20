@@ -29,7 +29,7 @@ SEARCH_TERMS = (
     "Czech Liga Pro",
     "TT Cup",
 )
-VS_RE = re.compile(r"^(.+?)\s+(?:vs?\\.?|versus)\s+(.+?)\s*$", re.IGNORECASE)
+VS_RE = re.compile(r"^(.+?)\s+(?:vs?\.?|versus)\s+(.+?)\s*$", re.IGNORECASE)
 
 
 def norm_name(value: str) -> str:
