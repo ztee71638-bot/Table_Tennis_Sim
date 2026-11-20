@@ -29,11 +29,11 @@ class PolymarketScanTests(unittest.TestCase):
 
     def test_near_match_is_review_only(self):
         status, candidate, score = MODULE.find_database_match(
-            "Fan Zhendong", ["Fan Zhendong", "Wang Chuqin"]
+            "Fan Zhendongg", ["Fan Zhendong", "Wang Chuqin"]
         )
-        self.assertEqual(status, "exact")
+        self.assertEqual(status, "possible_name_match_review_only")
         self.assertEqual(candidate, "Fan Zhendong")
-        self.assertEqual(score, 1.0)
+        self.assertGreaterEqual(score, 0.90)
 
 
 if __name__ == "__main__":
