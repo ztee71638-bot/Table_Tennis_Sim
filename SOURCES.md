@@ -53,6 +53,16 @@ This project is free-only. A source is not automatically imported just because i
 - The probe does not import these records into the professional WTT database. Event authenticity, category, match score schema, and reuse terms must be independently checked before a separate supplementary import is approved.
 - Respect the provider's caching guidance and future rate limits.
 
+
+### Polymarket US public listings (discovery only)
+- Public API: https://gateway.polymarket.us
+- Official Python SDK: https://github.com/Polymarket/polymarket-us-python
+- Integrated by `scripts/scan_polymarket_table_tennis.py` during the database build.
+- Searches public event listings for table-tennis terms and compares explicitly named players with source-scoped player display names.
+- No API key or account permissions are required. No account, wallet, portfolio, or trading endpoints are used.
+- Event/market snapshots are retained as raw discovery data; they are not imported as historical match results. Possible name matches are review-only and never auto-merged.
+- See `docs/polymarket_us_integration.md` for output files and limitations.
+
 ## Useful for discovery, but not free historical bulk feeds
 
 ### Table Tennis API
