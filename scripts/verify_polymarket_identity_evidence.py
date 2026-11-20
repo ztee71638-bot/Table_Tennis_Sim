@@ -123,6 +123,30 @@ MATCH_LEVEL_EVIDENCE = [
         "source": "PongData independent player match archive",
         "url": "https://pongdata.com/players/szotkowski-j-98geod1q0w/matches?year=2026",
     },
+    {
+        "candidate": "Michal Regner", "source_player_id": "625295",
+        "opponent": "Sebastian Kasnik", "opponent_source_player_id": "632087",
+        "date": "2026-11-19", "competition": "Czech Liga Pro",
+        "sets": [(12, 10), (5, 11), (8, 11), (8, 11)],
+        "source": "PongData independent player match archive",
+        "url": "https://pongdata.com/players/regner-m-lvnv22cdhn/matches?year=2026",
+    },
+    {
+        "candidate": "Kozachuk Ivan", "source_player_id": "4355",
+        "opponent": "Denys Shcherbak", "opponent_source_player_id": "278226",
+        "date": "2026-11-19", "competition": "Setka Cup",
+        "sets": [(6, 11), (9, 11), (11, 5), (12, 10), (6, 11)],
+        "source": "24live independent Setka Cup match result",
+        "url": "https://24live.com/page/sport/participant/table-tennis-22/1006413",
+    },
+    {
+        "candidate": "Kozachuk Ivan", "source_player_id": "4355",
+        "opponent": "Denys Pesternikov", "opponent_source_player_id": "278225",
+        "date": "2026-11-19", "competition": "Setka Cup",
+        "sets": [(11, 2), (11, 6), (11, 5)],
+        "source": "24live independent Setka Cup match result",
+        "url": "https://24live.com/page/sport/participant/table-tennis-22/1006413",
+    },
 ]
 
 FIELDS = [
@@ -174,7 +198,8 @@ def load_fixtures(raw_dir: Path) -> list[dict]:
 
 
 def _exact_fixture_match(evidence: dict, fixture: dict) -> bool:
-    if (fixture.get("league") or {}).get("name") != "Czech Liga Pro":
+    expected_competition = evidence.get("competition", "Czech Liga Pro")
+    if (fixture.get("league") or {}).get("name") != expected_competition:
         return False
     if fixture.get("_snapshot_date") != evidence["date"]:
         return False
