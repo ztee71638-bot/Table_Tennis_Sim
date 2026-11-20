@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101827"><title>Table Tennis Match Simulator</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#141f30;--line:#2a3a50;--muted:#a8b6c9;--text:#f3f6fb;--accent:#68d5bd;--warn:#f6c76b;--bad:#ff8585}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:820px;margin:auto;padding:22px 16px 48px}header{margin:8px 0 22px}h1{font-size:27px;margin:0 0 6px}p{color:var(--muted);line-height:1.5;margin:6px 0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:17px;margin:14px 0}
+label{display:block;font-weight:650;margin:12px 0 6px}input,select,button{width:100%;border-radius:10px;border:1px solid var(--line);background:#0d1726;color:var(--text);font:inherit;padding:13px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.btn{background:var(--accent);color:#06221c;border:0;font-weight:800;margin-top:18px}.btn:disabled{opacity:.5}
+.muted{color:var(--muted);font-size:13px}.result{display:none}.decision{font-size:22px;font-weight:850;margin:4px 0 12px}.pass{color:var(--warn)}.lean{color:var(--accent)}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.metric{background:#0d1726;border-radius:12px;padding:12px}.metric strong{display:block;font-size:20px;margin-top:4px}
+ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn);padding:8px 12px;background:#241f15;border-radius:6px;color:#f7dfad;margin-top:12px}
+.error{color:var(--bad)}footer{font-size:12px;color:var(--muted);margin-top:20px}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.panel{padding:14px}h1{font-size:24px}}
+</style></head>
+<body><main>
+<header><h1>Table Tennis Match Simulator</h1><p>Compare two players using historical WTT records, form, head-to-head and shared opponents.</p></header>
+<section class="panel">
+<div id="load">Loading player database…</div>
+<div id="form" hidden>
+<label for="source">Dataset</label><select id="source"></select>
+<div class="grid"><div><label for="a">Player A</label><input id="a" list="players" placeholder="Search player A" autocomplete="off"></div><div><label for="b">Player B</label><input id="b" list="players" placeholder="Search player B" autocomplete="off"></div></div>
+<datalist id="players"></datalist>
+<label for="competition">Competition (optional)</label><input id="competition" placeholder="Use exact competition name, or leave blank">
+<button class="btn" id="run">Run 100,000 simulations</button>
+<p class="muted">Names are source-specific. If a name is duplicated, use the source player ID shown in the search list.</p>
+</div></section>
+<section class="panel result" id="result" aria-live="polite">
+<div class="muted">Decision</div><div class="decision" id="decision"></div><p id="reason"></p>
+<div class="metrics" id="metrics"></div>
+<div id="warnings"></div><h3>Shared-opponent comparison</h3><div id="h2h"></div>
+</section>
+<section class="panel"><b>How the PASS filter works</b><ul>
+<li>Each player must have at least 10 prior recorded matches.</li><li>The enhanced model must beat the Elo baseline on chronological holdout Brier score.</li><li>The selected side must have at least 65% model probability.</li><li>More than 120 days without a recorded match triggers a context warning, not an automatic PASS.</li>
+</ul><p class="muted">The Monte Carlo interval measures simulation noise only, not model uncertainty. This is research output, not a guarantee or a live betting recommendation.</p></section>
+<footer id="freshness"></footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);let pools={},model={};
+const avg=a=>a&&a.length?a.reduce((s,x)=>s+x,0)/a.length:0;
+const sigmoid=z=>1/(1+Math.exp(-Math.max(-30,Math.min(30,z))));
+function resolve(pool,s){if(pool[s])return s;const ids=Object.keys(pool).filter(id=>pool[id].display_name===s);return ids.length===1?ids[0]:null}
+function fmt(x){return (100*x).toFixed(1)+'%'}
+function mean(arr){return arr.length?avg(arr):0}
+function simulate(aid,bid,comp){
+ const pool=pools[$('source').value],a=pool[aid],b=pool[bid];
+ const age=s=>s.last_date?Math.floor((Date.now()-new Date(s.last_date+'T00:00:00Z'))/86400000):36500;
+ const da=age(a),db=age(b),fa=a.recent_form_last10||[],fb=b.recent_form_last10||[];
+ const ca=(a.competition_form||{})[comp]||[],cb=(b.competition_form||{})[comp]||[];
+ const h=(a.h2h_last10||{})[bid]||[];
+ const common=Object.keys(a.opponent_records||{}).filter(k=>b.opponent_records&&b.opponent_records[k]);
+ const diffs=[],details=[];for(const id of common){const x=a.opponent_records[id],y=b.opponent_records[id],nx=x.wins+x.losses,ny=y.wins+y.losses;if(nx&&ny){diffs.push(x.wins/nx-y.wins/ny);details.push({id,x,y});}}
+ const features={elo_diff_400:(a.elo-b.elo)/400,form_diff_10:mean(fa)-mean(fb),competition_form_diff_10:mean(ca)-mean(cb),h2h_diff_10:h.length?2*mean(h)-1:0,inactivity_diff_30:Math.max(-1,Math.min(1,(db-da)/30)),common_opponent_diff:mean(diffs),common_opponents_count:Math.min(diffs.length,20)/20};
+ let z=model.intercept;for(const [k,v] of Object.entries(features))z+=model.weights[k]*(v-model.means[k])/model.scales[k];const p=sigmoid(z),elo=1/(1+Math.pow(10,(b.elo-a.elo)/400));
+ let lo=.000001,hi=.999999;for(let i=0;i<70;i++){const q=(lo+hi)/2;if(10*q**3-15*q**4+6*q**5<p)lo=q;else hi=q;}const q=(lo+hi)/2;
+ let wins=0;for(let i=0;i<100000;i++){let sa=0,sb=0;while(sa<3&&sb<3){if(Math.random()<q)sa++;else sb++;}if(sa>sb)wins++;}
+ const sim=wins/100000,se=Math.sqrt(sim*(1-sim)/100000),enh=model.holdout_metrics.enhanced.brier,base=model.holdout_metrics.elo.brier;
+ const selected=Math.max(p,1-p),eligible=a.matches>=10&&b.matches>=10&&enh<base&&selected>=.65;
+ const winner=p>=.5?a.display_name: b.display_name;
+ return {a,b,p,elo,sim,se,da,db,details,features,eligible,winner,enh,base};
+}
+function show(r){$('result').style.display='block';$('decision').textContent=r.eligible?'MODEL LEAN: '+r.winner:'PASS — NO BET';$('decision').className='decision '+(r.eligible?'lean':'pass');
+ const reasons=[];if(r.a.matches<10)reasons.push('Player A has fewer than 10 prior matches.');if(r.b.matches<10)reasons.push('Player B has fewer than 10 prior matches.');if(!(r.enh<r.base))reasons.push('Enhanced model has not beaten Elo on holdout Brier score.');if(Math.max(r.p,1-r.p)<.65)reasons.push('Neither side reaches the 65% probability threshold.');$('reason').textContent=reasons.length?reasons.join(' '):'All three model eligibility checks passed. This is a model lean, not a guarantee.';
+$('metrics').innerHTML=[['Model probability — A',fmt(r.p)],['Elo probability — A',fmt(r.elo)],['Simulated best-of-5 wins — A',fmt(r.sim)],['Monte Carlo 95% interval',fmt(Math.max(0,r.sim-1.96*r.se))+'–'+fmt(Math.min(1,r.sim+1.96*r.se))],['Player A record / Elo',r.a.matches+' matches / '+r.a.elo.toFixed(0)],['Player B record / Elo',r.b.matches+' matches / '+r.b.elo.toFixed(0)]].map(x=>'<div class="metric"><span class="muted">'+x[0]+'</span><strong>'+x[1]+'</strong></div>').join('');
+const warns=[];if(r.da>120)warns.push('Player A last recorded match was '+r.da+' days ago. Check season breaks, injury and source coverage.');if(r.db>120)warns.push('Player B last recorded match was '+r.db+' days ago. Check season breaks, injury and source coverage.');$('warnings').innerHTML=warns.map(x=>'<div class="notice">'+x+'</div>').join('');
+$('h2h').innerHTML=r.details.length?'<p>'+r.details.length+' shared opponents with comparable records.</p><ul>'+r.details.slice(0,30).map(d=>'<li>'+String(d.id).replaceAll('<','&lt;')+': A '+d.x.wins+'-'+d.x.losses+', B '+d.y.wins+'-'+d.y.losses+'</li>').join('')+'</ul>':'<p>No shared opponents with usable prior records were found.</p>';
+}
+async function init(){try{const [s,m]=await Promise.all([fetch('./data/current_player_states.json'),fetch('./data/prediction_model.json')]);if(!s.ok||!m.ok)throw Error('The published player data is not available yet.');pools=await s.json();model=await m.json();const keys=Object.keys(pools);$('source').innerHTML=keys.map(k=>'<option value="'+k+'">'+k+'</option>').join('');$('source').addEventListener('change',fill);fill();$('load').hidden=true;$('form').hidden=false;$('freshness').textContent='Model data: '+(model.holdout_start||'unknown')+' through '+(model.holdout_end||'unknown')+'. Dataset may not include current results.';}catch(e){$('load').textContent=e.message;$('load').className='error';}}
+function fill(){const p=pools[$('source').value]||{};const opts=Object.entries(p).map(([id,x])=>({id,name:x.display_name||'(unnamed)',label:(x.display_name||'(unnamed)')+' — '+id})).sort((a,b)=>a.name.localeCompare(b.name));$('players').innerHTML=opts.map(x=>'<option value="'+x.name.replaceAll('&','&amp;').replaceAll('"','&quot;')+'"></option>').join('');}
+$('run').addEventListener('click',()=>{const pool=pools[$('source').value],a=resolve(pool,$('a').value.trim()),b=resolve(pool,$('b').value.trim());if(!a||!b){alert('Choose an exact, unique player name from the suggestions.');return}if(a===b){alert('Choose two different players.');return}$('run').disabled=true;$('run').textContent='Simulating…';try{show(simulate(a,b,$('competition').value.trim()||'UNKNOWN'));}catch(e){alert('Unable to simulate: '+e.message)}finally{$('run').disabled=false;$('run').textContent='Run 100,000 simulations';}});
+init();
+</script></body></html>
