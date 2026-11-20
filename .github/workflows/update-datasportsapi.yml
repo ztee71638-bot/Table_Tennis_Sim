@@ -49,8 +49,11 @@ jobs:
       - name: Build individual player records from singles only
         run: python scripts/analyze_datasportsapi.py
 
-      - name: Compile import, classification, and analysis scripts
-        run: python -m py_compile scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py
+      - name: Run DataSportsAPI quality validation and chronological backtest
+        run: python scripts/backtest_datasportsapi.py
+
+      - name: Compile import, classification, analysis, and backtest scripts
+        run: python -m py_compile scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/backtest_datasportsapi.py
 
       - name: Persist refreshed daily source snapshots
         run: |
@@ -70,5 +73,6 @@ jobs:
             data/database/table_tennis.sqlite
             data/raw/datasportsapi/*.json
             data/processed/datasportsapi_player_records.json
+            data/processed/datasportsapi_quality_backtest.json
           if-no-files-found: error
           retention-days: 30
