@@ -1,0 +1,55 @@
+name: Update recent table-tennis results from DataSportsAPI
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/import_datasportsapi.py"
+      - ".github/workflows/update-datasportsapi.yml"
+      - "docs/new_source_import_acceptance.md"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: datasportsapi-table-tennis-import
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild validated historical database
+        run: |
+          python scripts/build_database.py
+          python scripts/import_wtt.py
+
+      - name: Import recent DataSportsAPI table-tennis results
+        env:
+          DATASPORTSAPI_KEY: ${{ secrets.DATASPORTSAPI_KEY }}
+        run: python scripts/import_datasportsapi.py
+
+      - name: Compile importer
+        run: python -m py_compile scripts/import_datasportsapi.py
+
+      - name: Upload database, provider snapshots, and import evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: table-tennis-datasportsapi-update
+          path: |
+            data/database/table_tennis.sqlite
+            data/raw/datasportsapi/*.json
+          if-no-files-found: error
+          retention-days: 30
