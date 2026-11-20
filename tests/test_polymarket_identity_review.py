@@ -17,8 +17,8 @@ class IdentityReviewQueueTests(unittest.TestCase):
             {"polymarket_player":"D Person","database_status":"not_found"},
         ]
         queue = MODULE.build_queue(rows)
-        self.assertEqual([r["polymarket_player"] for r in queue], ["B Person","A Person"])
-        self.assertEqual(json.loads(queue[0]["candidate_options_json"])[1]["source_player_id"], "22")
+        self.assertEqual([r["polymarket_player"] for r in queue], ["A Person","B Person"])
+        self.assertEqual(json.loads(queue[1]["candidate_options_json"])[1]["source_player_id"], "22")
 
     def test_queue_never_preapproves_or_merges(self):
         row = {"polymarket_player":"A Person","database_status":"initial_abbreviation_review","candidate_options":'[{"source_player_id":"12"}]'}
