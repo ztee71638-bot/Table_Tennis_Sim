@@ -33,12 +33,10 @@ jobs:
       - name: Probe documented public events endpoint
         run: python scripts/probe_pongiq.py
 
-      - name: Upload source snapshot and health report
+      - name: Upload source health report and any successful snapshot
         uses: actions/upload-artifact@v4
         with:
           name: pongiq-source-monitor
-          path: |
-            data/source_monitor/pongiq_events_latest.json
-            data/source_monitor/pongiq_source_health.json
+          path: data/source_monitor/
           if-no-files-found: error
           retention-days: 14
