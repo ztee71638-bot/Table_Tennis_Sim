@@ -97,12 +97,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/datasportsapi/ site/data/polymarket_active.json site/data/datasportsapi_player_records.json site/index.html
+          git add data/raw/datasportsapi/ site/data/polymarket_active.json site/data/datasportsapi_player_records.json site/data/tabletennisapi_profiles.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh player discovery and table tennis source summaries"
             # Other workflows may update main while this job runs. Rebase the
             # snapshot commit onto the latest branch before publishing it.
-            git pull --rebase origin main
+            git pull --rebase -X theirs origin main
             git push
           fi
 
