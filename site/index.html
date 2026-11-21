@@ -39,10 +39,10 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 <p class="muted">Player profile source: <a class="market-link" href="https://tabletennisapi.com/" target="_blank" rel="noopener">Table Tennis API</a>. Profiles are checked in a rotating queue within the free 50-call daily limit. Names remain unverified candidates; provider profiles are not used for model training. New listings without matching history still appear here.</p>
 </section>
 <section class="panel" id="history-search-panel">
-<div style="font-weight:800;font-size:18px">Search additional player histories</div>
-<p>Search the recent domestic singles database independently of the WTT prediction model. Results show source-scoped records and recent form; they are not automatically eligible for simulations.</p>
-<label for="history-player-search">Find a player across recent domestic results</label>
-<input id="history-player-search" type="search" placeholder="Type a player name…" autocomplete="off">
+<div style="font-weight:800;font-size:18px">Unified player and history search</div>
+<p>Search WTT model records, recent domestic singles histories, and free-tier Table Tennis API profiles in one place. Each source stays separate; a matching name is not proof of athlete identity.</p>
+<label for="history-player-search">Search players across all connected sources</label>
+<input id="history-player-search" type="search" placeholder="Search any player name…" autocomplete="off">
 <p id="history-search-status" class="muted">Loading additional player history…</p>
 <div id="history-search-results"><div class="market-empty">Loading player records…</div></div>
 </section>
@@ -202,33 +202,62 @@ async function loadPolymarket(){
  }catch(err){$('polymarket-updated').textContent='Live listing refresh unavailable: '+err.message;$('polymarket-results').innerHTML='<div class="market-empty">The simulator will keep its historical player search available while the live feed is unavailable.</div>';}
 }
 let domesticPlayerData=null,domesticPlayerRows=[];
+function playerSearchKey(value){
+ return String(value||'').toLocaleLowerCase().normalize('NFKD').replace(/[\\u0300-\\u036f]/g,'');
+}
 async function loadDomesticPlayerIndex(){
  const status=$('history-search-status'),box=$('history-search-results'),input=$('history-player-search');
  try{
-  const response=await fetch('./data/datasportsapi_player_records.json?refresh='+Date.now());
-  if(!response.ok)throw Error('The recent domestic history file has not been published yet.');
+  const response=await fetch('./data/datasportsapi_player_records.json?refresh='+Date.now(),{cache:'no-store'});
+  if(!response.ok)throw Error('Domestic history file has not been published by the latest data refresh.');
   domesticPlayerData=await response.json();
   const records=domesticPlayerData.records||{};
   domesticPlayerRows=Object.entries(records).map(([id,p])=>({id,...p})).filter(p=>p.display_name);
-  status.textContent=domesticPlayerRows.length.toLocaleString()+' source-specific player records · '+Number(domesticPlayerData.individual_singles_matches||0).toLocaleString()+' valid singles matches · source: DataSportsAPI';
-  input.addEventListener('input',renderDomesticPlayerSearch);
+  const wttCount=Object.values(pools||{}).reduce((n,pool)=>n+Object.keys(pool||{}).length,0);
+  const profileCount=Object.keys(tableTennisApiProfiles||{}).length;
+  status.textContent=wttCount.toLocaleString()+' WTT model records · '+domesticPlayerRows.length.toLocaleString()+' DataSportsAPI player records · '+profileCount.toLocaleString()+' Table Tennis API profiles · '+Number(domesticPlayerData.individual_singles_matches||0).toLocaleString()+' recent domestic singles matches';
+  if(!input.dataset.bound){input.addEventListener('input',renderDomesticPlayerSearch);input.dataset.bound='1';}
   renderDomesticPlayerSearch();
  }catch(err){
-  status.textContent='Additional player histories unavailable: '+err.message;
-  box.innerHTML='<div class="market-empty">The WTT player simulator remains available. Domestic history will appear after the next successful data refresh.</div>';
+  const wttCount=Object.values(pools||{}).reduce((n,pool)=>n+Object.keys(pool||{}).length,0);
+  const profileCount=Object.keys(tableTennisApiProfiles||{}).length;
+  status.textContent=wttCount.toLocaleString()+' WTT model records · '+profileCount.toLocaleString()+' Table Tennis API profiles · domestic feed: '+err.message;
+  if(!input.dataset.bound){input.addEventListener('input',renderDomesticPlayerSearch);input.dataset.bound='1';}
+  renderDomesticPlayerSearch();
  }
 }
 function renderDomesticPlayerSearch(){
- const q=($('history-player-search').value||'').trim().toLocaleLowerCase(),box=$('history-search-results');
- if(!q){box.innerHTML='<div class="market-empty">Enter a player name to search recent domestic results.</div>';return;}
- const rows=domesticPlayerRows.filter(p=>String(p.display_name||'').toLocaleLowerCase().includes(q)).sort((a,b)=>(b.matches||0)-(a.matches||0));
- const shown=rows.slice(0,30);
- box.innerHTML=shown.length?shown.map(p=>{
-  const competitions=Object.entries(p.competition_records||{}).sort((a,b)=>(b[1].matches||0)-(a[1].matches||0)).slice(0,4).map(([name,r])=>escapeHtml(name)+': '+r.wins+'–'+r.losses+' ('+r.matches+')').join(' · ');
-  const recent=(p.recent_form_last_10||[]).slice().reverse().slice(0,5).map(m=>escapeHtml(m.date)+' '+escapeHtml(m.result)+' vs '+escapeHtml(m.opponent||'unknown')).join(' · ');
-  return '<article class="history-search-result"><b>'+escapeHtml(p.display_name)+'</b><div class="history-line">DataSportsAPI source ID: '+escapeHtml(p.id)+' · '+Number(p.matches||0)+' matches · '+Number(p.wins||0)+'–'+Number(p.losses||0)+' · '+Number(p.win_percentage||0).toFixed(1)+'% wins</div><div class="history-line">Last recorded: '+escapeHtml(p.last_match_date||'unknown')+'</div><div class="history-line">'+(competitions||'No competition breakdown')+'</div><div class="history-line">Recent: '+(recent||'No recent match rows')+'</div><div class="history-line">History only — identity is source-scoped and no domestic prediction model is validated yet.</div></article>';
- }).join(''):'<div class="market-empty">No matching domestic player records found.</div>';
- if(rows.length>30)box.innerHTML+='<div class="market-empty">Showing 30 of '+rows.length+' matches. Refine your search.</div>';
+ const q=playerSearchKey($('history-player-search').value),box=$('history-search-results');
+ if(!q){box.innerHTML='<div class="market-empty">Enter a player name to search WTT, domestic, and provider profile records.</div>';return;}
+ const rows=[];
+ for(const [source,pool] of Object.entries(pools||{})){
+  for(const [id,p] of Object.entries(pool||{})){
+   if(playerSearchKey(p.display_name).includes(q))rows.push({kind:'WTT model',source,id,p,name:p.display_name,matches:Number(p.matches||0)});
+  }
+ }
+ for(const p of domesticPlayerRows){
+  if(playerSearchKey(p.display_name).includes(q))rows.push({kind:'DataSportsAPI history',source:'Domestic singles',id:p.id,p,name:p.display_name,matches:Number(p.matches||0)});
+ }
+ for(const [id,p] of Object.entries(tableTennisApiProfiles||{})){
+  if(playerSearchKey(p.display_name||id).includes(q))rows.push({kind:'Table Tennis API profile',source:'WTT discovery',id:p.source_player_id||id,p,name:p.display_name||id,matches:(p.records_by_discipline||[]).reduce((n,r)=>n+Number(r.played||0),0)});
+ }
+ rows.sort((a,b)=>b.matches-a.matches||a.name.localeCompare(b.name));
+ const shown=rows.slice(0,40);
+ box.innerHTML=shown.length?shown.map(r=>{
+  if(r.kind==='WTT model'){
+   const form=r.p.recent_form_last10||[],wins=form.filter(x=>Number(x)===1||String(x).toUpperCase()==='W').length;
+   return '<article class="history-search-result"><b>'+escapeHtml(r.name)+'</b><div class="history-line">Source: WTT historical model · dataset: '+escapeHtml(r.source)+' · source player ID: '+escapeHtml(r.id)+'</div><div class="history-line">'+r.matches+' prior matches · recent form '+wins+'–'+(form.length-wins)+' ('+form.length+' shown) · last match: '+escapeHtml(r.p.last_date||'unknown')+'</div><div class="history-line">Prediction model record. A similarly named Polymarket or other-source record is not automatically the same athlete.</div></article>';
+  }
+  if(r.kind==='DataSportsAPI history'){
+   const p=r.p,competitions=Object.entries(p.competition_records||{}).sort((a,b)=>(b[1].matches||0)-(a[1].matches||0)).slice(0,4).map(([name,x])=>escapeHtml(name)+': '+x.wins+'–'+x.losses+' ('+x.matches+')').join(' · ');
+   const recent=(p.recent_form_last_10||[]).slice().reverse().slice(0,5).map(m=>escapeHtml(m.date)+' '+escapeHtml(m.result)+' vs '+escapeHtml(m.opponent||'unknown')).join(' · ');
+   return '<article class="history-search-result"><b>'+escapeHtml(r.name)+'</b><div class="history-line">Source: DataSportsAPI · source player ID: '+escapeHtml(r.id)+'</div><div class="history-line">'+r.matches+' matches · '+Number(p.wins||0)+'–'+Number(p.losses||0)+' · '+Number(p.win_percentage||0).toFixed(1)+'% wins · last: '+escapeHtml(p.last_match_date||'unknown')+'</div><div class="history-line">'+(competitions||'No competition breakdown')+'</div><div class="history-line">Recent: '+(recent||'No recent match rows')+'</div><div class="history-line">History only — no domestic prediction model is validated yet.</div></article>';
+  }
+  const records=(r.p.records_by_discipline||[]).slice(0,3).map(x=>escapeHtml(x.discipline)+': '+Number(x.won||0)+'–'+Number(x.lost||0)+' from '+Number(x.played||0)+' ('+escapeHtml(x.first_match||'?')+' to '+escapeHtml(x.last_match||'?')+')').join(' · ');
+  const ranks=(r.p.world_ranks||[]).slice(0,3).map(x=>escapeHtml(x.discipline)+' rank #'+Number(x.rank||0)+' · '+escapeHtml(x.week||'')).join(' · ');
+  return '<article class="history-search-result"><b>'+escapeHtml(r.name)+'</b><div class="history-line">Source: Table Tennis API · source player ID: '+escapeHtml(r.id)+(r.p.country?' · '+escapeHtml(r.p.country):'')+'</div><div class="history-line">'+(records||'No recent result rows in free-tier window')+'</div><div class="history-line">'+(ranks||'No ranking summary')+'</div><div class="history-line">Free-tier window/profile data only; not a career-total record and not eligible for model training.</div><div class="history-line">'+escapeHtml(r.p.identity_note||'Provider candidate only; identity is not independently verified.')+'</div></article>';
+ }).join(''):'<div class="market-empty">No matching player records found in the connected sources.</div>';
+ if(rows.length>40)box.innerHTML+='<div class="market-empty">Showing 40 of '+rows.length+' source records. Refine your search.</div>';
 }
 async function init(){try{const [s,m]=await Promise.all([fetch('./data/current_player_states.json'),fetch('./data/prediction_model.json')]);if(!s.ok||!m.ok)throw Error('The published player data is not available yet.');pools=await s.json();model=await m.json();const keys=Object.keys(pools);$('source').innerHTML=keys.map(k=>'<option value="'+k+'">'+k+'</option>').join('');$('source').addEventListener('change',fill);fill();$('load').hidden=true;$('form').hidden=false;const sourceStats=Object.entries(pools).map(([key,pool])=>{const entries=Object.entries(pool);const latest=entries.map(([,p])=>p.last_date).filter(Boolean).sort().at(-1)||'unknown';const players=entries.length;const matches=Math.round(entries.reduce((sum,[,p])=>sum+(p.matches||0),0)/2);return {key,players,matches,latest};});const totalPlayers=sourceStats.reduce((n,x)=>n+x.players,0);const totalMatches=sourceStats.reduce((n,x)=>n+x.matches,0);const latestDate=sourceStats.map(x=>x.latest).filter(x=>x!=='unknown').sort().at(-1)||'unknown';$('coverage-text').textContent='Sources: '+sourceStats.map(x=>x.key).join(', ')+'. '+totalPlayers.toLocaleString()+' source-scoped player records and approximately '+totalMatches.toLocaleString()+' match appearances counted as matches. Latest player match date: '+latestDate+'. Chronological holdout: '+(model.holdout_start||'unknown')+' through '+(model.holdout_end||'unknown')+'.';$('freshness').textContent='Model holdout data: '+(model.holdout_start||'unknown')+' through '+(model.holdout_end||'unknown')+'. Latest result date in selected historical dataset: '+latestDate+'. Recent domestic results are not included in the WTT-trained prediction model.';if(polymarketEvents.length)renderPolymarket();}catch(e){$('load').textContent=e.message;$('load').className='error';}}
 function escapeHtml(s){return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;')}
@@ -240,5 +269,5 @@ attachPlayerSearch('a');attachPlayerSearch('b');
 init();
 loadPolymarket();
 loadDomesticPlayerIndex();
-setInterval(loadPolymarket,300000);
+setInterval(loadPolymarket,300000);\nsetInterval(loadDomesticPlayerIndex,300000);
 </script></body></html>
