@@ -128,6 +128,36 @@ class IdentityEvidenceAuditTests(unittest.TestCase):
         self.assertEqual(result["source_player_id_link_status"], "unverified")
         self.assertEqual(result["decision"], "HOLD")
 
+    def test_kovalchuk_exact_setka_result_correlates_but_stays_on_hold(self):
+        fixture = {"id": 1141249, "_snapshot_date": "2026-11-19",
+                   "league": {"name": "Setka Cup"},
+                   "home": {"id": 274477}, "away": {"id": 58534},
+                   "homeScore": {"periods": {"period1": 9, "period2": 11, "period3": 11, "period4": 11}},
+                   "awayScore": {"periods": {"period1": 11, "period2": 5, "period3": 4, "period4": 6}}}
+        row = {"polymarket_player": "Kovalchuk Nazarii", "competition_scope": "Setka Cup",
+               "candidate_options_json": '[{"source_player_id":"58534"}]'}
+        result = MODULE.build_audit([row], [fixture])[0]
+        self.assertEqual(result["independent_evidence_status"], "match_level_records_correlated")
+        self.assertEqual(result["matched_fixture_ids"], "1141249")
+        self.assertEqual(result["matched_independent_result_count"], 1)
+        self.assertEqual(result["source_player_id_link_status"], "unverified")
+        self.assertEqual(result["decision"], "HOLD")
+
+    def test_stefek_exact_pongdata_result_correlates_but_stays_on_hold(self):
+        fixture = {"id": 1140672, "_snapshot_date": "2026-11-19",
+                   "league": {"name": "Czech Liga Pro"},
+                   "home": {"id": 630794}, "away": {"id": 625477},
+                   "homeScore": {"periods": {"period1": 7, "period2": 11, "period3": 6, "period4": 11}},
+                   "awayScore": {"periods": {"period1": 11, "period2": 4, "period3": 11, "period4": 13}}}
+        row = {"polymarket_player": "Martin Stefek", "competition_scope": "Czech Liga Pro",
+               "candidate_options_json": '[{"source_player_id":"625477"}]'}
+        result = MODULE.build_audit([row], [fixture])[0]
+        self.assertEqual(result["independent_evidence_status"], "match_level_records_correlated")
+        self.assertEqual(result["matched_fixture_ids"], "1140672")
+        self.assertEqual(result["matched_independent_result_count"], 1)
+        self.assertEqual(result["source_player_id_link_status"], "unverified")
+        self.assertEqual(result["decision"], "HOLD")
+
     def test_wrong_score_does_not_correlate(self):
         evidence = MODULE.MATCH_LEVEL_EVIDENCE[0]
         fixture = {"id": 1, "_snapshot_date": "2026-11-19",

@@ -147,6 +147,22 @@ MATCH_LEVEL_EVIDENCE = [
         "source": "24live independent Setka Cup match result",
         "url": "https://24live.com/page/sport/participant/table-tennis-22/1006413",
     },
+    {
+        "candidate": "Kovalchuk Nazarii", "source_player_id": "58534",
+        "opponent": "Rak Serhii", "opponent_source_player_id": "274477",
+        "date": "2026-11-19", "competition": "Setka Cup",
+        "sets": [(11, 9), (5, 11), (4, 11), (6, 11)],
+        "source": "Bettrails independent Setka Cup player match archive",
+        "url": "https://bettrails.com/tenis-de-mesa/jugador/kovalchuk-nazarii?lang=en",
+    },
+    {
+        "candidate": "Martin Stefek", "source_player_id": "625477",
+        "opponent": "Tomas Andrle", "opponent_source_player_id": "630794",
+        "date": "2026-11-19", "competition": "Czech Liga Pro",
+        "sets": [(11, 7), (4, 11), (11, 6), (13, 11)],
+        "source": "PongData independent player match archive",
+        "url": "https://pongdata.com/players/stefek-m-k9gqp5qvz3",
+    },
 ]
 
 FIELDS = [
