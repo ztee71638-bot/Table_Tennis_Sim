@@ -16,6 +16,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: datasportsapi-table-tennis-import
@@ -24,7 +26,10 @@ concurrency:
 jobs:
   import:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -65,8 +70,15 @@ jobs:
       - name: Reconcile listed players against source-scoped recent match histories
         run: python scripts/reconcile_polymarket_players.py
 
+      - name: Rebuild WTT chronological features and prediction model
+        run: |
+          python scripts/analyze_database.py
+          python scripts/train_prediction_model.py
+
       - name: Export live matchups and player history for the website
-        run: python scripts/export_polymarket_web_data.py
+        run: |
+          python scripts/export_polymarket_web_data.py
+          python scripts/export_web_app.py
 
       - name: Compile import, classification, analysis, backtest, and web export scripts
         run: python -m py_compile scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/backtest_datasportsapi.py scripts/audit_datasportsapi_classification.py scripts/scan_polymarket_table_tennis.py scripts/reconcile_polymarket_players.py scripts/export_polymarket_web_data.py
@@ -96,3 +108,15 @@ jobs:
             data/processed/datasportsapi_quality_backtest.json
           if-no-files-found: error
           retention-days: 30
+
+      - name: Add Pages metadata
+        run: touch site/.nojekyll
+
+      - name: Upload refreshed simulator website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy refreshed simulator website
+        id: deployment
+        uses: actions/deploy-pages@v4
