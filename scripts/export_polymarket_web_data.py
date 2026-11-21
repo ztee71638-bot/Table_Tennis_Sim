@@ -216,7 +216,7 @@ def main() -> None:
             if source_info.get("available"):
                 return player_history(name, history, scope)
             cached = previous_players.get(name.casefold(), {})
-            if cached.get("status") == "exact_name_match_identity_unverified":
+            if cached.get("status") in {"exact_name_match_identity_unverified", "name_initial_match_review_only"}:
                 return cached
             return {
                 "status": "source_not_loaded",
