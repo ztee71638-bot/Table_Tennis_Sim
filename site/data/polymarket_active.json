@@ -1,368 +1,23 @@
 {
   "source": "Polymarket US public read-only listings",
-  "retrieved_at_utc": "2026-11-21T13:27:52.260789+00:00",
-  "events_count": 102,
-  "players_count": 70,
+  "retrieved_at_utc": "2026-11-21T19:16:52.498598+00:00",
+  "events_count": 100,
+  "players_count": 67,
   "history_source": {
     "available": true,
-    "matches_loaded": 7381,
+    "matches_loaded": 7719,
     "source_key": "datasportsapi_table_tennis"
   },
   "tabletennisapi_source": {
     "available": true,
     "source": "Table Tennis API (DeveloperData)",
-    "retrieved_at_utc": "2026-11-21T13:27:36.094350+00:00",
+    "retrieved_at_utc": "2026-11-21T19:16:36.331705+00:00",
     "names_checked": 8,
     "players_checked_today": 8,
     "calls_today": 21,
     "daily_safety_budget": 40
   },
   "events": [
-    {
-      "event_id": "295894",
-      "slug": "wtt-kahaka-honhas-2026-11-21",
-      "title": "Kaho Akae vs. Honoka Hashimoto",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-21T13:30:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-kahaka-honhas-2026-11-21",
-      "player_a": {
-        "name": "Kaho Akae",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Akae K.",
-          "source_player_id": "302076",
-          "matches_count": 6,
-          "wins": 5,
-          "losses": 1,
-          "last_match_date": "2026-11-21",
-          "competition_matches": 6,
-          "recent_matches": [
-            {
-              "date": "2026-11-21",
-              "time": "07:00:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Odo Satsuki",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "14:00:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Nagasaki M.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "07:10:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Qin Y.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "13:00:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Dragoman A.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "15:05:00",
-              "competition": "WTT Contender Istanbul, WS",
-              "opponent": "Joo C.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "08:40:00",
-              "competition": "WTT Contender Istanbul, WS",
-              "opponent": "Shibata S.",
-              "result": "W",
-              "score": "3-0"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:AKAE Kaho|country:JPN",
-          "display_name": "AKAE Kaho",
-          "matches": 9,
-          "last_match_date": "2025-09-01",
-          "recent_form_last10": [
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Honoka Hashimoto",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Hashimoto H.",
-          "source_player_id": "1011828",
-          "matches_count": 7,
-          "wins": 7,
-          "losses": 0,
-          "last_match_date": "2026-11-21",
-          "competition_matches": 7,
-          "recent_matches": [
-            {
-              "date": "2026-11-21",
-              "time": "08:15:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Szocs B.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "11:00:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Cheng I-Ching",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "07:40:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Kim S.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "10:20:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Akula S.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "13:20:00",
-              "competition": "WTT Contender Istanbul, WS",
-              "opponent": "Joo C.",
-              "result": "W",
-              "score": "4-1"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "13:30:00",
-              "competition": "WTT Contender Istanbul, WS",
-              "opponent": "Hirano M.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "09:40:00",
-              "competition": "WTT Contender Istanbul, WS",
-              "opponent": "Bruna Takahashi",
-              "result": "W",
-              "score": "3-0"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:HASHIMOTO Honoka|country:JPN",
-          "display_name": "HASHIMOTO Honoka",
-          "matches": 58,
-          "last_match_date": "2025-12-10",
-          "recent_form_last10": [
-            1,
-            1,
-            0,
-            1,
-            1,
-            1,
-            0,
-            1,
-            1,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "296068",
-      "slug": "wtt-ganpar-shutog-2026-11-21",
-      "title": "Ganghyeon Park vs. Shunsuke Togami",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-21T14:10:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-ganpar-shutog-2026-11-21",
-      "player_a": {
-        "name": "Ganghyeon Park",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Park G.",
-          "source_player_id": "1111389",
-          "matches_count": 5,
-          "wins": 5,
-          "losses": 0,
-          "last_match_date": "2026-11-21",
-          "competition_matches": 5,
-          "recent_matches": [
-            {
-              "date": "2026-11-21",
-              "time": "09:00:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Junsung Oh",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "11:35:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Flavien Coton",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "06:25:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Sun Y.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "08:25:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "An Jaehyun",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "10:20:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Bardet L.",
-              "result": "W",
-              "score": "3-1"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "116820",
-          "display_name": "PARK Ganghyeon",
-          "matches": 37,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            1,
-            1,
-            1,
-            0,
-            1,
-            1,
-            0,
-            1,
-            0,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Shunsuke Togami",
-        "history": {
-          "status": "exact_name_match_identity_unverified",
-          "display_name": "Shunsuke Togami",
-          "source_player_id": "685938",
-          "matches_count": 4,
-          "wins": 4,
-          "losses": 0,
-          "last_match_date": "2026-11-21",
-          "competition_matches": 4,
-          "recent_matches": [
-            {
-              "date": "2026-11-21",
-              "time": "07:50:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Chen Yuanyu",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "15:25:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Ovtcharov D.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "06:00:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Seyfried J.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "13:55:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Thakkar M.",
-              "result": "W",
-              "score": "3-0"
-            }
-          ],
-          "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "133694",
-          "display_name": "TOGAMI Shunsuke",
-          "matches": 90,
-          "last_match_date": "2025-11-04",
-          "recent_form_last10": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            0,
-            1,
-            0,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
     {
       "event_id": "294156",
       "slug": "setkamemd-ghifio-urevad-2026-11-21",
@@ -1186,6 +841,361 @@
       }
     },
     {
+      "event_id": "297123",
+      "slug": "czechligapro-id2503634977027084",
+      "title": "Jiri Dedek vs. Dmitro Parhomenko",
+      "competition": "Czech Liga Pro",
+      "start_time_utc": "2026-11-21T23:30:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/czechligapro-id2503634977027084",
+      "player_a": {
+        "name": "Jiri Dedek",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Dedek J.",
+          "source_player_id": "638787",
+          "matches_count": 19,
+          "wins": 7,
+          "losses": 12,
+          "last_match_date": "2026-11-19",
+          "competition_matches": 19,
+          "recent_matches": [
+            {
+              "date": "2026-11-19",
+              "time": "17:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Sochor M.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "16:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Sedlak M.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Volf M.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "04:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Pavelka R.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "03:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Pavelka R.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "01:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vladimir Cermak",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "00:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Tuma D.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "23:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Hlawatschke A.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "17:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Bittner M.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "16:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Tuma D.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Sedlak M.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "22:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Jaroslav Prokupek",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "21:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Lukas Krok",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "20:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Jaroslav Prokupek",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "04:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vedmoch M.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "03:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Dousa T.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "01:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vedmoch M.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "00:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vizek M.",
+              "result": "L",
+              "score": "2-3"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Dmitro Parhomenko",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Parhomenko D.",
+          "source_player_id": "69498",
+          "matches_count": 19,
+          "wins": 7,
+          "losses": 12,
+          "last_match_date": "2026-11-19",
+          "competition_matches": 19,
+          "recent_matches": [
+            {
+              "date": "2026-11-19",
+              "time": "13:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Varcl J.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "12:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Smrcek M.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "11:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Kolar M.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "04:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Holovatiuk Y.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "03:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Plachy J.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "01:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Fojt P.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "00:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Holovatiuk Y.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "23:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "13:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Kolar M.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Bresky J.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "11:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "18:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "17:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "16:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Plachy J.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Holovatiuk Y.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "04:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Svoboda A.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "03:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Budinsky P.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "02:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Holovatiuk Y.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "00:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Svoboda A.",
+              "result": "L",
+              "score": "1-3"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
       "event_id": "294154",
       "slug": "setkameua-tebyar-kovvla-2026-11-21",
       "title": "Tebenko Yaroslav vs. Kovalchuk Vladyslav",
@@ -1786,122 +1796,6 @@
         "history": {
           "status": "ambiguous",
           "candidate_count": 2,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294320",
-      "slug": "czechligapro-id2503634976982542",
-      "title": "Milan Kolar vs. Alexander Mikuska",
-      "competition": "Czech Liga Pro",
-      "start_time_utc": "2026-11-22T00:00:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/czechligapro-id2503634976982542",
-      "player_a": {
-        "name": "Milan Kolar",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Kolar M.",
-          "source_player_id": "133358",
-          "matches_count": 9,
-          "wins": 5,
-          "losses": 4,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 9,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "13:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Smrcek M.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "12:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Varcl J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "11:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Parhomenko D.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "13:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Parhomenko D.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "12:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "11:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Bresky J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "21:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "20:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Briza F.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "19:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Placek M.",
-              "result": "W",
-              "score": "3-0"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Alexander Mikuska",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
           "identity_note": "No unique source-scoped player candidate; history is not attached.",
           "matches": []
         },
@@ -2693,15 +2587,15 @@
       }
     },
     {
-      "event_id": "294322",
-      "slug": "czechligapro-id2503634976982316",
-      "title": "Pavel Fojt vs. Kyryl Darin",
+      "event_id": "297124",
+      "slug": "czechligapro-id2503634977027078",
+      "title": "Pavel Fojt vs. Jiri Dedek",
       "competition": "Czech Liga Pro",
       "start_time_utc": "2026-11-22T00:30:00Z",
       "end_time_utc": "",
       "active": true,
       "closed": false,
-      "url": "https://polymarket.us/event/czechligapro-id2503634976982316",
+      "url": "https://polymarket.us/event/czechligapro-id2503634977027078",
       "player_a": {
         "name": "Pavel Fojt",
         "history": {
@@ -2803,483 +2697,168 @@
         }
       },
       "player_b": {
-        "name": "Kyryl Darin",
+        "name": "Jiri Dedek",
         "history": {
           "status": "name_initial_match_review_only",
-          "display_name": "Darin K.",
-          "source_player_id": "627570",
-          "matches_count": 27,
-          "wins": 10,
-          "losses": 17,
-          "last_match_date": "2026-11-18",
-          "competition_matches": 27,
+          "display_name": "Dedek J.",
+          "source_player_id": "638787",
+          "matches_count": 19,
+          "wins": 7,
+          "losses": 12,
+          "last_match_date": "2026-11-19",
+          "competition_matches": 19,
           "recent_matches": [
             {
-              "date": "2026-11-18",
-              "time": "03:00:00",
+              "date": "2026-11-19",
+              "time": "17:30:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Fojt P.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "02:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Jaroslav Prokupek",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "01:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "23:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "22:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Lukas Krok",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "21:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "20:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Dousa T.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "19:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Lukas Krok",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "03:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "02:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "00:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Fojt P.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "23:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Parhomenko D.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "13:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Bresky J.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "12:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kolar M.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "11:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Parhomenko D.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "18:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Parhomenko D.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "17:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Parhomenko D.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "16:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "15:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "14:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "1-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294324",
-      "slug": "czechligapro-id2503634976982500",
-      "title": "Tomas Andrle vs. Jan Pleskot",
-      "competition": "Czech Liga Pro",
-      "start_time_utc": "2026-11-22T00:30:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/czechligapro-id2503634976982500",
-      "player_a": {
-        "name": "Tomas Andrle",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Andrle T.",
-          "source_player_id": "630794",
-          "matches_count": 15,
-          "wins": 9,
-          "losses": 6,
-          "last_match_date": "2026-11-20",
-          "competition_matches": 15,
-          "recent_matches": [
-            {
-              "date": "2026-11-20",
-              "time": "04:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kucirek O.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "03:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kucirek O.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "02:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Jan S.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "00:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kosar V.",
+              "opponent": "Sochor M.",
               "result": "W",
               "score": "3-1"
             },
             {
               "date": "2026-11-19",
-              "time": "23:00:00",
+              "time": "16:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Stefek M.",
+              "opponent": "Sedlak M.",
               "result": "L",
-              "score": "1-3"
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Volf M.",
+              "result": "L",
+              "score": "2-3"
             },
             {
               "date": "2026-11-18",
-              "time": "04:30:00",
+              "time": "04:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Bartunek R.",
-              "result": "W",
-              "score": "3-1"
+              "opponent": "Pavelka R.",
+              "result": "L",
+              "score": "1-3"
             },
             {
               "date": "2026-11-18",
               "time": "03:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Stefek M.",
+              "opponent": "Pavelka R.",
               "result": "W",
               "score": "3-1"
             },
             {
               "date": "2026-11-18",
-              "time": "02:00:00",
+              "time": "01:30:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Picek P.",
-              "result": "W",
-              "score": "3-1"
+              "opponent": "Vladimir Cermak",
+              "result": "L",
+              "score": "2-3"
             },
             {
               "date": "2026-11-18",
-              "time": "01:00:00",
+              "time": "00:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Bartunek R.",
+              "opponent": "Tuma D.",
               "result": "L",
               "score": "2-3"
             },
             {
               "date": "2026-11-17",
-              "time": "23:30:00",
+              "time": "23:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Smrcek M.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "04:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Ulrych M.",
+              "opponent": "Hlawatschke A.",
               "result": "L",
               "score": "1-3"
             },
             {
               "date": "2026-11-15",
-              "time": "02:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Stefek M.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "01:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Ulrych M.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "00:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Smrcek M.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "23:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Roman Urban",
-              "result": "L",
-              "score": "0-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Jan Pleskot",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Pleskot J.",
-          "source_player_id": "622978",
-          "matches_count": 17,
-          "wins": 10,
-          "losses": 7,
-          "last_match_date": "2026-11-20",
-          "competition_matches": 17,
-          "recent_matches": [
-            {
-              "date": "2026-11-20",
-              "time": "09:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Didi J.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "08:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Ladislav H.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "07:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Sulava L.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "22:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Framberk J.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "21:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kulhanek T.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "20:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Barta M.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "19:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Framberk J.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "09:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kulhanek T.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "08:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Ladislav H.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "07:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Sulava L.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "09:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Berdych P.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "08:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Hruska Snr V.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "07:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Sulava L.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "18:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Mikyska L.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-14",
               "time": "17:30:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Kulhanek T.",
+              "opponent": "Bittner M.",
               "result": "L",
-              "score": "1-3"
+              "score": "2-3"
             },
             {
-              "date": "2026-11-14",
+              "date": "2026-11-15",
               "time": "16:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Mikyska L.",
-              "result": "W",
-              "score": "3-1"
+              "opponent": "Tuma D.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Sedlak M.",
+              "result": "L",
+              "score": "0-3"
             },
             {
               "date": "2026-11-14",
-              "time": "15:00:00",
+              "time": "22:30:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Ladislav H.",
+              "opponent": "Jaroslav Prokupek",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "21:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Lukas Krok",
               "result": "W",
               "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "20:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Jaroslav Prokupek",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "04:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vedmoch M.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "03:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Dousa T.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "01:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vedmoch M.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "00:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vizek M.",
+              "result": "L",
+              "score": "2-3"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -5032,15 +4611,15 @@
       }
     },
     {
-      "event_id": "294424",
-      "slug": "czechligapro-id2503634976982548",
-      "title": "Jaroslav Prokupek vs. Kyryl Darin",
+      "event_id": "297125",
+      "slug": "czechligapro-id2503634977027092",
+      "title": "Jaroslav Prokupek vs. Jiri Dedek",
       "competition": "Czech Liga Pro",
       "start_time_utc": "2026-11-22T01:30:00Z",
       "end_time_utc": "",
       "active": true,
       "closed": false,
-      "url": "https://polymarket.us/event/czechligapro-id2503634976982548",
+      "url": "https://polymarket.us/event/czechligapro-id2503634977027092",
       "player_a": {
         "name": "Jaroslav Prokupek",
         "history": {
@@ -5214,150 +4793,86 @@
         }
       },
       "player_b": {
-        "name": "Kyryl Darin",
+        "name": "Jiri Dedek",
         "history": {
           "status": "name_initial_match_review_only",
-          "display_name": "Darin K.",
-          "source_player_id": "627570",
-          "matches_count": 27,
-          "wins": 10,
-          "losses": 17,
-          "last_match_date": "2026-11-18",
-          "competition_matches": 27,
+          "display_name": "Dedek J.",
+          "source_player_id": "638787",
+          "matches_count": 19,
+          "wins": 7,
+          "losses": 12,
+          "last_match_date": "2026-11-19",
+          "competition_matches": 19,
           "recent_matches": [
             {
-              "date": "2026-11-18",
-              "time": "03:00:00",
+              "date": "2026-11-19",
+              "time": "17:30:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Fojt P.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "02:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Jaroslav Prokupek",
+              "opponent": "Sochor M.",
               "result": "W",
-              "score": "3-2"
+              "score": "3-1"
             },
             {
-              "date": "2026-11-18",
-              "time": "01:00:00",
+              "date": "2026-11-19",
+              "time": "16:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
+              "opponent": "Sedlak M.",
               "result": "L",
               "score": "0-3"
             },
             {
-              "date": "2026-11-17",
-              "time": "23:30:00",
+              "date": "2026-11-19",
+              "time": "15:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
+              "opponent": "Volf M.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "04:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Pavelka R.",
               "result": "L",
               "score": "1-3"
             },
             {
-              "date": "2026-11-17",
-              "time": "22:00:00",
+              "date": "2026-11-18",
+              "time": "03:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Lukas Krok",
-              "result": "L",
-              "score": "1-3"
+              "opponent": "Pavelka R.",
+              "result": "W",
+              "score": "3-1"
             },
             {
-              "date": "2026-11-17",
-              "time": "21:30:00",
+              "date": "2026-11-18",
+              "time": "01:30:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
+              "opponent": "Vladimir Cermak",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "00:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Tuma D.",
               "result": "L",
               "score": "2-3"
             },
             {
               "date": "2026-11-17",
-              "time": "20:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Dousa T.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "19:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Lukas Krok",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "03:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "02:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "00:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Fojt P.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-16",
               "time": "23:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Parhomenko D.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "13:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Bresky J.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "12:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kolar M.",
+              "opponent": "Hlawatschke A.",
               "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "11:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Parhomenko D.",
-              "result": "W",
-              "score": "3-1"
+              "score": "1-3"
             },
             {
               "date": "2026-11-15",
-              "time": "18:00:00",
+              "time": "17:30:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Parhomenko D.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "17:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Parhomenko D.",
+              "opponent": "Bittner M.",
               "result": "L",
               "score": "2-3"
             },
@@ -5365,25 +4880,81 @@
               "date": "2026-11-15",
               "time": "16:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "15:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
+              "opponent": "Tuma D.",
               "result": "L",
               "score": "2-3"
             },
             {
               "date": "2026-11-15",
-              "time": "14:30:00",
+              "time": "15:00:00",
               "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
+              "opponent": "Sedlak M.",
               "result": "L",
-              "score": "1-3"
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "22:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Jaroslav Prokupek",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "21:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Lukas Krok",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "20:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Jaroslav Prokupek",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "04:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vedmoch M.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "03:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Dousa T.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "01:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vedmoch M.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "00:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vizek M.",
+              "result": "L",
+              "score": "2-3"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -8043,6 +7614,369 @@
               "opponent": "Andrle T.",
               "result": "L",
               "score": "1-3"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "297126",
+      "slug": "czechligapro-id2503634977027086",
+      "title": "Jiri Dedek vs. Jiri Plachy",
+      "competition": "Czech Liga Pro",
+      "start_time_utc": "2026-11-22T02:30:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/czechligapro-id2503634977027086",
+      "player_a": {
+        "name": "Jiri Dedek",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Dedek J.",
+          "source_player_id": "638787",
+          "matches_count": 19,
+          "wins": 7,
+          "losses": 12,
+          "last_match_date": "2026-11-19",
+          "competition_matches": 19,
+          "recent_matches": [
+            {
+              "date": "2026-11-19",
+              "time": "17:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Sochor M.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "16:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Sedlak M.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Volf M.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "04:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Pavelka R.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "03:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Pavelka R.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "01:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vladimir Cermak",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "00:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Tuma D.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "23:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Hlawatschke A.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "17:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Bittner M.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "16:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Tuma D.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Sedlak M.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "22:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Jaroslav Prokupek",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "21:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Lukas Krok",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "20:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Jaroslav Prokupek",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "04:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vedmoch M.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "03:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Dousa T.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "01:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vedmoch M.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "00:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vizek M.",
+              "result": "L",
+              "score": "2-3"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Jiri Plachy",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Plachy J.",
+          "source_player_id": "278206",
+          "matches_count": 28,
+          "wins": 20,
+          "losses": 8,
+          "last_match_date": "2026-11-19",
+          "competition_matches": 28,
+          "recent_matches": [
+            {
+              "date": "2026-11-19",
+              "time": "22:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Sochor M.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "21:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Holovatiuk Y.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "20:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Jaroslav Prokupek",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "04:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Holovatiuk Y.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "02:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Holovatiuk Y.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "01:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Fojt P.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "00:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Jaroslav Prokupek",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "23:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "22:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Dousa T.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "21:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "20:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Lukas Krok",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Dousa T.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "04:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Fojt P.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "03:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Parhomenko D.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "02:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "01:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Holovatiuk Y.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "23:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Fojt P.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "17:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Holovatiuk Y.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "16:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Parhomenko D.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "15:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Darin K.",
+              "result": "W",
+              "score": "3-2"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -12544,12 +12478,44 @@
           "status": "name_initial_match_review_only",
           "display_name": "Szotek D.",
           "source_player_id": "627571",
-          "matches_count": 10,
-          "wins": 6,
-          "losses": 4,
+          "matches_count": 14,
+          "wins": 9,
+          "losses": 5,
           "last_match_date": "2026-11-21",
-          "competition_matches": 10,
+          "competition_matches": 14,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "18:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Radim Urbaniec",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "17:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Nemec S.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "16:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Svacha O.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Radim Urbaniec",
+              "result": "L",
+              "score": "2-3"
+            },
             {
               "date": "2026-11-21",
               "time": "02:30:00",
@@ -12644,12 +12610,44 @@
           "status": "exact_name_match_identity_unverified",
           "display_name": "Radim Urbaniec",
           "source_player_id": "629113",
-          "matches_count": 34,
-          "wins": 14,
-          "losses": 20,
+          "matches_count": 38,
+          "wins": 16,
+          "losses": 22,
           "last_match_date": "2026-11-21",
-          "competition_matches": 34,
+          "competition_matches": 38,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "18:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Szotek D.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "17:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Svacha O.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "16:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Nemec S.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Szotek D.",
+              "result": "W",
+              "score": "3-2"
+            },
             {
               "date": "2026-11-21",
               "time": "03:30:00",
@@ -12777,38 +12775,6 @@
               "opponent": "Zahradka M.",
               "result": "W",
               "score": "3-1"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "15:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Nohejl V.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "18:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Nohejl V.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "17:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Nohejl V.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "16:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Zahradka M.",
-              "result": "L",
-              "score": "1-3"
             }
           ],
           "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
@@ -13920,12 +13886,28 @@
           "status": "name_initial_match_review_only",
           "display_name": "Machander D.",
           "source_player_id": "652046",
-          "matches_count": 9,
+          "matches_count": 11,
           "wins": 3,
-          "losses": 6,
+          "losses": 8,
           "last_match_date": "2026-11-21",
-          "competition_matches": 9,
+          "competition_matches": 11,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "14:03:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vavrecka R.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "13:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Rychlik E.",
+              "result": "L",
+              "score": "2-3"
+            },
             {
               "date": "2026-11-21",
               "time": "12:30:00",
@@ -14023,12 +14005,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Klement M.",
           "source_player_id": "635179",
-          "matches_count": 15,
-          "wins": 9,
+          "matches_count": 16,
+          "wins": 10,
           "losses": 6,
           "last_match_date": "2026-11-21",
-          "competition_matches": 15,
+          "competition_matches": 16,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "14:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Svoboda J.",
+              "result": "W",
+              "score": "3-2"
+            },
             {
               "date": "2026-11-21",
               "time": "13:00:00",
@@ -14593,12 +14583,44 @@
           "status": "exact_name_match_identity_unverified",
           "display_name": "Radim Urbaniec",
           "source_player_id": "629113",
-          "matches_count": 34,
-          "wins": 14,
-          "losses": 20,
+          "matches_count": 38,
+          "wins": 16,
+          "losses": 22,
           "last_match_date": "2026-11-21",
-          "competition_matches": 34,
+          "competition_matches": 38,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "18:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Szotek D.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "17:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Svacha O.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "16:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Nemec S.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Szotek D.",
+              "result": "W",
+              "score": "3-2"
+            },
             {
               "date": "2026-11-21",
               "time": "03:30:00",
@@ -14726,38 +14748,6 @@
               "opponent": "Zahradka M.",
               "result": "W",
               "score": "3-1"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "15:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Nohejl V.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "18:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Nohejl V.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "17:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Nohejl V.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "16:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Zahradka M.",
-              "result": "L",
-              "score": "1-3"
             }
           ],
           "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
@@ -14773,12 +14763,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Klement M.",
           "source_player_id": "635179",
-          "matches_count": 15,
-          "wins": 9,
+          "matches_count": 16,
+          "wins": 10,
           "losses": 6,
           "last_match_date": "2026-11-21",
-          "competition_matches": 15,
+          "competition_matches": 16,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "14:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Svoboda J.",
+              "result": "W",
+              "score": "3-2"
+            },
             {
               "date": "2026-11-21",
               "time": "13:00:00",
@@ -15179,12 +15177,28 @@
           "status": "name_initial_match_review_only",
           "display_name": "Machander D.",
           "source_player_id": "652046",
-          "matches_count": 9,
+          "matches_count": 11,
           "wins": 3,
-          "losses": 6,
+          "losses": 8,
           "last_match_date": "2026-11-21",
-          "competition_matches": 9,
+          "competition_matches": 11,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "14:03:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vavrecka R.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "13:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Rychlik E.",
+              "result": "L",
+              "score": "2-3"
+            },
             {
               "date": "2026-11-21",
               "time": "12:30:00",
@@ -15710,12 +15724,44 @@
           "status": "name_initial_match_review_only",
           "display_name": "Szotek D.",
           "source_player_id": "627571",
-          "matches_count": 10,
-          "wins": 6,
-          "losses": 4,
+          "matches_count": 14,
+          "wins": 9,
+          "losses": 5,
           "last_match_date": "2026-11-21",
-          "competition_matches": 10,
+          "competition_matches": 14,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "18:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Radim Urbaniec",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "17:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Nemec S.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "16:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Svacha O.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Radim Urbaniec",
+              "result": "L",
+              "score": "2-3"
+            },
             {
               "date": "2026-11-21",
               "time": "02:30:00",
@@ -16164,12 +16210,44 @@
           "status": "name_initial_match_review_only",
           "display_name": "Szotek D.",
           "source_player_id": "627571",
-          "matches_count": 10,
-          "wins": 6,
-          "losses": 4,
+          "matches_count": 14,
+          "wins": 9,
+          "losses": 5,
           "last_match_date": "2026-11-21",
-          "competition_matches": 10,
+          "competition_matches": 14,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "18:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Radim Urbaniec",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "17:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Nemec S.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "16:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Svacha O.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Radim Urbaniec",
+              "result": "L",
+              "score": "2-3"
+            },
             {
               "date": "2026-11-21",
               "time": "02:30:00",
@@ -16264,12 +16342,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Klement M.",
           "source_player_id": "635179",
-          "matches_count": 15,
-          "wins": 9,
+          "matches_count": 16,
+          "wins": 10,
           "losses": 6,
           "last_match_date": "2026-11-21",
-          "competition_matches": 15,
+          "competition_matches": 16,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "14:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Svoboda J.",
+              "result": "W",
+              "score": "3-2"
+            },
             {
               "date": "2026-11-21",
               "time": "13:00:00",
@@ -17207,11 +17293,6 @@
       "name": "Alexander Mikuska",
       "events": [
         {
-          "title": "Milan Kolar vs. Alexander Mikuska",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982542"
-        },
-        {
           "title": "Alexander Mikuska vs. Frantisek Briza",
           "competition": "Czech Liga Pro",
           "url": "https://polymarket.us/event/czechligapro-id2503634976982412"
@@ -17336,12 +17417,28 @@
         "status": "name_initial_match_review_only",
         "display_name": "Machander D.",
         "source_player_id": "652046",
-        "matches_count": 9,
+        "matches_count": 11,
         "wins": 3,
-        "losses": 6,
+        "losses": 8,
         "last_match_date": "2026-11-21",
-        "competition_matches": 9,
+        "competition_matches": 11,
         "recent_matches": [
+          {
+            "date": "2026-11-21",
+            "time": "14:03:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Vavrecka R.",
+            "result": "L",
+            "score": "2-3"
+          },
+          {
+            "date": "2026-11-21",
+            "time": "13:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Rychlik E.",
+            "result": "L",
+            "score": "2-3"
+          },
           {
             "date": "2026-11-21",
             "time": "12:30:00",
@@ -17445,12 +17542,44 @@
         "status": "name_initial_match_review_only",
         "display_name": "Szotek D.",
         "source_player_id": "627571",
-        "matches_count": 10,
-        "wins": 6,
-        "losses": 4,
+        "matches_count": 14,
+        "wins": 9,
+        "losses": 5,
         "last_match_date": "2026-11-21",
-        "competition_matches": 10,
+        "competition_matches": 14,
         "recent_matches": [
+          {
+            "date": "2026-11-21",
+            "time": "18:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Radim Urbaniec",
+            "result": "W",
+            "score": "3-1"
+          },
+          {
+            "date": "2026-11-21",
+            "time": "17:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Nemec S.",
+            "result": "W",
+            "score": "3-1"
+          },
+          {
+            "date": "2026-11-21",
+            "time": "16:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Svacha O.",
+            "result": "W",
+            "score": "3-0"
+          },
+          {
+            "date": "2026-11-21",
+            "time": "15:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Radim Urbaniec",
+            "result": "L",
+            "score": "2-3"
+          },
           {
             "date": "2026-11-21",
             "time": "02:30:00",
@@ -17542,6 +17671,11 @@
     {
       "name": "Dmitro Parhomenko",
       "events": [
+        {
+          "title": "Jiri Dedek vs. Dmitro Parhomenko",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634977027084"
+        },
         {
           "title": "Jiri Plachy vs. Dmitro Parhomenko",
           "competition": "Czech Liga Pro",
@@ -18102,90 +18236,6 @@
       }
     },
     {
-      "name": "Ganghyeon Park",
-      "events": [
-        {
-          "title": "Ganghyeon Park vs. Shunsuke Togami",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-ganpar-shutog-2026-11-21"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Park G.",
-        "source_player_id": "1111389",
-        "matches_count": 5,
-        "wins": 5,
-        "losses": 0,
-        "last_match_date": "2026-11-21",
-        "competition_matches": 5,
-        "recent_matches": [
-          {
-            "date": "2026-11-21",
-            "time": "09:00:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Junsung Oh",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "11:35:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Flavien Coton",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "06:25:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Sun Y.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "08:25:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "An Jaehyun",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-18",
-            "time": "10:20:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Bardet L.",
-            "result": "W",
-            "score": "3-1"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "116820",
-        "display_name": "PARK Ganghyeon",
-        "matches": 37,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          1,
-          1,
-          1,
-          0,
-          1,
-          1,
-          0,
-          1,
-          0,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Gazhula Oleksii",
       "events": [
         {
@@ -18381,106 +18431,6 @@
       }
     },
     {
-      "name": "Honoka Hashimoto",
-      "events": [
-        {
-          "title": "Kaho Akae vs. Honoka Hashimoto",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-kahaka-honhas-2026-11-21"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Hashimoto H.",
-        "source_player_id": "1011828",
-        "matches_count": 7,
-        "wins": 7,
-        "losses": 0,
-        "last_match_date": "2026-11-21",
-        "competition_matches": 7,
-        "recent_matches": [
-          {
-            "date": "2026-11-21",
-            "time": "08:15:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Szocs B.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "11:00:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Cheng I-Ching",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "07:40:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Kim S.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "10:20:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Akula S.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-15",
-            "time": "13:20:00",
-            "competition": "WTT Contender Istanbul, WS",
-            "opponent": "Joo C.",
-            "result": "W",
-            "score": "4-1"
-          },
-          {
-            "date": "2026-11-14",
-            "time": "13:30:00",
-            "competition": "WTT Contender Istanbul, WS",
-            "opponent": "Hirano M.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-14",
-            "time": "09:40:00",
-            "competition": "WTT Contender Istanbul, WS",
-            "opponent": "Bruna Takahashi",
-            "result": "W",
-            "score": "3-0"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:HASHIMOTO Honoka|country:JPN",
-        "display_name": "HASHIMOTO Honoka",
-        "matches": 58,
-        "last_match_date": "2025-12-10",
-        "recent_form_last10": [
-          1,
-          1,
-          0,
-          1,
-          1,
-          1,
-          0,
-          1,
-          1,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Iskander Christopher",
       "events": [
         {
@@ -18668,11 +18618,6 @@
     {
       "name": "Jan Pleskot",
       "events": [
-        {
-          "title": "Tomas Andrle vs. Jan Pleskot",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982500"
-        },
         {
           "title": "Lubor Sulava vs. Jan Pleskot",
           "competition": "Czech Liga Pro",
@@ -19088,9 +19033,9 @@
       "name": "Jaroslav Prokupek",
       "events": [
         {
-          "title": "Jaroslav Prokupek vs. Kyryl Darin",
+          "title": "Jaroslav Prokupek vs. Jiri Dedek",
           "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982548"
+          "url": "https://polymarket.us/event/czechligapro-id2503634977027092"
         },
         {
           "title": "Dmitro Parhomenko vs. Jaroslav Prokupek",
@@ -19269,6 +19214,200 @@
       }
     },
     {
+      "name": "Jiri Dedek",
+      "events": [
+        {
+          "title": "Jiri Dedek vs. Dmitro Parhomenko",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634977027084"
+        },
+        {
+          "title": "Pavel Fojt vs. Jiri Dedek",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634977027078"
+        },
+        {
+          "title": "Jaroslav Prokupek vs. Jiri Dedek",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634977027092"
+        },
+        {
+          "title": "Jiri Dedek vs. Jiri Plachy",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634977027086"
+        }
+      ],
+      "history": {
+        "status": "name_initial_match_review_only",
+        "display_name": "Dedek J.",
+        "source_player_id": "638787",
+        "matches_count": 19,
+        "wins": 7,
+        "losses": 12,
+        "last_match_date": "2026-11-19",
+        "competition_matches": 19,
+        "recent_matches": [
+          {
+            "date": "2026-11-19",
+            "time": "17:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Sochor M.",
+            "result": "W",
+            "score": "3-1"
+          },
+          {
+            "date": "2026-11-19",
+            "time": "16:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Sedlak M.",
+            "result": "L",
+            "score": "0-3"
+          },
+          {
+            "date": "2026-11-19",
+            "time": "15:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Volf M.",
+            "result": "L",
+            "score": "2-3"
+          },
+          {
+            "date": "2026-11-18",
+            "time": "04:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Pavelka R.",
+            "result": "L",
+            "score": "1-3"
+          },
+          {
+            "date": "2026-11-18",
+            "time": "03:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Pavelka R.",
+            "result": "W",
+            "score": "3-1"
+          },
+          {
+            "date": "2026-11-18",
+            "time": "01:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Vladimir Cermak",
+            "result": "L",
+            "score": "2-3"
+          },
+          {
+            "date": "2026-11-18",
+            "time": "00:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Tuma D.",
+            "result": "L",
+            "score": "2-3"
+          },
+          {
+            "date": "2026-11-17",
+            "time": "23:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Hlawatschke A.",
+            "result": "L",
+            "score": "1-3"
+          },
+          {
+            "date": "2026-11-15",
+            "time": "17:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Bittner M.",
+            "result": "L",
+            "score": "2-3"
+          },
+          {
+            "date": "2026-11-15",
+            "time": "16:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Tuma D.",
+            "result": "L",
+            "score": "2-3"
+          },
+          {
+            "date": "2026-11-15",
+            "time": "15:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Sedlak M.",
+            "result": "L",
+            "score": "0-3"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "22:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Jaroslav Prokupek",
+            "result": "W",
+            "score": "3-0"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "21:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Lukas Krok",
+            "result": "W",
+            "score": "3-2"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "20:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Darin K.",
+            "result": "W",
+            "score": "3-2"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "19:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Jaroslav Prokupek",
+            "result": "L",
+            "score": "2-3"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "04:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Vedmoch M.",
+            "result": "W",
+            "score": "3-0"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "03:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Dousa T.",
+            "result": "L",
+            "score": "0-3"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "01:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Vedmoch M.",
+            "result": "W",
+            "score": "3-2"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "00:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Vizek M.",
+            "result": "L",
+            "score": "2-3"
+          }
+        ],
+        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+      },
+      "model_record": {
+        "status": "not_applicable",
+        "identity_note": "WTT model lookup is only used for WTT listings."
+      }
+    },
+    {
       "name": "Jiri Hyrsl",
       "events": [
         {
@@ -19392,6 +19531,11 @@
           "title": "Jiri Plachy vs. Dmitro Parhomenko",
           "competition": "Czech Liga Pro",
           "url": "https://polymarket.us/event/czechligapro-id2503634976989028"
+        },
+        {
+          "title": "Jiri Dedek vs. Jiri Plachy",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634977027086"
         },
         {
           "title": "Kyryl Darin vs. Jiri Plachy",
@@ -19580,97 +19724,6 @@
       "model_record": {
         "status": "not_applicable",
         "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
-      "name": "Kaho Akae",
-      "events": [
-        {
-          "title": "Kaho Akae vs. Honoka Hashimoto",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-kahaka-honhas-2026-11-21"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Akae K.",
-        "source_player_id": "302076",
-        "matches_count": 6,
-        "wins": 5,
-        "losses": 1,
-        "last_match_date": "2026-11-21",
-        "competition_matches": 6,
-        "recent_matches": [
-          {
-            "date": "2026-11-21",
-            "time": "07:00:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Odo Satsuki",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "14:00:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Nagasaki M.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "07:10:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Qin Y.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "13:00:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Dragoman A.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-14",
-            "time": "15:05:00",
-            "competition": "WTT Contender Istanbul, WS",
-            "opponent": "Joo C.",
-            "result": "L",
-            "score": "0-3"
-          },
-          {
-            "date": "2026-11-14",
-            "time": "08:40:00",
-            "competition": "WTT Contender Istanbul, WS",
-            "opponent": "Shibata S.",
-            "result": "W",
-            "score": "3-0"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:AKAE Kaho|country:JPN",
-        "display_name": "AKAE Kaho",
-        "matches": 9,
-        "last_match_date": "2025-09-01",
-        "recent_form_last10": [
-          0,
-          1,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
       }
     },
     {
@@ -20327,16 +20380,6 @@
     {
       "name": "Kyryl Darin",
       "events": [
-        {
-          "title": "Pavel Fojt vs. Kyryl Darin",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982316"
-        },
-        {
-          "title": "Jaroslav Prokupek vs. Kyryl Darin",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982548"
-        },
         {
           "title": "Kyryl Darin vs. Jiri Plachy",
           "competition": "Czech Liga Pro",
@@ -21752,12 +21795,20 @@
         "status": "name_initial_match_review_only",
         "display_name": "Klement M.",
         "source_player_id": "635179",
-        "matches_count": 15,
-        "wins": 9,
+        "matches_count": 16,
+        "wins": 10,
         "losses": 6,
         "last_match_date": "2026-11-21",
-        "competition_matches": 15,
+        "competition_matches": 16,
         "recent_matches": [
+          {
+            "date": "2026-11-21",
+            "time": "14:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Svoboda J.",
+            "result": "W",
+            "score": "3-2"
+          },
           {
             "date": "2026-11-21",
             "time": "13:00:00",
@@ -21889,11 +21940,6 @@
     {
       "name": "Milan Kolar",
       "events": [
-        {
-          "title": "Milan Kolar vs. Alexander Mikuska",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982542"
-        },
         {
           "title": "Milan Kolar vs. Marek Placek",
           "competition": "Czech Liga Pro",
@@ -22372,9 +22418,9 @@
       "name": "Pavel Fojt",
       "events": [
         {
-          "title": "Pavel Fojt vs. Kyryl Darin",
+          "title": "Pavel Fojt vs. Jiri Dedek",
           "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982316"
+          "url": "https://polymarket.us/event/czechligapro-id2503634977027078"
         },
         {
           "title": "Dmitro Parhomenko vs. Pavel Fojt",
@@ -22637,12 +22683,44 @@
         "status": "exact_name_match_identity_unverified",
         "display_name": "Radim Urbaniec",
         "source_player_id": "629113",
-        "matches_count": 34,
-        "wins": 14,
-        "losses": 20,
+        "matches_count": 38,
+        "wins": 16,
+        "losses": 22,
         "last_match_date": "2026-11-21",
-        "competition_matches": 34,
+        "competition_matches": 38,
         "recent_matches": [
+          {
+            "date": "2026-11-21",
+            "time": "18:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Szotek D.",
+            "result": "L",
+            "score": "1-3"
+          },
+          {
+            "date": "2026-11-21",
+            "time": "17:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Svacha O.",
+            "result": "W",
+            "score": "3-1"
+          },
+          {
+            "date": "2026-11-21",
+            "time": "16:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Nemec S.",
+            "result": "L",
+            "score": "1-3"
+          },
+          {
+            "date": "2026-11-21",
+            "time": "15:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Szotek D.",
+            "result": "W",
+            "score": "3-2"
+          },
           {
             "date": "2026-11-21",
             "time": "03:30:00",
@@ -22770,38 +22848,6 @@
             "opponent": "Zahradka M.",
             "result": "W",
             "score": "3-1"
-          },
-          {
-            "date": "2026-11-17",
-            "time": "15:30:00",
-            "competition": "Czech Liga Pro",
-            "opponent": "Nohejl V.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-16",
-            "time": "18:00:00",
-            "competition": "Czech Liga Pro",
-            "opponent": "Nohejl V.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-16",
-            "time": "17:30:00",
-            "competition": "Czech Liga Pro",
-            "opponent": "Nohejl V.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-16",
-            "time": "16:30:00",
-            "competition": "Czech Liga Pro",
-            "opponent": "Zahradka M.",
-            "result": "L",
-            "score": "1-3"
           }
         ],
         "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
@@ -23283,82 +23329,6 @@
       }
     },
     {
-      "name": "Shunsuke Togami",
-      "events": [
-        {
-          "title": "Ganghyeon Park vs. Shunsuke Togami",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-ganpar-shutog-2026-11-21"
-        }
-      ],
-      "history": {
-        "status": "exact_name_match_identity_unverified",
-        "display_name": "Shunsuke Togami",
-        "source_player_id": "685938",
-        "matches_count": 4,
-        "wins": 4,
-        "losses": 0,
-        "last_match_date": "2026-11-21",
-        "competition_matches": 4,
-        "recent_matches": [
-          {
-            "date": "2026-11-21",
-            "time": "07:50:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Chen Yuanyu",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "15:25:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Ovtcharov D.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "06:00:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Seyfried J.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "13:55:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Thakkar M.",
-            "result": "W",
-            "score": "3-0"
-          }
-        ],
-        "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "133694",
-        "display_name": "TOGAMI Shunsuke",
-        "matches": 90,
-        "last_match_date": "2025-11-04",
-        "recent_form_last10": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          0,
-          0,
-          1,
-          0,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Slozka Mykola",
       "events": [
         {
@@ -23741,11 +23711,6 @@
     {
       "name": "Tomas Andrle",
       "events": [
-        {
-          "title": "Tomas Andrle vs. Jan Pleskot",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982500"
-        },
         {
           "title": "Jaroslav (1964) Strnad vs. Tomas Andrle",
           "competition": "Czech Liga Pro",
