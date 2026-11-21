@@ -110,3 +110,15 @@ The first simple Elo benchmark is a baseline only. It is not a fitted machine-le
 
 ### Phase 11 decision
 No new source rows are imported in this phase. The ITTF page's 403 response, partial-round coverage, missing scores, and unresolved reuse conditions make an automated import unsafe. ETTU is the next best target for a bounded manual schema/terms review. Keep all these sources separate from DataSportsAPI and WTT until acceptance checks pass.
+
+
+## Phase 14 — Free independent-source qualification (2026-11-21)
+
+A fresh source review identified three additional candidates with different coverage profiles:
+
+- **PongIQ:** a no-key, read-only API for published tournaments hosted on its platform. The public developer contract exposes category match lists and per-game score arrays, plus event draws and standings. It is potentially useful for tournament-scoped results and corroboration, but not a global professional feed. Confirm event provenance, historical retention, and reuse conditions before import; respect the provider's caching guidance.
+- **Table Tennis API / DeveloperData.net:** free tier offers 50 calls/day and results from December 2024 onward, with match/event/player/result-level information. The provider reserves per-game scores and duration fields for paid tiers. It could independently validate winners and discover coverage but cannot provide the full set-score history needed by the simulator. It requires a user-created free key, so integration is deferred until the user provisions one.
+- **U.S. Table Tennis Hall of Fame Archive:** a public historical archive spanning U.S. Opens/Nationals, Olympic Festivals, international results, college, MLTT, Olympic/Paralympic and Pan Am collections. The public landing page highlights finals, champions and career records; match-level completeness, set scores and bulk reuse rights remain collection-specific and unverified. Use only for targeted corroboration until assessed.
+
+### Phase 14 decision
+Do not ingest any candidate source yet. Keep the existing free DataSportsAPI feed as the recent results backbone, with its own source-isolated histories and no model promotion until a credible chronological holdout exists. Sample PongIQ next because it is publicly accessible without a key and appears to expose per-game scores; accept only published, completed, singles matches with event/match IDs, source timestamps and adequate score detail. Do not exceed provider caching guidance. Table Tennis API remains optional and requires a user-provisioned free key; do not ask for or store credentials in repository files. The U.S. archive is a targeted history/corroboration source, not assumed to be a complete match dataset.

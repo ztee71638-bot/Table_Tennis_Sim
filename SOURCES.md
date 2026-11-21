@@ -134,3 +134,34 @@ Keep separate source-scoped player IDs. Never merge players across providers bas
 ### European Table Tennis Information System (ETTIS)
 - https://ettis.info/
 - Community historical database advertises European results from 1926–2006. Use for discovery and targeted corroboration only; source provenance, completeness, and reuse terms remain unverified.
+
+
+## Additional free independent-source candidates (reviewed 2026-11-21)
+
+### PongIQ public API — free, read-only, tournament-scoped
+- Developer documentation: https://www.pongiq.app/developers
+- Public endpoints include published events, event categories, locked knockout draws/results, group standings, category match lists with scores, individual match details, and public ratings.
+- No API key is currently required. The provider asks clients to cache responses and avoid polling faster than the data changes; published events only are exposed.
+- Coverage appears to be tournaments using the PongIQ platform, not a comprehensive global professional circuit feed. Sample payloads include per-game scores, but completed historical coverage, stable long-term retention, terms for bulk reuse, and event/player provenance need verification before ingestion.
+- Qualification: good candidate for a separately scoped tournament feed and independent match corroboration. No importer or automatic identity links authorized.
+
+### Table Tennis API (DeveloperData.net) — free tier, account key required
+- Official service: https://tabletennisapi.com/
+- Published free tier: 50 calls/day, no payment card; date-filtered matches/results, events, player lookup, world rankings, and individual match retrieval. Coverage is advertised from December 2024 for professional events across senior, youth, and para disciplines.
+- Free tier does not include full per-game scores/durations (these are advertised for paid tiers); its match records include event, date, discipline, round, status, best-of, sides, match score, and winner.
+- This could support independent winner/result cross-checks, event coverage discovery, and opponent history, but is not a substitute for set-by-set scores. It requires a separate free account/key and 50-call daily budget. Do not request or store the key until user explicitly provisions it.
+- Qualification: no integration until an account key is provided and a small sample is inspected. Keep source-specific IDs and all links isolated.
+
+### U.S. Table Tennis Hall of Fame — The Archive
+- Official project page: https://results.ustthof.org/
+- Public archive covers U.S. Open/Nationals, U.S. Olympic Festival, international results, college champions, MLTT, Olympic/Paralympic and Pan Am history, and player/finalist profiles.
+- It is a valuable discovery and identity-corroboration source for historical U.S. players and major events. The public overview emphasizes finals, champions, and career results; completeness of individual match rows, set scores, bulk downloads, and reuse terms must be assessed on a collection-by-collection basis.
+- Qualification: targeted historical corroboration only; do not treat title/finalist records as a complete match-history dataset or bulk-scrape the site.
+
+### Free-source prioritization
+1. Existing DataSportsAPI free daily feed remains the primary recent result feed; maintain the separate classification and chronological backtest gate.
+2. PongIQ is the strongest no-key candidate to sample for platform tournament match-level scores, but should remain a distinct source and be used only for tournaments with clear provenance.
+3. Table Tennis API can offer independent result-level validation if the user provisions a free key; the free plan lacks full game-score detail and is limited to 50 calls/day.
+4. The U.S. Hall of Fame archive is best suited to targeted historical U.S. identity/event corroboration, not a universal results importer.
+
+No data from these three candidates was imported in this qualification pass. No paid plan, API key, scraping, or cross-source identity merge was used.
