@@ -52,3 +52,10 @@ Additional evidence added in this phase:
 - Kozachuk Ivan: two 19 November 2026 Setka Cup results, against Denys Shcherbak and Denys Pesternikov, exact date/opponent/all set scores correlated to fixtures 1141253 and 1141267. Independent record: https://24live.com/page/sport/participant/table-tennis-22/1006413
 
 The Setka Cup results demonstrate that the evidence validator now checks the candidate's own competition scope, rather than applying a Czech-only restriction. All three new result correlations remain human-review evidence only; no ID is verified, approved, or merged.
+
+
+## Additional Setka Cup candidate: Kovalchuk Nazarii
+
+Bettrails' public player archive lists Kovalchuk Nazarii's 19 November 2026 Setka Cup match against Rak Serhii as a 1–3 loss, with candidate-perspective set scores 11–9, 5–11, 4–11, 6–11. Those details correlate exactly with DataSportsAPI fixture 1141249 for source player ID 58534 against opponent ID 274477. Independent reference: https://bettrails.com/tenis-de-mesa/jugador/kovalchuk-nazarii?lang=en
+
+The evidence is recorded as a match-level correlation for human review only. The DataSportsAPI source ID remains unverified and the identity decision remains HOLD; this evidence does not authorize a merge or alter simulator records.
