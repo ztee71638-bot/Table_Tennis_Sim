@@ -18,6 +18,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: datasportsapi-table-tennis-import
@@ -26,10 +28,21 @@ concurrency:
 jobs:
   import:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
     timeout-minutes: 45
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -100,10 +113,21 @@ jobs:
           git add data/raw/datasportsapi/ site/data/polymarket_active.json site/data/datasportsapi_player_records.json site/data/tabletennisapi_profiles.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh player discovery and table tennis source summaries"
-            # Other workflows may update main while this job runs. Rebase the
-            # snapshot commit onto the latest branch before publishing it.
-            git pull --rebase -X theirs origin main
-            git push
+            # Other workflows or merged PRs may update main while this job runs.
+            # Retry a safe rebase/push; prefer this run's newly fetched source snapshots
+            # when the same daily JSON files changed in both commits.
+            for attempt in 1 2 3; do
+              git fetch origin main
+              git rebase -X theirs origin/main
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "::error::Could not publish refreshed data after three safe push attempts."
+                exit 1
+              fi
+              sleep 3
+            done
           fi
 
       - name: Upload database, provider snapshots, and import evidence
@@ -118,4 +142,19 @@ jobs:
             data/processed/datasportsapi_quality_backtest.json
           if-no-files-found: error
           retention-days: 30
+
+      - name: Add Pages metadata
+        run: touch site/.nojekyll
+
+      - name: Upload refreshed website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: github-pages-${{ github.run_id }}
+          path: site
+
+      - name: Deploy refreshed website
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}
 
