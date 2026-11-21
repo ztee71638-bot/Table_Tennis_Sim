@@ -60,6 +60,12 @@ class TableTennisApiDiscoveryTests(unittest.TestCase):
         self.assertNotIn("height_cm", result)
         self.assertFalse(result["model_eligible"])
 
+    def test_daily_budget_limits_player_lookups(self):
+        self.assertEqual(MODULE.lookup_slots(0, 50), 5)
+        self.assertEqual(MODULE.lookup_slots(38, 40), 1)
+        self.assertEqual(MODULE.lookup_slots(40, 40), 0)
+        self.assertEqual(MODULE.lookup_slots(45, 40), 0)
+
     def test_temporary_rate_limit_is_not_cached_as_fresh(self):
         record = {"status": "provider_rate_limited", "looked_up_at_utc": "2026-11-20T12:00:00+00:00"}
         self.assertFalse(MODULE.is_fresh(record, datetime(2026, 11, 20, 13, tzinfo=timezone.utc)))
