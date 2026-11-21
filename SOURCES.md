@@ -75,10 +75,15 @@ This project is free-only. A source is not automatically imported just because i
 
 ## Useful for discovery, but not free historical bulk feeds
 
-### Table Tennis API
-- https://tabletennisapi.com/
-- Free key: 50 calls/day and yesterday-to-future results; historical archive since December 2024 is paid.
-- Could be considered later for recent match coverage, but do not make paid calls or subscribe.
+### Table Tennis API (free-tier WTT player discovery only)
+- Website and terms: https://tabletennisapi.com/ and https://tabletennisapi.com/terms
+- API documentation: https://tabletennisapi.com/openapi.json
+- Integrated by `scripts/enrich_polymarket_tabletennisapi.py` during the six-hour Polymarket refresh.
+- The repository secret `TABLETENNISAPI_KEY` is used server-side only; it is never sent to the browser or written to logs.
+- Free plan: 50 calls/day and 10 calls/minute. The integration caps itself at 40 successful calls/day and at five player lookups per six-hour run. A lookup uses the free `GET /v1/players?q=...` endpoint and, only after a unique exact full-token name candidate is found, `GET /v1/players/{id}`.
+- The integration is limited to active WTT Polymarket listings. It does not call paid player-match-history, head-to-head, live-score, or archive endpoints. It retains only source ID, country, aggregate record by discipline, and current ranking summary; it does not retain raw API responses or individual match rows.
+- These profiles are displayed as unverified discovery evidence only. They are not imported into the historical match database, used for model training, or treated as identity proof. Domestic Setka/Czech/TT Elite listings are not queried through this WTT-focused source.
+- Terms checked 2026-11-20: permitted for use and display in the project's own app/site, but not for raw-data resale/redistribution, bulk database rebuilding, or building a competing product. If the product's intended use changes, re-check with the provider before expanding usage.
 
 ### TT Data Lab
 - https://tt-data-lab.onrender.com/data-api.html
