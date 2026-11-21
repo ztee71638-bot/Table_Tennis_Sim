@@ -286,9 +286,9 @@ def main() -> None:
     except (KeyError, TypeError, ValueError) as exc:
         raise RuntimeError("Table Tennis API /usage response did not include valid daily usage limits.") from exc
     effective_daily_budget = min(MAX_CALLS_PER_UTC_DAY, provider_daily_limit)
-    if calls >= effective_daily_budget:
+    budget_reached = calls >= effective_daily_budget
+    if budget_reached:
         print(f"Daily provider safety budget reached ({calls}/{effective_daily_budget}); no player lookups made.")
-        return
 
     active = event_players()
     queue = []
