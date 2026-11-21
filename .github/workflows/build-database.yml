@@ -16,6 +16,7 @@ on:
       - "scripts/import_datasportsapi.py"
       - "scripts/classify_datasportsapi.py"
       - "tests/test_datasportsapi_import.py"
+      - "tests/test_simulator_cli.py"
       - "docs/polymarket_us_integration.md"
       - "docs/domestic_league_coverage.md"
       - "SOURCES.md"
