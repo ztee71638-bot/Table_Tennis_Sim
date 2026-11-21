@@ -13,6 +13,9 @@ class TableTennisApiDiscoveryTests(unittest.TestCase):
     def test_full_name_tokens_match_in_either_order(self):
         self.assertEqual(MODULE.name_match_type("Yuanyu Chen", "Chen Yuanyu"), "exact")
 
+    def test_provider_search_uses_a_distinctive_name_token(self):
+        self.assertEqual(MODULE.search_term("Yuanyu Chen"), "yuanyu")
+
     def test_accents_are_normalized(self):
         self.assertEqual(MODULE.name_match_type("Felix Lebrun", "Félix Lebrun"), "exact")
 
