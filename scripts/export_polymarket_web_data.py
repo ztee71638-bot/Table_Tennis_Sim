@@ -67,6 +67,17 @@ def main() -> None:
         raise SystemExit("Polymarket event snapshot is missing; run the public read-only scanner first.")
     payload = json.loads(RAW_EVENTS.read_text(encoding="utf-8"))
     events = payload.get("events", [])
+    previous_players = {}
+    if OUT.exists():
+        try:
+            previous = json.loads(OUT.read_text(encoding="utf-8"))
+            previous_players = {
+                str(p.get("name", "")).casefold(): p.get("history", {})
+                for p in previous.get("players", [])
+                if p.get("name")
+            }
+        except (ValueError, OSError):
+            previous_players = {}
     history: list[dict] = []
     source_info = {"available": False, "reason": "Database unavailable"}
     if DB_PATH.exists():
@@ -85,12 +96,20 @@ def main() -> None:
         if not a or not b:
             continue
         scope = reconciliation.event_competition(event)
-        pa = player_history(a, history, scope) if source_info.get("available") else {
-            "status": "source_not_loaded", "identity_note": "Recent source history is unavailable in this refresh.", "matches": []
-        }
-        pb = player_history(b, history, scope) if source_info.get("available") else {
-            "status": "source_not_loaded", "identity_note": "Recent source history is unavailable in this refresh.", "matches": []
-        }
+        def resolve_history(name: str) -> dict:
+            if source_info.get("available"):
+                return player_history(name, history, scope)
+            cached = previous_players.get(name.casefold(), {})
+            if cached.get("status") == "exact_name_match_identity_unverified":
+                return cached
+            return {
+                "status": "source_not_loaded",
+                "identity_note": "Recent source history is unavailable in this refresh.",
+                "matches": [],
+            }
+
+        pa = resolve_history(a)
+        pb = resolve_history(b)
         slug = event.get("slug") or ""
         event_row = {
             "event_id": str(event.get("id") or ""),
