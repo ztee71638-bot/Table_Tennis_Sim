@@ -155,6 +155,14 @@ MATCH_LEVEL_EVIDENCE = [
         "source": "Bettrails independent Setka Cup player match archive",
         "url": "https://bettrails.com/tenis-de-mesa/jugador/kovalchuk-nazarii?lang=en",
     },
+    {
+        "candidate": "Martin Stefek", "source_player_id": "625477",
+        "opponent": "Tomas Andrle", "opponent_source_player_id": "630794",
+        "date": "2026-11-19", "competition": "Czech Liga Pro",
+        "sets": [(11, 7), (4, 11), (11, 6), (13, 11)],
+        "source": "PongData independent player match archive",
+        "url": "https://pongdata.com/players/stefek-m-k9gqp5qvz3",
+    },
 ]
 
 FIELDS = [
