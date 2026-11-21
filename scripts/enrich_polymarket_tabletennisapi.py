@@ -186,6 +186,12 @@ def event_players() -> list[tuple[str, str]]:
     return list(found.values())
 
 
+def lookup_slots(calls_today: int, daily_budget: int) -> int:
+    if calls_today >= daily_budget:
+        return 0
+    return min(MAX_PLAYERS_PER_RUN, max(0, (daily_budget - calls_today) // 2))
+
+
 def is_fresh(record: dict, now: datetime) -> bool:
     if record.get("status") in {"provider_rate_limited", "provider_error"}:
         return False
@@ -286,9 +292,9 @@ def main() -> None:
     except (KeyError, TypeError, ValueError) as exc:
         raise RuntimeError("Table Tennis API /usage response did not include valid daily usage limits.") from exc
     effective_daily_budget = min(MAX_CALLS_PER_UTC_DAY, provider_daily_limit)
-    if calls >= effective_daily_budget:
+    remaining = lookup_slots(calls, effective_daily_budget)
+    if remaining == 0:
         print(f"Daily provider safety budget reached ({calls}/{effective_daily_budget}); no player lookups made.")
-        return
 
     active = event_players()
     queue = []
@@ -297,7 +303,6 @@ def main() -> None:
         cached = state["players"].get(key, {})
         if not is_fresh(cached, now):
             queue.append(name)
-    remaining = 0 if budget_reached else min(MAX_PLAYERS_PER_RUN, (effective_daily_budget - calls) // 2)
     selected = queue[:remaining]
     print(f"Active WTT player names: {len(active)}; due for lookup: {len(queue)}; selected this run: {len(selected)}.")
     for name in selected:

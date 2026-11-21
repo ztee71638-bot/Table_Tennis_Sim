@@ -64,6 +64,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.event_name == 'workflow_dispatch' && 'datasportsapi-table-tennis-import' || format('build-database-{0}', github.run_id) }}
+      cancel-in-progress: false
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -86,7 +89,7 @@ jobs:
         run: python scripts/import_wtt.py
 
       - name: Import recent domestic-league results and build source-isolated player histories
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'workflow_dispatch'
         env:
           DATASPORTSAPI_KEY: ${{ secrets.DATASPORTSAPI_KEY }}
         run: |

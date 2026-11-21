@@ -60,7 +60,7 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 <!-- TABLETENNISAPI_PROFILE_DATA_START -->
 <!-- TABLETENNISAPI_PROFILE_DATA_END -->
 <script>
-const tableTennisApiProfiles=(()=>{try{return JSON.parse(document.getElementById('tabletennisapi-profile-data')?.textContent||'{}').profiles||{}}catch{return {}}})();
+let tableTennisApiProfiles=(()=>{try{return JSON.parse(document.getElementById('tabletennisapi-profile-data')?.textContent||'{}').profiles||{}}catch{return {}}})();
 const tableTennisApiKey=name=>String(name||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').match(/[a-z0-9]+/g)?.sort().join(' ')||'';
 const $=id=>document.getElementById(id);let pools={},model={};
 const avg=a=>a&&a.length?a.reduce((s,x)=>s+x,0)/a.length:0;
@@ -167,11 +167,21 @@ function renderPolymarket(){
  $('polymarket-results').innerHTML=rows.length?rows.slice(0,60).map(e=>({e,index:polymarketEvents.indexOf(e)})).map(({e,index})=>{const pair=findPolymarketModelPair(e);return '<article class="market-card"><div class="market-title">'+escapeHtml(e.title)+'</div><div class="muted">'+escapeHtml(e.competition||'Table Tennis')+' · '+escapeHtml(e.start_time_utc||'Start time unavailable')+'</div><div class="market-players"><div class="market-player"><b>'+escapeHtml(e.player_a.name)+'</b>'+historySummary(e.player_a)+'</div><div class="market-player"><b>'+escapeHtml(e.player_b.name)+'</b>'+historySummary(e.player_b)+'</div></div><div class="market-actions"><button type="button" class="market-simulate" data-simulate-index="'+index+'" '+(pair?'':'disabled')+'>Simulate this match</button><a class="market-link" href="'+escapeHtml(e.url)+'" target="_blank" rel="noopener noreferrer">View Polymarket listing ↗</a></div><div class="market-sim-note">'+(pair?'Ready · '+escapeHtml(pair.source)+' model'+(pair.nameMatchType==='full_token_order_match'?' · unique full-name token match':''):'Not available yet · both players need unique full-name matches in the same model dataset')+'</div></article>'}).join(''):'<div class="market-empty">No active matchups match that search.</div>';
  if(rows.length>60)$('polymarket-results').innerHTML+='<div class="market-empty">Showing first 60 results. Refine your search.</div>';
 }
+async function refreshTableTennisApiProfiles(){
+ try{
+  const response=await fetch('./index.html?profiles_refresh='+Date.now(),{cache:'no-store'});
+  if(!response.ok)return;
+  const html=await response.text();
+  const match=html.match(/<script id="tabletennisapi-profile-data" type="application\/json">([\s\S]*?)<\/script>/);
+  if(match){const parsed=JSON.parse(match[1]);if(parsed&&parsed.profiles&&typeof parsed.profiles==='object')tableTennisApiProfiles=parsed.profiles;}
+ }catch(_err){/* Keep the last good in-page profile cache if the page refresh is unavailable. */}
+}
 async function loadPolymarket(){
  try{
   const response=await fetch('./data/polymarket_active.json?refresh='+Date.now());
   if(!response.ok)throw Error('Current listing feed is not published yet.');
   const data=await response.json();
+  await refreshTableTennisApiProfiles();
   polymarketEvents=(data.events||[]).filter(e=>e.active&&!e.closed);
   const api=data.tabletennisapi_source||{};
   const apiStatus=api.available?' · WTT names checked '+(api.names_checked||0)+' ('+(api.players_checked_today||0)+' checked today) · provider calls today '+(api.calls_today||0)+'/'+(api.daily_safety_budget||40):' · WTT profile lookup awaiting provider refresh';
@@ -190,4 +200,5 @@ $('run').addEventListener('click',()=>{const pool=pools[$('source').value],a=res
 attachPlayerSearch('a');attachPlayerSearch('b');
 init();
 loadPolymarket();
+setInterval(loadPolymarket,300000);
 </script></body></html>

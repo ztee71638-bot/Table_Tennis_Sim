@@ -45,21 +45,10 @@ jobs:
           python-version: "3.12"
       - name: Install read-only Polymarket US SDK
         run: python -m pip install --upgrade pip polymarket-us
-      - name: Rebuild validated database and model
-        env:
-          DATASPORTSAPI_KEY: ${{ secrets.DATASPORTSAPI_KEY }}
+      - name: Rebuild validated WTT database and model
         run: |
           python scripts/build_database.py
           python scripts/import_wtt.py
-          if [ -n "$DATASPORTSAPI_KEY" ]; then
-            python scripts/import_datasportsapi.py
-            python scripts/classify_datasportsapi.py
-            python scripts/audit_datasportsapi_classification.py
-            python scripts/analyze_datasportsapi.py
-            python scripts/backtest_datasportsapi.py
-          else
-            echo "::warning::DATASPORTSAPI_KEY is not configured; player histories will show source_not_loaded."
-          fi
           python scripts/analyze_database.py
           python scripts/train_prediction_model.py
           python scripts/scan_polymarket_table_tennis.py

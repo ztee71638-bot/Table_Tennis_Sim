@@ -30,7 +30,7 @@ This project is free-only. A source is not automatically imported just because i
 - Terms checked 2026-11-16: data may be used in the project's own apps/products/analysis; raw feed resale or redistribution is prohibited.
 - The 2026-11-14 through 2026-11-20 saved update contained 6,337 singles results across Czech Liga Pro (940), Setka Cup (1,526), TT Elite Series (2,023), TT Cup (1,119), and Liga Pro (729). These are recent-window counts, not full historical totals.
 - Singles/doubles/team/unknown classifications are stored separately. Only completed individual singles are used for individual-player form and H2H; ambiguous/team/doubles records are excluded from those calculations.
-- The main database build now replays the rolling recent import when the secret is configured, then reconciles Polymarket player listings against the matching competition. See `docs/domestic_league_coverage.md`.
+- The scheduled `update-datasportsapi.yml` workflow is the single automated owner of the rolling recent import, then reconciles Polymarket player listings against the matching competition. Deployment-only rebuilds reuse the latest published histories and do not make duplicate provider calls. Manual database builds serialize with the scheduled importer. See `docs/domestic_league_coverage.md`.
 
 ### Racket Sports Multi-Dataset (WTT men and women)
 - Repository: https://github.com/Li02003121/racket-sports-dataset
