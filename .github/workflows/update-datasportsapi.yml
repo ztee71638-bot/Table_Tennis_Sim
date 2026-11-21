@@ -34,6 +34,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install read-only Polymarket US SDK
+        run: python -m pip install --upgrade pip polymarket-us
+
       - name: Rebuild validated historical database
         run: |
           python scripts/build_database.py
@@ -56,14 +59,23 @@ jobs:
       - name: Run DataSportsAPI quality validation and chronological backtest
         run: python scripts/backtest_datasportsapi.py
 
-      - name: Compile import, classification, analysis, and backtest scripts
-        run: python -m py_compile scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/backtest_datasportsapi.py scripts/audit_datasportsapi_classification.py
+      - name: Scan active public Polymarket US table-tennis listings
+        run: python scripts/scan_polymarket_table_tennis.py
+
+      - name: Reconcile listed players against source-scoped recent match histories
+        run: python scripts/reconcile_polymarket_players.py
+
+      - name: Export live matchups and player history for the website
+        run: python scripts/export_polymarket_web_data.py
+
+      - name: Compile import, classification, analysis, backtest, and web export scripts
+        run: python -m py_compile scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/backtest_datasportsapi.py scripts/audit_datasportsapi_classification.py scripts/scan_polymarket_table_tennis.py scripts/reconcile_polymarket_players.py scripts/export_polymarket_web_data.py
 
       - name: Persist refreshed daily source snapshots
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/datasportsapi/
+          git add data/raw/datasportsapi/ site/data/polymarket_active.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh retained DataSportsAPI table tennis snapshots"
             # Other workflows may update main while this job runs. Rebase the
