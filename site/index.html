@@ -57,7 +57,11 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 </ul><p class="muted">The Monte Carlo interval measures simulation noise only, not model uncertainty. This is research output, not a guarantee or a live betting recommendation.</p></section>
 <footer id="freshness"></footer>
 </main>
+<!-- TABLETENNISAPI_PROFILE_DATA_START -->
+<!-- TABLETENNISAPI_PROFILE_DATA_END -->
 <script>
+const tableTennisApiProfiles=(()=>{try{return JSON.parse(document.getElementById('tabletennisapi-profile-data')?.textContent||'{}').profiles||{}}catch{return {}}})();
+const tableTennisApiKey=name=>String(name||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').match(/[a-z0-9]+/g)?.sort().join(' ')||'';
 const $=id=>document.getElementById(id);let pools={},model={};
 const avg=a=>a&&a.length?a.reduce((s,x)=>s+x,0)/a.length:0;
 const sigmoid=z=>1/(1+Math.exp(-Math.max(-30,Math.min(30,z))));
@@ -88,7 +92,7 @@ const warns=[];if(r.da>120)warns.push('Player A last recorded match was '+r.da+'
 $('h2h').innerHTML=r.details.length?'<p>'+r.details.length+' shared opponents with comparable records.</p><ul>'+r.details.slice(0,30).map(d=>'<li>'+String(d.id).replaceAll('<','&lt;')+': A '+d.x.wins+'-'+d.x.losses+', B '+d.y.wins+'-'+d.y.losses+'</li>').join('')+'</ul>':'<p>No shared opponents with usable prior records were found.</p>';
 }
 function tableTennisApiSummary(player){
- const t=player.tabletennisapi||{};
+ const t=tableTennisApiProfiles[tableTennisApiKey(player.name)]||{};
  if(t.status==='exact_name_match_identity_unverified'){
   const records=(t.records_by_discipline||[]).slice().sort((a,b)=>Number(b.played||0)-Number(a.played||0));
   const recordHtml=records.slice(0,3).map(r=>{
