@@ -104,11 +104,14 @@ function historySummary(player){
 }
 let polymarketEvents=[];
 function findPolymarketModelPair(event){
- const norm=s=>String(s||'').trim().toLocaleLowerCase();
+ const norm=s=>String(s||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').match(/[a-z0-9]+/g)?.sort().join(' ')||'';
  for(const [source,pool] of Object.entries(pools)){
   const find=name=>Object.entries(pool).filter(([,p])=>norm(p.display_name)===norm(name));
   const aa=find(event.player_a?.name),bb=find(event.player_b?.name);
-  if(aa.length===1&&bb.length===1&&aa[0][0]!==bb[0][0])return {source,a:aa[0][0],b:bb[0][0],pool};
+  if(aa.length===1&&bb.length===1&&aa[0][0]!==bb[0][0]){
+   const sameText=(String(pool[aa[0][0]].display_name||'').trim().toLocaleLowerCase()===String(event.player_a?.name||'').trim().toLocaleLowerCase())&&(String(pool[bb[0][0]].display_name||'').trim().toLocaleLowerCase()===String(event.player_b?.name||'').trim().toLocaleLowerCase());
+   return {source,a:aa[0][0],b:bb[0][0],pool,nameMatchType:sameText?'exact':'full_token_order_match'};
+  }
  }
  return null;
 }
@@ -130,7 +133,7 @@ function runPolymarketSimulation(index,button){
 function renderPolymarket(){
  const q=($('polymarket-search').value||'').trim().toLocaleLowerCase();
  const rows=polymarketEvents.filter(e=>([e.title,e.competition,e.player_a?.name,e.player_b?.name].join(' ').toLocaleLowerCase()).includes(q));
- $('polymarket-results').innerHTML=rows.length?rows.slice(0,60).map(e=>({e,index:polymarketEvents.indexOf(e)})).map(({e,index})=>{const pair=findPolymarketModelPair(e);return '<article class="market-card"><div class="market-title">'+escapeHtml(e.title)+'</div><div class="muted">'+escapeHtml(e.competition||'Table Tennis')+' · '+escapeHtml(e.start_time_utc||'Start time unavailable')+'</div><div class="market-players"><div class="market-player"><b>'+escapeHtml(e.player_a.name)+'</b>'+historySummary(e.player_a)+'</div><div class="market-player"><b>'+escapeHtml(e.player_b.name)+'</b>'+historySummary(e.player_b)+'</div></div><div class="market-actions"><button type="button" class="market-simulate" data-simulate-index="'+index+'" '+(pair?'':'disabled')+'>Simulate this match</button><a class="market-link" href="'+escapeHtml(e.url)+'" target="_blank" rel="noopener noreferrer">View Polymarket listing ↗</a></div><div class="market-sim-note">'+(pair?'Ready · '+escapeHtml(pair.source)+' model':'Not available yet · both exact player records are not in the same model dataset')+'</div></article>'}).join(''):'<div class="market-empty">No active matchups match that search.</div>';
+ $('polymarket-results').innerHTML=rows.length?rows.slice(0,60).map(e=>({e,index:polymarketEvents.indexOf(e)})).map(({e,index})=>{const pair=findPolymarketModelPair(e);return '<article class="market-card"><div class="market-title">'+escapeHtml(e.title)+'</div><div class="muted">'+escapeHtml(e.competition||'Table Tennis')+' · '+escapeHtml(e.start_time_utc||'Start time unavailable')+'</div><div class="market-players"><div class="market-player"><b>'+escapeHtml(e.player_a.name)+'</b>'+historySummary(e.player_a)+'</div><div class="market-player"><b>'+escapeHtml(e.player_b.name)+'</b>'+historySummary(e.player_b)+'</div></div><div class="market-actions"><button type="button" class="market-simulate" data-simulate-index="'+index+'" '+(pair?'':'disabled')+'>Simulate this match</button><a class="market-link" href="'+escapeHtml(e.url)+'" target="_blank" rel="noopener noreferrer">View Polymarket listing ↗</a></div><div class="market-sim-note">'+(pair?'Ready · '+escapeHtml(pair.source)+' model'+(pair.nameMatchType==='full_token_order_match'?' · unique full-name token match':''):'Not available yet · both players need unique full-name matches in the same model dataset')+'</div></article>'}).join(''):'<div class="market-empty">No active matchups match that search.</div>';
  if(rows.length>60)$('polymarket-results').innerHTML+='<div class="market-empty">Showing first 60 results. Refine your search.</div>';
 }
 async function loadPolymarket(){
