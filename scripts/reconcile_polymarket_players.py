@@ -154,6 +154,58 @@ def player_candidates(name: str, history: list[dict], scope: str) -> list[dict]:
     return exact if exact else usable
 
 
+def rank_joint_candidates(cands_a: list[dict], cands_b: list[dict], pair_history: dict, scope: str) -> list[dict]:
+    """Rank ambiguous A/B identity pairs using shared, competition-scoped H2H evidence.
+
+    This is a review aid only: even repeated H2H never verifies or merges identities.
+    """
+    ranked = []
+    for a in cands_a:
+        for b in cands_b:
+            if a["source_player_id"] == b["source_player_id"]:
+                continue
+            meetings = pair_history.get(
+                frozenset((a["source_player_id"], b["source_player_id"])), []
+            )
+            if scope:
+                meetings = [
+                    m for m in meetings
+                    if competition_matches(scope, m.get("competition") or "")
+                ]
+            latest = max((m.get("match_date") or "" for m in meetings), default="")
+            a_recent = len(a.get("relevant_matches", []))
+            b_recent = len(b.get("relevant_matches", []))
+            if len(meetings) >= 2:
+                evidence = "repeated_head_to_head_review"
+            elif len(meetings) == 1:
+                evidence = "single_head_to_head_review"
+            elif a_recent and b_recent:
+                evidence = "competition_overlap_only"
+            else:
+                evidence = "no_joint_evidence"
+            ranked.append({
+                "player_a_source_id": a["source_player_id"],
+                "player_a_database_name": a["display_name"],
+                "player_b_source_id": b["source_player_id"],
+                "player_b_database_name": b["display_name"],
+                "h2h_matches_in_competition": len(meetings),
+                "latest_h2h_date": latest,
+                "player_a_matches_in_competition": a_recent,
+                "player_b_matches_in_competition": b_recent,
+                "evidence_status": evidence,
+                "decision": "review_only_no_identity_merge",
+            })
+    ranked.sort(
+        key=lambda row: (
+            row["h2h_matches_in_competition"],
+            row["latest_h2h_date"],
+            min(row["player_a_matches_in_competition"], row["player_b_matches_in_competition"]),
+        ),
+        reverse=True,
+    )
+    return ranked[:10]
+
+
 def summarize_candidate(candidate: dict | None, ambiguous: bool = False) -> dict:
     if candidate is None:
         return {
@@ -212,6 +264,7 @@ def reconcile(events: list[dict], history: list[dict], source_info: dict) -> tup
             h2h = pair_history.get(frozenset((unique_a["source_player_id"], unique_b["source_player_id"])), [])
             if scope:
                 h2h = [m for m in h2h if competition_matches(scope, m["competition"] or "")]
+        joint_pairs = rank_joint_candidates(cands_a, cands_b, pair_history, scope)
 
         def status(candidates, summary):
             if not source_info.get("available"):
@@ -249,6 +302,9 @@ def reconcile(events: list[dict], history: list[dict], source_info: dict) -> tup
             "player_b_last_match_date": sum_b["last_match_date"],
             "historical_h2h_matches_in_competition": len(h2h),
             "latest_h2h_date": max((m["match_date"] or "" for m in h2h), default=""),
+            "joint_candidate_pair_count": len(joint_pairs),
+            "joint_candidate_pairs_json": json.dumps(joint_pairs, ensure_ascii=False),
+            "joint_pair_top_evidence": joint_pairs[0]["evidence_status"] if joint_pairs else "no_candidates",
             "identity_decision": "review only; no automatic cross-source identity merge",
         }
         matchup_rows.append(row)
@@ -324,6 +380,7 @@ def main() -> None:
         "safety": [
             "DataSportsAPI player IDs remain source-scoped.",
             "Name and head-to-head evidence are review aids only; no identities are automatically merged.",
+            "Joint candidate pairs are ranked by same-competition head-to-head and recent coverage, but are never auto-approved.",
             "Only finished matches with a recorded winner from the DataSportsAPI source are considered.",
             "No simulator match records are changed by this reconciliation report.",
         ],
