@@ -140,7 +140,8 @@ def main() -> None:
                 "available": True,
                 "source": tabletennisapi_data.get("source") or "Table Tennis API (DeveloperData)",
                 "retrieved_at_utc": tabletennisapi_data.get("retrieved_at_utc") or "",
-                "players_checked": int(tabletennisapi_data.get("players_checked") or 0),
+                "players_cached": int(tabletennisapi_data.get("players_cached") or 0),
+                "players_checked_today": int(tabletennisapi_data.get("players_checked_today") or 0),
                 "calls_today": int(tabletennisapi_data.get("calls_today") or 0),
                 "daily_safety_budget": int(tabletennisapi_data.get("daily_safety_budget") or 40),
             }
