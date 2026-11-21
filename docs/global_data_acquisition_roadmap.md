@@ -84,3 +84,29 @@ The first simple Elo benchmark is a baseline only. It is not a fitted machine-le
 6. Enable scheduled imports only after the source adapter passes fixture tests and a live dry-run.
 
 **Current status: monitoring workflow implemented; automatic player-record updates are not yet enabled.** This avoids falsely advertising the database as live or contaminating the professional training set with unverified community events.
+
+
+## Phase 11 — European and official historical source qualification (2026-11-20)
+
+### ITTF historical championships archive — qualified, not yet ingested
+- Official ITTF page advertises individual-event World Championships results from 1926 across men's singles, women's singles, men's doubles, women's doubles, and mixed doubles.
+- The archive explicitly starts at the Round of 16; it is not a complete draw archive. ITTF also acknowledges missing scores and requests corrections from readers.
+- The public page returned HTTP 403 to automated retrieval during this review. The source is therefore documented as a high-value manual/download qualification target, not as an available automated feed.
+- Before import: obtain the underlying files through an allowed download route, inspect file formats and per-game score depth, record hashes and retrieval metadata, check reuse/attribution terms, and keep doubles separate from individual singles.
+
+### ITTF Results database — useful player-history validation, not a bulk feed
+- ITTF's results platform exposes player profiles and match-history search; ITTF's own 2018 description says results were then available from 2008 onward, with coverage still expanding.
+- Public search indexing exposes historical event and winner information, but the player-matches area can require registration/login. Do not automate authenticated scraping or assume a public display grants bulk-reuse rights.
+- Use for targeted independent corroboration and player identity review only until a documented bulk export/API and reuse terms are confirmed.
+
+### European Table Tennis Union — strong candidate for a separate event source
+- ETTU's official historical announcement documents European Championships results from 2008, European Youth Championships from 2010, U21 events, and Youth Top 10; it describes player results and head-to-head queries.
+- The current ETTU past-events archive exposes many recent event result pages. Public visibility is established, but a stable bulk endpoint/export and reuse terms for automated ingestion have not yet been verified.
+- Next qualification step: test a small set of official event-result pages manually, identify whether completed singles matches expose set scores and stable match identifiers, then request/confirm permitted reuse before writing an importer.
+
+### Historical European Table Tennis Information System (ETTIS) — discovery only
+- ETTIS advertises historical European results from 1926–2006, but it is a community historical database rather than an official governing-body feed. Provenance, completeness, and reuse rights require separate verification.
+- It may be used to discover event names and corroborating records; do not ingest into the canonical database until source-level provenance and permissions are documented.
+
+### Phase 11 decision
+No new source rows are imported in this phase. The ITTF page's 403 response, partial-round coverage, missing scores, and unresolved reuse conditions make an automated import unsafe. ETTU is the next best target for a bounded manual schema/terms review. Keep all these sources separate from DataSportsAPI and WTT until acceptance checks pass.

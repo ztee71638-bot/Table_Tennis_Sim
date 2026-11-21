@@ -110,3 +110,27 @@ Keep separate source-scoped player IDs. Never merge players across providers bas
 3. Investigate 11EDGE free account export and permitted use.
 4. Evaluate no-cost recent-result APIs and supplementary tournament feeds.
 5. Expand professional domestic leagues one provider/source at a time, with coverage and licensing documented.
+
+
+## Newly qualified historical research candidates (reviewed 2026-11-20)
+
+### ITTF Past World Championships Results
+- Official landing page: https://www.ittf.com/history/documents/past-world-championships-results/
+- Advertises individual-event results from 1926 for men's singles, women's singles, men's doubles, women's doubles, and mixed doubles.
+- Coverage is limited to matches from the Round of 16 onward; ITTF explicitly notes missing scores.
+- Automated retrieval returned HTTP 403 during this review. No files have been downloaded or imported. Reassess only through a permitted manual download or an authorized export, and preserve the coverage/missing-score limitations.
+
+### ITTF Results database / player profiles
+- Player search and profiles: https://results.ittf.link/players-profiles
+- ITTF's 2018 description reported player/tournament statistics and results coverage from 2008 at that time: https://www.ittf.com/2018/01/09/statistics-page-now-available/
+- Useful for targeted independent corroboration and identity review. The player-matches area may require registration; no automated login, scraping, or bulk reuse is assumed.
+
+### European Table Tennis Union (ETTU) results archive
+- Official past-events archive: https://www.ettu.org/past-events/
+- ETTU's 2017 announcement documented European Championships results from 2008, European Youth Championships from 2010, U21 and Youth Top 10 events, plus player and head-to-head queries: https://www.ettu.org/en-n-news-2017-june-new-statistic-data-section-available-on-ettu-web-page/
+- Public event pages are a promising source for a separate European event collection. Stable bulk export/API access, per-match set-score availability, and automated reuse permissions have not yet been verified. Manual qualification only; no importer enabled.
+- Privacy/policy page: https://www.ettu.org/privacy-policy/ . Public publication of sporting results is described, but that alone is not treated as a bulk data license.
+
+### European Table Tennis Information System (ETTIS)
+- https://ettis.info/
+- Community historical database advertises European results from 1926–2006. Use for discovery and targeted corroboration only; source provenance, completeness, and reuse terms remain unverified.
