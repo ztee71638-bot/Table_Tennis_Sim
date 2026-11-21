@@ -190,7 +190,7 @@ async function refreshTableTennisApiProfiles(){
   const response=await fetch('./index.html?profiles_refresh='+Date.now(),{cache:'no-store'});
   if(!response.ok)return;
   const html=await response.text();
-  const match=html.match(/<script id="tabletennisapi-profile-data" type="application\\/json">([\\s\\S]*?)<\\/script>/);
+  const match=html.match(/<script id="tabletennisapi-profile-data" type="application\/json">([\s\S]*?)<\/script>/);
   if(match){const parsed=JSON.parse(match[1]);if(parsed&&parsed.profiles&&typeof parsed.profiles==='object')tableTennisApiProfiles=parsed.profiles;}
  }catch(_err){/* Keep the last good in-page profile cache. */}
 }
