@@ -8,6 +8,8 @@ on:
       - "scripts/scan_polymarket_table_tennis.py"
       - "scripts/reconcile_polymarket_players.py"
       - "scripts/export_polymarket_web_data.py"
+      - "scripts/enrich_polymarket_tabletennisapi.py"
+      - "tests/test_tabletennisapi_polymarket.py"
       - "tests/test_polymarket_web_export.py"
       - ".github/workflows/update-datasportsapi.yml"
       - "scripts/review_polymarket_identity_candidates.py"
@@ -17,6 +19,8 @@ on:
       - "tests/test_polymarket_identity_review.py"
       - "tests/test_polymarket_identity_evidence.py"
       - "scripts/import_datasportsapi.py"
+      - "scripts/enrich_polymarket_tabletennisapi.py"
+      - "tests/test_tabletennisapi_polymarket.py"
       - "scripts/classify_datasportsapi.py"
       - "tests/test_datasportsapi_import.py"
       - "tests/test_simulator_cli.py"
@@ -115,7 +119,7 @@ jobs:
         run: python scripts/verify_polymarket_identity_evidence.py
 
       - name: Compile prediction and data scripts
-        run: python -m py_compile scripts/verify_polymarket_identity_evidence.py scripts/review_polymarket_identity_candidates.py scripts/train_prediction_model.py scripts/simulate_match.py scripts/smoke_test_simulator.py scripts/scan_polymarket_table_tennis.py scripts/reconcile_polymarket_players.py scripts/export_polymarket_web_data.py scripts/review_polymarket_identity_candidates.py scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/audit_datasportsapi_classification.py scripts/backtest_datasportsapi.py
+        run: python -m py_compile scripts/verify_polymarket_identity_evidence.py scripts/review_polymarket_identity_candidates.py scripts/train_prediction_model.py scripts/simulate_match.py scripts/smoke_test_simulator.py scripts/scan_polymarket_table_tennis.py scripts/reconcile_polymarket_players.py scripts/export_polymarket_web_data.py scripts/review_polymarket_identity_candidates.py scripts/import_datasportsapi.py scripts/enrich_polymarket_tabletennisapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/audit_datasportsapi_classification.py scripts/backtest_datasportsapi.py
 
       - name: Run 100000-simulation smoke test
         run: python scripts/smoke_test_simulator.py
