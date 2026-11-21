@@ -40,6 +40,20 @@ class PolymarketWebExportTests(unittest.TestCase):
         }
         self.assertEqual(MODULE.wtt_model_record("Yuanyu Chen", pools, "WTT")["status"], "ambiguous")
 
+    def test_tabletennisapi_profile_attaches_exact_name_profile(self):
+        profile = {"status": "exact_name_match_identity_unverified", "source_player_id": "pl_aaaa1111"}
+        result = MODULE.tabletennisapi_profile("Yuanyu Chen", "WTT", {"chen yuanyu": profile})
+        self.assertEqual(result["source_player_id"], "pl_aaaa1111")
+
+    def test_tabletennisapi_profile_does_not_apply_to_domestic_competitions(self):
+        result = MODULE.tabletennisapi_profile("Yuanyu Chen", "Setka Cup", {})
+        self.assertEqual(result["status"], "not_applicable")
+
+    def test_unchecked_wtt_player_is_queued(self):
+        result = MODULE.tabletennisapi_profile("Yuanyu Chen", "WTT", {})
+        self.assertEqual(result["status"], "queued_not_checked")
+        self.assertFalse(result["model_eligible"])
+
     def test_exact_unique_candidate_exposes_source_scoped_recent_history(self):
         result = MODULE.player_history("Erik Mares", [match()], "Czech Liga Pro")
         self.assertEqual(result["status"], "exact_name_match_identity_unverified")
