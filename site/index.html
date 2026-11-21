@@ -179,12 +179,20 @@ function renderPolymarket(){
 }
 async function refreshTableTennisApiProfiles(){
  try{
+  const response=await fetch('./data/tabletennisapi_profiles.json?refresh='+Date.now(),{cache:'no-store'});
+  if(response.ok){
+   const parsed=await response.json();
+   if(parsed&&parsed.profiles&&typeof parsed.profiles==='object')tableTennisApiProfiles=parsed.profiles;
+   return;
+  }
+ }catch(_err){/* Fall back to the last embedded profile snapshot for older deployments. */}
+ try{
   const response=await fetch('./index.html?profiles_refresh='+Date.now(),{cache:'no-store'});
   if(!response.ok)return;
   const html=await response.text();
-  const match=html.match(/<script id="tabletennisapi-profile-data" type="application\/json">([\s\S]*?)<\/script>/);
+  const match=html.match(/<script id="tabletennisapi-profile-data" type="application\\/json">([\\s\\S]*?)<\\/script>/);
   if(match){const parsed=JSON.parse(match[1]);if(parsed&&parsed.profiles&&typeof parsed.profiles==='object')tableTennisApiProfiles=parsed.profiles;}
- }catch(_err){/* Keep the last good in-page profile cache if the page refresh is unavailable. */}
+ }catch(_err){/* Keep the last good in-page profile cache. */}
 }
 async function loadPolymarket(){
  try{
