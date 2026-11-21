@@ -122,3 +122,10 @@ A fresh source review identified three additional candidates with different cove
 
 ### Phase 14 decision
 Do not ingest any candidate source yet. Keep the existing free DataSportsAPI feed as the recent results backbone, with its own source-isolated histories and no model promotion until a credible chronological holdout exists. Sample PongIQ next because it is publicly accessible without a key and appears to expose per-game scores; accept only published, completed, singles matches with event/match IDs, source timestamps and adequate score detail. Do not exceed provider caching guidance. Table Tennis API remains optional and requires a user-provisioned free key; do not ask for or store credentials in repository files. The U.S. archive is a targeted history/corroboration source, not assumed to be a complete match dataset.
+
+
+## Phase 15 — Table Tennis API terms and permission gate (2026-11-21)
+
+A review of the provider's current terms found a material restriction that narrows Phase 14's proposed use. The terms (updated 2026-10-27) allow API data in one's own apps/sites, but expressly prohibit bulk downloads to rebuild a database and using the service to build a competing product; broader use requires a separate licence. Consequently, the free API key does not authorize importing a historical corpus into our research database or training our model from bulk data.
+
+**Decision:** no integration, no bulk calls, no database writes, and no GitHub secret configuration for this provider until written permission explicitly covers private storage, derived statistics, and model training. The support acknowledgement is not a licence. Continue with the existing authorized DataSportsAPI feed and independently sourced public results. Revisit only after a substantive written response.
