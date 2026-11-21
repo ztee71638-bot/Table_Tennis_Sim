@@ -68442,7 +68442,13 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 11,
+                "period2": 10,
+                "period3": 11,
+                "period4": 9,
+                "period5": 11
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -68480,7 +68486,13 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 6,
+                "period2": 12,
+                "period3": 5,
+                "period4": 11,
+                "period5": 8
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -68700,7 +68712,13 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 5,
+                "period2": 7,
+                "period3": 11,
+                "period4": 11,
+                "period5": 11
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -68738,7 +68756,13 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 11,
+                "period2": 11,
+                "period3": 9,
+                "period4": 7,
+                "period5": 6
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -68817,13 +68841,18 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": null,
+              "current": 1,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 11,
+                "period2": 12,
+                "period3": 8,
+                "period4": 12
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -68855,13 +68884,18 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": null,
+              "current": 3,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 8,
+                "period2": 14,
+                "period3": 11,
+                "period4": 14
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -68906,12 +68940,12 @@
             "sport": "table-tennis",
             "startTime": "2026-11-20T19:20:00.000Z",
             "status": {
-              "code": 0,
-              "description": "Not started",
-              "finish": null,
+              "code": 100,
+              "description": "Ended",
+              "finish": "regular",
               "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
+              "phase": "finished",
+              "type": "finished"
             },
             "surface": null,
             "tier": null,
@@ -68921,7 +68955,7 @@
             "umpires": null,
             "varCheck": null,
             "venue": null,
-            "winner": null
+            "winner": "home"
           },
           {
             "aggregateWinner": null,
@@ -73313,18 +73347,18 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": 3,
+              "current": 2,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 9,
+                "period1": 11,
                 "period2": 11,
-                "period3": 3,
-                "period4": 11,
-                "period5": 11
+                "period3": 5,
+                "period4": 2,
+                "period5": 5
               },
               "point": null,
               "redCards": null,
@@ -73357,18 +73391,18 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": 2,
+              "current": 3,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 11,
-                "period2": 6,
+                "period1": 7,
+                "period2": 7,
                 "period3": 11,
-                "period4": 8,
-                "period5": 4
+                "period4": 11,
+                "period5": 11
               },
               "point": null,
               "redCards": null,
@@ -73429,7 +73463,7 @@
             "umpires": null,
             "varCheck": null,
             "venue": null,
-            "winner": "away"
+            "winner": "home"
           },
           {
             "aggregateWinner": null,
@@ -75711,7 +75745,7 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "fb38b3dd77e3496aaad6d51954c0695b3788691a5e8479654aeb64458100264a"
+      "sha256": "808cb68024f0c921c0b069abbc5d4ca224835dfc7f1fafc571fc387e8342173e"
     },
     {
       "page": 1,
@@ -140824,13 +140858,15 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": null,
+              "current": 0,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 0
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -140862,13 +140898,15 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": null,
+              "current": 0,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 0
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -140913,12 +140951,12 @@
             "sport": "table-tennis",
             "startTime": "2026-11-20T22:00:00.000Z",
             "status": {
-              "code": 0,
-              "description": "Not started",
+              "code": 80,
+              "description": "Interrupted",
               "finish": null,
               "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
+              "phase": "interrupted",
+              "type": "interrupted"
             },
             "surface": null,
             "tier": null,
@@ -142809,13 +142847,15 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": null,
+              "current": 0,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 0
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -142847,13 +142887,15 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": null,
+              "current": 0,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 0
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -142898,12 +142940,12 @@
             "sport": "table-tennis",
             "startTime": "2026-11-20T23:05:00.000Z",
             "status": {
-              "code": 0,
-              "description": "Not started",
+              "code": 80,
+              "description": "Interrupted",
               "finish": null,
               "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
+              "phase": "interrupted",
+              "type": "interrupted"
             },
             "surface": null,
             "tier": null,
@@ -143988,8 +144030,8 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "5955a8a221043b6d403992b665571f457709b2cf9cbe1fea9648578d228a754b"
+      "sha256": "e2638fb0660d9236b36a133a5393b510195adef549c2aa7874c2469a83967b0d"
     }
   ],
-  "retrieved_at": "2026-11-21T02:55:01.318257+00:00"
+  "retrieved_at": "2026-11-21T03:16:10.069981+00:00"
 }
