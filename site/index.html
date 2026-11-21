@@ -203,7 +203,7 @@ async function loadPolymarket(){
 }
 let domesticPlayerData=null,domesticPlayerRows=[];
 function playerSearchKey(value){
- return String(value||'').toLocaleLowerCase().normalize('NFKD').replace(/[\\u0300-\\u036f]/g,'');
+ return String(value||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'');
 }
 async function loadDomesticPlayerIndex(){
  const status=$('history-search-status'),box=$('history-search-results'),input=$('history-player-search');
