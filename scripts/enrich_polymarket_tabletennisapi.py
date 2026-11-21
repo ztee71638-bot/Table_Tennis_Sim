@@ -265,9 +265,20 @@ def main() -> None:
         state["utc_day"] = day
         state["calls_today"] = 0
     state.setdefault("players", {})
-    calls = int(state.get("calls_today") or 0)
-    if calls >= MAX_CALLS_PER_UTC_DAY:
-        print(f"Daily provider safety budget reached ({calls}/{MAX_CALLS_PER_UTC_DAY}); no calls made.")
+
+    # /usage is explicitly excluded from the provider's allowance. Use it as
+    # the source of truth so manual calls or other keys sharing this account
+    # cannot push the automation over the free plan's quota.
+    usage_payload = api_get("/usage")
+    usage = usage_payload.get("data") if isinstance(usage_payload.get("data"), dict) else {}
+    try:
+        calls = int(usage["calls_today"])
+        provider_daily_limit = int((usage.get("limits") or {})["per_day"])
+    except (KeyError, TypeError, ValueError) as exc:
+        raise RuntimeError("Table Tennis API /usage response did not include valid daily usage limits.") from exc
+    effective_daily_budget = min(MAX_CALLS_PER_UTC_DAY, provider_daily_limit)
+    if calls >= effective_daily_budget:
+        print(f"Daily provider safety budget reached ({calls}/{effective_daily_budget}); no player lookups made.")
         return
 
     active = event_players()
@@ -277,7 +288,7 @@ def main() -> None:
         cached = state["players"].get(key, {})
         if not is_fresh(cached, now):
             queue.append(name)
-    remaining = min(MAX_PLAYERS_PER_RUN, (MAX_CALLS_PER_UTC_DAY - calls) // 2)
+    remaining = min(MAX_PLAYERS_PER_RUN, (effective_daily_budget - calls) // 2)
     selected = queue[:remaining]
     print(f"Active WTT player names: {len(active)}; due for lookup: {len(queue)}; selected this run: {len(selected)}.")
     for name in selected:
@@ -303,10 +314,10 @@ def main() -> None:
             if str(item.get("looked_up_at_utc") or "").startswith(day)
         ),
         "calls_today": calls,
-        "daily_safety_budget": MAX_CALLS_PER_UTC_DAY,
+        "daily_safety_budget": effective_daily_budget,
         "players": state["players"],
     }, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(f"Table Tennis API lookup complete. Calls today: {calls}/{MAX_CALLS_PER_UTC_DAY}; cached names: {len(state['players'])}.")
+    print(f"Table Tennis API lookup complete. Calls today: {calls}/{effective_daily_budget}; cached names: {len(state['players'])}.")
 
 
 if __name__ == "__main__":
