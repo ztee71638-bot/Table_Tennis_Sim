@@ -280,7 +280,7 @@ def main() -> None:
     # or feature branches may be updating that page.
     PROFILE_OUT.parent.mkdir(parents=True, exist_ok=True)
     PROFILE_OUT.write_text(
-        json.dumps({"profiles": provider_profiles}, ensure_ascii=False, indent=2) + "\\n",
+        json.dumps({"profiles": provider_profiles}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
     print(json.dumps({"output": str(OUT.relative_to(ROOT)), "events": len(output_events), "players": len(player_index), "history_source": source_info}, indent=2))
