@@ -35,7 +35,7 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 <input id="polymarket-search" type="search" placeholder="Search a player, opponent or competition…" autocomplete="off">
 <p id="polymarket-updated" class="muted">Loading current Polymarket listings…</p>
 <div id="polymarket-results"><div class="market-empty">Loading active matchups…</div></div>
-<p class="muted">History is shown only where a unique exact-name candidate exists in the recent-results source. Identity is not independently verified. New listings without matching history still appear here.</p>
+<p class="muted">Player profile source: <a class="market-link" href="https://tabletennisapi.com/" target="_blank" rel="noopener">Table Tennis API</a>. Profiles are checked in a rotating queue within the free 50-call daily limit. Names remain unverified candidates; provider profiles are not used for model training. New listings without matching history still appear here.</p>
 </section>
 <section class="panel">
 <div id="load">Loading player database…</div>
@@ -169,7 +169,9 @@ async function loadPolymarket(){
   if(!response.ok)throw Error('Current listing feed is not published yet.');
   const data=await response.json();
   polymarketEvents=(data.events||[]).filter(e=>e.active&&!e.closed);
-  $('polymarket-updated').textContent=polymarketEvents.length+' active matchups · '+(data.players_count||0)+' listed players · source checked '+new Date(data.retrieved_at_utc).toLocaleString()+' · this page checks for feed updates every 5 minutes';
+  const api=data.tabletennisapi_source||{};
+  const apiStatus=api.available?' · WTT profiles checked '+(api.players_checked||0)+' · provider calls today '+(api.calls_today||0)+'/'+(api.daily_safety_budget||40):' · WTT profile lookup awaiting provider refresh';
+  $('polymarket-updated').textContent=polymarketEvents.length+' active matchups · '+(data.players_count||0)+' listed players · feed '+new Date(data.retrieved_at_utc).toLocaleString()+apiStatus+' · page checks for feed updates every 5 minutes';
   if(!$('polymarket-search').dataset.bound){$('polymarket-search').addEventListener('input',renderPolymarket);$('polymarket-search').dataset.bound='1';}
   if(!$('polymarket-results').dataset.bound){$('polymarket-results').addEventListener('click',e=>{const btn=e.target.closest('[data-simulate-index]');if(btn)runPolymarketSimulation(Number(btn.dataset.simulateIndex),btn);});$('polymarket-results').dataset.bound='1';}
   renderPolymarket();
