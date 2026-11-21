@@ -72,6 +72,39 @@ def player_history(name: str, history: list[dict], scope: str) -> dict:
     }
 
 
+
+def wtt_model_record(name: str, model_pools: dict, scope: str) -> dict:
+    """Find a WTT model record by full token-set name; never fuzzy-merge identities."""
+    if scope != "WTT" or not isinstance(model_pools, dict):
+        return {"status": "not_applicable", "identity_note": "WTT model lookup is only used for WTT listings."}
+    candidates = []
+    for source, pool in model_pools.items():
+        if not isinstance(pool, dict):
+            continue
+        for player_id, record in pool.items():
+            if not isinstance(record, dict):
+                continue
+            if reconciliation.normalized_tokens_match(name, record.get("display_name") or "") == "exact":
+                candidates.append((source, str(player_id), record))
+    if len(candidates) != 1:
+        return {
+            "status": "ambiguous" if len(candidates) > 1 else "not_found",
+            "candidate_count": len(candidates),
+            "identity_note": "No unique full-token WTT model record; no model match is assumed.",
+        }
+    source, player_id, record = candidates[0]
+    return {
+        "status": "wtt_model_record_identity_unverified",
+        "source": source,
+        "source_player_id": player_id,
+        "display_name": record.get("display_name") or "",
+        "matches": int(record.get("matches") or 0),
+        "last_match_date": record.get("last_date") or "",
+        "recent_form_last10": list(record.get("recent_form_last10") or [])[-10:],
+        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only.",
+    }
+
+
 def main() -> None:
     if not RAW_EVENTS.exists():
         raise SystemExit("Polymarket event snapshot is missing; run the public read-only scanner first.")
@@ -90,6 +123,13 @@ def main() -> None:
             previous_players = {}
     history: list[dict] = []
     source_info = {"available": False, "reason": "Database unavailable"}
+    model_pools = {}
+    model_path = ROOT / "data/processed/current_player_states.json"
+    if model_path.exists():
+        try:
+            model_pools = json.loads(model_path.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            model_pools = {}
     if DB_PATH.exists():
         conn = sqlite3.connect(DB_PATH)
         conn.row_factory = sqlite3.Row
@@ -120,6 +160,8 @@ def main() -> None:
 
         pa = resolve_history(a)
         pb = resolve_history(b)
+        ma = wtt_model_record(a, model_pools, scope)
+        mb = wtt_model_record(b, model_pools, scope)
         slug = event.get("slug") or ""
         event_row = {
             "event_id": str(event.get("id") or ""),
@@ -131,14 +173,15 @@ def main() -> None:
             "active": event.get("active") is not False,
             "closed": event.get("closed") is True,
             "url": f"https://polymarket.us/event/{slug}" if slug else "https://polymarket.us",
-            "player_a": {"name": a, "history": pa},
-            "player_b": {"name": b, "history": pb},
+            "player_a": {"name": a, "history": pa, "model_record": ma},
+            "player_b": {"name": b, "history": pb, "model_record": mb},
         }
         output_events.append(event_row)
         for name, details in ((a, pa), (b, pb)):
             key = name.casefold()
             if key not in player_index:
-                player_index[key] = {"name": name, "events": [], "history": details}
+                model_details = ma if name == a else mb
+                player_index[key] = {"name": name, "events": [], "history": details, "model_record": model_details}
             player_index[key]["events"].append({"title": title, "competition": scope, "url": event_row["url"]})
 
     output = {
