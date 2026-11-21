@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - "scripts/import_datasportsapi.py"
+      - "scripts/enrich_polymarket_tabletennisapi.py"
+      - "tests/test_tabletennisapi_polymarket.py"
       - "scripts/classify_datasportsapi.py"
       - "scripts/analyze_datasportsapi.py"
       - "scripts/audit_datasportsapi_classification.py"
@@ -16,8 +18,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: datasportsapi-table-tennis-import
@@ -27,9 +27,6 @@ jobs:
   import:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -67,6 +64,19 @@ jobs:
       - name: Scan active public Polymarket US table-tennis listings
         run: python scripts/scan_polymarket_table_tennis.py
 
+      - name: Restore private player lookup cache and daily call budget
+        uses: actions/cache@v4
+        with:
+          path: data/processed/tabletennisapi_polymarket_lookup_state.json
+          key: tabletennisapi-lookup-${{ github.run_id }}
+          restore-keys: |
+            tabletennisapi-lookup-
+
+      - name: Discover active WTT players using the free Table Tennis API tier
+        env:
+          TABLETENNISAPI_KEY: ${{ secrets.TABLETENNISAPI_KEY }}
+        run: python scripts/enrich_polymarket_tabletennisapi.py
+
       - name: Reconcile listed players against source-scoped recent match histories
         run: python scripts/reconcile_polymarket_players.py
 
@@ -80,16 +90,16 @@ jobs:
           python scripts/export_polymarket_web_data.py
           python scripts/export_web_app.py
 
-      - name: Compile import, classification, analysis, backtest, and web export scripts
-        run: python -m py_compile scripts/import_datasportsapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/backtest_datasportsapi.py scripts/audit_datasportsapi_classification.py scripts/scan_polymarket_table_tennis.py scripts/reconcile_polymarket_players.py scripts/export_polymarket_web_data.py
+      - name: Compile import, classification, analysis, backtest, discovery, and web export scripts
+        run: python -m py_compile scripts/import_datasportsapi.py scripts/enrich_polymarket_tabletennisapi.py scripts/classify_datasportsapi.py scripts/analyze_datasportsapi.py scripts/backtest_datasportsapi.py scripts/audit_datasportsapi_classification.py scripts/scan_polymarket_table_tennis.py scripts/reconcile_polymarket_players.py scripts/export_polymarket_web_data.py
 
       - name: Persist refreshed daily source snapshots
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/datasportsapi/ site/data/polymarket_active.json
+          git add data/raw/datasportsapi/ site/data/polymarket_active.json site/index.html
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh retained DataSportsAPI table tennis snapshots"
+            git commit -m "Refresh player discovery and table tennis source summaries"
             # Other workflows may update main while this job runs. Rebase the
             # snapshot commit onto the latest branch before publishing it.
             git pull --rebase origin main
@@ -109,14 +119,3 @@ jobs:
           if-no-files-found: error
           retention-days: 30
 
-      - name: Add Pages metadata
-        run: touch site/.nojekyll
-
-      - name: Upload refreshed simulator website
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-      - name: Deploy refreshed simulator website
-        id: deployment
-        uses: actions/deploy-pages@v4

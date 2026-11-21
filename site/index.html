@@ -35,7 +35,7 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 <input id="polymarket-search" type="search" placeholder="Search a player, opponent or competition…" autocomplete="off">
 <p id="polymarket-updated" class="muted">Loading current Polymarket listings…</p>
 <div id="polymarket-results"><div class="market-empty">Loading active matchups…</div></div>
-<p class="muted">History is shown only where a unique exact-name candidate exists in the recent-results source. Identity is not independently verified. New listings without matching history still appear here.</p>
+<p class="muted">Player profile source: <a class="market-link" href="https://tabletennisapi.com/" target="_blank" rel="noopener">Table Tennis API</a>. Profiles are checked in a rotating queue within the free 50-call daily limit. Names remain unverified candidates; provider profiles are not used for model training. New listings without matching history still appear here.</p>
 </section>
 <section class="panel">
 <div id="load">Loading player database…</div>
@@ -57,7 +57,11 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 </ul><p class="muted">The Monte Carlo interval measures simulation noise only, not model uncertainty. This is research output, not a guarantee or a live betting recommendation.</p></section>
 <footer id="freshness"></footer>
 </main>
+<!-- TABLETENNISAPI_PROFILE_DATA_START -->
+<!-- TABLETENNISAPI_PROFILE_DATA_END -->
 <script>
+const tableTennisApiProfiles=(()=>{try{return JSON.parse(document.getElementById('tabletennisapi-profile-data')?.textContent||'{}').profiles||{}}catch{return {}}})();
+const tableTennisApiKey=name=>String(name||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').match(/[a-z0-9]+/g)?.sort().join(' ')||'';
 const $=id=>document.getElementById(id);let pools={},model={};
 const avg=a=>a&&a.length?a.reduce((s,x)=>s+x,0)/a.length:0;
 const sigmoid=z=>1/(1+Math.exp(-Math.max(-30,Math.min(30,z))));
@@ -87,6 +91,29 @@ $('metrics').innerHTML=[['Model probability — A',fmt(r.p)],['Elo probability �
 const warns=[];if(r.da>120)warns.push('Player A last recorded match was '+r.da+' days ago. Check season breaks, injury and source coverage.');if(r.db>120)warns.push('Player B last recorded match was '+r.db+' days ago. Check season breaks, injury and source coverage.');$('warnings').innerHTML=warns.map(x=>'<div class="notice">'+x+'</div>').join('');
 $('h2h').innerHTML=r.details.length?'<p>'+r.details.length+' shared opponents with comparable records.</p><ul>'+r.details.slice(0,30).map(d=>'<li>'+String(d.id).replaceAll('<','&lt;')+': A '+d.x.wins+'-'+d.x.losses+', B '+d.y.wins+'-'+d.y.losses+'</li>').join('')+'</ul>':'<p>No shared opponents with usable prior records were found.</p>';
 }
+function tableTennisApiSummary(player){
+ const t=tableTennisApiProfiles[tableTennisApiKey(player.name)]||{};
+ if(t.status==='exact_name_match_identity_unverified'){
+  const records=(t.records_by_discipline||[]).slice().sort((a,b)=>Number(b.played||0)-Number(a.played||0));
+  const recordHtml=records.slice(0,3).map(r=>{
+   const played=Number(r.played||0),won=Number(r.won||0),lost=Number(r.lost||0);
+   const rate=played?(' · '+(100*won/played).toFixed(1)+'% wins'):'';
+   return escapeHtml(r.discipline)+': '+won+'–'+lost+' from '+played+rate+' · window '+escapeHtml(r.first_match||'unknown')+' to '+escapeHtml(r.last_match||'unknown');
+  }).join('<br>');
+  const ranks=(t.world_ranks||[]).slice(0,2).map(r=>escapeHtml(r.discipline)+' rank #'+Number(r.rank||0)+' ('+escapeHtml(r.week||'')+')').join(' · ');
+  return '<div class="history-line">Table Tennis API free-tier window profile · '+escapeHtml(t.display_name||'')+(t.country?' · '+escapeHtml(t.country):'')+'</div><div class="history-line">'+(recordHtml||'No discipline record listed')+'</div>'+(ranks?'<div class="history-line">'+ranks+'</div>':'')+'<div class="history-line">'+escapeHtml(t.record_window_note||'')+'</div><div class="history-line">'+escapeHtml(t.identity_note||'')+'</div>';
+ }
+ const labels={
+  queued_not_checked:'Table Tennis API: queued for automatic free-tier player lookup.',
+  not_found:'Table Tennis API: no exact full-name player candidate found.',
+  ambiguous:'Table Tennis API: multiple player candidates; profile withheld.',
+  name_initial_match_review_only:'Table Tennis API: initial/surname-format candidate only; manual review needed.',
+  provider_rate_limited:'Table Tennis API: provider limit reached; will retry later.',
+  not_applicable:'Table Tennis API: not used for this non-WTT competition.'
+ };
+ if(!t.status||t.status==='not_applicable')return '';
+ return '<div class="history-line">'+escapeHtml(labels[t.status]||'Table Tennis API: profile not available yet.')+'</div>';
+}
 function historySummary(player){
  const h=player.history||{},m=player.model_record||{};
  let modelHtml='';
@@ -94,13 +121,16 @@ function historySummary(player){
   const form=m.recent_form_last10||[],wins=form.filter(x=>Number(x)===1||String(x).toUpperCase()==='W').length,losses=form.length-wins;
   modelHtml='<div class="history-line">WTT model record: '+Number(m.matches||0)+' prior matches · recent form '+wins+'–'+losses+' ('+form.length+' shown) · last: '+escapeHtml(m.last_match_date||'unknown')+'</div><div class="history-line">'+escapeHtml(m.identity_note)+'</div>';
  }
+ let historyHtml='';
  if(h.status==='exact_name_match_identity_unverified'||h.status==='name_initial_match_review_only'){
   const recent=(h.recent_matches||[]).slice(0,5).map(x=>escapeHtml(x.date)+' '+escapeHtml(x.result)+' '+escapeHtml(x.opponent)+' ('+escapeHtml(x.score)+')').join('<br>');
   const prefix=h.status==='name_initial_match_review_only'?'Possible name-format match · ':'';
-  return '<div class="history-line">'+prefix+h.wins+'–'+h.losses+' across '+h.matches_count+' recorded matches · last: '+escapeHtml(h.last_match_date||'unknown')+'</div><div class="history-line">'+(recent||'No recent match rows available')+'</div><div class="history-line">'+escapeHtml(h.identity_note)+'</div>'+modelHtml;
+  historyHtml='<div class="history-line">'+prefix+h.wins+'–'+h.losses+' across '+h.matches_count+' recorded matches · last: '+escapeHtml(h.last_match_date||'unknown')+'</div><div class="history-line">'+(recent||'No recent match rows available')+'</div><div class="history-line">'+escapeHtml(h.identity_note)+'</div>';
+ }else{
+  const labels={ambiguous:'Multiple possible source records; history withheld.',not_found:'No exact or safe name-format match found yet.',other_competition_only:'Same-name record found only in another competition.',source_not_loaded:'Recent results source was unavailable in this refresh.'};
+  historyHtml='<div class="history-line">'+escapeHtml(labels[h.status]||'No verified source history available.')+'</div>';
  }
- const labels={ambiguous:'Multiple possible source records; history withheld.',not_found:'No exact or safe name-format match found yet.',other_competition_only:'Same-name record found only in another competition.',source_not_loaded:'Recent results source was unavailable in this refresh.'};
- return '<div class="history-line">'+escapeHtml(labels[h.status]||'No verified source history available.')+'</div>'+modelHtml;
+ return historyHtml+modelHtml+tableTennisApiSummary(player);
 }
 let polymarketEvents=[];
 function findPolymarketModelPair(event){
@@ -143,7 +173,9 @@ async function loadPolymarket(){
   if(!response.ok)throw Error('Current listing feed is not published yet.');
   const data=await response.json();
   polymarketEvents=(data.events||[]).filter(e=>e.active&&!e.closed);
-  $('polymarket-updated').textContent=polymarketEvents.length+' active matchups · '+(data.players_count||0)+' listed players · source checked '+new Date(data.retrieved_at_utc).toLocaleString()+' · this page checks for feed updates every 5 minutes';
+  const api=data.tabletennisapi_source||{};
+  const apiStatus=api.available?' · WTT names checked '+(api.names_checked||0)+' ('+(api.players_checked_today||0)+' checked today) · provider calls today '+(api.calls_today||0)+'/'+(api.daily_safety_budget||40):' · WTT profile lookup awaiting provider refresh';
+  $('polymarket-updated').textContent=polymarketEvents.length+' active matchups · '+(data.players_count||0)+' listed players · feed '+new Date(data.retrieved_at_utc).toLocaleString()+apiStatus+' · page checks for feed updates every 5 minutes';
   if(!$('polymarket-search').dataset.bound){$('polymarket-search').addEventListener('input',renderPolymarket);$('polymarket-search').dataset.bound='1';}
   if(!$('polymarket-results').dataset.bound){$('polymarket-results').addEventListener('click',e=>{const btn=e.target.closest('[data-simulate-index]');if(btn)runPolymarketSimulation(Number(btn.dataset.simulateIndex),btn);});$('polymarket-results').dataset.bound='1';}
   renderPolymarket();

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sqlite3
 import sys
 from datetime import datetime, timezone
@@ -11,8 +12,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import reconcile_polymarket_players as reconciliation
+import enrich_polymarket_tabletennisapi as tabletennisapi_discovery
 
 RAW_EVENTS = ROOT / "data/raw/polymarket_us_table_tennis_events.json"
+TABLETENNISAPI_OUT = ROOT / "data/processed/tabletennisapi_polymarket_players.json"
+INDEX_PATH = ROOT / "site/index.html"
+PROFILE_DATA_START = "<!-- TABLETENNISAPI_PROFILE_DATA_START -->"
+PROFILE_DATA_END = "<!-- TABLETENNISAPI_PROFILE_DATA_END -->"
 DB_PATH = ROOT / "data/database/table_tennis.sqlite"
 OUT = ROOT / "site/data/polymarket_active.json"
 
@@ -105,11 +111,70 @@ def wtt_model_record(name: str, model_pools: dict, scope: str) -> dict:
     }
 
 
+
+def tabletennisapi_profile(name: str, scope: str, players: dict) -> dict:
+    if scope != "WTT":
+        return {"status": "not_applicable", "model_eligible": False}
+    cached = players.get(tabletennisapi_discovery.normalized_name(name))
+    if isinstance(cached, dict):
+        return cached
+    return {
+        "status": "queued_not_checked",
+        "source": "Table Tennis API (DeveloperData)",
+        "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+        "model_eligible": False,
+    }
+
+
 def main() -> None:
     if not RAW_EVENTS.exists():
         raise SystemExit("Polymarket event snapshot is missing; run the public read-only scanner first.")
     payload = json.loads(RAW_EVENTS.read_text(encoding="utf-8"))
     events = payload.get("events", [])
+    tabletennisapi_data = {}
+    tabletennisapi_source = {"available": False, "source": "Table Tennis API (DeveloperData)"}
+    if TABLETENNISAPI_OUT.exists():
+        try:
+            tabletennisapi_data = json.loads(TABLETENNISAPI_OUT.read_text(encoding="utf-8"))
+            tabletennisapi_source = {
+                "available": True,
+                "source": tabletennisapi_data.get("source") or "Table Tennis API (DeveloperData)",
+                "retrieved_at_utc": tabletennisapi_data.get("retrieved_at_utc") or "",
+                "names_checked": int(tabletennisapi_data.get("names_checked") or 0),
+                "players_checked_today": int(tabletennisapi_data.get("players_checked_today") or 0),
+                "calls_today": int(tabletennisapi_data.get("calls_today") or 0),
+                "daily_safety_budget": int(tabletennisapi_data.get("daily_safety_budget") or 40),
+            }
+        except (ValueError, OSError):
+            tabletennisapi_data = {}
+    tabletennisapi_players = tabletennisapi_data.get("players", {}) if isinstance(tabletennisapi_data, dict) else {}
+    if not isinstance(tabletennisapi_players, dict):
+        tabletennisapi_players = {}
+    # Deploy-only rebuilds do not call the provider. Preserve the last app-page
+    # summaries instead of replacing them with empty queued states.
+    if not tabletennisapi_players and INDEX_PATH.exists():
+        existing_html = INDEX_PATH.read_text(encoding="utf-8")
+        match = re.search(
+            r'<script id="tabletennisapi-profile-data" type="application/json">(.*?)</script>',
+            existing_html, re.DOTALL,
+        )
+        if match:
+            try:
+                embedded = json.loads(match.group(1))
+                profiles = embedded.get("profiles", {})
+                if isinstance(profiles, dict):
+                    tabletennisapi_players = profiles
+            except ValueError:
+                pass
+        if OUT.exists():
+            try:
+                previous_output = json.loads(OUT.read_text(encoding="utf-8"))
+                previous_source = previous_output.get("tabletennisapi_source")
+                if isinstance(previous_source, dict):
+                    tabletennisapi_source = previous_source
+            except (ValueError, OSError):
+                pass
+
     previous_players = {}
     if OUT.exists():
         try:
@@ -140,6 +205,7 @@ def main() -> None:
 
     output_events = []
     player_index: dict[str, dict] = {}
+    provider_profiles: dict[str, dict] = {}
     for event in events:
         title = str(event.get("title") or event.get("name") or "")
         a, b = reconciliation.event_pair(event)
@@ -162,6 +228,11 @@ def main() -> None:
         pb = resolve_history(b)
         ma = wtt_model_record(a, model_pools, scope)
         mb = wtt_model_record(b, model_pools, scope)
+        ta = tabletennisapi_profile(a, scope, tabletennisapi_players)
+        tb = tabletennisapi_profile(b, scope, tabletennisapi_players)
+        if scope == "WTT":
+            provider_profiles[tabletennisapi_discovery.normalized_name(a)] = ta
+            provider_profiles[tabletennisapi_discovery.normalized_name(b)] = tb
         slug = event.get("slug") or ""
         event_row = {
             "event_id": str(event.get("id") or ""),
@@ -190,17 +261,32 @@ def main() -> None:
         "events_count": len(output_events),
         "players_count": len(player_index),
         "history_source": source_info,
+        "tabletennisapi_source": tabletennisapi_source,
         "events": output_events,
         "players": sorted(player_index.values(), key=lambda p: p["name"].casefold()),
         "limitations": [
             "Listings are current discovery data, not confirmation of an athlete's real-world activity.",
             "DataSportsAPI histories are source-scoped and exact-name candidates only; identity is not independently verified.",
             "No automatic identity merges or model promotion are performed.",
-            "DataSportsAPI recent histories are descriptive evidence only; its unpromoted model is not used to issue picks."
+            "DataSportsAPI recent histories are descriptive evidence only; its unpromoted model is not used to issue picks.",
+            "Table Tennis API free-tier player profiles are on-demand discovery evidence only; individual player match-history and head-to-head endpoints are not called, and profiles are not used for model training or automatic identity merges."
         ]
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    # Provider profile summaries are rendered into the simulator page itself,
+    # rather than exposed as a separate public JSON/API feed.
+    if INDEX_PATH.exists():
+        html = INDEX_PATH.read_text(encoding="utf-8")
+        if PROFILE_DATA_START not in html or PROFILE_DATA_END not in html:
+            raise SystemExit("Simulator HTML is missing the Table Tennis API profile data markers.")
+        profile_json = json.dumps({"profiles": provider_profiles}, ensure_ascii=False, separators=(",", ":"))
+        profile_json = profile_json.replace("</", "<\\/")
+        start = html.index(PROFILE_DATA_START) + len(PROFILE_DATA_START)
+        end = html.index(PROFILE_DATA_END)
+        html = html[:start] + "\n<script id=\"tabletennisapi-profile-data\" type=\"application/json\">" + profile_json + "</script>\n" + html[end:]
+        INDEX_PATH.write_text(html, encoding="utf-8")
     print(json.dumps({"output": str(OUT.relative_to(ROOT)), "events": len(output_events), "players": len(player_index), "history_source": source_info}, indent=2))
 
 
