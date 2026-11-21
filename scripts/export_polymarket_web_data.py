@@ -17,6 +17,7 @@ import enrich_polymarket_tabletennisapi as tabletennisapi_discovery
 RAW_EVENTS = ROOT / "data/raw/polymarket_us_table_tennis_events.json"
 TABLETENNISAPI_OUT = ROOT / "data/processed/tabletennisapi_polymarket_players.json"
 PROFILE_OUT = ROOT / "site/data/tabletennisapi_profiles.json"
+INDEX_PATH = ROOT / "site/index.html"
 PROFILE_DATA_START = "<!-- TABLETENNISAPI_PROFILE_DATA_START -->"
 PROFILE_DATA_END = "<!-- TABLETENNISAPI_PROFILE_DATA_END -->"
 DB_PATH = ROOT / "data/database/table_tennis.sqlite"
@@ -150,8 +151,16 @@ def main() -> None:
     tabletennisapi_players = tabletennisapi_data.get("players", {}) if isinstance(tabletennisapi_data, dict) else {}
     if not isinstance(tabletennisapi_players, dict):
         tabletennisapi_players = {}
-    # Deploy-only rebuilds do not call the provider. Preserve the last app-page
-    # summaries instead of replacing them with empty queued states.
+    # Deploy-only rebuilds do not call the provider. Preserve the last published
+    # static profile asset, then fall back to the legacy embedded page payload.
+    if not tabletennisapi_players and PROFILE_OUT.exists():
+        try:
+            cached_profiles = json.loads(PROFILE_OUT.read_text(encoding="utf-8"))
+            profiles = cached_profiles.get("profiles", {}) if isinstance(cached_profiles, dict) else {}
+            if isinstance(profiles, dict):
+                tabletennisapi_players = profiles
+        except (ValueError, OSError):
+            pass
     if not tabletennisapi_players and INDEX_PATH.exists():
         existing_html = INDEX_PATH.read_text(encoding="utf-8")
         match = re.search(
