@@ -107,6 +107,21 @@ def wtt_model_record(name: str, model_pools: dict, scope: str) -> dict:
     }
 
 
+
+def tabletennisapi_profile(name: str, scope: str, players: dict) -> dict:
+    if scope != "WTT":
+        return {"status": "not_applicable", "model_eligible": False}
+    cached = players.get(tabletennisapi_discovery.normalized_name(name))
+    if isinstance(cached, dict):
+        return cached
+    return {
+        "status": "queued_not_checked",
+        "source": "Table Tennis API (DeveloperData)",
+        "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+        "model_eligible": False,
+    }
+
+
 def main() -> None:
     if not RAW_EVENTS.exists():
         raise SystemExit("Polymarket event snapshot is missing; run the public read-only scanner first.")
@@ -131,18 +146,6 @@ def main() -> None:
     if not isinstance(tabletennisapi_players, dict):
         tabletennisapi_players = {}
 
-    def resolve_tabletennisapi(name: str, scope: str) -> dict:
-        if scope != "WTT":
-            return {"status": "not_applicable", "model_eligible": False}
-        cached = tabletennisapi_players.get(tabletennisapi_discovery.normalized_name(name))
-        if isinstance(cached, dict):
-            return cached
-        return {
-            "status": "queued_not_checked",
-            "source": "Table Tennis API (DeveloperData)",
-            "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-            "model_eligible": False,
-        }
     previous_players = {}
     if OUT.exists():
         try:
@@ -195,8 +198,8 @@ def main() -> None:
         pb = resolve_history(b)
         ma = wtt_model_record(a, model_pools, scope)
         mb = wtt_model_record(b, model_pools, scope)
-        ta = resolve_tabletennisapi(a, scope)
-        tb = resolve_tabletennisapi(b, scope)
+        ta = tabletennisapi_profile(a, scope, tabletennisapi_players)
+        tb = tabletennisapi_profile(b, scope, tabletennisapi_players)
         slug = event.get("slug") or ""
         event_row = {
             "event_id": str(event.get("id") or ""),
