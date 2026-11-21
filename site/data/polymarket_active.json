@@ -1,20 +1,20 @@
 {
   "source": "Polymarket US public read-only listings",
-  "retrieved_at_utc": "2026-11-21T04:20:29.705320+00:00",
+  "retrieved_at_utc": "2026-11-21T04:30:27.742510+00:00",
   "events_count": 104,
   "players_count": 72,
   "history_source": {
     "available": true,
-    "matches_loaded": 6912,
+    "matches_loaded": 6916,
     "source_key": "datasportsapi_table_tennis"
   },
   "tabletennisapi_source": {
     "available": true,
     "source": "Table Tennis API (DeveloperData)",
-    "retrieved_at_utc": "2026-11-21T04:20:15.231544+00:00",
-    "names_checked": 5,
-    "players_checked_today": 5,
-    "calls_today": 9,
+    "retrieved_at_utc": "2026-11-21T04:30:17.532085+00:00",
+    "names_checked": 8,
+    "players_checked_today": 8,
+    "calls_today": 21,
     "daily_safety_budget": 40
   },
   "events": [
