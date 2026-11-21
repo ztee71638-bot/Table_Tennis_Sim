@@ -69,23 +69,18 @@ jobs:
       - name: Scan active public Polymarket US table-tennis listings
         run: python scripts/scan_polymarket_table_tennis.py
 
+      - name: Restore private player lookup cache and daily call budget
+        uses: actions/cache@v4
+        with:
+          path: data/processed/tabletennisapi_polymarket_lookup_state.json
+          key: tabletennisapi-lookup-${{ github.run_id }}
+          restore-keys: |
+            tabletennisapi-lookup-
+
       - name: Discover active WTT players using the free Table Tennis API tier
         env:
           TABLETENNISAPI_KEY: ${{ secrets.TABLETENNISAPI_KEY }}
         run: python scripts/enrich_polymarket_tabletennisapi.py
-
-      - name: Persist provider lookup state and daily call budget immediately
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -f data/processed/tabletennisapi_polymarket_lookup_state.json ]; then
-            git add data/processed/tabletennisapi_polymarket_lookup_state.json data/processed/tabletennisapi_polymarket_players.json
-            if ! git diff --cached --quiet; then
-              git commit -m "Persist Table Tennis API player lookup budget"
-              git pull --rebase origin main
-              git push
-            fi
-          fi
 
       - name: Reconcile listed players against source-scoped recent match histories
         run: python scripts/reconcile_polymarket_players.py
@@ -107,7 +102,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/datasportsapi/ data/processed/tabletennisapi_polymarket_lookup_state.json data/processed/tabletennisapi_polymarket_players.json site/data/polymarket_active.json
+          git add data/raw/datasportsapi/ site/data/polymarket_active.json site/index.html
           if ! git diff --cached --quiet; then
             git commit -m "Refresh player discovery and table tennis source summaries"
             # Other workflows may update main while this job runs. Rebase the
@@ -126,7 +121,6 @@ jobs:
             data/processed/datasportsapi_player_records.json
             data/processed/datasportsapi_classification_audit.json
             data/processed/datasportsapi_quality_backtest.json
-            data/processed/tabletennisapi_polymarket_players.json
           if-no-files-found: error
           retention-days: 30
 
