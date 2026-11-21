@@ -74,6 +74,19 @@ jobs:
           TABLETENNISAPI_KEY: ${{ secrets.TABLETENNISAPI_KEY }}
         run: python scripts/enrich_polymarket_tabletennisapi.py
 
+      - name: Persist provider lookup state and daily call budget immediately
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -f data/processed/tabletennisapi_polymarket_lookup_state.json ]; then
+            git add data/processed/tabletennisapi_polymarket_lookup_state.json data/processed/tabletennisapi_polymarket_players.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Persist Table Tennis API player lookup budget"
+              git pull --rebase origin main
+              git push
+            fi
+          fi
+
       - name: Reconcile listed players against source-scoped recent match histories
         run: python scripts/reconcile_polymarket_players.py
 
