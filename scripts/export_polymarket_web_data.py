@@ -16,7 +16,7 @@ import enrich_polymarket_tabletennisapi as tabletennisapi_discovery
 
 RAW_EVENTS = ROOT / "data/raw/polymarket_us_table_tennis_events.json"
 TABLETENNISAPI_OUT = ROOT / "data/processed/tabletennisapi_polymarket_players.json"
-INDEX_PATH = ROOT / "site/index.html"
+PROFILE_OUT = ROOT / "site/data/tabletennisapi_profiles.json"
 PROFILE_DATA_START = "<!-- TABLETENNISAPI_PROFILE_DATA_START -->"
 PROFILE_DATA_END = "<!-- TABLETENNISAPI_PROFILE_DATA_END -->"
 DB_PATH = ROOT / "data/database/table_tennis.sqlite"
@@ -275,18 +275,14 @@ def main() -> None:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    # Provider profile summaries are rendered into the simulator page itself,
-    # rather than exposed as a separate public JSON/API feed.
-    if INDEX_PATH.exists():
-        html = INDEX_PATH.read_text(encoding="utf-8")
-        if PROFILE_DATA_START not in html or PROFILE_DATA_END not in html:
-            raise SystemExit("Simulator HTML is missing the Table Tennis API profile data markers.")
-        profile_json = json.dumps({"profiles": provider_profiles}, ensure_ascii=False, separators=(",", ":"))
-        profile_json = profile_json.replace("</", "<\\/")
-        start = html.index(PROFILE_DATA_START) + len(PROFILE_DATA_START)
-        end = html.index(PROFILE_DATA_END)
-        html = html[:start] + "\n<script id=\"tabletennisapi-profile-data\" type=\"application/json\">" + profile_json + "</script>\n" + html[end:]
-        INDEX_PATH.write_text(html, encoding="utf-8")
+    # Publish provider profile summaries as a separate static asset. This avoids
+    # having scheduled data refreshes rewrite site/index.html while UI deployments
+    # or feature branches may be updating that page.
+    PROFILE_OUT.parent.mkdir(parents=True, exist_ok=True)
+    PROFILE_OUT.write_text(
+        json.dumps({"profiles": provider_profiles}, ensure_ascii=False, indent=2) + "\\n",
+        encoding="utf-8",
+    )
     print(json.dumps({"output": str(OUT.relative_to(ROOT)), "events": len(output_events), "players": len(player_index), "history_source": source_info}, indent=2))
 
 
