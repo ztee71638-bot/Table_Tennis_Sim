@@ -59,3 +59,10 @@ The Setka Cup results demonstrate that the evidence validator now checks the can
 Bettrails' public player archive lists Kovalchuk Nazarii's 19 November 2026 Setka Cup match against Rak Serhii as a 1–3 loss, with candidate-perspective set scores 11–9, 5–11, 4–11, 6–11. Those details correlate exactly with DataSportsAPI fixture 1141249 for source player ID 58534 against opponent ID 274477. Independent reference: https://bettrails.com/tenis-de-mesa/jugador/kovalchuk-nazarii?lang=en
 
 The evidence is recorded as a match-level correlation for human review only. The DataSportsAPI source ID remains unverified and the identity decision remains HOLD; this evidence does not authorize a merge or alter simulator records.
+
+
+## Additional Czech Liga Pro candidate: Martin Stefek
+
+PongData's public Martin Stefek match archive lists the 19 November 2026 result against Tomas Andrle with Stefek-perspective set scores 11–7, 4–11, 11–6, 13–11. These details correlate exactly with DataSportsAPI fixture 1140672 for source player ID 625477 against opponent ID 630794. Independent reference: https://pongdata.com/players/stefek-m-k9gqp5qvz3
+
+This match-level correlation is surfaced for human review only. Source player ID 625477 remains unverified and the identity decision remains HOLD.
