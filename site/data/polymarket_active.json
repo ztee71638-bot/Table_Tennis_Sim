@@ -1,17 +1,17 @@
 {
   "source": "Polymarket US public read-only listings",
-  "retrieved_at_utc": "2026-11-21T04:30:27.742510+00:00",
+  "retrieved_at_utc": "2026-11-21T04:35:44.726616+00:00",
   "events_count": 104,
   "players_count": 72,
   "history_source": {
     "available": true,
-    "matches_loaded": 6916,
+    "matches_loaded": 6918,
     "source_key": "datasportsapi_table_tennis"
   },
   "tabletennisapi_source": {
     "available": true,
     "source": "Table Tennis API (DeveloperData)",
-    "retrieved_at_utc": "2026-11-21T04:30:17.532085+00:00",
+    "retrieved_at_utc": "2026-11-21T04:35:28.813351+00:00",
     "names_checked": 8,
     "players_checked_today": 8,
     "calls_today": 21,
@@ -528,6 +528,185 @@
               "opponent": "Pantak J.",
               "result": "W",
               "score": "3-2"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "292241",
+      "slug": "czechligapro-id2503634976982302",
+      "title": "Lubor Sulava vs. Miroslav Barta",
+      "competition": "Czech Liga Pro",
+      "start_time_utc": "2026-11-21T08:00:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/czechligapro-id2503634976982302",
+      "player_a": {
+        "name": "Lubor Sulava",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Sulava L.",
+          "source_player_id": "622979",
+          "matches_count": 9,
+          "wins": 6,
+          "losses": 3,
+          "last_match_date": "2026-11-20",
+          "competition_matches": 9,
+          "recent_matches": [
+            {
+              "date": "2026-11-20",
+              "time": "09:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Ladislav H.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "08:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Didi J.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "07:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Pleskot J.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "09:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Ladislav H.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "08:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Kulhanek T.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "07:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Pleskot J.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "09:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Hruska Snr V.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "08:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Berdych P.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "07:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Pleskot J.",
+              "result": "W",
+              "score": "3-1"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Miroslav Barta",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Barta M.",
+          "source_player_id": "51733",
+          "matches_count": 7,
+          "wins": 3,
+          "losses": 4,
+          "last_match_date": "2026-11-17",
+          "competition_matches": 7,
+          "recent_matches": [
+            {
+              "date": "2026-11-17",
+              "time": "17:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Briza F.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "16:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Trinta M.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Kolenic T.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "22:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Kulhanek T.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "21:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Framberk J.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "20:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Pleskot J.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Kulhanek T.",
+              "result": "L",
+              "score": "0-3"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -3047,12 +3226,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Krol Y.",
           "source_player_id": "685009",
-          "matches_count": 3,
-          "wins": 2,
+          "matches_count": 4,
+          "wins": 3,
           "losses": 1,
           "last_match_date": "2026-11-21",
-          "competition_matches": 3,
+          "competition_matches": 4,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Kobets V.",
+              "result": "W",
+              "score": "3-2"
+            },
             {
               "date": "2026-11-21",
               "time": "01:05:00",
@@ -3115,12 +3302,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Slozka M.",
           "source_player_id": "170428",
-          "matches_count": 7,
-          "wins": 4,
+          "matches_count": 8,
+          "wins": 5,
           "losses": 3,
           "last_match_date": "2026-11-21",
-          "competition_matches": 7,
+          "competition_matches": 8,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Volodymyr Korobko",
+              "result": "W",
+              "score": "3-1"
+            },
             {
               "date": "2026-11-21",
               "time": "02:45:00",
@@ -4752,12 +4947,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Kobets V.",
           "source_player_id": "649137",
-          "matches_count": 18,
+          "matches_count": 19,
           "wins": 7,
-          "losses": 11,
+          "losses": 12,
           "last_match_date": "2026-11-21",
-          "competition_matches": 18,
+          "competition_matches": 19,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Krol Y.",
+              "result": "L",
+              "score": "2-3"
+            },
             {
               "date": "2026-11-21",
               "time": "03:05:00",
@@ -6275,12 +6478,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Krol Y.",
           "source_player_id": "685009",
-          "matches_count": 3,
-          "wins": 2,
+          "matches_count": 4,
+          "wins": 3,
           "losses": 1,
           "last_match_date": "2026-11-21",
-          "competition_matches": 3,
+          "competition_matches": 4,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Kobets V.",
+              "result": "W",
+              "score": "3-2"
+            },
             {
               "date": "2026-11-21",
               "time": "01:05:00",
@@ -7416,12 +7627,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Kobets V.",
           "source_player_id": "649137",
-          "matches_count": 18,
+          "matches_count": 19,
           "wins": 7,
-          "losses": 11,
+          "losses": 12,
           "last_match_date": "2026-11-21",
-          "competition_matches": 18,
+          "competition_matches": 19,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Krol Y.",
+              "result": "L",
+              "score": "2-3"
+            },
             {
               "date": "2026-11-21",
               "time": "03:05:00",
@@ -7872,241 +8091,6 @@
               "opponent": "Parhomenko D.",
               "result": "W",
               "score": "3-1"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Marek Placek",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Placek M.",
-          "source_player_id": "649711",
-          "matches_count": 4,
-          "wins": 2,
-          "losses": 2,
-          "last_match_date": "2026-11-14",
-          "competition_matches": 4,
-          "recent_matches": [
-            {
-              "date": "2026-11-14",
-              "time": "22:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "21:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Briza F.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "20:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "19:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kolar M.",
-              "result": "L",
-              "score": "0-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294323",
-      "slug": "czechligapro-id2503634976982400",
-      "title": "Dmitro Parhomenko vs. Marek Placek",
-      "competition": "Czech Liga Pro",
-      "start_time_utc": "2026-11-22T00:30:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/czechligapro-id2503634976982400",
-      "player_a": {
-        "name": "Dmitro Parhomenko",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Parhomenko D.",
-          "source_player_id": "69498",
-          "matches_count": 19,
-          "wins": 7,
-          "losses": 12,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 19,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "13:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Varcl J.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "12:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Smrcek M.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "11:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kolar M.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "04:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "03:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "01:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Fojt P.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "00:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "23:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "13:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kolar M.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "12:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Bresky J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "11:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "18:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "17:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "16:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "15:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "04:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Svoboda A.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "03:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Budinsky P.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "02:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "00:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Svoboda A.",
-              "result": "L",
-              "score": "1-3"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -9142,12 +9126,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Slozka M.",
           "source_player_id": "170428",
-          "matches_count": 7,
-          "wins": 4,
+          "matches_count": 8,
+          "wins": 5,
           "losses": 3,
           "last_match_date": "2026-11-21",
-          "competition_matches": 7,
+          "competition_matches": 8,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Volodymyr Korobko",
+              "result": "W",
+              "score": "3-1"
+            },
             {
               "date": "2026-11-21",
               "time": "02:45:00",
@@ -10363,12 +10355,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Kobets V.",
           "source_player_id": "649137",
-          "matches_count": 18,
+          "matches_count": 19,
           "wins": 7,
-          "losses": 11,
+          "losses": 12,
           "last_match_date": "2026-11-21",
-          "competition_matches": 18,
+          "competition_matches": 19,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Krol Y.",
+              "result": "L",
+              "score": "2-3"
+            },
             {
               "date": "2026-11-21",
               "time": "03:05:00",
@@ -11604,12 +11604,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Krol Y.",
           "source_player_id": "685009",
-          "matches_count": 3,
-          "wins": 2,
+          "matches_count": 4,
+          "wins": 3,
           "losses": 1,
           "last_match_date": "2026-11-21",
-          "competition_matches": 3,
+          "competition_matches": 4,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Kobets V.",
+              "result": "W",
+              "score": "3-2"
+            },
             {
               "date": "2026-11-21",
               "time": "01:05:00",
@@ -14335,12 +14343,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Slozka M.",
           "source_player_id": "170428",
-          "matches_count": 7,
-          "wins": 4,
+          "matches_count": 8,
+          "wins": 5,
           "losses": 3,
           "last_match_date": "2026-11-21",
-          "competition_matches": 7,
+          "competition_matches": 8,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Volodymyr Korobko",
+              "result": "W",
+              "score": "3-1"
+            },
             {
               "date": "2026-11-21",
               "time": "02:45:00",
@@ -15669,12 +15685,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Kobets V.",
           "source_player_id": "649137",
-          "matches_count": 18,
+          "matches_count": 19,
           "wins": 7,
-          "losses": 11,
+          "losses": 12,
           "last_match_date": "2026-11-21",
-          "competition_matches": 18,
+          "competition_matches": 19,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Krol Y.",
+              "result": "L",
+              "score": "2-3"
+            },
             {
               "date": "2026-11-21",
               "time": "03:05:00",
@@ -17202,12 +17226,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Krol Y.",
           "source_player_id": "685009",
-          "matches_count": 3,
-          "wins": 2,
+          "matches_count": 4,
+          "wins": 3,
           "losses": 1,
           "last_match_date": "2026-11-21",
-          "competition_matches": 3,
+          "competition_matches": 4,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Kobets V.",
+              "result": "W",
+              "score": "3-2"
+            },
             {
               "date": "2026-11-21",
               "time": "01:05:00",
@@ -17691,11 +17723,6 @@
           "title": "Kyryl Darin vs. Dmitro Parhomenko",
           "competition": "Czech Liga Pro",
           "url": "https://polymarket.us/event/czechligapro-id2503634976989030"
-        },
-        {
-          "title": "Dmitro Parhomenko vs. Marek Placek",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982400"
         },
         {
           "title": "Jiri Plachy vs. Dmitro Parhomenko",
@@ -19754,12 +19781,20 @@
         "status": "name_initial_match_review_only",
         "display_name": "Kobets V.",
         "source_player_id": "649137",
-        "matches_count": 18,
+        "matches_count": 19,
         "wins": 7,
-        "losses": 11,
+        "losses": 12,
         "last_match_date": "2026-11-21",
-        "competition_matches": 18,
+        "competition_matches": 19,
         "recent_matches": [
+          {
+            "date": "2026-11-21",
+            "time": "04:05:00",
+            "competition": "Setka Cup",
+            "opponent": "Krol Y.",
+            "result": "L",
+            "score": "2-3"
+          },
           {
             "date": "2026-11-21",
             "time": "03:05:00",
@@ -20166,12 +20201,20 @@
         "status": "name_initial_match_review_only",
         "display_name": "Krol Y.",
         "source_player_id": "685009",
-        "matches_count": 3,
-        "wins": 2,
+        "matches_count": 4,
+        "wins": 3,
         "losses": 1,
         "last_match_date": "2026-11-21",
-        "competition_matches": 3,
+        "competition_matches": 4,
         "recent_matches": [
+          {
+            "date": "2026-11-21",
+            "time": "04:05:00",
+            "competition": "Setka Cup",
+            "opponent": "Kobets V.",
+            "result": "W",
+            "score": "3-2"
+          },
           {
             "date": "2026-11-21",
             "time": "01:05:00",
@@ -20678,6 +20721,11 @@
       "name": "Lubor Sulava",
       "events": [
         {
+          "title": "Lubor Sulava vs. Miroslav Barta",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634976982302"
+        },
+        {
           "title": "Tomas Andrle vs. Lubor Sulava",
           "competition": "Czech Liga Pro",
           "url": "https://polymarket.us/event/czechligapro-id2503634976982556"
@@ -21007,11 +21055,6 @@
           "title": "Adam Svoboda vs. Marek Placek",
           "competition": "Czech Liga Pro",
           "url": "https://polymarket.us/event/czechligapro-id2503634976998668"
-        },
-        {
-          "title": "Dmitro Parhomenko vs. Marek Placek",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982400"
         },
         {
           "title": "Martin Sochor vs. Marek Placek",
@@ -21701,6 +21744,11 @@
     {
       "name": "Miroslav Barta",
       "events": [
+        {
+          "title": "Lubor Sulava vs. Miroslav Barta",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634976982302"
+        },
         {
           "title": "Martin Stefek vs. Miroslav Barta",
           "competition": "Czech Liga Pro",
@@ -22839,12 +22887,20 @@
         "status": "name_initial_match_review_only",
         "display_name": "Slozka M.",
         "source_player_id": "170428",
-        "matches_count": 7,
-        "wins": 4,
+        "matches_count": 8,
+        "wins": 5,
         "losses": 3,
         "last_match_date": "2026-11-21",
-        "competition_matches": 7,
+        "competition_matches": 8,
         "recent_matches": [
+          {
+            "date": "2026-11-21",
+            "time": "04:15:00",
+            "competition": "Setka Cup",
+            "opponent": "Volodymyr Korobko",
+            "result": "W",
+            "score": "3-1"
+          },
           {
             "date": "2026-11-21",
             "time": "02:45:00",

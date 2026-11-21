@@ -1,10 +1,10 @@
 {
   "source": "datasportsapi_table_tennis",
-  "individual_singles_matches": 6898,
-  "excluded_invalid_results": 18,
+  "individual_singles_matches": 6901,
+  "excluded_invalid_results": 17,
   "classification_counts": {
     "doubles": 59,
-    "singles": 6916,
+    "singles": 6918,
     "team": 34,
     "unknown": 16
   },
@@ -19227,20 +19227,12 @@
     },
     "649739": {
       "display_name": "Szymanski I.",
-      "matches": 33,
-      "wins": 14,
+      "matches": 34,
+      "wins": 15,
       "losses": 19,
-      "win_percentage": 42.42,
+      "win_percentage": 44.12,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-18",
-          "opponent_id": "631752",
-          "opponent": "Sokolowski O.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "628913",
@@ -19312,12 +19304,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649738",
+          "opponent": "Fira D.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 33,
-          "wins": 14,
+          "matches": 34,
+          "wins": 15,
           "losses": 19
         }
       },
@@ -19408,12 +19408,12 @@
           "losses": 2
         },
         "649738": {
-          "matches": 1,
-          "wins": 0,
+          "matches": 2,
+          "wins": 1,
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1456.68
+      "elo_descriptive_only": 1470.61
     },
     "627836": {
       "display_name": "Rafal Stapor",
@@ -75082,20 +75082,12 @@
     },
     "649137": {
       "display_name": "Kobets V.",
-      "matches": 18,
+      "matches": 19,
       "wins": 7,
-      "losses": 11,
-      "win_percentage": 38.89,
+      "losses": 12,
+      "win_percentage": 36.84,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-18",
-          "opponent_id": "274478",
-          "opponent": "Rehotun D.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "274479",
@@ -75167,13 +75159,21 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "685009",
+          "opponent": "Krol Y.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 18,
+          "matches": 19,
           "wins": 7,
-          "losses": 11
+          "losses": 12
         }
       },
       "opponent_records": {
@@ -75226,9 +75226,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "685009": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1460.6
+      "elo_descriptive_only": 1450.31
     },
     "626814": {
       "display_name": "Aldayev D.",
@@ -129443,10 +129448,10 @@
     },
     "170428": {
       "display_name": "Slozka M.",
-      "matches": 7,
-      "wins": 4,
+      "matches": 8,
+      "wins": 5,
       "losses": 3,
-      "win_percentage": 57.14,
+      "win_percentage": 62.5,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
@@ -129504,12 +129509,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "630233",
+          "opponent": "Volodymyr Korobko",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 7,
-          "wins": 4,
+          "matches": 8,
+          "wins": 5,
           "losses": 3
         }
       },
@@ -129520,8 +129533,8 @@
           "losses": 1
         },
         "630233": {
-          "matches": 1,
-          "wins": 1,
+          "matches": 2,
+          "wins": 2,
           "losses": 0
         },
         "685007": {
@@ -129545,7 +129558,7 @@
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1511.2
+      "elo_descriptive_only": 1522.51
     },
     "620130": {
       "display_name": "Shchegelskyi D.",
@@ -130129,20 +130142,12 @@
     },
     "630233": {
       "display_name": "Volodymyr Korobko",
-      "matches": 11,
+      "matches": 12,
       "wins": 5,
-      "losses": 6,
-      "win_percentage": 45.45,
+      "losses": 7,
+      "win_percentage": 41.67,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-19",
-          "opponent_id": "115061",
-          "opponent": "Storozhenko O.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
         {
           "date": "2026-11-19",
           "opponent_id": "115049",
@@ -130214,20 +130219,28 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "170428",
+          "opponent": "Slozka M.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 11,
+          "matches": 12,
           "wins": 5,
-          "losses": 6
+          "losses": 7
         }
       },
       "opponent_records": {
         "170428": {
-          "matches": 1,
+          "matches": 2,
           "wins": 0,
-          "losses": 1
+          "losses": 2
         },
         "115061": {
           "matches": 2,
@@ -130270,7 +130283,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1491.12
+      "elo_descriptive_only": 1479.81
     },
     "781277": {
       "display_name": "Vladimir Sidorenko",
@@ -147107,10 +147120,10 @@
     },
     "649738": {
       "display_name": "Fira D.",
-      "matches": 6,
+      "matches": 7,
       "wins": 4,
-      "losses": 2,
-      "win_percentage": 66.67,
+      "losses": 3,
+      "win_percentage": 57.14,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
@@ -147160,13 +147173,21 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649739",
+          "opponent": "Szymanski I.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 6,
+          "matches": 7,
           "wins": 4,
-          "losses": 2
+          "losses": 3
         }
       },
       "opponent_records": {
@@ -147181,9 +147202,9 @@
           "losses": 0
         },
         "649739": {
-          "matches": 1,
+          "matches": 2,
           "wins": 1,
-          "losses": 0
+          "losses": 1
         },
         "133370": {
           "matches": 1,
@@ -147196,7 +147217,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1513.05
+      "elo_descriptive_only": 1499.12
     },
     "1197908": {
       "display_name": "Francka L.",
@@ -152054,10 +152075,10 @@
     },
     "685009": {
       "display_name": "Krol Y.",
-      "matches": 3,
-      "wins": 2,
+      "matches": 4,
+      "wins": 3,
       "losses": 1,
-      "win_percentage": 66.67,
+      "win_percentage": 75.0,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
@@ -152083,12 +152104,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649137",
+          "opponent": "Kobets V.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 3,
-          "wins": 2,
+          "matches": 4,
+          "wins": 3,
           "losses": 1
         }
       },
@@ -152107,9 +152136,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "649137": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1510.71
+      "elo_descriptive_only": 1520.99
     },
     "698131": {
       "display_name": "Nemchenko D.",

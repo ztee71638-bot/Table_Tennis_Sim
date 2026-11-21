@@ -16805,17 +16805,17 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": 1,
+              "current": 3,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 6,
-                "period2": 0,
-                "period3": 0,
-                "period4": 0
+                "period1": 12,
+                "period2": 13,
+                "period3": 3,
+                "period4": 11
               },
               "point": null,
               "redCards": null,
@@ -16848,17 +16848,17 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": 0,
+              "current": 1,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 3,
-                "period2": 0,
-                "period3": 0,
-                "period4": 0
+                "period1": 10,
+                "period2": 11,
+                "period3": 11,
+                "period4": 4
               },
               "point": null,
               "redCards": null,
@@ -18789,7 +18789,7 @@
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 0
+                "period1": 11
               },
               "point": null,
               "redCards": null,
@@ -18829,7 +18829,7 @@
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 0
+                "period1": 12
               },
               "point": null,
               "redCards": null,
@@ -18916,7 +18916,9 @@
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 4
+                "period1": 5,
+                "period2": 4,
+                "period3": 4
               },
               "point": null,
               "redCards": null,
@@ -18949,14 +18951,16 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": 0,
+              "current": 2,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 9
+                "period1": 11,
+                "period2": 11,
+                "period3": 5
               },
               "point": null,
               "redCards": null,
@@ -19002,10 +19006,10 @@
             "sport": "table-tennis",
             "startTime": "2026-11-21T04:25:00.000Z",
             "status": {
-              "code": 8,
-              "description": "1st set",
+              "code": 10,
+              "description": "3rd set",
               "finish": null,
-              "period": "period1",
+              "period": "period3",
               "phase": "inprogress",
               "type": "inprogress"
             },
@@ -19043,7 +19047,7 @@
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 1
+                "period1": 4
               },
               "point": null,
               "redCards": null,
@@ -19083,7 +19087,7 @@
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 0
+                "period1": 3
               },
               "point": null,
               "redCards": null,
@@ -19163,13 +19167,15 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": null,
+              "current": 0,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 1
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -19201,13 +19207,15 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": null,
+              "current": 0,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 2
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -19252,12 +19260,12 @@
             "sport": "table-tennis",
             "startTime": "2026-11-21T04:30:00.000Z",
             "status": {
-              "code": 0,
-              "description": "Not started",
+              "code": 8,
+              "description": "1st set",
               "finish": null,
-              "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
+              "period": "period1",
+              "phase": "inprogress",
+              "type": "inprogress"
             },
             "surface": null,
             "tier": null,
@@ -22315,7 +22323,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 188,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -22678,7 +22692,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 188,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -22795,7 +22815,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 188,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -22912,7 +22938,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 188,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -23029,7 +23061,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 188,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -23146,7 +23184,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 188,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -23509,7 +23553,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 188,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -23626,7 +23676,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 188,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -23743,7 +23799,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 188,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -23860,7 +23922,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 188,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -24223,7 +24291,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 188,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -29300,7 +29374,7 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "03a9767d6d4b0c58501a6f0803593db487b1a3cef1a288e78555ad2df4cfc758"
+      "sha256": "05fa80c227213df60809983c7351c62c749f552071c1566af50a0b1c5c8b3171"
     },
     {
       "page": 1,
@@ -31268,7 +31342,13 @@
             "previousLegFixtureId": null,
             "referee": null,
             "round": null,
-            "season": null,
+            "season": {
+              "endYear": 2026,
+              "id": 4329,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
@@ -31308,13 +31388,15 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": null,
+              "current": 0,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 7
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -31346,13 +31428,15 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": null,
+              "current": 0,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 4
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -31397,12 +31481,12 @@
             "sport": "table-tennis",
             "startTime": "2026-11-21T04:30:00.000Z",
             "status": {
-              "code": 0,
-              "description": "Not started",
+              "code": 8,
+              "description": "1st set",
               "finish": null,
-              "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
+              "period": "period1",
+              "phase": "inprogress",
+              "type": "inprogress"
             },
             "surface": null,
             "tier": null,
@@ -33264,6 +33348,129 @@
             "attendance": null,
             "awarded": false,
             "away": {
+              "code": "PAN",
+              "id": 631947,
+              "image": "https://cdn.datasportsapi.com/v2/teams/631947/logo",
+              "name": "Potapkov A.",
+              "shortName": null,
+              "slug": "potapkov-andrey"
+            },
+            "awayManager": null,
+            "awayRanking": null,
+            "awayRecord": null,
+            "awayScore": {
+              "aggregated": null,
+              "current": null,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": null,
+              "penalties": null,
+              "periods": {},
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "awaySeed": null,
+            "battingSide": null,
+            "bonus": null,
+            "clock": null,
+            "discipline": null,
+            "downAndDistance": null,
+            "durations": null,
+            "fightCard": null,
+            "fightDiscipline": null,
+            "fightResult": null,
+            "finalResultOnly": false,
+            "firstToServe": null,
+            "group": null,
+            "home": {
+              "code": "KHA",
+              "id": 168889,
+              "image": "https://cdn.datasportsapi.com/v2/teams/168889/logo",
+              "name": "Kharchenko E.",
+              "shortName": null,
+              "slug": "kharchenko-evgeniy"
+            },
+            "homeManager": null,
+            "homeRanking": null,
+            "homeRecord": null,
+            "homeScore": {
+              "aggregated": null,
+              "current": null,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": null,
+              "penalties": null,
+              "periods": {},
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "homeSeed": null,
+            "id": 1199139,
+            "inningState": null,
+            "league": {
+              "category": "Russia",
+              "country": {
+                "code": "RU",
+                "flag": "https://cdn.datasportsapi.com/v2/countries/RU/flag",
+                "name": "Russia"
+              },
+              "id": 4324,
+              "image": "https://cdn.datasportsapi.com/v2/leagues/4324/logo",
+              "name": "Liga Pro",
+              "priority": 0,
+              "slug": "liga-pro",
+              "sport": "table-tennis"
+            },
+            "levels": [],
+            "lineupsAvailable": null,
+            "lineupsConfirmed": null,
+            "matchFormat": null,
+            "matchesInTie": null,
+            "note": null,
+            "playerOfTheMatch": null,
+            "previousLegFixtureId": null,
+            "referee": null,
+            "round": null,
+            "season": {
+              "endYear": 2026,
+              "id": 4329,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
+            "servedFirst": null,
+            "serving": null,
+            "sport": "table-tennis",
+            "startTime": "2026-11-21T06:15:00.000Z",
+            "status": {
+              "code": 0,
+              "description": "Not started",
+              "finish": null,
+              "period": null,
+              "phase": "notstarted",
+              "type": "notstarted"
+            },
+            "surface": null,
+            "tier": null,
+            "timeouts": null,
+            "toss": null,
+            "tvUmpire": null,
+            "umpires": null,
+            "varCheck": null,
+            "venue": null,
+            "winner": null
+          },
+          {
+            "aggregateWinner": null,
+            "attendance": null,
+            "awarded": false,
+            "away": {
               "code": "NOV",
               "id": 202178,
               "image": "https://cdn.datasportsapi.com/v2/teams/202178/logo",
@@ -33510,129 +33717,6 @@
             "attendance": null,
             "awarded": false,
             "away": {
-              "code": "PAN",
-              "id": 631947,
-              "image": "https://cdn.datasportsapi.com/v2/teams/631947/logo",
-              "name": "Potapkov A.",
-              "shortName": null,
-              "slug": "potapkov-andrey"
-            },
-            "awayManager": null,
-            "awayRanking": null,
-            "awayRecord": null,
-            "awayScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "awaySeed": null,
-            "battingSide": null,
-            "bonus": null,
-            "clock": null,
-            "discipline": null,
-            "downAndDistance": null,
-            "durations": null,
-            "fightCard": null,
-            "fightDiscipline": null,
-            "fightResult": null,
-            "finalResultOnly": false,
-            "firstToServe": null,
-            "group": null,
-            "home": {
-              "code": "KHA",
-              "id": 168889,
-              "image": "https://cdn.datasportsapi.com/v2/teams/168889/logo",
-              "name": "Kharchenko E.",
-              "shortName": null,
-              "slug": "kharchenko-evgeniy"
-            },
-            "homeManager": null,
-            "homeRanking": null,
-            "homeRecord": null,
-            "homeScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "homeSeed": null,
-            "id": 1199139,
-            "inningState": null,
-            "league": {
-              "category": "Russia",
-              "country": {
-                "code": "RU",
-                "flag": "https://cdn.datasportsapi.com/v2/countries/RU/flag",
-                "name": "Russia"
-              },
-              "id": 4324,
-              "image": "https://cdn.datasportsapi.com/v2/leagues/4324/logo",
-              "name": "Liga Pro",
-              "priority": 0,
-              "slug": "liga-pro",
-              "sport": "table-tennis"
-            },
-            "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
-            "matchFormat": null,
-            "matchesInTie": null,
-            "note": null,
-            "playerOfTheMatch": null,
-            "previousLegFixtureId": null,
-            "referee": null,
-            "round": null,
-            "season": {
-              "endYear": 2026,
-              "id": 4329,
-              "name": "2026",
-              "startYear": 2026,
-              "year": "2026"
-            },
-            "servedFirst": null,
-            "serving": null,
-            "sport": "table-tennis",
-            "startTime": "2026-11-21T06:35:00.000Z",
-            "status": {
-              "code": 0,
-              "description": "Not started",
-              "finish": null,
-              "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
-            },
-            "surface": null,
-            "tier": null,
-            "timeouts": null,
-            "toss": null,
-            "tvUmpire": null,
-            "umpires": null,
-            "varCheck": null,
-            "venue": null,
-            "winner": null
-          },
-          {
-            "aggregateWinner": null,
-            "attendance": null,
-            "awarded": false,
-            "away": {
               "code": "KON",
               "id": 649774,
               "image": "https://cdn.datasportsapi.com/v2/teams/649774/logo",
@@ -33820,6 +33904,129 @@
             },
             "homeSeed": null,
             "id": 1199141,
+            "inningState": null,
+            "league": {
+              "category": "Russia",
+              "country": {
+                "code": "RU",
+                "flag": "https://cdn.datasportsapi.com/v2/countries/RU/flag",
+                "name": "Russia"
+              },
+              "id": 4324,
+              "image": "https://cdn.datasportsapi.com/v2/leagues/4324/logo",
+              "name": "Liga Pro",
+              "priority": 0,
+              "slug": "liga-pro",
+              "sport": "table-tennis"
+            },
+            "levels": [],
+            "lineupsAvailable": null,
+            "lineupsConfirmed": null,
+            "matchFormat": null,
+            "matchesInTie": null,
+            "note": null,
+            "playerOfTheMatch": null,
+            "previousLegFixtureId": null,
+            "referee": null,
+            "round": null,
+            "season": {
+              "endYear": 2026,
+              "id": 4329,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
+            "servedFirst": null,
+            "serving": null,
+            "sport": "table-tennis",
+            "startTime": "2026-11-21T06:45:00.000Z",
+            "status": {
+              "code": 0,
+              "description": "Not started",
+              "finish": null,
+              "period": null,
+              "phase": "notstarted",
+              "type": "notstarted"
+            },
+            "surface": null,
+            "tier": null,
+            "timeouts": null,
+            "toss": null,
+            "tvUmpire": null,
+            "umpires": null,
+            "varCheck": null,
+            "venue": null,
+            "winner": null
+          },
+          {
+            "aggregateWinner": null,
+            "attendance": null,
+            "awarded": false,
+            "away": {
+              "code": "GOL",
+              "id": 740683,
+              "image": "https://cdn.datasportsapi.com/v2/teams/740683/logo",
+              "name": "Golyshev A.",
+              "shortName": null,
+              "slug": "golyshev-aleksandr"
+            },
+            "awayManager": null,
+            "awayRanking": null,
+            "awayRecord": null,
+            "awayScore": {
+              "aggregated": null,
+              "current": null,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": null,
+              "penalties": null,
+              "periods": {},
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "awaySeed": null,
+            "battingSide": null,
+            "bonus": null,
+            "clock": null,
+            "discipline": null,
+            "downAndDistance": null,
+            "durations": null,
+            "fightCard": null,
+            "fightDiscipline": null,
+            "fightResult": null,
+            "finalResultOnly": false,
+            "firstToServe": null,
+            "group": null,
+            "home": {
+              "code": "PAN",
+              "id": 631947,
+              "image": "https://cdn.datasportsapi.com/v2/teams/631947/logo",
+              "name": "Potapkov A.",
+              "shortName": null,
+              "slug": "potapkov-andrey"
+            },
+            "homeManager": null,
+            "homeRanking": null,
+            "homeRecord": null,
+            "homeScore": {
+              "aggregated": null,
+              "current": null,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": null,
+              "penalties": null,
+              "periods": {},
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "homeSeed": null,
+            "id": 1199144,
             "inningState": null,
             "league": {
               "category": "Russia",
@@ -34102,129 +34309,6 @@
             "serving": null,
             "sport": "table-tennis",
             "startTime": "2026-11-21T07:00:00.000Z",
-            "status": {
-              "code": 0,
-              "description": "Not started",
-              "finish": null,
-              "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
-            },
-            "surface": null,
-            "tier": null,
-            "timeouts": null,
-            "toss": null,
-            "tvUmpire": null,
-            "umpires": null,
-            "varCheck": null,
-            "venue": null,
-            "winner": null
-          },
-          {
-            "aggregateWinner": null,
-            "attendance": null,
-            "awarded": false,
-            "away": {
-              "code": "GOL",
-              "id": 740683,
-              "image": "https://cdn.datasportsapi.com/v2/teams/740683/logo",
-              "name": "Golyshev A.",
-              "shortName": null,
-              "slug": "golyshev-aleksandr"
-            },
-            "awayManager": null,
-            "awayRanking": null,
-            "awayRecord": null,
-            "awayScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "awaySeed": null,
-            "battingSide": null,
-            "bonus": null,
-            "clock": null,
-            "discipline": null,
-            "downAndDistance": null,
-            "durations": null,
-            "fightCard": null,
-            "fightDiscipline": null,
-            "fightResult": null,
-            "finalResultOnly": false,
-            "firstToServe": null,
-            "group": null,
-            "home": {
-              "code": "PAN",
-              "id": 631947,
-              "image": "https://cdn.datasportsapi.com/v2/teams/631947/logo",
-              "name": "Potapkov A.",
-              "shortName": null,
-              "slug": "potapkov-andrey"
-            },
-            "homeManager": null,
-            "homeRanking": null,
-            "homeRecord": null,
-            "homeScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "homeSeed": null,
-            "id": 1199144,
-            "inningState": null,
-            "league": {
-              "category": "Russia",
-              "country": {
-                "code": "RU",
-                "flag": "https://cdn.datasportsapi.com/v2/countries/RU/flag",
-                "name": "Russia"
-              },
-              "id": 4324,
-              "image": "https://cdn.datasportsapi.com/v2/leagues/4324/logo",
-              "name": "Liga Pro",
-              "priority": 0,
-              "slug": "liga-pro",
-              "sport": "table-tennis"
-            },
-            "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
-            "matchFormat": null,
-            "matchesInTie": null,
-            "note": null,
-            "playerOfTheMatch": null,
-            "previousLegFixtureId": null,
-            "referee": null,
-            "round": null,
-            "season": {
-              "endYear": 2026,
-              "id": 4329,
-              "name": "2026",
-              "startYear": 2026,
-              "year": "2026"
-            },
-            "servedFirst": null,
-            "serving": null,
-            "sport": "table-tennis",
-            "startTime": "2026-11-21T07:05:00.000Z",
             "status": {
               "code": 0,
               "description": "Not started",
@@ -49704,7 +49788,7 @@
                 "period2": 9,
                 "period3": 11,
                 "period4": 10,
-                "period5": 3
+                "period5": 7
               },
               "point": null,
               "redCards": null,
@@ -49737,7 +49821,7 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": 2,
+              "current": 3,
               "errors": null,
               "hits": null,
               "innings": {},
@@ -49748,7 +49832,7 @@
                 "period2": 11,
                 "period3": 9,
                 "period4": 12,
-                "period5": 4
+                "period5": 11
               },
               "point": null,
               "redCards": null,
@@ -49794,12 +49878,12 @@
             "sport": "table-tennis",
             "startTime": "2026-11-21T04:05:00.000Z",
             "status": {
-              "code": 12,
-              "description": "5th set",
-              "finish": null,
-              "period": "period5",
-              "phase": "inprogress",
-              "type": "inprogress"
+              "code": 100,
+              "description": "Ended",
+              "finish": "regular",
+              "period": null,
+              "phase": "finished",
+              "type": "finished"
             },
             "surface": null,
             "tier": null,
@@ -49809,7 +49893,7 @@
             "umpires": null,
             "varCheck": null,
             "venue": null,
-            "winner": null
+            "winner": "home"
           },
           {
             "aggregateWinner": null,
@@ -49828,7 +49912,7 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": 2,
+              "current": 3,
               "errors": null,
               "hits": null,
               "innings": {},
@@ -49838,7 +49922,7 @@
                 "period1": 11,
                 "period2": 11,
                 "period3": 11,
-                "period4": 4
+                "period4": 11
               },
               "point": null,
               "redCards": null,
@@ -49881,7 +49965,7 @@
                 "period1": 4,
                 "period2": 9,
                 "period3": 13,
-                "period4": 1
+                "period4": 3
               },
               "point": null,
               "redCards": null,
@@ -49927,12 +50011,12 @@
             "sport": "table-tennis",
             "startTime": "2026-11-21T04:15:00.000Z",
             "status": {
-              "code": 11,
-              "description": "4th set",
-              "finish": null,
-              "period": "period4",
-              "phase": "inprogress",
-              "type": "inprogress"
+              "code": 100,
+              "description": "Ended",
+              "finish": "regular",
+              "period": null,
+              "phase": "finished",
+              "type": "finished"
             },
             "surface": null,
             "tier": null,
@@ -49942,7 +50026,7 @@
             "umpires": null,
             "varCheck": null,
             "venue": null,
-            "winner": null
+            "winner": "away"
           },
           {
             "aggregateWinner": null,
@@ -49961,7 +50045,7 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": 1,
+              "current": 2,
               "errors": null,
               "hits": null,
               "innings": {},
@@ -49969,7 +50053,8 @@
               "penalties": null,
               "periods": {
                 "period1": 11,
-                "period2": 0
+                "period2": 11,
+                "period3": 0
               },
               "point": null,
               "redCards": null,
@@ -50010,7 +50095,8 @@
               "penalties": null,
               "periods": {
                 "period1": 4,
-                "period2": 0
+                "period2": 7,
+                "period3": 0
               },
               "point": null,
               "redCards": null,
@@ -50056,10 +50142,10 @@
             "sport": "table-tennis",
             "startTime": "2026-11-21T04:25:00.000Z",
             "status": {
-              "code": 9,
-              "description": "2nd set",
+              "code": 10,
+              "description": "3rd set",
               "finish": null,
-              "period": "period2",
+              "period": "period3",
               "phase": "inprogress",
               "type": "inprogress"
             },
@@ -70349,7 +70435,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "startTime": "2026-11-21T14:53:00.000Z",
+            "startTime": "2026-11-21T14:55:00.000Z",
             "status": {
               "code": 0,
               "description": "Not started",
@@ -74777,7 +74863,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "startTime": "2026-11-21T16:53:00.000Z",
+            "startTime": "2026-11-21T16:55:00.000Z",
             "status": {
               "code": 0,
               "description": "Not started",
@@ -82433,8 +82519,8 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "f061a0b48488ee118786344df1b0c6d29213a45802e3b00a7c24346d90864274"
+      "sha256": "d6186bbd59adf433e1690c44b3119da304155848650d9be8bb680263f172a051"
     }
   ],
-  "retrieved_at": "2026-11-21T04:29:12.634681+00:00"
+  "retrieved_at": "2026-11-21T04:34:34.369383+00:00"
 }
