@@ -27,6 +27,12 @@ class PolymarketWebExportTests(unittest.TestCase):
         self.assertEqual(result["recent_matches"][0]["opponent"], "Jakub Pilch")
         self.assertIn("not independently verified", result["identity_note"])
 
+    def test_unique_initial_candidate_is_exposed_as_review_only(self):
+        result = MODULE.player_history("Erik Mares", [match(a_name="Mares E.")], "Czech Liga Pro")
+        self.assertEqual(result["status"], "name_initial_match_review_only")
+        self.assertEqual(result["matches_count"], 1)
+        self.assertIn("not a confirmed identity", result["identity_note"])
+
     def test_ambiguous_same_name_candidates_withhold_history(self):
         history = [
             match(a_id="101", a_pk=1, b_id="202", b_pk=2),

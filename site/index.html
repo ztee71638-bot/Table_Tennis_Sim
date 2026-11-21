@@ -89,11 +89,12 @@ $('h2h').innerHTML=r.details.length?'<p>'+r.details.length+' shared opponents wi
 }
 function historySummary(player){
  const h=player.history||{};
- if(h.status==='exact_name_match_identity_unverified'){
+ if(h.status==='exact_name_match_identity_unverified'||h.status==='name_initial_match_review_only'){
   const recent=(h.recent_matches||[]).slice(0,5).map(m=>escapeHtml(m.date)+' '+escapeHtml(m.result)+' '+escapeHtml(m.opponent)+' ('+escapeHtml(m.score)+')').join('<br>');
-  return '<div class="history-line">'+h.wins+'–'+h.losses+' across '+h.matches_count+' recorded matches · last: '+escapeHtml(h.last_match_date||'unknown')+'</div><div class="history-line">'+(recent||'No recent match rows available')+'</div><div class="history-line">'+escapeHtml(h.identity_note)+'</div>';
+  const prefix=h.status==='name_initial_match_review_only'?'Possible name-format match · ':'';
+  return '<div class="history-line">'+prefix+h.wins+'–'+h.losses+' across '+h.matches_count+' recorded matches · last: '+escapeHtml(h.last_match_date||'unknown')+'</div><div class="history-line">'+(recent||'No recent match rows available')+'</div><div class="history-line">'+escapeHtml(h.identity_note)+'</div>';
  }
- const labels={ambiguous:'Multiple possible source records; history withheld.',not_found:'No exact source-name match found yet.',other_competition_only:'Same-name record found only in another competition.',source_not_loaded:'Recent results source was unavailable in this refresh.'};
+ const labels={ambiguous:'Multiple possible source records; history withheld.',not_found:'No exact or safe name-format match found yet.',other_competition_only:'Same-name record found only in another competition.',source_not_loaded:'Recent results source was unavailable in this refresh.'};
  return '<div class="history-line">'+escapeHtml(labels[h.status]||'No verified history available.')+'</div>';
 }
 let polymarketEvents=[];
@@ -133,9 +134,9 @@ async function loadPolymarket(){
   if(!response.ok)throw Error('Current listing feed is not published yet.');
   const data=await response.json();
   polymarketEvents=(data.events||[]).filter(e=>e.active&&!e.closed);
-  $('polymarket-updated').textContent=polymarketEvents.length+' active matchups · '+(data.players_count||0)+' listed players · refreshed '+new Date(data.retrieved_at_utc).toLocaleString();
-  $('polymarket-search').addEventListener('input',renderPolymarket);
-  $('polymarket-results').addEventListener('click',e=>{const btn=e.target.closest('[data-simulate-index]');if(btn)runPolymarketSimulation(Number(btn.dataset.simulateIndex),btn);});
+  $('polymarket-updated').textContent=polymarketEvents.length+' active matchups · '+(data.players_count||0)+' listed players · source checked '+new Date(data.retrieved_at_utc).toLocaleString()+' · this page checks for feed updates every 5 minutes';
+  if(!$('polymarket-search').dataset.bound){$('polymarket-search').addEventListener('input',renderPolymarket);$('polymarket-search').dataset.bound='1';}
+  if(!$('polymarket-results').dataset.bound){$('polymarket-results').addEventListener('click',e=>{const btn=e.target.closest('[data-simulate-index]');if(btn)runPolymarketSimulation(Number(btn.dataset.simulateIndex),btn);});$('polymarket-results').dataset.bound='1';}
   renderPolymarket();
  }catch(err){$('polymarket-updated').textContent='Live listing refresh unavailable: '+err.message;$('polymarket-results').innerHTML='<div class="market-empty">The simulator will keep its historical player search available while the live feed is unavailable.</div>';}
 }

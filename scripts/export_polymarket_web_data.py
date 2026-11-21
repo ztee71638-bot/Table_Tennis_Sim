@@ -20,13 +20,18 @@ OUT = ROOT / "site/data/polymarket_active.json"
 def player_history(name: str, history: list[dict], scope: str) -> dict:
     candidates = reconciliation.player_candidates(name, history, scope)
     exact = [c for c in candidates if c["match_type"] == "exact"]
-    if len(exact) != 1:
+    # Initial-based matches are useful discovery leads (for example, "Erik Mares"
+    # versus "Mares E."), but are deliberately kept review-only and never promoted
+    # to a verified identity or a model-eligible player.
+    usable = exact if exact else [c for c in candidates if c["match_type"] == "initial"]
+    if len(usable) != 1:
         return {
-            "status": "ambiguous" if len(exact) > 1 or len(candidates) > 1 else "not_found",
-            "identity_note": "No verified source identity; history is not attached.",
+            "status": "ambiguous" if len(usable) > 1 or len(candidates) > 1 else "not_found",
+            "candidate_count": len(candidates),
+            "identity_note": "No unique source-scoped player candidate; history is not attached.",
             "matches": [],
         }
-    candidate = exact[0]
+    candidate = usable[0]
     if not candidate["scope_match"] and scope:
         return {
             "status": "other_competition_only",
@@ -48,8 +53,9 @@ def player_history(name: str, history: list[dict], scope: str) -> dict:
             "result": "W" if won else "L",
             "score": f'{m.get("sets_a")}-{m.get("sets_b")}' if own_a else f'{m.get("sets_b")}-{m.get("sets_a")}',
         })
+    initial_only = candidate["match_type"] == "initial"
     return {
-        "status": "exact_name_match_identity_unverified",
+        "status": "name_initial_match_review_only" if initial_only else "exact_name_match_identity_unverified",
         "display_name": candidate["display_name"],
         "source_player_id": pid,
         "matches_count": len(rows),
@@ -58,7 +64,11 @@ def player_history(name: str, history: list[dict], scope: str) -> dict:
         "last_match_date": rows[0]["date"] if rows else "",
         "competition_matches": len(candidate["relevant_matches"]),
         "recent_matches": rows[:20],
-        "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity.",
+        "identity_note": (
+            "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+            if initial_only else
+            "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
+        ),
     }
 
 
