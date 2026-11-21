@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sqlite3
 import sys
 from datetime import datetime, timezone
@@ -148,6 +149,30 @@ def main() -> None:
     tabletennisapi_players = tabletennisapi_data.get("players", {}) if isinstance(tabletennisapi_data, dict) else {}
     if not isinstance(tabletennisapi_players, dict):
         tabletennisapi_players = {}
+    # Deploy-only rebuilds do not call the provider. Preserve the last app-page
+    # summaries instead of replacing them with empty queued states.
+    if not tabletennisapi_players and INDEX_PATH.exists():
+        existing_html = INDEX_PATH.read_text(encoding="utf-8")
+        match = re.search(
+            r'<script id="tabletennisapi-profile-data" type="application/json">(.*?)</script>',
+            existing_html, re.DOTALL,
+        )
+        if match:
+            try:
+                embedded = json.loads(match.group(1))
+                profiles = embedded.get("profiles", {})
+                if isinstance(profiles, dict):
+                    tabletennisapi_players = profiles
+            except ValueError:
+                pass
+        if OUT.exists():
+            try:
+                previous_output = json.loads(OUT.read_text(encoding="utf-8"))
+                previous_source = previous_output.get("tabletennisapi_source")
+                if isinstance(previous_source, dict):
+                    tabletennisapi_source = previous_source
+            except (ValueError, OSError):
+                pass
 
     previous_players = {}
     if OUT.exists():
