@@ -29,6 +29,7 @@ MAX_PLAYERS_PER_RUN = 5
 MAX_CALLS_PER_UTC_DAY = 40  # leaves headroom below the free plan's 50/day
 REFRESH_DAYS = 7
 API_KEY = os.environ.get("TABLETENNISAPI_KEY", "").strip()
+LAST_API_CALL_MONOTONIC: float | None = None
 
 
 def tokens(value: str) -> list[str]:
@@ -120,6 +121,12 @@ def profile_summary(query_name: str, candidate: dict, profile: dict, looked_up_a
 
 
 def api_get(path: str, params: dict | None = None) -> dict:
+    global LAST_API_CALL_MONOTONIC
+    if LAST_API_CALL_MONOTONIC is not None:
+        elapsed = time.monotonic() - LAST_API_CALL_MONOTONIC
+        if elapsed < 6.2:
+            time.sleep(6.2 - elapsed)
+    LAST_API_CALL_MONOTONIC = time.monotonic()
     query = urllib.parse.urlencode(params or {})
     url = f"{BASE_URL}{path}" + (f"?{query}" if query else "")
     request = urllib.request.Request(
@@ -224,7 +231,6 @@ def lookup_one(name: str, state: dict, calls: int) -> tuple[dict, int]:
                 "identity_note": "Provider returned a player candidate without a valid stable player ID.",
                 "model_eligible": False,
             }, calls)
-        time.sleep(1.1)  # stay below the provider's 10 calls/minute limit
         detail = api_get(f"/players/{player_id}")
         calls += 1
         profile = detail.get("data") if isinstance(detail.get("data"), dict) else {}
