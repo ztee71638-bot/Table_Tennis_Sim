@@ -174,7 +174,7 @@ async function loadPolymarket(){
   const data=await response.json();
   polymarketEvents=(data.events||[]).filter(e=>e.active&&!e.closed);
   const api=data.tabletennisapi_source||{};
-  const apiStatus=api.available?' · WTT profiles checked '+(api.players_checked||0)+' · provider calls today '+(api.calls_today||0)+'/'+(api.daily_safety_budget||40):' · WTT profile lookup awaiting provider refresh';
+  const apiStatus=api.available?' · WTT profiles cached '+(api.players_cached||0)+' ('+(api.players_checked_today||0)+' checked today) · provider calls today '+(api.calls_today||0)+'/'+(api.daily_safety_budget||40):' · WTT profile lookup awaiting provider refresh';
   $('polymarket-updated').textContent=polymarketEvents.length+' active matchups · '+(data.players_count||0)+' listed players · feed '+new Date(data.retrieved_at_utc).toLocaleString()+apiStatus+' · page checks for feed updates every 5 minutes';
   if(!$('polymarket-search').dataset.bound){$('polymarket-search').addEventListener('input',renderPolymarket);$('polymarket-search').dataset.bound='1';}
   if(!$('polymarket-results').dataset.bound){$('polymarket-results').addEventListener('click',e=>{const btn=e.target.closest('[data-simulate-index]');if(btn)runPolymarketSimulation(Number(btn.dataset.simulateIndex),btn);});$('polymarket-results').dataset.bound='1';}
