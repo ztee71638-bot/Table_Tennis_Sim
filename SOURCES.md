@@ -165,3 +165,11 @@ Keep separate source-scoped player IDs. Never merge players across providers bas
 4. The U.S. Hall of Fame archive is best suited to targeted historical U.S. identity/event corroboration, not a universal results importer.
 
 No data from these three candidates was imported in this qualification pass. No paid plan, API key, scraping, or cross-source identity merge was used.
+
+
+### Table Tennis API — binding reuse restriction review (2026-11-21)
+- Terms: https://tabletennisapi.com/terms (last updated 2026-10-27).
+- The terms allow use of API data in one's own apps/sites, but prohibit reselling, redistributing or republishing the data itself, downloading it in bulk to rebuild a database, or using it to build a competing product. They direct users to request a licence for uses beyond those permissions.
+- Therefore the free key is **not** approval to bulk-import historical results, build our own replicated match database, or train a model from a bulk export. Do not wire it into the database ingestion workflow or persist bulk response data unless DeveloperData provides explicit written permission covering the proposed private research database and model training.
+- The user's non-commercial research-access request is awaiting a substantive response; the automated acknowledgement is not permission. A free account/key by itself does not override the terms.
+- Until written permission is received, keep this source as documentation-only. Do not place the key in GitHub Secrets or call bulk endpoints for the project. Never put a key in source control, logs, or chat.
