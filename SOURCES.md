@@ -185,3 +185,32 @@ No data from these three candidates was imported in this qualification pass. No 
 - Therefore the free key is **not** approval to bulk-import historical results, build our own replicated match database, or train a model from a bulk export. Do not wire it into the database ingestion workflow or persist bulk response data unless DeveloperData provides explicit written permission covering the proposed private research database and model training.
 - The user's non-commercial research-access request is awaiting a substantive response; the automated acknowledgement is not permission. A free account/key by itself does not override the terms.
 - Until written permission is received, keep this source as documentation-only. Do not place the key in GitHub Secrets or call bulk endpoints for the project. Never put a key in source control, logs, or chat.
+
+## Provider permission requests — awaiting written responses (2026-11-21)
+
+The following requests have been sent. No source may be expanded beyond its already documented permitted scope until a substantive written response is received and recorded here.
+
+### SCORE Network / Setka Cup historical archive
+- Request sent to `scorenetworkorg@gmail.com`, CC `ryurko@stat.cmu.edu`, subject: `Permission Request: Setka Cup Table Tennis Historical Dataset`.
+- Asked whether SCORE or Setka Cup controls the rights and whether private research storage, derived statistics, public display of permitted derived statistics, model training/testing/validation, and future updates are authorized.
+- Raw archive redistribution was expressly excluded unless separately authorized.
+- Status: awaiting response. Existing archive remains quarantined from new model training or public display pending permission clarification.
+
+### TT Data Lab
+- Request sent to `software.pingpong.reds@gmail.com`, subject: `No-cost research access and data-use permission request — table-tennis simulator`.
+- Requested only a no-cost sample or limited research access, with written clarification for private storage, derived statistics, model training/testing, and limited display of derived outputs. Paid access is not authorized.
+- Status: awaiting response. No scraping, bulk download, or import has been enabled.
+
+### DataSportsAPI
+- Request sent to `hello@datasportsapi.com`, subject: `Written clarification request: table-tennis results, derived statistics and model training`.
+- Asked for written confirmation of free-plan permissions for private retention of recent results, derived player statistics, statistical model training/testing, and limited display of derived outputs, including retention and commercial-use restrictions.
+- Status: awaiting response. Existing recent-results integration remains within its documented free-plan and source-isolation controls; do not expand retention, bulk use, or model training beyond the current approved scope until clarified.
+
+### Table Tennis API (DeveloperData)
+- Existing non-commercial research/licensing clarification request remains pending; automated acknowledgements or API-key issuance do not constitute permission.
+- The provider's published terms prohibit bulk database rebuilding and competing-product model training without a separate licence. Keep the integration limited to its existing free-tier player-discovery/profile summaries; do not use its match/archive endpoints for model training or bulk retention.
+- Status: awaiting substantive written response.
+
+### PongIQ
+- Public read-only event probe remains health/discovery-only. The developer documentation asks users to contact the tournament organiser for integration questions; no blanket bulk-reuse or model-training licence has been established.
+- Status: no general permission request can be routed to a verified rights-holder yet. Continue monitoring only; do not import into the professional history database.
