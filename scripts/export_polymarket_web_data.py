@@ -1,0 +1,136 @@
+#!/usr/bin/env python3
+"""Publish current Polymarket table-tennis events and source-scoped player histories."""
+from __future__ import annotations
+
+import json
+import sqlite3
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+import reconcile_polymarket_players as reconciliation
+
+RAW_EVENTS = ROOT / "data/raw/polymarket_us_table_tennis_events.json"
+DB_PATH = ROOT / "data/database/table_tennis.sqlite"
+OUT = ROOT / "site/data/polymarket_active.json"
+
+
+def player_history(name: str, history: list[dict], scope: str) -> dict:
+    candidates = reconciliation.player_candidates(name, history, scope)
+    exact = [c for c in candidates if c["match_type"] == "exact"]
+    if len(exact) != 1:
+        return {
+            "status": "ambiguous" if len(exact) > 1 or len(candidates) > 1 else "not_found",
+            "identity_note": "No verified source identity; history is not attached.",
+            "matches": [],
+        }
+    candidate = exact[0]
+    if not candidate["scope_match"] and scope:
+        return {
+            "status": "other_competition_only",
+            "identity_note": "A same-name record exists, but no match in this event's competition was found.",
+            "matches": [],
+        }
+    pid = candidate["source_player_id"]
+    rows = []
+    wins = 0
+    for m in sorted(candidate["matches"], key=lambda x: (x.get("match_date") or "", x.get("match_time") or ""), reverse=True):
+        own_a = m["a_id"] == pid
+        won = m["winner_player_pk"] == (m["a_pk"] if own_a else m["b_pk"])
+        wins += int(won)
+        rows.append({
+            "date": m.get("match_date") or "",
+            "time": m.get("match_time") or "",
+            "competition": m.get("competition") or "",
+            "opponent": m.get("b_name") if own_a else m.get("a_name"),
+            "result": "W" if won else "L",
+            "score": f'{m.get("sets_a")}-{m.get("sets_b")}' if own_a else f'{m.get("sets_b")}-{m.get("sets_a")}',
+        })
+    return {
+        "status": "exact_name_match_identity_unverified",
+        "display_name": candidate["display_name"],
+        "source_player_id": pid,
+        "matches_count": len(rows),
+        "wins": wins,
+        "losses": len(rows) - wins,
+        "last_match_date": rows[0]["date"] if rows else "",
+        "competition_matches": len(candidate["relevant_matches"]),
+        "recent_matches": rows[:20],
+        "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity.",
+    }
+
+
+def main() -> None:
+    if not RAW_EVENTS.exists():
+        raise SystemExit("Polymarket event snapshot is missing; run the public read-only scanner first.")
+    payload = json.loads(RAW_EVENTS.read_text(encoding="utf-8"))
+    events = payload.get("events", [])
+    history: list[dict] = []
+    source_info = {"available": False, "reason": "Database unavailable"}
+    if DB_PATH.exists():
+        conn = sqlite3.connect(DB_PATH)
+        conn.row_factory = sqlite3.Row
+        try:
+            history, source_info = reconciliation.load_source_history(conn)
+        finally:
+            conn.close()
+
+    output_events = []
+    player_index: dict[str, dict] = {}
+    for event in events:
+        title = str(event.get("title") or event.get("name") or "")
+        a, b = reconciliation.event_pair(event)
+        if not a or not b:
+            continue
+        scope = reconciliation.event_competition(event)
+        pa = player_history(a, history, scope) if source_info.get("available") else {
+            "status": "source_not_loaded", "identity_note": "Recent source history is unavailable in this refresh.", "matches": []
+        }
+        pb = player_history(b, history, scope) if source_info.get("available") else {
+            "status": "source_not_loaded", "identity_note": "Recent source history is unavailable in this refresh.", "matches": []
+        }
+        slug = event.get("slug") or ""
+        event_row = {
+            "event_id": str(event.get("id") or ""),
+            "slug": slug,
+            "title": title,
+            "competition": scope or "Table Tennis",
+            "start_time_utc": event.get("startTime") or "",
+            "end_time_utc": event.get("endTime") or "",
+            "active": event.get("active") is not False,
+            "closed": event.get("closed") is True,
+            "url": f"https://polymarket.us/event/{slug}" if slug else "https://polymarket.us",
+            "player_a": {"name": a, "history": pa},
+            "player_b": {"name": b, "history": pb},
+        }
+        output_events.append(event_row)
+        for name, details in ((a, pa), (b, pb)):
+            key = name.casefold()
+            if key not in player_index:
+                player_index[key] = {"name": name, "events": [], "history": details}
+            player_index[key]["events"].append({"title": title, "competition": scope, "url": event_row["url"]})
+
+    output = {
+        "source": "Polymarket US public read-only listings",
+        "retrieved_at_utc": datetime.now(timezone.utc).isoformat(),
+        "events_count": len(output_events),
+        "players_count": len(player_index),
+        "history_source": source_info,
+        "events": output_events,
+        "players": sorted(player_index.values(), key=lambda p: p["name"].casefold()),
+        "limitations": [
+            "Listings are current discovery data, not confirmation of an athlete's real-world activity.",
+            "DataSportsAPI histories are source-scoped and exact-name candidates only; identity is not independently verified.",
+            "No automatic identity merges or model promotion are performed.",
+            "DataSportsAPI recent histories are descriptive evidence only; its unpromoted model is not used to issue picks."
+        ]
+    }
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"output": str(OUT.relative_to(ROOT)), "events": len(output_events), "players": len(player_index), "history_source": source_info}, indent=2))
+
+
+if __name__ == "__main__":
+    main()
