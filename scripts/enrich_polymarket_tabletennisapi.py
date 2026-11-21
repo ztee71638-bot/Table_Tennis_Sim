@@ -110,6 +110,7 @@ def profile_summary(query_name: str, candidate: dict, profile: dict, looked_up_a
         "display_name": str(profile.get("name") or candidate.get("name") or ""),
         "country": profile.get("country") or candidate.get("country"),
         "records_by_discipline": records,
+        "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
         "world_ranks": ranks,
         "looked_up_at_utc": looked_up_at,
         "identity_note": (
