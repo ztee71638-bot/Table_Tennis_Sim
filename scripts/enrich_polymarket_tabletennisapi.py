@@ -296,7 +296,11 @@ def main() -> None:
         "source": SOURCE_NAME,
         "source_terms": "https://tabletennisapi.com/terms",
         "retrieved_at_utc": datetime.now(timezone.utc).isoformat(),
-        "players_checked": len(state["players"]),
+        "players_cached": len(state["players"]),
+        "players_checked_today": sum(
+            1 for item in state["players"].values()
+            if str(item.get("looked_up_at_utc") or "").startswith(day)
+        ),
         "calls_today": calls,
         "daily_safety_budget": MAX_CALLS_PER_UTC_DAY,
         "players": state["players"],
