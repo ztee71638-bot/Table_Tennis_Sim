@@ -19,6 +19,27 @@ def match(a_id="101", a_name="Erik Mares", a_pk=1, b_id="202", b_name="Jakub Pil
 
 
 class PolymarketWebExportTests(unittest.TestCase):
+    def test_wtt_model_lookup_matches_reordered_full_name_tokens(self):
+        pools = {"wtt_mens_singles": {"123": {
+            "display_name": "Chen Yuanyu", "matches": 24, "last_date": "2026-11-20",
+            "recent_form_last10": [1, 1, 0, 1],
+        }}}
+        result = MODULE.wtt_model_record("Yuanyu Chen", pools, "WTT")
+        self.assertEqual(result["status"], "wtt_model_record_identity_unverified")
+        self.assertEqual(result["source_player_id"], "123")
+        self.assertEqual(result["matches"], 24)
+
+    def test_wtt_model_lookup_is_not_used_for_domestic_competitions(self):
+        pools = {"wtt_mens_singles": {"123": {"display_name": "Chen Yuanyu"}}}
+        self.assertEqual(MODULE.wtt_model_record("Yuanyu Chen", pools, "Setka Cup")["status"], "not_applicable")
+
+    def test_ambiguous_wtt_model_name_candidates_are_withheld(self):
+        pools = {
+            "wtt_mens_singles": {"123": {"display_name": "Chen Yuanyu"}},
+            "wtt_womens_singles": {"456": {"display_name": "Yuanyu Chen"}},
+        }
+        self.assertEqual(MODULE.wtt_model_record("Yuanyu Chen", pools, "WTT")["status"], "ambiguous")
+
     def test_exact_unique_candidate_exposes_source_scoped_recent_history(self):
         result = MODULE.player_history("Erik Mares", [match()], "Czech Liga Pro")
         self.assertEqual(result["status"], "exact_name_match_identity_unverified")
