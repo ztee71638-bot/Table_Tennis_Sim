@@ -88,14 +88,19 @@ const warns=[];if(r.da>120)warns.push('Player A last recorded match was '+r.da+'
 $('h2h').innerHTML=r.details.length?'<p>'+r.details.length+' shared opponents with comparable records.</p><ul>'+r.details.slice(0,30).map(d=>'<li>'+String(d.id).replaceAll('<','&lt;')+': A '+d.x.wins+'-'+d.x.losses+', B '+d.y.wins+'-'+d.y.losses+'</li>').join('')+'</ul>':'<p>No shared opponents with usable prior records were found.</p>';
 }
 function historySummary(player){
- const h=player.history||{};
+ const h=player.history||{},m=player.model_record||{};
+ let modelHtml='';
+ if(m.status==='wtt_model_record_identity_unverified'){
+  const form=m.recent_form_last10||[],wins=form.filter(x=>Number(x)===1||String(x).toUpperCase()==='W').length,losses=form.length-wins;
+  modelHtml='<div class="history-line">WTT model record: '+Number(m.matches||0)+' prior matches · recent form '+wins+'–'+losses+' ('+form.length+' shown) · last: '+escapeHtml(m.last_match_date||'unknown')+'</div><div class="history-line">'+escapeHtml(m.identity_note)+'</div>';
+ }
  if(h.status==='exact_name_match_identity_unverified'||h.status==='name_initial_match_review_only'){
-  const recent=(h.recent_matches||[]).slice(0,5).map(m=>escapeHtml(m.date)+' '+escapeHtml(m.result)+' '+escapeHtml(m.opponent)+' ('+escapeHtml(m.score)+')').join('<br>');
+  const recent=(h.recent_matches||[]).slice(0,5).map(x=>escapeHtml(x.date)+' '+escapeHtml(x.result)+' '+escapeHtml(x.opponent)+' ('+escapeHtml(x.score)+')').join('<br>');
   const prefix=h.status==='name_initial_match_review_only'?'Possible name-format match · ':'';
-  return '<div class="history-line">'+prefix+h.wins+'–'+h.losses+' across '+h.matches_count+' recorded matches · last: '+escapeHtml(h.last_match_date||'unknown')+'</div><div class="history-line">'+(recent||'No recent match rows available')+'</div><div class="history-line">'+escapeHtml(h.identity_note)+'</div>';
+  return '<div class="history-line">'+prefix+h.wins+'–'+h.losses+' across '+h.matches_count+' recorded matches · last: '+escapeHtml(h.last_match_date||'unknown')+'</div><div class="history-line">'+(recent||'No recent match rows available')+'</div><div class="history-line">'+escapeHtml(h.identity_note)+'</div>'+modelHtml;
  }
  const labels={ambiguous:'Multiple possible source records; history withheld.',not_found:'No exact or safe name-format match found yet.',other_competition_only:'Same-name record found only in another competition.',source_not_loaded:'Recent results source was unavailable in this refresh.'};
- return '<div class="history-line">'+escapeHtml(labels[h.status]||'No verified history available.')+'</div>';
+ return '<div class="history-line">'+escapeHtml(labels[h.status]||'No verified source history available.')+'</div>'+modelHtml;
 }
 let polymarketEvents=[];
 function findPolymarketModelPair(event){
