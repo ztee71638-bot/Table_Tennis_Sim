@@ -1,115 +1,5 @@
 {
   "profiles": {
-    "odo satsuki": {
-      "country": "JPN",
-      "display_name": "Odo Satsuki",
-      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
-      "looked_up_at_utc": "2026-11-21T04:19:19.511604+00:00",
-      "model_eligible": false,
-      "query_name": "Satsuki Odo",
-      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
-      "records_by_discipline": [
-        {
-          "discipline": "WS",
-          "first_match": "2026-11-20",
-          "last_match": "2026-11-20",
-          "lost": 0,
-          "played": 2,
-          "won": 2
-        },
-        {
-          "discipline": "XD",
-          "first_match": "2026-11-20",
-          "last_match": "2026-11-20",
-          "lost": 0,
-          "played": 1,
-          "won": 1
-        },
-        {
-          "discipline": "WD",
-          "first_match": "2026-11-20",
-          "last_match": "2026-11-20",
-          "lost": 0,
-          "played": 1,
-          "won": 1
-        }
-      ],
-      "source": "Table Tennis API (DeveloperData)",
-      "source_player_id": "pl_0e2p4z4v",
-      "status": "exact_name_match_identity_unverified",
-      "world_ranks": [
-        {
-          "discipline": "WS",
-          "list": "senior",
-          "points": 3710,
-          "rank": 10,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "WD",
-          "list": "senior",
-          "points": 2024,
-          "rank": 5,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "WD",
-          "list": "senior",
-          "points": 580,
-          "rank": 30,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "WD",
-          "list": "senior",
-          "points": 400,
-          "rank": 52,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "WD",
-          "list": "senior",
-          "points": 175,
-          "rank": 84,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "WD",
-          "list": "senior",
-          "points": 3179,
-          "rank": 10,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "XD",
-          "list": "senior",
-          "points": 1310,
-          "rank": 13,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "XD",
-          "list": "senior",
-          "points": 950,
-          "rank": 20,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "XD",
-          "list": "senior",
-          "points": 180,
-          "rank": 75,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "XD",
-          "list": "senior",
-          "points": 2440,
-          "rank": 20,
-          "week": "2026-47"
-        }
-      ]
-    },
     "akae kaho": {
       "country": "JPN",
       "display_name": "Akae Kaho",
@@ -168,141 +58,6 @@
           "week": "2026-47"
         }
       ]
-    },
-    "chen yuanyu": {
-      "country": "CHN",
-      "display_name": "Chen Yuanyu",
-      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
-      "looked_up_at_utc": "2026-11-21T04:19:44.182451+00:00",
-      "model_eligible": false,
-      "query_name": "Yuanyu Chen",
-      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
-      "records_by_discipline": [
-        {
-          "discipline": "MS",
-          "first_match": "2026-11-20",
-          "last_match": "2026-11-20",
-          "lost": 0,
-          "played": 2,
-          "won": 2
-        }
-      ],
-      "source": "Table Tennis API (DeveloperData)",
-      "source_player_id": "pl_xsn9ha0f",
-      "status": "exact_name_match_identity_unverified",
-      "world_ranks": [
-        {
-          "discipline": "MS",
-          "list": "senior",
-          "points": 1500,
-          "rank": 29,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "MD",
-          "list": "senior",
-          "points": 180,
-          "rank": 70,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "XD",
-          "list": "senior",
-          "points": 270,
-          "rank": 54,
-          "week": "2026-47"
-        }
-      ]
-    },
-    "shunsuke togami": {
-      "country": "JPN",
-      "display_name": "Togami Shunsuke",
-      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
-      "looked_up_at_utc": "2026-11-21T04:19:56.635700+00:00",
-      "model_eligible": false,
-      "query_name": "Shunsuke Togami",
-      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
-      "records_by_discipline": [
-        {
-          "discipline": "MS",
-          "first_match": "2026-11-20",
-          "last_match": "2026-11-20",
-          "lost": 0,
-          "played": 2,
-          "won": 2
-        },
-        {
-          "discipline": "XD",
-          "first_match": "2026-11-20",
-          "last_match": "2026-11-20",
-          "lost": 0,
-          "played": 1,
-          "won": 1
-        }
-      ],
-      "source": "Table Tennis API (DeveloperData)",
-      "source_player_id": "pl_0ybe1qfr",
-      "status": "exact_name_match_identity_unverified",
-      "world_ranks": [
-        {
-          "discipline": "MS",
-          "list": "senior",
-          "points": 2848,
-          "rank": 15,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "MD",
-          "list": "senior",
-          "points": 1504,
-          "rank": 13,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "MD",
-          "list": "senior",
-          "points": 485,
-          "rank": 35,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "MD",
-          "list": "senior",
-          "points": 1989,
-          "rank": 21,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "XD",
-          "list": "senior",
-          "points": 950,
-          "rank": 20,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "XD",
-          "list": "senior",
-          "points": 272,
-          "rank": 52,
-          "week": "2026-47"
-        },
-        {
-          "discipline": "XD",
-          "list": "senior",
-          "points": 1290,
-          "rank": 29,
-          "week": "2026-47"
-        }
-      ]
-    },
-    "bernadette cynthia szocs": {
-      "candidate_count": 0,
-      "identity_note": "No exact full-name candidate was found in the provider player directory.",
-      "looked_up_at_utc": "2026-11-21T04:20:09.022159+00:00",
-      "model_eligible": false,
-      "query_name": "Bernadette Cynthia Szocs",
-      "source": "Table Tennis API (DeveloperData)",
-      "status": "not_found"
     },
     "hashimoto honoka": {
       "country": "JPN",
@@ -408,13 +163,13 @@
         }
       ]
     },
-    "junsung oh": {
-      "country": "KOR",
-      "display_name": "Oh Junsung",
+    "shunsuke togami": {
+      "country": "JPN",
+      "display_name": "Togami Shunsuke",
       "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
-      "looked_up_at_utc": "2026-11-21T04:30:05.266963+00:00",
+      "looked_up_at_utc": "2026-11-21T04:19:56.635700+00:00",
       "model_eligible": false,
-      "query_name": "Junsung OH",
+      "query_name": "Shunsuke Togami",
       "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
       "records_by_discipline": [
         {
@@ -426,7 +181,7 @@
           "won": 2
         },
         {
-          "discipline": "MD",
+          "discipline": "XD",
           "first_match": "2026-11-20",
           "last_match": "2026-11-20",
           "lost": 0,
@@ -435,42 +190,56 @@
         }
       ],
       "source": "Table Tennis API (DeveloperData)",
-      "source_player_id": "pl_xv4d8te3",
+      "source_player_id": "pl_0ybe1qfr",
       "status": "exact_name_match_identity_unverified",
       "world_ranks": [
         {
           "discipline": "MS",
           "list": "senior",
-          "points": 2197,
-          "rank": 19,
+          "points": 2848,
+          "rank": 15,
           "week": "2026-47"
         },
         {
           "discipline": "MD",
           "list": "senior",
-          "points": 5250,
-          "rank": 2,
+          "points": 1504,
+          "rank": 13,
           "week": "2026-47"
         },
         {
           "discipline": "MD",
           "list": "senior",
-          "points": 5250,
-          "rank": 3,
+          "points": 485,
+          "rank": 35,
+          "week": "2026-47"
+        },
+        {
+          "discipline": "MD",
+          "list": "senior",
+          "points": 1989,
+          "rank": 21,
           "week": "2026-47"
         },
         {
           "discipline": "XD",
           "list": "senior",
-          "points": 270,
-          "rank": 55,
+          "points": 950,
+          "rank": 20,
           "week": "2026-47"
         },
         {
           "discipline": "XD",
           "list": "senior",
-          "points": 430,
-          "rank": 83,
+          "points": 272,
+          "rank": 52,
+          "week": "2026-47"
+        },
+        {
+          "discipline": "XD",
+          "list": "senior",
+          "points": 1290,
+          "rank": 29,
           "week": "2026-47"
         }
       ]
