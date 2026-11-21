@@ -297,7 +297,7 @@ def main() -> None:
         cached = state["players"].get(key, {})
         if not is_fresh(cached, now):
             queue.append(name)
-    remaining = min(MAX_PLAYERS_PER_RUN, (effective_daily_budget - calls) // 2)
+    remaining = 0 if budget_reached else min(MAX_PLAYERS_PER_RUN, (effective_daily_budget - calls) // 2)
     selected = queue[:remaining]
     print(f"Active WTT player names: {len(active)}; due for lookup: {len(queue)}; selected this run: {len(selected)}.")
     for name in selected:
