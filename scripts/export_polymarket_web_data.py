@@ -15,6 +15,9 @@ import enrich_polymarket_tabletennisapi as tabletennisapi_discovery
 
 RAW_EVENTS = ROOT / "data/raw/polymarket_us_table_tennis_events.json"
 TABLETENNISAPI_OUT = ROOT / "data/processed/tabletennisapi_polymarket_players.json"
+INDEX_PATH = ROOT / "site/index.html"
+PROFILE_DATA_START = "<!-- TABLETENNISAPI_PROFILE_DATA_START -->"
+PROFILE_DATA_END = "<!-- TABLETENNISAPI_PROFILE_DATA_END -->"
 DB_PATH = ROOT / "data/database/table_tennis.sqlite"
 OUT = ROOT / "site/data/polymarket_active.json"
 
@@ -176,6 +179,7 @@ def main() -> None:
 
     output_events = []
     player_index: dict[str, dict] = {}
+    provider_profiles: dict[str, dict] = {}
     for event in events:
         title = str(event.get("title") or event.get("name") or "")
         a, b = reconciliation.event_pair(event)
@@ -200,6 +204,9 @@ def main() -> None:
         mb = wtt_model_record(b, model_pools, scope)
         ta = tabletennisapi_profile(a, scope, tabletennisapi_players)
         tb = tabletennisapi_profile(b, scope, tabletennisapi_players)
+        if scope == "WTT":
+            provider_profiles[tabletennisapi_discovery.normalized_name(a)] = ta
+            provider_profiles[tabletennisapi_discovery.normalized_name(b)] = tb
         slug = event.get("slug") or ""
         event_row = {
             "event_id": str(event.get("id") or ""),
@@ -211,16 +218,15 @@ def main() -> None:
             "active": event.get("active") is not False,
             "closed": event.get("closed") is True,
             "url": f"https://polymarket.us/event/{slug}" if slug else "https://polymarket.us",
-            "player_a": {"name": a, "history": pa, "model_record": ma, "tabletennisapi": ta},
-            "player_b": {"name": b, "history": pb, "model_record": mb, "tabletennisapi": tb},
+            "player_a": {"name": a, "history": pa, "model_record": ma},
+            "player_b": {"name": b, "history": pb, "model_record": mb},
         }
         output_events.append(event_row)
         for name, details in ((a, pa), (b, pb)):
             key = name.casefold()
             if key not in player_index:
                 model_details = ma if name == a else mb
-                api_details = ta if name == a else tb
-                player_index[key] = {"name": name, "events": [], "history": details, "model_record": model_details, "tabletennisapi": api_details}
+                player_index[key] = {"name": name, "events": [], "history": details, "model_record": model_details}
             player_index[key]["events"].append({"title": title, "competition": scope, "url": event_row["url"]})
 
     output = {
@@ -242,6 +248,19 @@ def main() -> None:
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    # Provider profile summaries are rendered into the simulator page itself,
+    # rather than exposed as a separate public JSON/API feed.
+    if INDEX_PATH.exists():
+        html = INDEX_PATH.read_text(encoding="utf-8")
+        if PROFILE_DATA_START not in html or PROFILE_DATA_END not in html:
+            raise SystemExit("Simulator HTML is missing the Table Tennis API profile data markers.")
+        profile_json = json.dumps({"profiles": provider_profiles}, ensure_ascii=False, separators=(",", ":"))
+        profile_json = profile_json.replace("</", "<\\/")
+        start = html.index(PROFILE_DATA_START) + len(PROFILE_DATA_START)
+        end = html.index(PROFILE_DATA_END)
+        html = html[:start] + "\n<script id=\"tabletennisapi-profile-data\" type=\"application/json\">" + profile_json + "</script>\n" + html[end:]
+        INDEX_PATH.write_text(html, encoding="utf-8")
     print(json.dumps({"output": str(OUT.relative_to(ROOT)), "events": len(output_events), "players": len(player_index), "history_source": source_info}, indent=2))
 
 
