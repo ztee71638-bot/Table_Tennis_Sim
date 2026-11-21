@@ -11,8 +11,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import reconcile_polymarket_players as reconciliation
+import enrich_polymarket_tabletennisapi as tabletennisapi_discovery
 
 RAW_EVENTS = ROOT / "data/raw/polymarket_us_table_tennis_events.json"
+TABLETENNISAPI_OUT = ROOT / "data/processed/tabletennisapi_polymarket_players.json"
 DB_PATH = ROOT / "data/database/table_tennis.sqlite"
 OUT = ROOT / "site/data/polymarket_active.json"
 
@@ -110,6 +112,37 @@ def main() -> None:
         raise SystemExit("Polymarket event snapshot is missing; run the public read-only scanner first.")
     payload = json.loads(RAW_EVENTS.read_text(encoding="utf-8"))
     events = payload.get("events", [])
+    tabletennisapi_data = {}
+    tabletennisapi_source = {"available": False, "source": "Table Tennis API (DeveloperData)"}
+    if TABLETENNISAPI_OUT.exists():
+        try:
+            tabletennisapi_data = json.loads(TABLETENNISAPI_OUT.read_text(encoding="utf-8"))
+            tabletennisapi_source = {
+                "available": True,
+                "source": tabletennisapi_data.get("source") or "Table Tennis API (DeveloperData)",
+                "retrieved_at_utc": tabletennisapi_data.get("retrieved_at_utc") or "",
+                "players_checked": int(tabletennisapi_data.get("players_checked") or 0),
+                "calls_today": int(tabletennisapi_data.get("calls_today") or 0),
+                "daily_safety_budget": int(tabletennisapi_data.get("daily_safety_budget") or 40),
+            }
+        except (ValueError, OSError):
+            tabletennisapi_data = {}
+    tabletennisapi_players = tabletennisapi_data.get("players", {}) if isinstance(tabletennisapi_data, dict) else {}
+    if not isinstance(tabletennisapi_players, dict):
+        tabletennisapi_players = {}
+
+    def resolve_tabletennisapi(name: str, scope: str) -> dict:
+        if scope != "WTT":
+            return {"status": "not_applicable", "model_eligible": False}
+        cached = tabletennisapi_players.get(tabletennisapi_discovery.normalized_name(name))
+        if isinstance(cached, dict):
+            return cached
+        return {
+            "status": "queued_not_checked",
+            "source": "Table Tennis API (DeveloperData)",
+            "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+            "model_eligible": False,
+        }
     previous_players = {}
     if OUT.exists():
         try:
@@ -162,6 +195,8 @@ def main() -> None:
         pb = resolve_history(b)
         ma = wtt_model_record(a, model_pools, scope)
         mb = wtt_model_record(b, model_pools, scope)
+        ta = resolve_tabletennisapi(a, scope)
+        tb = resolve_tabletennisapi(b, scope)
         slug = event.get("slug") or ""
         event_row = {
             "event_id": str(event.get("id") or ""),
@@ -173,15 +208,16 @@ def main() -> None:
             "active": event.get("active") is not False,
             "closed": event.get("closed") is True,
             "url": f"https://polymarket.us/event/{slug}" if slug else "https://polymarket.us",
-            "player_a": {"name": a, "history": pa, "model_record": ma},
-            "player_b": {"name": b, "history": pb, "model_record": mb},
+            "player_a": {"name": a, "history": pa, "model_record": ma, "tabletennisapi": ta},
+            "player_b": {"name": b, "history": pb, "model_record": mb, "tabletennisapi": tb},
         }
         output_events.append(event_row)
         for name, details in ((a, pa), (b, pb)):
             key = name.casefold()
             if key not in player_index:
                 model_details = ma if name == a else mb
-                player_index[key] = {"name": name, "events": [], "history": details, "model_record": model_details}
+                api_details = ta if name == a else tb
+                player_index[key] = {"name": name, "events": [], "history": details, "model_record": model_details, "tabletennisapi": api_details}
             player_index[key]["events"].append({"title": title, "competition": scope, "url": event_row["url"]})
 
     output = {
@@ -190,13 +226,15 @@ def main() -> None:
         "events_count": len(output_events),
         "players_count": len(player_index),
         "history_source": source_info,
+        "tabletennisapi_source": tabletennisapi_source,
         "events": output_events,
         "players": sorted(player_index.values(), key=lambda p: p["name"].casefold()),
         "limitations": [
             "Listings are current discovery data, not confirmation of an athlete's real-world activity.",
             "DataSportsAPI histories are source-scoped and exact-name candidates only; identity is not independently verified.",
             "No automatic identity merges or model promotion are performed.",
-            "DataSportsAPI recent histories are descriptive evidence only; its unpromoted model is not used to issue picks."
+            "DataSportsAPI recent histories are descriptive evidence only; its unpromoted model is not used to issue picks.",
+            "Table Tennis API free-tier player profiles are on-demand discovery evidence only; individual player match-history and head-to-head endpoints are not called, and profiles are not used for model training or automatic identity merges."
         ]
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
