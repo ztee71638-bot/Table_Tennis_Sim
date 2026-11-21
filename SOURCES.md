@@ -131,6 +131,12 @@ Keep separate source-scoped player IDs. Never merge players across providers bas
 - Public event pages are a promising source for a separate European event collection. Stable bulk export/API access, per-match set-score availability, and automated reuse permissions have not yet been verified. Manual qualification only; no importer enabled.
 - Privacy/policy page: https://www.ettu.org/privacy-policy/ . Public publication of sporting results is described, but that alone is not treated as a bulk data license.
 
+### European Table Tennis Union (ETTU) — current past-events archive and legacy statistics platform
+- Official current archive: https://www.ettu.org/past-events/ . It lists competitions and result links across 2022–2026, including European Championships, youth events, club competitions, and Europe Top 16. Many result links lead to ETTU.tv or third-party competition-management hosts; match-level score completeness and stable export formats vary by event.
+- ETTU's privacy and policy page states that it publishes results, rankings, statistics, reports, and historical records, and that some results and sporting records may be licensed, distributed, or otherwise used. This is not a blanket bulk-reuse licence for our private database or model training; obtain written permission for any systematic collection or reuse beyond manual research.
+- ETTU's 2017 announcement described a legacy results/statistics platform at https://results.ettu.site, with European Championships results from 2008, Youth Championships from 2010, U21, Europe Top 10, player queries, and head-to-head search. The legacy host was not accessible during this review, so current availability and downloadable match-level completeness remain unverified.
+- Qualification: useful official event discovery and targeted result corroboration. Do not scrape, bulk-download, or import until stable permitted access, score coverage, and reuse rights are confirmed.
+
 ### European Table Tennis Information System (ETTIS)
 - https://ettis.info/
 - Community historical database advertises European results from 1926–2006. Use for discovery and targeted corroboration only; source provenance, completeness, and reuse terms remain unverified.
