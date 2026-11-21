@@ -170,6 +170,8 @@ def event_players() -> list[tuple[str, str]]:
 
 
 def is_fresh(record: dict, now: datetime) -> bool:
+    if record.get("status") in {"provider_rate_limited", "provider_error"}:
+        return False
     stamp = record.get("looked_up_at_utc")
     if not stamp:
         return False
