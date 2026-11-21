@@ -18,7 +18,7 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 .market-title{font-weight:750;font-size:16px}.market-players{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
 .market-player{background:#142338;border-radius:9px;padding:10px;min-width:0}.market-player b{display:block;overflow-wrap:anywhere}
 .history-line{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.45}
-.market-actions{display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap}
+.market-actions{display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap}.market-simulate{width:auto;margin:0;padding:10px 13px;background:var(--accent);color:#06221c;border:0;font-weight:800;cursor:pointer}.market-simulate:disabled{opacity:.45;cursor:not-allowed}.market-sim-note{font-size:11px;color:var(--muted)}
 .market-link{color:var(--accent);font-weight:700;text-decoration:none}.market-link:hover{text-decoration:underline}
 #polymarket-results{margin-top:10px}.market-empty{padding:14px;color:var(--muted)}
 @media(max-width:560px){.market-players{grid-template-columns:1fr}}
@@ -30,7 +30,7 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 <header><h1>Table Tennis Match Simulator</h1><p>Compare two players using historical WTT records, form, head-to-head and shared opponents.</p></header>
 <section class="panel" id="polymarket-panel">
 <div style="font-weight:800;font-size:18px">Live Polymarket matches &amp; player histories</div>
-<p>Search active table-tennis listings and inspect available recent match histories. Listings refresh automatically with the data update workflow.</p>
+<p>Search active table-tennis listings, inspect recent histories, and launch a simulation directly from a matchup when both players have unique exact-name records in the same supported model dataset. Listings refresh automatically.</p>
 <label for="polymarket-search">Search active matches or players</label>
 <input id="polymarket-search" type="search" placeholder="Search a player, opponent or competition…" autocomplete="off">
 <p id="polymarket-updated" class="muted">Loading current Polymarket listings…</p>
@@ -97,10 +97,32 @@ function historySummary(player){
  return '<div class="history-line">'+escapeHtml(labels[h.status]||'No verified history available.')+'</div>';
 }
 let polymarketEvents=[];
+function findPolymarketModelPair(event){
+ const norm=s=>String(s||'').trim().toLocaleLowerCase();
+ for(const [source,pool] of Object.entries(pools)){
+  const find=name=>Object.entries(pool).filter(([,p])=>norm(p.display_name)===norm(name));
+  const aa=find(event.player_a?.name),bb=find(event.player_b?.name);
+  if(aa.length===1&&bb.length===1&&aa[0][0]!==bb[0][0])return {source,a:aa[0][0],b:bb[0][0],pool};
+ }
+ return null;
+}
+function runPolymarketSimulation(index){
+ const event=polymarketEvents[index];if(!event)return;
+ const pair=findPolymarketModelPair(event);
+ if(!pair){alert('This matchup cannot be simulated yet: both players need unique exact-name records in the same supported model dataset. The Polymarket history display is not enough to establish a model identity.');return;}
+ $('source').value=pair.source;fill();
+ $('a').value=pair.pool[pair.a].display_name;$('a').dataset.playerId=pair.a;
+ $('b').value=pair.pool[pair.b].display_name;$('b').dataset.playerId=pair.b;
+ const comps=Object.keys(pair.pool[pair.a].competition_form||{});
+ const eventComp=String(event.competition||'').trim();
+ $('competition').value=comps.find(x=>x.toLocaleLowerCase()===eventComp.toLocaleLowerCase())||'';
+ try{show(simulate(pair.a,pair.b,$('competition').value||'UNKNOWN'));$('result').scrollIntoView({behavior:'smooth',block:'start'});}
+ catch(err){alert('Unable to simulate this matchup: '+err.message);}
+}
 function renderPolymarket(){
  const q=($('polymarket-search').value||'').trim().toLocaleLowerCase();
  const rows=polymarketEvents.filter(e=>([e.title,e.competition,e.player_a?.name,e.player_b?.name].join(' ').toLocaleLowerCase()).includes(q));
- $('polymarket-results').innerHTML=rows.length?rows.slice(0,60).map(e=>'<article class="market-card"><div class="market-title">'+escapeHtml(e.title)+'</div><div class="muted">'+escapeHtml(e.competition||'Table Tennis')+' · '+escapeHtml(e.start_time_utc||'Start time unavailable')+'</div><div class="market-players"><div class="market-player"><b>'+escapeHtml(e.player_a.name)+'</b>'+historySummary(e.player_a)+'</div><div class="market-player"><b>'+escapeHtml(e.player_b.name)+'</b>'+historySummary(e.player_b)+'</div></div><div class="market-actions"><a class="market-link" href="'+escapeHtml(e.url)+'" target="_blank" rel="noopener noreferrer">View Polymarket listing ↗</a></div></article>').join(''):'<div class="market-empty">No active matchups match that search.</div>';
+ $('polymarket-results').innerHTML=rows.length?rows.slice(0,60).map(e=>({e,index:polymarketEvents.indexOf(e)})).map(({e,index})=>{const pair=findPolymarketModelPair(e);return '<article class="market-card"><div class="market-title">'+escapeHtml(e.title)+'</div><div class="muted">'+escapeHtml(e.competition||'Table Tennis')+' · '+escapeHtml(e.start_time_utc||'Start time unavailable')+'</div><div class="market-players"><div class="market-player"><b>'+escapeHtml(e.player_a.name)+'</b>'+historySummary(e.player_a)+'</div><div class="market-player"><b>'+escapeHtml(e.player_b.name)+'</b>'+historySummary(e.player_b)+'</div></div><div class="market-actions"><button type="button" class="market-simulate" data-simulate-index="'+index+'" '+(pair?'':'disabled')+'>Simulate this match</button><a class="market-link" href="'+escapeHtml(e.url)+'" target="_blank" rel="noopener noreferrer">View Polymarket listing ↗</a></div><div class="market-sim-note">'+(pair?'Ready · '+escapeHtml(pair.source)+' model':'Not available yet · both exact player records are not in the same model dataset')+'</div></article>'}).join(''):'<div class="market-empty">No active matchups match that search.</div>';
  if(rows.length>60)$('polymarket-results').innerHTML+='<div class="market-empty">Showing first 60 results. Refine your search.</div>';
 }
 async function loadPolymarket(){
@@ -111,6 +133,7 @@ async function loadPolymarket(){
   polymarketEvents=(data.events||[]).filter(e=>e.active&&!e.closed);
   $('polymarket-updated').textContent=polymarketEvents.length+' active matchups · '+(data.players_count||0)+' listed players · refreshed '+new Date(data.retrieved_at_utc).toLocaleString();
   $('polymarket-search').addEventListener('input',renderPolymarket);
+  $('polymarket-results').addEventListener('click',e=>{const btn=e.target.closest('[data-simulate-index]');if(btn)runPolymarketSimulation(Number(btn.dataset.simulateIndex));});
   renderPolymarket();
  }catch(err){$('polymarket-updated').textContent='Live listing refresh unavailable: '+err.message;$('polymarket-results').innerHTML='<div class="market-empty">The simulator will keep its historical player search available while the live feed is unavailable.</div>';}
 }
