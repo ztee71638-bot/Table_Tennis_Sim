@@ -1,11 +1,11 @@
 {
   "source": "Polymarket US public read-only listings",
-  "retrieved_at_utc": "2026-11-21T03:17:26.843788+00:00",
+  "retrieved_at_utc": "2026-11-21T03:22:14.432837+00:00",
   "events_count": 104,
   "players_count": 77,
   "history_source": {
     "available": true,
-    "matches_loaded": 6887,
+    "matches_loaded": 6892,
     "source_key": "datasportsapi_table_tennis"
   },
   "events": [
