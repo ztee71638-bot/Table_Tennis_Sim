@@ -1,14 +1,14 @@
 {
   "source": "datasportsapi_table_tennis",
-  "individual_singles_matches": 6901,
-  "excluded_invalid_results": 17,
+  "individual_singles_matches": 6983,
+  "excluded_invalid_results": 14,
   "classification_counts": {
     "doubles": 59,
-    "singles": 6918,
+    "singles": 6997,
     "team": 34,
     "unknown": 16
   },
-  "competitors": 1487,
+  "competitors": 1511,
   "records": {
     "1040249": {
       "display_name": "Ouaiche S.",
@@ -12916,20 +12916,12 @@
     },
     "627180": {
       "display_name": "Kanak A.",
-      "matches": 23,
+      "matches": 24,
       "wins": 9,
-      "losses": 14,
-      "win_percentage": 39.13,
-      "last_match_date": "2026-11-18",
+      "losses": 15,
+      "win_percentage": 37.5,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-17",
-          "opponent_id": "756097",
-          "opponent": "Srubar M.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-17",
           "opponent_id": "633319",
@@ -13001,13 +12993,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "58503",
+          "opponent": "Krupnik J.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Cup": {
-          "matches": 23,
+          "matches": 24,
           "wins": 9,
-          "losses": 14
+          "losses": 15
         }
       },
       "opponent_records": {
@@ -13075,9 +13075,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "58503": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1481.62
+      "elo_descriptive_only": 1473.97
     },
     "69505": {
       "display_name": "Wloszek S.",
@@ -13686,20 +13691,12 @@
     },
     "274458": {
       "display_name": "Gembala J.",
-      "matches": 20,
-      "wins": 11,
+      "matches": 21,
+      "wins": 12,
       "losses": 9,
-      "win_percentage": 55.0,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 57.14,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-15",
-          "opponent_id": "302089",
-          "opponent": "Macurak M.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-15",
           "opponent_id": "627180",
@@ -13771,12 +13768,20 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "302089",
+          "opponent": "Macurak M.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "TT Cup": {
-          "matches": 20,
-          "wins": 11,
+          "matches": 21,
+          "wins": 12,
           "losses": 9
         }
       },
@@ -13812,8 +13817,8 @@
           "losses": 0
         },
         "302089": {
-          "matches": 1,
-          "wins": 0,
+          "matches": 2,
+          "wins": 1,
           "losses": 1
         },
         "622859": {
@@ -13837,7 +13842,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1505.56
+      "elo_descriptive_only": 1518.4
     },
     "145826": {
       "display_name": "Velky Junior D.",
@@ -16375,20 +16380,12 @@
     },
     "302089": {
       "display_name": "Macurak M.",
-      "matches": 20,
+      "matches": 21,
       "wins": 12,
-      "losses": 8,
-      "win_percentage": 60.0,
-      "last_match_date": "2026-11-20",
+      "losses": 9,
+      "win_percentage": 57.14,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-15",
-          "opponent_id": "274458",
-          "opponent": "Gembala J.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
         {
           "date": "2026-11-15",
           "opponent_id": "145826",
@@ -16460,13 +16457,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "274458",
+          "opponent": "Gembala J.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Cup": {
-          "matches": 20,
+          "matches": 21,
           "wins": 12,
-          "losses": 8
+          "losses": 9
         }
       },
       "opponent_records": {
@@ -16506,9 +16511,9 @@
           "losses": 0
         },
         "274458": {
-          "matches": 1,
+          "matches": 2,
           "wins": 1,
-          "losses": 0
+          "losses": 1
         },
         "58503": {
           "matches": 2,
@@ -16526,7 +16531,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1530.08
+      "elo_descriptive_only": 1517.23
     },
     "622860": {
       "display_name": "Sedlacek R.",
@@ -19077,20 +19082,12 @@
     },
     "701200": {
       "display_name": "Wiza R.",
-      "matches": 23,
-      "wins": 7,
+      "matches": 24,
+      "wins": 8,
       "losses": 16,
-      "win_percentage": 30.43,
+      "win_percentage": 33.33,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-15",
-          "opponent_id": "649744",
-          "opponent": "Badura J.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-15",
           "opponent_id": "69514",
@@ -19162,12 +19159,20 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "702169",
+          "opponent": "Guzik M.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 23,
-          "wins": 7,
+          "matches": 24,
+          "wins": 8,
           "losses": 16
         }
       },
@@ -19188,8 +19193,8 @@
           "losses": 0
         },
         "702169": {
-          "matches": 2,
-          "wins": 0,
+          "matches": 3,
+          "wins": 1,
           "losses": 2
         },
         "69514": {
@@ -19223,24 +19228,16 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1418.56
+      "elo_descriptive_only": 1432.37
     },
     "649739": {
       "display_name": "Szymanski I.",
-      "matches": 34,
+      "matches": 35,
       "wins": 15,
-      "losses": 19,
-      "win_percentage": 44.12,
+      "losses": 20,
+      "win_percentage": 42.86,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-18",
-          "opponent_id": "628913",
-          "opponent": "Oracz L.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 0
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "285933",
@@ -19312,13 +19309,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "702169",
+          "opponent": "Guzik M.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 34,
+          "matches": 35,
           "wins": 15,
-          "losses": 19
+          "losses": 20
         }
       },
       "opponent_records": {
@@ -19343,9 +19348,9 @@
           "losses": 0
         },
         "702169": {
-          "matches": 2,
+          "matches": 3,
           "wins": 2,
-          "losses": 0
+          "losses": 1
         },
         "806141": {
           "matches": 2,
@@ -19413,7 +19418,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1470.61
+      "elo_descriptive_only": 1458.16
     },
     "627836": {
       "display_name": "Rafal Stapor",
@@ -19652,20 +19657,12 @@
     },
     "649753": {
       "display_name": "Kesic G.",
-      "matches": 13,
+      "matches": 14,
       "wins": 3,
-      "losses": 10,
-      "win_percentage": 23.08,
+      "losses": 11,
+      "win_percentage": 21.43,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-14",
-          "opponent_id": "720859",
-          "opponent": "Mlynarski F.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-14",
           "opponent_id": "622927",
@@ -19737,13 +19734,21 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "806093",
+          "opponent": "Kostyk K.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 13,
+          "matches": 14,
           "wins": 3,
-          "losses": 10
+          "losses": 11
         }
       },
       "opponent_records": {
@@ -19786,9 +19791,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "806093": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1434.96
+      "elo_descriptive_only": 1423.78
     },
     "51748": {
       "display_name": "Szoltysek A.",
@@ -20092,28 +20102,12 @@
     },
     "649745": {
       "display_name": "Szymik R.",
-      "matches": 23,
-      "wins": 15,
-      "losses": 8,
-      "win_percentage": 65.22,
+      "matches": 25,
+      "wins": 16,
+      "losses": 9,
+      "win_percentage": 64.0,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-15",
-          "opponent_id": "649744",
-          "opponent": "Badura J.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-15",
-          "opponent_id": "69514",
-          "opponent": "Szostok S.",
-          "result": "L",
-          "sets_for": 0,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-15",
           "opponent_id": "628096",
@@ -20177,13 +20171,29 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "1147514",
+          "opponent": "Sobkow Z.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202176",
+          "opponent": "Jesiek J.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 23,
-          "wins": 15,
-          "losses": 8
+          "matches": 25,
+          "wins": 16,
+          "losses": 9
         }
       },
       "opponent_records": {
@@ -20208,9 +20218,9 @@
           "losses": 0
         },
         "202176": {
-          "matches": 1,
+          "matches": 2,
           "wins": 0,
-          "losses": 1
+          "losses": 2
         },
         "133369": {
           "matches": 1,
@@ -20266,9 +20276,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "1147514": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1557.45
+      "elo_descriptive_only": 1550.67
     },
     "4334": {
       "display_name": "Baron M.",
@@ -20482,28 +20497,12 @@
     },
     "702169": {
       "display_name": "Guzik M.",
-      "matches": 27,
-      "wins": 11,
-      "losses": 16,
-      "win_percentage": 40.74,
+      "matches": 29,
+      "wins": 12,
+      "losses": 17,
+      "win_percentage": 41.38,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-18",
-          "opponent_id": "285934",
-          "opponent": "Lebek M.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-18",
-          "opponent_id": "631705",
-          "opponent": "Adamus P.",
-          "result": "L",
-          "sets_for": 0,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "628914",
@@ -20567,13 +20566,29 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "701200",
+          "opponent": "Wiza R.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649739",
+          "opponent": "Szymanski I.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 27,
-          "wins": 11,
-          "losses": 16
+          "matches": 29,
+          "wins": 12,
+          "losses": 17
         }
       },
       "opponent_records": {
@@ -20593,13 +20608,13 @@
           "losses": 3
         },
         "701200": {
-          "matches": 2,
+          "matches": 3,
           "wins": 2,
-          "losses": 0
+          "losses": 1
         },
         "649739": {
-          "matches": 2,
-          "wins": 0,
+          "matches": 3,
+          "wins": 1,
           "losses": 2
         },
         "631705": {
@@ -20653,24 +20668,16 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1471.37
+      "elo_descriptive_only": 1470.01
     },
     "133370": {
       "display_name": "Michalski J.",
-      "matches": 12,
-      "wins": 4,
+      "matches": 13,
+      "wins": 5,
       "losses": 8,
-      "win_percentage": 33.33,
+      "win_percentage": 38.46,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-14",
-          "opponent_id": "69514",
-          "opponent": "Szostok S.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-14",
           "opponent_id": "649739",
@@ -20742,12 +20749,20 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "636497",
+          "opponent": "Orszulik J.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 12,
-          "wins": 4,
+          "matches": 13,
+          "wins": 5,
           "losses": 8
         }
       },
@@ -20778,8 +20793,8 @@
           "losses": 0
         },
         "636497": {
-          "matches": 1,
-          "wins": 1,
+          "matches": 2,
+          "wins": 2,
           "losses": 0
         },
         "649738": {
@@ -20788,7 +20803,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1447.93
+      "elo_descriptive_only": 1463.06
     },
     "622924": {
       "display_name": "Wolny M.",
@@ -21191,98 +21206,98 @@
     },
     "701289": {
       "display_name": "Sawicki G.",
-      "matches": 18,
-      "wins": 6,
-      "losses": 12,
+      "matches": 21,
+      "wins": 7,
+      "losses": 14,
       "win_percentage": 33.33,
-      "last_match_date": "2026-11-16",
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-15",
+          "opponent_id": "631705",
+          "opponent": "Adamus P.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        },
+        {
+          "date": "2026-11-15",
+          "opponent_id": "631675",
+          "opponent": "Kurek P.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-15",
+          "opponent_id": "702169",
+          "opponent": "Guzik M.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-15",
           "opponent_id": "58513",
           "opponent": "Slosarczyk P.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-16",
+          "opponent_id": "631675",
+          "opponent": "Kurek P.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-16",
+          "opponent_id": "631705",
+          "opponent": "Adamus P.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-16",
+          "opponent_id": "679348",
+          "opponent": "Bernacki L.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "628096",
+          "opponent": "Tkaczyk H.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "629248",
+          "opponent": "Pruszkowski J.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "1147514",
+          "opponent": "Sobkow Z.",
           "result": "L",
           "sets_for": 0,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-15",
-          "opponent_id": "679348",
-          "opponent": "Bernacki L.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 2
-        },
-        {
-          "date": "2026-11-15",
-          "opponent_id": "702169",
-          "opponent": "Guzik M.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 2
-        },
-        {
-          "date": "2026-11-15",
-          "opponent_id": "631705",
-          "opponent": "Adamus P.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 2
-        },
-        {
-          "date": "2026-11-15",
-          "opponent_id": "631675",
-          "opponent": "Kurek P.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-15",
-          "opponent_id": "702169",
-          "opponent": "Guzik M.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-15",
-          "opponent_id": "58513",
-          "opponent": "Slosarczyk P.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-16",
-          "opponent_id": "631675",
-          "opponent": "Kurek P.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-16",
-          "opponent_id": "631705",
-          "opponent": "Adamus P.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-16",
-          "opponent_id": "679348",
-          "opponent": "Bernacki L.",
-          "result": "L",
-          "sets_for": 2,
           "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 18,
-          "wins": 6,
-          "losses": 12
+          "matches": 21,
+          "wins": 7,
+          "losses": 14
         }
       },
       "opponent_records": {
@@ -21297,8 +21312,8 @@
           "losses": 0
         },
         "628096": {
-          "matches": 1,
-          "wins": 0,
+          "matches": 2,
+          "wins": 1,
           "losses": 1
         },
         "733480": {
@@ -21350,9 +21365,19 @@
           "matches": 2,
           "wins": 0,
           "losses": 2
+        },
+        "629248": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "1147514": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1438.57
+      "elo_descriptive_only": 1431.37
     },
     "685682": {
       "display_name": "Juszczyk K.",
@@ -22051,20 +22076,12 @@
     },
     "69514": {
       "display_name": "Szostok S.",
-      "matches": 35,
+      "matches": 36,
       "wins": 22,
-      "losses": 13,
-      "win_percentage": 62.86,
-      "last_match_date": "2026-11-18",
+      "losses": 14,
+      "win_percentage": 61.11,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-18",
-          "opponent_id": "4336",
-          "opponent": "Brozek P.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "4334",
@@ -22136,13 +22153,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "706618",
+          "opponent": "Jedrzejak P.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 35,
+          "matches": 36,
           "wins": 22,
-          "losses": 13
+          "losses": 14
         }
       },
       "opponent_records": {
@@ -22230,9 +22255,14 @@
           "matches": 2,
           "wins": 0,
           "losses": 2
+        },
+        "706618": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1564.08
+      "elo_descriptive_only": 1553.36
     },
     "1024559": {
       "display_name": "Durak K.",
@@ -22295,28 +22325,12 @@
     },
     "628096": {
       "display_name": "Tkaczyk H.",
-      "matches": 33,
-      "wins": 17,
-      "losses": 16,
-      "win_percentage": 51.52,
-      "last_match_date": "2026-11-20",
+      "matches": 35,
+      "wins": 18,
+      "losses": 17,
+      "win_percentage": 51.43,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-18",
-          "opponent_id": "631705",
-          "opponent": "Adamus P.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-18",
-          "opponent_id": "702169",
-          "opponent": "Guzik M.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "628914",
@@ -22380,13 +22394,29 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "701289",
+          "opponent": "Sawicki G.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202176",
+          "opponent": "Jesiek J.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 33,
-          "wins": 17,
-          "losses": 16
+          "matches": 35,
+          "wins": 18,
+          "losses": 17
         }
       },
       "opponent_records": {
@@ -22401,9 +22431,9 @@
           "losses": 0
         },
         "701289": {
-          "matches": 1,
+          "matches": 2,
           "wins": 1,
-          "losses": 0
+          "losses": 1
         },
         "701200": {
           "matches": 2,
@@ -22494,9 +22524,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "202176": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1499.79
+      "elo_descriptive_only": 1496.95
     },
     "679348": {
       "display_name": "Bernacki L.",
@@ -23376,28 +23411,12 @@
     },
     "202176": {
       "display_name": "Jesiek J.",
-      "matches": 21,
-      "wins": 9,
-      "losses": 12,
-      "win_percentage": 42.86,
+      "matches": 23,
+      "wins": 10,
+      "losses": 13,
+      "win_percentage": 43.48,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-15",
-          "opponent_id": "806141",
-          "opponent": "Swider D.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-15",
-          "opponent_id": "649739",
-          "opponent": "Szymanski I.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
         {
           "date": "2026-11-15",
           "opponent_id": "133369",
@@ -23461,13 +23480,29 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "628096",
+          "opponent": "Tkaczyk H.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649745",
+          "opponent": "Szymik R.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 21,
-          "wins": 9,
-          "losses": 12
+          "matches": 23,
+          "wins": 10,
+          "losses": 13
         }
       },
       "opponent_records": {
@@ -23477,8 +23512,8 @@
           "losses": 3
         },
         "649745": {
-          "matches": 1,
-          "wins": 1,
+          "matches": 2,
+          "wins": 2,
           "losses": 0
         },
         "733480": {
@@ -23530,9 +23565,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "628096": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1463.94
+      "elo_descriptive_only": 1468.49
     },
     "133369": {
       "display_name": "Wojtaszczyk W.",
@@ -23821,20 +23861,12 @@
     },
     "202174": {
       "display_name": "Piotrowski T.",
-      "matches": 20,
+      "matches": 21,
       "wins": 3,
-      "losses": 17,
-      "win_percentage": 15.0,
-      "last_match_date": "2026-11-15",
+      "losses": 18,
+      "win_percentage": 14.29,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-15",
-          "opponent_id": "806093",
-          "opponent": "Kostyk K.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
         {
           "date": "2026-11-15",
           "opponent_id": "649751",
@@ -23906,13 +23938,21 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "168884",
+          "opponent": "Dabrowski I.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 20,
+          "matches": 21,
           "wins": 3,
-          "losses": 17
+          "losses": 18
         }
       },
       "opponent_records": {
@@ -23945,42 +23985,23 @@
           "matches": 2,
           "wins": 0,
           "losses": 2
+        },
+        "168884": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1386.94
+      "elo_descriptive_only": 1378.78
     },
     "168884": {
       "display_name": "Dabrowski I.",
-      "matches": 10,
-      "wins": 5,
+      "matches": 13,
+      "wins": 8,
       "losses": 5,
-      "win_percentage": 50.0,
-      "last_match_date": "2026-11-14",
+      "win_percentage": 61.54,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-14",
-          "opponent_id": "170416",
-          "opponent": "Poloszczanski D.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-14",
-          "opponent_id": "631676",
-          "opponent": "Sulkowski K.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-14",
-          "opponent_id": "58514",
-          "opponent": "Waclaw Suchecki",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-14",
           "opponent_id": "909563",
@@ -24036,12 +24057,36 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202174",
+          "opponent": "Piotrowski T.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202175",
+          "opponent": "Rolak J.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "58514",
+          "opponent": "Waclaw Suchecki",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 10,
-          "wins": 5,
+          "matches": 13,
+          "wins": 8,
           "losses": 5
         }
       },
@@ -24057,8 +24102,8 @@
           "losses": 1
         },
         "58514": {
-          "matches": 2,
-          "wins": 1,
+          "matches": 3,
+          "wins": 2,
           "losses": 1
         },
         "909563": {
@@ -24067,12 +24112,17 @@
           "losses": 1
         },
         "202175": {
-          "matches": 2,
-          "wins": 1,
+          "matches": 3,
+          "wins": 2,
           "losses": 1
+        },
+        "202174": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1502.35
+      "elo_descriptive_only": 1533.98
     },
     "170416": {
       "display_name": "Poloszczanski D.",
@@ -24431,20 +24481,12 @@
     },
     "706438": {
       "display_name": "Grzegorz Adamiak",
-      "matches": 20,
+      "matches": 21,
       "wins": 5,
-      "losses": 15,
-      "win_percentage": 25.0,
-      "last_match_date": "2026-11-15",
+      "losses": 16,
+      "win_percentage": 23.81,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-15",
-          "opponent_id": "1033998",
-          "opponent": "Dosz A.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-15",
           "opponent_id": "69511",
@@ -24516,13 +24558,21 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "69511",
+          "opponent": "Michna D.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 20,
+          "matches": 21,
           "wins": 5,
-          "losses": 15
+          "losses": 16
         }
       },
       "opponent_records": {
@@ -24552,9 +24602,9 @@
           "losses": 1
         },
         "69511": {
-          "matches": 2,
+          "matches": 3,
           "wins": 0,
-          "losses": 2
+          "losses": 3
         },
         "1048446": {
           "matches": 2,
@@ -24567,32 +24617,16 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1406.03
+      "elo_descriptive_only": 1397.3
     },
     "622887": {
       "display_name": "Mecik P.",
-      "matches": 10,
-      "wins": 4,
-      "losses": 6,
-      "win_percentage": 40.0,
-      "last_match_date": "2026-11-15",
+      "matches": 12,
+      "wins": 5,
+      "losses": 7,
+      "win_percentage": 41.67,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-14",
-          "opponent_id": "51752",
-          "opponent": "Pytlas W.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-14",
-          "opponent_id": "183",
-          "opponent": "Koczyba M.",
-          "result": "L",
-          "sets_for": 0,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-14",
           "opponent_id": "631790",
@@ -24656,13 +24690,29 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "183",
+          "opponent": "Koczyba M.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "632076",
+          "opponent": "Adamus K.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 10,
-          "wins": 4,
-          "losses": 6
+          "matches": 12,
+          "wins": 5,
+          "losses": 7
         }
       },
       "opponent_records": {
@@ -24672,9 +24722,9 @@
           "losses": 1
         },
         "183": {
-          "matches": 2,
+          "matches": 3,
           "wins": 0,
-          "losses": 2
+          "losses": 3
         },
         "631790": {
           "matches": 1,
@@ -24705,9 +24755,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "632076": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1478.27
+      "elo_descriptive_only": 1481.9
     },
     "51752": {
       "display_name": "Pytlas W.",
@@ -25006,20 +25061,12 @@
     },
     "633200": {
       "display_name": "Tomasz Filbrandt",
-      "matches": 18,
-      "wins": 12,
+      "matches": 19,
+      "wins": 13,
       "losses": 6,
-      "win_percentage": 66.67,
+      "win_percentage": 68.42,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-14",
-          "opponent_id": "202174",
-          "opponent": "Piotrowski T.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 0
-        },
         {
           "date": "2026-11-14",
           "opponent_id": "649755",
@@ -25091,12 +25138,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "631733",
+          "opponent": "Lamperski J.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 18,
-          "wins": 12,
+          "matches": 19,
+          "wins": 13,
           "losses": 6
         }
       },
@@ -25127,8 +25182,8 @@
           "losses": 0
         },
         "631733": {
-          "matches": 1,
-          "wins": 1,
+          "matches": 2,
+          "wins": 2,
           "losses": 0
         },
         "51754": {
@@ -25157,7 +25212,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1547.83
+      "elo_descriptive_only": 1561.37
     },
     "622925": {
       "display_name": "Buczynski W.",
@@ -25431,20 +25486,12 @@
     },
     "1033998": {
       "display_name": "Dosz A.",
-      "matches": 20,
-      "wins": 15,
+      "matches": 21,
+      "wins": 16,
       "losses": 5,
-      "win_percentage": 75.0,
-      "last_match_date": "2026-11-15",
+      "win_percentage": 76.19,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-15",
-          "opponent_id": "706438",
-          "opponent": "Grzegorz Adamiak",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
         {
           "date": "2026-11-15",
           "opponent_id": "1048446",
@@ -25516,12 +25563,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "274461",
+          "opponent": "Spanik T.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 20,
-          "wins": 15,
+          "matches": 21,
+          "wins": 16,
           "losses": 5
         }
       },
@@ -25565,9 +25620,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "274461": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1589.35
+      "elo_descriptive_only": 1598.86
     },
     "631676": {
       "display_name": "Sulkowski K.",
@@ -25781,20 +25841,12 @@
     },
     "202175": {
       "display_name": "Rolak J.",
-      "matches": 27,
+      "matches": 28,
       "wins": 14,
-      "losses": 13,
-      "win_percentage": 51.85,
-      "last_match_date": "2026-11-19",
+      "losses": 14,
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-17",
-          "opponent_id": "646749",
-          "opponent": "Mrugala B.",
-          "result": "L",
-          "sets_for": 0,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "1065777",
@@ -25866,13 +25918,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "168884",
+          "opponent": "Dabrowski I.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 27,
+          "matches": 28,
           "wins": 14,
-          "losses": 13
+          "losses": 14
         }
       },
       "opponent_records": {
@@ -25897,9 +25957,9 @@
           "losses": 1
         },
         "168884": {
-          "matches": 2,
+          "matches": 3,
           "wins": 1,
-          "losses": 1
+          "losses": 2
         },
         "622799": {
           "matches": 2,
@@ -25947,24 +26007,16 @@
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1532.28
+      "elo_descriptive_only": 1519.52
     },
     "183": {
       "display_name": "Koczyba M.",
-      "matches": 29,
-      "wins": 18,
+      "matches": 30,
+      "wins": 19,
       "losses": 11,
-      "win_percentage": 62.07,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 63.33,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-18",
-          "opponent_id": "636322",
-          "opponent": "Tkocz M.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 0
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "686451",
@@ -26036,12 +26088,20 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "622887",
+          "opponent": "Mecik P.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 29,
-          "wins": 18,
+          "matches": 30,
+          "wins": 19,
           "losses": 11
         }
       },
@@ -26052,8 +26112,8 @@
           "losses": 1
         },
         "622887": {
-          "matches": 2,
-          "wins": 2,
+          "matches": 3,
+          "wins": 3,
           "losses": 0
         },
         "51752": {
@@ -26137,7 +26197,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1549.49
+      "elo_descriptive_only": 1559.06
     },
     "58504": {
       "display_name": "Adamus M.",
@@ -26491,20 +26551,12 @@
     },
     "806093": {
       "display_name": "Kostyk K.",
-      "matches": 20,
-      "wins": 8,
+      "matches": 21,
+      "wins": 9,
       "losses": 12,
-      "win_percentage": 40.0,
-      "last_match_date": "2026-11-15",
+      "win_percentage": 42.86,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-15",
-          "opponent_id": "202174",
-          "opponent": "Piotrowski T.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-15",
           "opponent_id": "278209",
@@ -26576,12 +26628,20 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649753",
+          "opponent": "Kesic G.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 20,
-          "wins": 8,
+          "matches": 21,
+          "wins": 9,
           "losses": 12
         }
       },
@@ -26615,9 +26675,14 @@
           "matches": 2,
           "wins": 0,
           "losses": 2
+        },
+        "649753": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1458.66
+      "elo_descriptive_only": 1469.84
     },
     "1034083": {
       "display_name": "Murawski M.",
@@ -27101,28 +27166,12 @@
     },
     "58514": {
       "display_name": "Waclaw Suchecki",
-      "matches": 10,
+      "matches": 12,
       "wins": 5,
-      "losses": 5,
-      "win_percentage": 50.0,
-      "last_match_date": "2026-11-14",
+      "losses": 7,
+      "win_percentage": 41.67,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-14",
-          "opponent_id": "909563",
-          "opponent": "Kowol M.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-14",
-          "opponent_id": "202175",
-          "opponent": "Rolak J.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 0
-        },
         {
           "date": "2026-11-14",
           "opponent_id": "168884",
@@ -27186,13 +27235,29 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "628126",
+          "opponent": "Przewlocki J.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "168884",
+          "opponent": "Dabrowski I.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 10,
+          "matches": 12,
           "wins": 5,
-          "losses": 5
+          "losses": 7
         }
       },
       "opponent_records": {
@@ -27207,9 +27272,9 @@
           "losses": 0
         },
         "168884": {
-          "matches": 2,
+          "matches": 3,
           "wins": 1,
-          "losses": 1
+          "losses": 2
         },
         "631676": {
           "matches": 2,
@@ -27220,9 +27285,14 @@
           "matches": 2,
           "wins": 2,
           "losses": 0
+        },
+        "628126": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1497.73
+      "elo_descriptive_only": 1475.4
     },
     "909563": {
       "display_name": "Kowol M.",
@@ -27676,22 +27746,14 @@
     },
     "706618": {
       "display_name": "Jedrzejak P.",
-      "matches": 20,
-      "wins": 16,
+      "matches": 21,
+      "wins": 17,
       "losses": 4,
-      "win_percentage": 80.0,
-      "last_match_date": "2026-11-15",
+      "win_percentage": 80.95,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-15",
-          "opponent_id": "622925",
-          "opponent": "Buczynski W.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
-        {
-          "date": "2026-11-15",
           "opponent_id": "685675",
           "opponent": "Oracz M.",
           "result": "W",
@@ -27758,6 +27820,14 @@
           "date": "2026-11-15",
           "opponent_id": "685675",
           "opponent": "Oracz M.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "69514",
+          "opponent": "Szostok S.",
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
@@ -27765,8 +27835,8 @@
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 20,
-          "wins": 16,
+          "matches": 21,
+          "wins": 17,
           "losses": 4
         }
       },
@@ -27820,9 +27890,14 @@
           "matches": 2,
           "wins": 1,
           "losses": 1
+        },
+        "69514": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1601.14
+      "elo_descriptive_only": 1611.87
     },
     "1034245": {
       "display_name": "Jablonski K.",
@@ -28881,20 +28956,12 @@
     },
     "69511": {
       "display_name": "Michna D.",
-      "matches": 10,
-      "wins": 5,
+      "matches": 11,
+      "wins": 6,
       "losses": 5,
-      "win_percentage": 50.0,
-      "last_match_date": "2026-11-15",
+      "win_percentage": 54.55,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-14",
-          "opponent_id": "1033998",
-          "opponent": "Dosz A.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-14",
           "opponent_id": "1034083",
@@ -28966,12 +29033,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "706438",
+          "opponent": "Grzegorz Adamiak",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 10,
-          "wins": 5,
+          "matches": 11,
+          "wins": 6,
           "losses": 5
         }
       },
@@ -28997,8 +29072,8 @@
           "losses": 1
         },
         "706438": {
-          "matches": 2,
-          "wins": 2,
+          "matches": 3,
+          "wins": 3,
           "losses": 0
         },
         "1048446": {
@@ -29007,7 +29082,7 @@
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1503.18
+      "elo_descriptive_only": 1511.91
     },
     "649748": {
       "display_name": "Malcher K.",
@@ -36348,20 +36423,12 @@
     },
     "58503": {
       "display_name": "Krupnik J.",
-      "matches": 23,
-      "wins": 19,
+      "matches": 24,
+      "wins": 20,
       "losses": 4,
-      "win_percentage": 82.61,
-      "last_match_date": "2026-11-19",
+      "win_percentage": 83.33,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-18",
-          "opponent_id": "69507",
-          "opponent": "Benes R.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 0
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "622935",
@@ -36433,12 +36500,20 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "627180",
+          "opponent": "Kanak A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "TT Cup": {
-          "matches": 23,
-          "wins": 19,
+          "matches": 24,
+          "wins": 20,
           "losses": 4
         }
       },
@@ -36512,9 +36587,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "627180": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1613.34
+      "elo_descriptive_only": 1621.0
     },
     "133366": {
       "display_name": "Travnicek J.",
@@ -45713,22 +45793,14 @@
     },
     "629248": {
       "display_name": "Pruszkowski J.",
-      "matches": 20,
-      "wins": 11,
+      "matches": 21,
+      "wins": 12,
       "losses": 9,
-      "win_percentage": 55.0,
-      "last_match_date": "2026-11-17",
+      "win_percentage": 57.14,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-16",
-          "opponent_id": "628096",
-          "opponent": "Tkaczyk H.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
-        {
-          "date": "2026-11-16",
           "opponent_id": "628914",
           "opponent": "Nowak J.",
           "result": "W",
@@ -45798,12 +45870,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "701289",
+          "opponent": "Sawicki G.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 20,
-          "wins": 11,
+          "matches": 21,
+          "wins": 12,
           "losses": 9
         }
       },
@@ -45847,9 +45927,14 @@
           "matches": 2,
           "wins": 0,
           "losses": 2
+        },
+        "701289": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1514.23
+      "elo_descriptive_only": 1524.12
     },
     "628914": {
       "display_name": "Nowak J.",
@@ -48630,11 +48715,11 @@
     },
     "636926": {
       "display_name": "Sergey Arefev",
-      "matches": 3,
-      "wins": 1,
+      "matches": 4,
+      "wins": 2,
       "losses": 2,
-      "win_percentage": 33.33,
-      "last_match_date": "2026-11-16",
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-16",
@@ -48659,12 +48744,20 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649704",
+          "opponent": "Aleksandr Kazak",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "Liga Pro": {
-          "matches": 3,
-          "wins": 1,
+          "matches": 4,
+          "wins": 2,
           "losses": 2
         }
       },
@@ -48683,9 +48776,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "649704": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1487.17
+      "elo_descriptive_only": 1501.16
     },
     "51783": {
       "display_name": "Anishchenko V.",
@@ -54100,11 +54198,11 @@
     },
     "622921": {
       "display_name": "Palan T.",
-      "matches": 4,
+      "matches": 5,
       "wins": 3,
-      "losses": 1,
-      "win_percentage": 75.0,
-      "last_match_date": "2026-11-16",
+      "losses": 2,
+      "win_percentage": 60.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-16",
@@ -54137,13 +54235,21 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "629635",
+          "opponent": "Hons D.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Cup": {
-          "matches": 4,
+          "matches": 5,
           "wins": 3,
-          "losses": 1
+          "losses": 2
         }
       },
       "opponent_records": {
@@ -54161,9 +54267,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "629635": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1522.36
+      "elo_descriptive_only": 1509.42
     },
     "233792": {
       "display_name": "Sindler J.",
@@ -55736,20 +55847,12 @@
     },
     "629635": {
       "display_name": "Hons D.",
-      "matches": 12,
-      "wins": 6,
+      "matches": 13,
+      "wins": 7,
       "losses": 6,
-      "win_percentage": 50.0,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 53.85,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-16",
-          "opponent_id": "622983",
-          "opponent": "Flesar M.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 2
-        },
         {
           "date": "2026-11-16",
           "opponent_id": "686055",
@@ -55821,12 +55924,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "622921",
+          "opponent": "Palan T.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "TT Cup": {
-          "matches": 12,
-          "wins": 6,
+          "matches": 13,
+          "wins": 7,
           "losses": 6
         }
       },
@@ -55870,9 +55981,14 @@
           "matches": 2,
           "wins": 1,
           "losses": 1
+        },
+        "622921": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1495.16
+      "elo_descriptive_only": 1508.1
     },
     "645228": {
       "display_name": "Skulina D.",
@@ -56640,20 +56756,12 @@
     },
     "202168": {
       "display_name": "Kiejda P.",
-      "matches": 23,
-      "wins": 13,
+      "matches": 24,
+      "wins": 14,
       "losses": 10,
-      "win_percentage": 56.52,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 58.33,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-18",
-          "opponent_id": "202169",
-          "opponent": "Komorowicz J.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "635400",
@@ -56725,12 +56833,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "1143834",
+          "opponent": "Zabinski M.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "TT Cup": {
-          "matches": 23,
-          "wins": 13,
+          "matches": 24,
+          "wins": 14,
           "losses": 10
         }
       },
@@ -56771,12 +56887,12 @@
           "losses": 1
         },
         "1143834": {
-          "matches": 1,
-          "wins": 0,
+          "matches": 2,
+          "wins": 1,
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1525.22
+      "elo_descriptive_only": 1535.89
     },
     "1075271": {
       "display_name": "Prochazka M.",
@@ -62831,20 +62947,12 @@
     },
     "58510": {
       "display_name": "Jadczyk M.",
-      "matches": 35,
+      "matches": 36,
       "wins": 24,
-      "losses": 11,
-      "win_percentage": 68.57,
-      "last_match_date": "2026-11-20",
+      "losses": 12,
+      "win_percentage": 66.67,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-19",
-          "opponent_id": "649750",
-          "opponent": "Kolodziej K.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 0
-        },
         {
           "date": "2026-11-19",
           "opponent_id": "622923",
@@ -62916,13 +63024,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "274461",
+          "opponent": "Spanik T.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 35,
+          "matches": 36,
           "wins": 24,
-          "losses": 11
+          "losses": 12
         }
       },
       "opponent_records": {
@@ -63010,9 +63126,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "274461": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1621.54
+      "elo_descriptive_only": 1605.51
     },
     "170418": {
       "display_name": "Skotniczny R.",
@@ -63336,20 +63457,12 @@
     },
     "622798": {
       "display_name": "Wrobel D.",
-      "matches": 15,
+      "matches": 16,
       "wins": 8,
-      "losses": 7,
-      "win_percentage": 53.33,
-      "last_match_date": "2026-11-20",
+      "losses": 8,
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-18",
-          "opponent_id": "651630",
-          "opponent": "Kotwica D.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "631733",
@@ -63421,13 +63534,21 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "628126",
+          "opponent": "Przewlocki J.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 15,
+          "matches": 16,
           "wins": 8,
-          "losses": 7
+          "losses": 8
         }
       },
       "opponent_records": {
@@ -63490,9 +63611,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "628126": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1508.23
+      "elo_descriptive_only": 1496.66
     },
     "752003": {
       "display_name": "Lamer M.",
@@ -64419,20 +64545,12 @@
     },
     "631733": {
       "display_name": "Lamperski J.",
-      "matches": 38,
+      "matches": 39,
       "wins": 28,
-      "losses": 10,
-      "win_percentage": 73.68,
+      "losses": 11,
+      "win_percentage": 71.79,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-19",
-          "opponent_id": "1111609",
-          "opponent": "Pilch A.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
         {
           "date": "2026-11-19",
           "opponent_id": "622799",
@@ -64504,13 +64622,21 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "633200",
+          "opponent": "Tomasz Filbrandt",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 38,
+          "matches": 39,
           "wins": 28,
-          "losses": 10
+          "losses": 11
         }
       },
       "opponent_records": {
@@ -64585,9 +64711,9 @@
           "losses": 0
         },
         "633200": {
-          "matches": 1,
+          "matches": 2,
           "wins": 0,
-          "losses": 1
+          "losses": 2
         },
         "636386": {
           "matches": 1,
@@ -64605,7 +64731,7 @@
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1592.44
+      "elo_descriptive_only": 1578.9
     },
     "133367": {
       "display_name": "Kubiak A.",
@@ -66414,20 +66540,12 @@
     },
     "628126": {
       "display_name": "Przewlocki J.",
-      "matches": 9,
-      "wins": 5,
+      "matches": 11,
+      "wins": 7,
       "losses": 4,
-      "win_percentage": 55.56,
-      "last_match_date": "2026-11-17",
+      "win_percentage": 63.64,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-16",
-          "opponent_id": "628127",
-          "opponent": "Strus P.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 0
-        },
         {
           "date": "2026-11-16",
           "opponent_id": "646552",
@@ -66491,12 +66609,28 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "58514",
+          "opponent": "Waclaw Suchecki",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "622798",
+          "opponent": "Wrobel D.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 9,
-          "wins": 5,
+          "matches": 11,
+          "wins": 7,
           "losses": 4
         }
       },
@@ -66525,9 +66659,19 @@
           "matches": 2,
           "wins": 1,
           "losses": 1
+        },
+        "58514": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "622798": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1508.91
+      "elo_descriptive_only": 1532.1
     },
     "628127": {
       "display_name": "Strus P.",
@@ -72899,11 +73043,11 @@
     },
     "740776": {
       "display_name": "Priadko S.",
-      "matches": 9,
+      "matches": 10,
       "wins": 5,
-      "losses": 4,
-      "win_percentage": 55.56,
-      "last_match_date": "2026-11-19",
+      "losses": 5,
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-16",
@@ -72976,13 +73120,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202183",
+          "opponent": "Boklah R.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 9,
+          "matches": 10,
           "wins": 5,
-          "losses": 4
+          "losses": 5
         }
       },
       "opponent_records": {
@@ -72992,9 +73144,9 @@
           "losses": 1
         },
         "202183": {
-          "matches": 1,
+          "matches": 2,
           "wins": 0,
-          "losses": 1
+          "losses": 2
         },
         "626814": {
           "matches": 3,
@@ -73012,7 +73164,7 @@
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1512.72
+      "elo_descriptive_only": 1500.71
     },
     "628896": {
       "display_name": "Kubos F.",
@@ -75580,20 +75732,12 @@
     },
     "4359": {
       "display_name": "Balabei S.",
-      "matches": 16,
-      "wins": 12,
+      "matches": 17,
+      "wins": 13,
       "losses": 4,
-      "win_percentage": 75.0,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 76.47,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-17",
-          "opponent_id": "51765",
-          "opponent": "Levitskiy M.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
         {
           "date": "2026-11-17",
           "opponent_id": "168896",
@@ -75665,12 +75809,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "686908",
+          "opponent": "Shyndel I.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 16,
-          "wins": 12,
+          "matches": 17,
+          "wins": 13,
           "losses": 4
         }
       },
@@ -75711,12 +75863,12 @@
           "losses": 0
         },
         "686908": {
-          "matches": 1,
-          "wins": 0,
+          "matches": 2,
+          "wins": 1,
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1574.55
+      "elo_descriptive_only": 1584.9
     },
     "115053": {
       "display_name": "Marushchak V.",
@@ -75987,11 +76139,11 @@
     },
     "723272": {
       "display_name": "Kotrbacek P.",
-      "matches": 4,
+      "matches": 5,
       "wins": 2,
-      "losses": 2,
-      "win_percentage": 50.0,
-      "last_match_date": "2026-11-16",
+      "losses": 3,
+      "win_percentage": 40.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-16",
@@ -76024,13 +76176,21 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "51779",
+          "opponent": "Hendrych L.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
+          "matches": 5,
           "wins": 2,
-          "losses": 2
+          "losses": 3
         }
       },
       "opponent_records": {
@@ -76048,9 +76208,14 @@
           "matches": 2,
           "wins": 0,
           "losses": 2
+        },
+        "51779": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1498.4
+      "elo_descriptive_only": 1484.86
     },
     "168895": {
       "display_name": "Dvoracek A.",
@@ -77283,20 +77448,12 @@
     },
     "58534": {
       "display_name": "Kovalchuk N.",
-      "matches": 18,
-      "wins": 8,
+      "matches": 19,
+      "wins": 9,
       "losses": 10,
-      "win_percentage": 44.44,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 47.37,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-19",
-          "opponent_id": "274477",
-          "opponent": "Rak S.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-19",
           "opponent_id": "202189",
@@ -77368,12 +77525,20 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "51767",
+          "opponent": "Plishylo V.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 18,
-          "wins": 8,
+          "matches": 19,
+          "wins": 9,
           "losses": 10
         }
       },
@@ -77409,8 +77574,8 @@
           "losses": 1
         },
         "51767": {
-          "matches": 2,
-          "wins": 1,
+          "matches": 3,
+          "wins": 2,
           "losses": 1
         },
         "168903": {
@@ -77429,15 +77594,15 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1471.1
+      "elo_descriptive_only": 1485.14
     },
     "168897": {
       "display_name": "Kushnirenko S.",
-      "matches": 9,
+      "matches": 10,
       "wins": 4,
-      "losses": 5,
-      "win_percentage": 44.44,
-      "last_match_date": "2026-11-20",
+      "losses": 6,
+      "win_percentage": 40.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-16",
@@ -77510,20 +77675,28 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "69523",
+          "opponent": "Horokh R.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 9,
+          "matches": 10,
           "wins": 4,
-          "losses": 5
+          "losses": 6
         }
       },
       "opponent_records": {
         "69523": {
-          "matches": 2,
+          "matches": 3,
           "wins": 1,
-          "losses": 1
+          "losses": 2
         },
         "780992": {
           "matches": 1,
@@ -77556,24 +77729,16 @@
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1494.57
+      "elo_descriptive_only": 1483.39
     },
     "69523": {
       "display_name": "Horokh R.",
-      "matches": 16,
-      "wins": 9,
+      "matches": 17,
+      "wins": 10,
       "losses": 7,
-      "win_percentage": 56.25,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 58.82,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-17",
-          "opponent_id": "51765",
-          "opponent": "Levitskiy M.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
         {
           "date": "2026-11-17",
           "opponent_id": "168896",
@@ -77645,19 +77810,27 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "168897",
+          "opponent": "Kushnirenko S.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 16,
-          "wins": 9,
+          "matches": 17,
+          "wins": 10,
           "losses": 7
         }
       },
       "opponent_records": {
         "168897": {
-          "matches": 2,
-          "wins": 1,
+          "matches": 3,
+          "wins": 2,
           "losses": 1
         },
         "4359": {
@@ -77696,7 +77869,7 @@
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1518.53
+      "elo_descriptive_only": 1529.7
     },
     "626536": {
       "display_name": "Mishchenko V.",
@@ -77972,11 +78145,11 @@
     },
     "202183": {
       "display_name": "Boklah R.",
-      "matches": 3,
-      "wins": 2,
-      "losses": 1,
-      "win_percentage": 66.67,
-      "last_match_date": "2026-11-16",
+      "matches": 5,
+      "wins": 3,
+      "losses": 2,
+      "win_percentage": 60.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-16",
@@ -78001,28 +78174,49 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "740776",
+          "opponent": "Priadko S.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "278228",
+          "opponent": "Ziakun V.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 3,
-          "wins": 2,
-          "losses": 1
+          "matches": 5,
+          "wins": 3,
+          "losses": 2
         }
       },
       "opponent_records": {
         "740776": {
-          "matches": 1,
-          "wins": 1,
+          "matches": 2,
+          "wins": 2,
           "losses": 0
         },
         "51778": {
           "matches": 2,
           "wins": 1,
           "losses": 1
+        },
+        "278228": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1512.42
+      "elo_descriptive_only": 1511.16
     },
     "630097": {
       "display_name": "Kosogolov A.",
@@ -81765,28 +81959,12 @@
     },
     "170429": {
       "display_name": "Hura O.",
-      "matches": 15,
-      "wins": 5,
-      "losses": 10,
-      "win_percentage": 33.33,
-      "last_match_date": "2026-11-18",
+      "matches": 17,
+      "wins": 6,
+      "losses": 11,
+      "win_percentage": 35.29,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-17",
-          "opponent_id": "145839",
-          "opponent": "Romaniak I.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-17",
-          "opponent_id": "168903",
-          "opponent": "Vlasenko V.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 2
-        },
         {
           "date": "2026-11-17",
           "opponent_id": "4354",
@@ -81850,13 +82028,29 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "686924",
+          "opponent": "Kravets Y.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "51767",
+          "opponent": "Plishylo V.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 15,
-          "wins": 5,
-          "losses": 10
+          "matches": 17,
+          "wins": 6,
+          "losses": 11
         }
       },
       "opponent_records": {
@@ -81894,17 +82088,27 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "686924": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "51767": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1454.37
+      "elo_descriptive_only": 1458.58
     },
     "133377": {
       "display_name": "Shypilov A.",
-      "matches": 9,
+      "matches": 10,
       "wins": 2,
-      "losses": 7,
-      "win_percentage": 22.22,
-      "last_match_date": "2026-11-20",
+      "losses": 8,
+      "win_percentage": 20.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-16",
@@ -81977,13 +82181,21 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "168903",
+          "opponent": "Vlasenko V.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 9,
+          "matches": 10,
           "wins": 2,
-          "losses": 7
+          "losses": 8
         }
       },
       "opponent_records": {
@@ -82013,9 +82225,9 @@
           "losses": 1
         },
         "168903": {
-          "matches": 1,
+          "matches": 2,
           "wins": 0,
-          "losses": 1
+          "losses": 2
         },
         "686924": {
           "matches": 1,
@@ -82033,7 +82245,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1441.6
+      "elo_descriptive_only": 1429.93
     },
     "4347": {
       "display_name": "Verbianyi V.",
@@ -89740,11 +89952,11 @@
     },
     "619223": {
       "display_name": "Mrowetz B.",
-      "matches": 8,
-      "wins": 5,
+      "matches": 9,
+      "wins": 6,
       "losses": 3,
-      "win_percentage": 62.5,
-      "last_match_date": "2026-11-19",
+      "win_percentage": 66.67,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-17",
@@ -89809,12 +90021,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "719041",
+          "opponent": "Skalicky J.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "TT Cup": {
-          "matches": 8,
-          "wins": 5,
+          "matches": 9,
+          "wins": 6,
           "losses": 3
         }
       },
@@ -89848,9 +90068,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "719041": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1520.66
+      "elo_descriptive_only": 1531.95
     },
     "639990": {
       "display_name": "Kindl T.",
@@ -92515,20 +92740,12 @@
     },
     "632076": {
       "display_name": "Adamus K.",
-      "matches": 30,
+      "matches": 31,
       "wins": 15,
-      "losses": 15,
-      "win_percentage": 50.0,
-      "last_match_date": "2026-11-20",
+      "losses": 16,
+      "win_percentage": 48.39,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-19",
-          "opponent_id": "635682",
-          "opponent": "Jurowicz G.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 0
-        },
         {
           "date": "2026-11-19",
           "opponent_id": "51752",
@@ -92600,13 +92817,21 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "622887",
+          "opponent": "Mecik P.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 30,
+          "matches": 31,
           "wins": 15,
-          "losses": 15
+          "losses": 16
         }
       },
       "opponent_records": {
@@ -92704,9 +92929,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "622887": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1503.56
+      "elo_descriptive_only": 1490.36
     },
     "635599": {
       "display_name": "Paszkiewicz M.",
@@ -95888,28 +96118,12 @@
     },
     "170420": {
       "display_name": "Oleg Denisov",
-      "matches": 9,
-      "wins": 5,
-      "losses": 4,
-      "win_percentage": 55.56,
-      "last_match_date": "2026-11-19",
+      "matches": 12,
+      "wins": 7,
+      "losses": 5,
+      "win_percentage": 58.33,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-17",
-          "opponent_id": "631913",
-          "opponent": "Viktor Bochev",
-          "result": "L",
-          "sets_for": 0,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-17",
-          "opponent_id": "69516",
-          "opponent": "Karpovkin G.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-17",
           "opponent_id": "806189",
@@ -95965,13 +96179,37 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "626904",
+          "opponent": "Kuzmin A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202177",
+          "opponent": "Blinov I.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "51760",
+          "opponent": "Pryakhin V.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Liga Pro": {
-          "matches": 9,
-          "wins": 5,
-          "losses": 4
+          "matches": 12,
+          "wins": 7,
+          "losses": 5
         }
       },
       "opponent_records": {
@@ -95991,8 +96229,8 @@
           "losses": 0
         },
         "626904": {
-          "matches": 2,
-          "wins": 2,
+          "matches": 3,
+          "wins": 3,
           "losses": 0
         },
         "774880": {
@@ -96001,12 +96239,17 @@
           "losses": 2
         },
         "51760": {
+          "matches": 2,
+          "wins": 1,
+          "losses": 1
+        },
+        "202177": {
           "matches": 1,
           "wins": 1,
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1511.33
+      "elo_descriptive_only": 1519.02
     },
     "170426": {
       "display_name": "Bazilevsky V.",
@@ -96209,11 +96452,11 @@
     },
     "202178": {
       "display_name": "Novikov I.",
-      "matches": 4,
+      "matches": 7,
       "wins": 1,
-      "losses": 3,
-      "win_percentage": 25.0,
-      "last_match_date": "2026-11-17",
+      "losses": 6,
+      "win_percentage": 14.29,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-17",
@@ -96246,13 +96489,37 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "706929",
+          "opponent": "Troshkin A.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "651730",
+          "opponent": "Krikunov I.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "58518",
+          "opponent": "Lobanov A.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Liga Pro": {
-          "matches": 4,
+          "matches": 7,
           "wins": 1,
-          "losses": 3
+          "losses": 6
         }
       },
       "opponent_records": {
@@ -96270,9 +96537,24 @@
           "matches": 2,
           "wins": 0,
           "losses": 2
+        },
+        "706929": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "651730": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "58518": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1475.23
+      "elo_descriptive_only": 1443.66
     },
     "640609": {
       "display_name": "Konobeev A.",
@@ -99375,20 +99657,12 @@
     },
     "626904": {
       "display_name": "Kuzmin A.",
-      "matches": 9,
+      "matches": 11,
       "wins": 4,
-      "losses": 5,
-      "win_percentage": 44.44,
-      "last_match_date": "2026-11-19",
+      "losses": 7,
+      "win_percentage": 36.36,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-17",
-          "opponent_id": "966933",
-          "opponent": "Anton Kulikov Sergeevich",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
         {
           "date": "2026-11-17",
           "opponent_id": "806189",
@@ -99452,13 +99726,29 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "170420",
+          "opponent": "Oleg Denisov",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202177",
+          "opponent": "Blinov I.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Liga Pro": {
-          "matches": 9,
+          "matches": 11,
           "wins": 4,
-          "losses": 5
+          "losses": 7
         }
       },
       "opponent_records": {
@@ -99478,9 +99768,9 @@
           "losses": 1
         },
         "170420": {
-          "matches": 2,
+          "matches": 3,
           "wins": 0,
-          "losses": 2
+          "losses": 3
         },
         "115041": {
           "matches": 1,
@@ -99496,9 +99786,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "202177": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1487.16
+      "elo_descriptive_only": 1464.79
     },
     "145831": {
       "display_name": "Ekzhanov A.",
@@ -100559,20 +100854,12 @@
     },
     "639824": {
       "display_name": "Ponomarenko O.",
-      "matches": 10,
-      "wins": 8,
+      "matches": 11,
+      "wins": 9,
       "losses": 2,
-      "win_percentage": 80.0,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 81.82,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-17",
-          "opponent_id": "69524",
-          "opponent": "Mikluha O.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 0
-        },
         {
           "date": "2026-11-17",
           "opponent_id": "639960",
@@ -100644,12 +100931,20 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "706350",
+          "opponent": "Khavanskyi D.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 10,
-          "wins": 8,
+          "matches": 11,
+          "wins": 9,
           "losses": 2
         }
       },
@@ -100683,9 +100978,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "706350": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1555.17
+      "elo_descriptive_only": 1565.28
     },
     "69527": {
       "display_name": "Ziakun O.",
@@ -101483,11 +101783,11 @@
     },
     "622778": {
       "display_name": "Kovshun Y.",
-      "matches": 9,
+      "matches": 10,
       "wins": 6,
-      "losses": 3,
-      "win_percentage": 66.67,
-      "last_match_date": "2026-11-19",
+      "losses": 4,
+      "win_percentage": 60.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-17",
@@ -101560,13 +101860,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "1198856",
+          "opponent": "Lobanov A.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 9,
+          "matches": 10,
           "wins": 6,
-          "losses": 3
+          "losses": 4
         }
       },
       "opponent_records": {
@@ -101609,17 +101917,22 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "1198856": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1534.95
+      "elo_descriptive_only": 1521.75
     },
     "622779": {
       "display_name": "Troian A.",
-      "matches": 9,
-      "wins": 6,
+      "matches": 10,
+      "wins": 7,
       "losses": 3,
-      "win_percentage": 66.67,
-      "last_match_date": "2026-11-19",
+      "win_percentage": 70.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-17",
@@ -101692,12 +102005,20 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "622735",
+          "opponent": "Volkov Y.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 9,
-          "wins": 6,
+          "matches": 10,
+          "wins": 7,
           "losses": 3
         }
       },
@@ -101738,12 +102059,12 @@
           "losses": 0
         },
         "622735": {
-          "matches": 1,
-          "wins": 0,
+          "matches": 2,
+          "wins": 1,
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1527.41
+      "elo_descriptive_only": 1539.67
     },
     "686927": {
       "display_name": "Gasparovic D.",
@@ -102625,11 +102946,11 @@
     },
     "639790": {
       "display_name": "Stukalov V.",
-      "matches": 9,
-      "wins": 6,
+      "matches": 10,
+      "wins": 7,
       "losses": 3,
-      "win_percentage": 66.67,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 70.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-17",
@@ -102702,12 +103023,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "51782",
+          "opponent": "Semenets S.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 9,
-          "wins": 6,
+          "matches": 10,
+          "wins": 7,
           "losses": 3
         }
       },
@@ -102741,9 +103070,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "51782": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1529.43
+      "elo_descriptive_only": 1539.25
     },
     "639960": {
       "display_name": "Osipov S.",
@@ -103546,11 +103880,11 @@
     },
     "115046": {
       "display_name": "Martyniuk A.",
-      "matches": 4,
-      "wins": 1,
+      "matches": 5,
+      "wins": 2,
       "losses": 3,
-      "win_percentage": 25.0,
-      "last_match_date": "2026-11-17",
+      "win_percentage": 40.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-17",
@@ -103583,12 +103917,20 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "69529",
+          "opponent": "Grygorenko S.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
-          "wins": 1,
+          "matches": 5,
+          "wins": 2,
           "losses": 3
         }
       },
@@ -103612,9 +103954,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "69529": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1478.01
+      "elo_descriptive_only": 1490.48
     },
     "622865": {
       "display_name": "Kyienko S.",
@@ -105074,11 +105421,11 @@
     },
     "51782": {
       "display_name": "Semenets S.",
-      "matches": 3,
+      "matches": 4,
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "win_percentage": 0.0,
-      "last_match_date": "2026-11-17",
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-17",
@@ -105103,13 +105450,21 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "639790",
+          "opponent": "Stukalov V.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 3,
+          "matches": 4,
           "wins": 0,
-          "losses": 3
+          "losses": 4
         }
       },
       "opponent_records": {
@@ -105127,9 +105482,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "639790": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1465.63
+      "elo_descriptive_only": 1455.81
     },
     "168900": {
       "display_name": "Buianov E.",
@@ -105385,20 +105745,12 @@
     },
     "278222": {
       "display_name": "Yakimenko S.",
-      "matches": 14,
+      "matches": 15,
       "wins": 2,
-      "losses": 12,
-      "win_percentage": 14.29,
-      "last_match_date": "2026-11-20",
+      "losses": 13,
+      "win_percentage": 13.33,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-18",
-          "opponent_id": "639861",
-          "opponent": "Kondratenko V.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        },
         {
           "date": "2026-11-18",
           "opponent_id": "639959",
@@ -105470,13 +105822,21 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "691707",
+          "opponent": "Oleh Stopin",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 14,
+          "matches": 15,
           "wins": 2,
-          "losses": 12
+          "losses": 13
         }
       },
       "opponent_records": {
@@ -105534,9 +105894,14 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "691707": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1408.03
+      "elo_descriptive_only": 1399.14
     },
     "722388": {
       "display_name": "Anghel V.",
@@ -105674,11 +106039,11 @@
     },
     "168903": {
       "display_name": "Vlasenko V.",
-      "matches": 9,
-      "wins": 2,
+      "matches": 10,
+      "wins": 3,
       "losses": 7,
-      "win_percentage": 22.22,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 30.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-17",
@@ -105751,12 +106116,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "133377",
+          "opponent": "Shypilov A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 9,
-          "wins": 2,
+          "matches": 10,
+          "wins": 3,
           "losses": 7
         }
       },
@@ -105782,8 +106155,8 @@
           "losses": 1
         },
         "133377": {
-          "matches": 1,
-          "wins": 1,
+          "matches": 2,
+          "wins": 2,
           "losses": 0
         },
         "58534": {
@@ -105802,7 +106175,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1450.92
+      "elo_descriptive_only": 1462.6
     },
     "634360": {
       "display_name": "Chuhai S.",
@@ -109706,11 +110079,11 @@
     },
     "202186": {
       "display_name": "Merkl R.",
-      "matches": 8,
-      "wins": 4,
+      "matches": 9,
+      "wins": 5,
       "losses": 4,
-      "win_percentage": 50.0,
-      "last_match_date": "2026-11-18",
+      "win_percentage": 55.56,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-17",
@@ -109775,12 +110148,20 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "637359",
+          "opponent": "Hanke T.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 8,
-          "wins": 4,
+          "matches": 9,
+          "wins": 5,
           "losses": 4
         }
       },
@@ -109814,9 +110195,14 @@
           "matches": 2,
           "wins": 1,
           "losses": 1
+        },
+        "637359": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1498.41
+      "elo_descriptive_only": 1510.42
     },
     "706591": {
       "display_name": "Tuma L.",
@@ -118951,11 +119337,11 @@
     },
     "58518": {
       "display_name": "Lobanov A.",
-      "matches": 3,
-      "wins": 3,
-      "losses": 0,
-      "win_percentage": 100.0,
-      "last_match_date": "2026-11-18",
+      "matches": 6,
+      "wins": 5,
+      "losses": 1,
+      "win_percentage": 83.33,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-18",
@@ -118980,13 +119366,37 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "651730",
+          "opponent": "Krikunov I.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "706929",
+          "opponent": "Troshkin A.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202178",
+          "opponent": "Novikov I.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "Liga Pro": {
-          "matches": 3,
-          "wins": 3,
-          "losses": 0
+          "matches": 6,
+          "wins": 5,
+          "losses": 1
         }
       },
       "opponent_records": {
@@ -119004,9 +119414,24 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "651730": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "706929": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "202178": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1535.17
+      "elo_descriptive_only": 1542.05
     },
     "51762": {
       "display_name": "Bogdanov D.",
@@ -127567,11 +127992,11 @@
     },
     "202185": {
       "display_name": "Kanka T.",
-      "matches": 4,
+      "matches": 5,
       "wins": 2,
-      "losses": 2,
-      "win_percentage": 50.0,
-      "last_match_date": "2026-11-18",
+      "losses": 3,
+      "win_percentage": 40.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-18",
@@ -127604,13 +128029,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "647449",
+          "opponent": "Orlowski P.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
+          "matches": 5,
           "wins": 2,
-          "losses": 2
+          "losses": 3
         }
       },
       "opponent_records": {
@@ -127628,9 +128061,14 @@
           "matches": 2,
           "wins": 2,
           "losses": 0
+        },
+        "647449": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1500.0
+      "elo_descriptive_only": 1488.0
     },
     "678482": {
       "display_name": "Andrii Lifanov",
@@ -137109,11 +137547,11 @@
     },
     "51760": {
       "display_name": "Pryakhin V.",
-      "matches": 4,
-      "wins": 0,
-      "losses": 4,
-      "win_percentage": 0.0,
-      "last_match_date": "2026-11-19",
+      "matches": 6,
+      "wins": 1,
+      "losses": 5,
+      "win_percentage": 16.67,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-19",
@@ -137146,13 +137584,29 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202177",
+          "opponent": "Blinov I.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "170420",
+          "opponent": "Oleg Denisov",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "Liga Pro": {
-          "matches": 4,
-          "wins": 0,
-          "losses": 4
+          "matches": 6,
+          "wins": 1,
+          "losses": 5
         }
       },
       "opponent_records": {
@@ -137167,12 +137621,17 @@
           "losses": 1
         },
         "170420": {
+          "matches": 2,
+          "wins": 1,
+          "losses": 1
+        },
+        "202177": {
           "matches": 1,
           "wins": 0,
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1453.6
+      "elo_descriptive_only": 1458.27
     },
     "274467": {
       "display_name": "Stroyev A.",
@@ -137964,11 +138423,11 @@
     },
     "631947": {
       "display_name": "Potapkov A.",
-      "matches": 3,
-      "wins": 1,
-      "losses": 2,
-      "win_percentage": 33.33,
-      "last_match_date": "2026-11-19",
+      "matches": 6,
+      "wins": 3,
+      "losses": 3,
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-19",
@@ -137993,13 +138452,37 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "909714",
+          "opponent": "Gritsenko A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "168889",
+          "opponent": "Kharchenko E.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "740683",
+          "opponent": "Golyshev A.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Liga Pro": {
-          "matches": 3,
-          "wins": 1,
-          "losses": 2
+          "matches": 6,
+          "wins": 3,
+          "losses": 3
         }
       },
       "opponent_records": {
@@ -138017,9 +138500,24 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "909714": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "168889": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "740683": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1488.42
+      "elo_descriptive_only": 1500.75
     },
     "621841": {
       "display_name": "Bystrushkin K.",
@@ -138925,11 +139423,11 @@
     },
     "202177": {
       "display_name": "Blinov I.",
-      "matches": 2,
-      "wins": 1,
-      "losses": 1,
-      "win_percentage": 50.0,
-      "last_match_date": "2026-11-19",
+      "matches": 5,
+      "wins": 3,
+      "losses": 2,
+      "win_percentage": 60.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-19",
@@ -138946,13 +139444,37 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "51760",
+          "opponent": "Pryakhin V.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "170420",
+          "opponent": "Oleg Denisov",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "626904",
+          "opponent": "Kuzmin A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "Liga Pro": {
-          "matches": 2,
-          "wins": 1,
-          "losses": 1
+          "matches": 5,
+          "wins": 3,
+          "losses": 2
         }
       },
       "opponent_records": {
@@ -138965,9 +139487,24 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "51760": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "170420": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "626904": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1500.4
+      "elo_descriptive_only": 1510.4
     },
     "630384": {
       "display_name": "Vlasov A.",
@@ -141165,11 +141702,11 @@
     },
     "69529": {
       "display_name": "Grygorenko S.",
-      "matches": 5,
+      "matches": 6,
       "wins": 2,
-      "losses": 3,
-      "win_percentage": 40.0,
-      "last_match_date": "2026-11-19",
+      "losses": 4,
+      "win_percentage": 33.33,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-19",
@@ -141210,13 +141747,21 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "115046",
+          "opponent": "Martyniuk A.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
+          "matches": 6,
           "wins": 2,
-          "losses": 3
+          "losses": 4
         }
       },
       "opponent_records": {
@@ -141244,17 +141789,22 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "115046": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1491.86
+      "elo_descriptive_only": 1479.38
     },
     "622735": {
       "display_name": "Volkov Y.",
-      "matches": 5,
+      "matches": 7,
       "wins": 4,
-      "losses": 1,
-      "win_percentage": 80.0,
-      "last_match_date": "2026-11-19",
+      "losses": 3,
+      "win_percentage": 57.14,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-19",
@@ -141295,13 +141845,29 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "622779",
+          "opponent": "Troian A.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "1198856",
+          "opponent": "Lobanov A.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
+          "matches": 7,
           "wins": 4,
-          "losses": 1
+          "losses": 3
         }
       },
       "opponent_records": {
@@ -141326,12 +141892,17 @@
           "losses": 0
         },
         "622779": {
-          "matches": 1,
+          "matches": 2,
           "wins": 1,
-          "losses": 0
+          "losses": 1
+        },
+        "1198856": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1534.99
+      "elo_descriptive_only": 1510.4
     },
     "686877": {
       "display_name": "Blazek J.",
@@ -142846,11 +143417,11 @@
     },
     "51777": {
       "display_name": "Fastov A.",
-      "matches": 5,
-      "wins": 2,
+      "matches": 6,
+      "wins": 3,
       "losses": 3,
-      "win_percentage": 40.0,
-      "last_match_date": "2026-11-19",
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-19",
@@ -142891,12 +143462,20 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "278228",
+          "opponent": "Ziakun V.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
-          "wins": 2,
+          "matches": 6,
+          "wins": 3,
           "losses": 3
         }
       },
@@ -142920,9 +143499,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "278228": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1489.46
+      "elo_descriptive_only": 1501.83
     },
     "685007": {
       "display_name": "Oleksandr S.",
@@ -144334,11 +144918,11 @@
     },
     "51779": {
       "display_name": "Hendrych L.",
-      "matches": 4,
-      "wins": 0,
-      "losses": 4,
-      "win_percentage": 0.0,
-      "last_match_date": "2026-11-19",
+      "matches": 6,
+      "wins": 1,
+      "losses": 5,
+      "win_percentage": 16.67,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-19",
@@ -144371,13 +144955,29 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "723272",
+          "opponent": "Kotrbacek P.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202190",
+          "opponent": "Taranko M.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
-          "wins": 0,
-          "losses": 4
+          "matches": 6,
+          "wins": 1,
+          "losses": 5
         }
       },
       "opponent_records": {
@@ -144395,9 +144995,19 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "723272": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "202190": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1453.6
+      "elo_descriptive_only": 1456.68
     },
     "631233": {
       "display_name": "Urechean V.",
@@ -144984,11 +145594,11 @@
     },
     "649704": {
       "display_name": "Aleksandr Kazak",
-      "matches": 4,
-      "wins": 3,
-      "losses": 1,
-      "win_percentage": 75.0,
-      "last_match_date": "2026-11-20",
+      "matches": 7,
+      "wins": 5,
+      "losses": 2,
+      "win_percentage": 71.43,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -145021,13 +145631,37 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "51784",
+          "opponent": "Aleksandr Pavlov",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "58537",
+          "opponent": "Masharskiy A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "636926",
+          "opponent": "Sergey Arefev",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Liga Pro": {
-          "matches": 4,
-          "wins": 3,
-          "losses": 1
+          "matches": 7,
+          "wins": 5,
+          "losses": 2
         }
       },
       "opponent_records": {
@@ -145045,9 +145679,24 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "51784": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "58537": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "636926": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1523.29
+      "elo_descriptive_only": 1531.31
     },
     "793664": {
       "display_name": "Serdiuk S.",
@@ -145807,11 +146456,11 @@
     },
     "1143834": {
       "display_name": "Zabinski M.",
-      "matches": 5,
+      "matches": 6,
       "wins": 2,
-      "losses": 3,
-      "win_percentage": 40.0,
-      "last_match_date": "2026-11-20",
+      "losses": 4,
+      "win_percentage": 33.33,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -145852,20 +146501,28 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202168",
+          "opponent": "Kiejda P.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Cup": {
-          "matches": 5,
+          "matches": 6,
           "wins": 2,
-          "losses": 3
+          "losses": 4
         }
       },
       "opponent_records": {
         "202168": {
-          "matches": 1,
+          "matches": 2,
           "wins": 1,
-          "losses": 0
+          "losses": 1
         },
         "619224": {
           "matches": 1,
@@ -145883,7 +146540,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1486.37
+      "elo_descriptive_only": 1475.71
     },
     "637482": {
       "display_name": "Vich L.",
@@ -146741,28 +147398,12 @@
     },
     "1147514": {
       "display_name": "Sobkow Z.",
-      "matches": 11,
-      "wins": 4,
-      "losses": 7,
-      "win_percentage": 36.36,
+      "matches": 13,
+      "wins": 5,
+      "losses": 8,
+      "win_percentage": 38.46,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
-        {
-          "date": "2026-11-20",
-          "opponent_id": "1140696",
-          "opponent": "Pelczar D.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 2
-        },
-        {
-          "date": "2026-11-20",
-          "opponent_id": "58504",
-          "opponent": "Adamus M.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
         {
           "date": "2026-11-20",
           "opponent_id": "278208",
@@ -146826,13 +147467,29 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649745",
+          "opponent": "Szymik R.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "701289",
+          "opponent": "Sawicki G.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 11,
-          "wins": 4,
-          "losses": 7
+          "matches": 13,
+          "wins": 5,
+          "losses": 8
         }
       },
       "opponent_records": {
@@ -146870,9 +147527,19 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "649745": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "701289": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1469.14
+      "elo_descriptive_only": 1471.52
     },
     "58509": {
       "display_name": "Wozniak J.",
@@ -147306,10 +147973,10 @@
     },
     "636497": {
       "display_name": "Orszulik J.",
-      "matches": 6,
+      "matches": 7,
       "wins": 5,
-      "losses": 1,
-      "win_percentage": 83.33,
+      "losses": 2,
+      "win_percentage": 71.43,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
@@ -147359,20 +148026,28 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "133370",
+          "opponent": "Michalski J.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "TT Elite Series": {
-          "matches": 6,
+          "matches": 7,
           "wins": 5,
-          "losses": 1
+          "losses": 2
         }
       },
       "opponent_records": {
         "133370": {
-          "matches": 1,
+          "matches": 2,
           "wins": 0,
-          "losses": 1
+          "losses": 2
         },
         "649739": {
           "matches": 2,
@@ -147395,7 +148070,7 @@
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1540.59
+      "elo_descriptive_only": 1525.46
     },
     "814455": {
       "display_name": "Melnikov M.",
@@ -149918,11 +150593,11 @@
     },
     "678331": {
       "display_name": "Chyzh P.",
-      "matches": 5,
-      "wins": 4,
-      "losses": 1,
-      "win_percentage": 80.0,
-      "last_match_date": "2026-11-20",
+      "matches": 7,
+      "wins": 5,
+      "losses": 2,
+      "win_percentage": 71.43,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -149963,13 +150638,29 @@
           "result": "L",
           "sets_for": 2,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "678038",
+          "opponent": "Melnichuk P.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "327",
+          "opponent": "Illia Fokin",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
-          "wins": 4,
-          "losses": 1
+          "matches": 7,
+          "wins": 5,
+          "losses": 2
         }
       },
       "opponent_records": {
@@ -149979,8 +150670,8 @@
           "losses": 0
         },
         "678038": {
-          "matches": 1,
-          "wins": 1,
+          "matches": 2,
+          "wins": 2,
           "losses": 0
         },
         "233805": {
@@ -149989,9 +150680,9 @@
           "losses": 0
         },
         "327": {
-          "matches": 1,
+          "matches": 2,
           "wins": 1,
-          "losses": 0
+          "losses": 1
         },
         "619720": {
           "matches": 1,
@@ -149999,7 +150690,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1531.25
+      "elo_descriptive_only": 1526.27
     },
     "894442": {
       "display_name": "Zhurba O.",
@@ -150083,11 +150774,11 @@
     },
     "1176245": {
       "display_name": "Belskyi O.",
-      "matches": 4,
+      "matches": 5,
       "wins": 1,
-      "losses": 3,
-      "win_percentage": 25.0,
-      "last_match_date": "2026-11-20",
+      "losses": 4,
+      "win_percentage": 20.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -150120,13 +150811,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "686896",
+          "opponent": "Ivchuk O.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
+          "matches": 5,
           "wins": 1,
-          "losses": 3
+          "losses": 4
         }
       },
       "opponent_records": {
@@ -150136,9 +150835,9 @@
           "losses": 1
         },
         "686896": {
-          "matches": 1,
+          "matches": 2,
           "wins": 0,
-          "losses": 1
+          "losses": 2
         },
         "686910": {
           "matches": 1,
@@ -150151,7 +150850,7 @@
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1480.05
+      "elo_descriptive_only": 1468.31
     },
     "698978": {
       "display_name": "Evgheni Cilcic",
@@ -150289,11 +150988,11 @@
     },
     "233805": {
       "display_name": "Nikolenko A.",
-      "matches": 5,
+      "matches": 6,
       "wins": 3,
-      "losses": 2,
-      "win_percentage": 60.0,
-      "last_match_date": "2026-11-20",
+      "losses": 3,
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -150334,13 +151033,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "233806",
+          "opponent": "Ivanytskyi V.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
+          "matches": 6,
           "wins": 3,
-          "losses": 2
+          "losses": 3
         }
       },
       "opponent_records": {
@@ -150368,17 +151075,22 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "233806": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1512.83
+      "elo_descriptive_only": 1500.38
     },
     "327": {
       "display_name": "Illia Fokin",
-      "matches": 5,
-      "wins": 1,
+      "matches": 7,
+      "wins": 3,
       "losses": 4,
-      "win_percentage": 20.0,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 42.86,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -150419,12 +151131,28 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "619720",
+          "opponent": "Maksymkiv O.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "678331",
+          "opponent": "Chyzh P.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
-          "wins": 1,
+          "matches": 7,
+          "wins": 3,
           "losses": 4
         }
       },
@@ -150440,13 +151168,13 @@
           "losses": 1
         },
         "619720": {
-          "matches": 1,
-          "wins": 0,
+          "matches": 2,
+          "wins": 1,
           "losses": 1
         },
         "678331": {
-          "matches": 1,
-          "wins": 0,
+          "matches": 2,
+          "wins": 1,
           "losses": 1
         },
         "678038": {
@@ -150455,15 +151183,15 @@
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1467.94
+      "elo_descriptive_only": 1496.19
     },
     "686894": {
       "display_name": "Buluy S.",
-      "matches": 4,
+      "matches": 5,
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "win_percentage": 0.0,
-      "last_match_date": "2026-11-20",
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -150496,13 +151224,21 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "686908",
+          "opponent": "Shyndel I.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
+          "matches": 5,
           "wins": 0,
-          "losses": 4
+          "losses": 5
         }
       },
       "opponent_records": {
@@ -150512,9 +151248,9 @@
           "losses": 1
         },
         "686908": {
-          "matches": 1,
+          "matches": 2,
           "wins": 0,
-          "losses": 1
+          "losses": 2
         },
         "4359": {
           "matches": 1,
@@ -150527,7 +151263,7 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1456.3
+      "elo_descriptive_only": 1446.36
     },
     "686910": {
       "display_name": "Tkachenko O.",
@@ -150678,11 +151414,11 @@
     },
     "51767": {
       "display_name": "Plishylo V.",
-      "matches": 5,
+      "matches": 7,
       "wins": 4,
-      "losses": 1,
-      "win_percentage": 80.0,
-      "last_match_date": "2026-11-20",
+      "losses": 3,
+      "win_percentage": 57.14,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -150723,20 +151459,36 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "58534",
+          "opponent": "Kovalchuk N.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "170429",
+          "opponent": "Hura O.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
+          "matches": 7,
           "wins": 4,
-          "losses": 1
+          "losses": 3
         }
       },
       "opponent_records": {
         "58534": {
-          "matches": 2,
+          "matches": 3,
           "wins": 1,
-          "losses": 1
+          "losses": 2
         },
         "686924": {
           "matches": 1,
@@ -150752,17 +151504,22 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "170429": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1530.59
+      "elo_descriptive_only": 1502.08
     },
     "619720": {
       "display_name": "Maksymkiv O.",
-      "matches": 5,
+      "matches": 6,
       "wins": 4,
-      "losses": 1,
-      "win_percentage": 80.0,
-      "last_match_date": "2026-11-20",
+      "losses": 2,
+      "win_percentage": 66.67,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -150803,13 +151560,21 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "327",
+          "opponent": "Illia Fokin",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
+          "matches": 6,
           "wins": 4,
-          "losses": 1
+          "losses": 2
         }
       },
       "opponent_records": {
@@ -150824,9 +151589,9 @@
           "losses": 0
         },
         "327": {
-          "matches": 1,
+          "matches": 2,
           "wins": 1,
-          "losses": 0
+          "losses": 1
         },
         "622725": {
           "matches": 1,
@@ -150839,15 +151604,15 @@
           "losses": 0
         }
       },
-      "elo_descriptive_only": 1534.33
+      "elo_descriptive_only": 1520.06
     },
     "678038": {
       "display_name": "Melnichuk P.",
-      "matches": 5,
+      "matches": 6,
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "win_percentage": 0.0,
-      "last_match_date": "2026-11-20",
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -150888,13 +151653,21 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "678331",
+          "opponent": "Chyzh P.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
+          "matches": 6,
           "wins": 0,
-          "losses": 5
+          "losses": 6
         }
       },
       "opponent_records": {
@@ -150904,9 +151677,9 @@
           "losses": 1
         },
         "678331": {
-          "matches": 1,
+          "matches": 2,
           "wins": 0,
-          "losses": 1
+          "losses": 2
         },
         "622725": {
           "matches": 1,
@@ -150924,15 +151697,15 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1442.48
+      "elo_descriptive_only": 1433.48
     },
     "686896": {
       "display_name": "Ivchuk O.",
-      "matches": 5,
-      "wins": 2,
+      "matches": 6,
+      "wins": 3,
       "losses": 3,
-      "win_percentage": 40.0,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -150973,19 +151746,27 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "1176245",
+          "opponent": "Belskyi O.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
-          "wins": 2,
+          "matches": 6,
+          "wins": 3,
           "losses": 3
         }
       },
       "opponent_records": {
         "1176245": {
-          "matches": 1,
-          "wins": 1,
+          "matches": 2,
+          "wins": 2,
           "losses": 0
         },
         "4354": {
@@ -151004,15 +151785,15 @@
           "losses": 1
         }
       },
-      "elo_descriptive_only": 1487.66
+      "elo_descriptive_only": 1499.4
     },
     "686908": {
       "display_name": "Shyndel I.",
-      "matches": 5,
-      "wins": 3,
-      "losses": 2,
-      "win_percentage": 60.0,
-      "last_match_date": "2026-11-20",
+      "matches": 7,
+      "wins": 4,
+      "losses": 3,
+      "win_percentage": 57.14,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -151053,13 +151834,29 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "686894",
+          "opponent": "Buluy S.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "4359",
+          "opponent": "Balabei S.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
-          "wins": 3,
-          "losses": 2
+          "matches": 7,
+          "wins": 4,
+          "losses": 3
         }
       },
       "opponent_records": {
@@ -151069,8 +151866,8 @@
           "losses": 1
         },
         "686894": {
-          "matches": 1,
-          "wins": 1,
+          "matches": 2,
+          "wins": 2,
           "losses": 0
         },
         "168897": {
@@ -151079,20 +151876,20 @@
           "losses": 1
         },
         "4359": {
-          "matches": 1,
+          "matches": 2,
           "wins": 1,
-          "losses": 0
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1516.52
+      "elo_descriptive_only": 1516.11
     },
     "686924": {
       "display_name": "Kravets Y.",
-      "matches": 5,
-      "wins": 3,
+      "matches": 6,
+      "wins": 4,
       "losses": 2,
-      "win_percentage": 60.0,
-      "last_match_date": "2026-11-20",
+      "win_percentage": 66.67,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -151133,12 +151930,20 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "170429",
+          "opponent": "Hura O.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 5,
-          "wins": 3,
+          "matches": 6,
+          "wins": 4,
           "losses": 2
         }
       },
@@ -151162,9 +151967,14 @@
           "matches": 2,
           "wins": 1,
           "losses": 1
+        },
+        "170429": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1505.06
+      "elo_descriptive_only": 1515.33
     },
     "168893": {
       "display_name": "Pavlik A.",
@@ -151302,11 +152112,11 @@
     },
     "637359": {
       "display_name": "Hanke T.",
-      "matches": 4,
+      "matches": 5,
       "wins": 2,
-      "losses": 2,
-      "win_percentage": 50.0,
-      "last_match_date": "2026-11-20",
+      "losses": 3,
+      "win_percentage": 40.0,
+      "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
           "date": "2026-11-20",
@@ -151339,13 +152149,21 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202186",
+          "opponent": "Merkl R.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
+          "matches": 5,
           "wins": 2,
-          "losses": 2
+          "losses": 3
         }
       },
       "opponent_records": {
@@ -151363,9 +152181,14 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "202186": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1498.57
+      "elo_descriptive_only": 1486.57
     },
     "627506": {
       "display_name": "Coubal V.",
@@ -152219,10 +153042,10 @@
     },
     "621992": {
       "display_name": "Dukhovenko O.",
-      "matches": 4,
+      "matches": 5,
       "wins": 1,
-      "losses": 3,
-      "win_percentage": 25.0,
+      "losses": 4,
+      "win_percentage": 20.0,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
@@ -152256,13 +153079,21 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "804350",
+          "opponent": "Tuzhylin O.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
+          "matches": 5,
           "wins": 1,
-          "losses": 3
+          "losses": 4
         }
       },
       "opponent_records": {
@@ -152285,16 +153116,21 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "804350": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1476.0
+      "elo_descriptive_only": 1465.65
     },
     "619238": {
       "display_name": "Roman Cherevko",
-      "matches": 4,
-      "wins": 3,
+      "matches": 5,
+      "wins": 4,
       "losses": 1,
-      "win_percentage": 75.0,
+      "win_percentage": 80.0,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
@@ -152328,12 +153164,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "619722",
+          "opponent": "Melnyk V.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
-          "wins": 3,
+          "matches": 5,
+          "wins": 4,
           "losses": 1
         }
       },
@@ -152357,16 +153201,21 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "619722": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1522.38
+      "elo_descriptive_only": 1533.6
     },
     "685006": {
       "display_name": "Marchuk M.",
-      "matches": 3,
+      "matches": 4,
       "wins": 1,
-      "losses": 2,
-      "win_percentage": 33.33,
+      "losses": 3,
+      "win_percentage": 25.0,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
@@ -152392,13 +153241,21 @@
           "result": "L",
           "sets_for": 1,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "685010",
+          "opponent": "Gomilko O.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 3,
+          "matches": 4,
           "wins": 1,
-          "losses": 2
+          "losses": 3
         }
       },
       "opponent_records": {
@@ -152416,16 +153273,21 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "685010": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1486.6
+      "elo_descriptive_only": 1474.64
     },
     "804350": {
       "display_name": "Tuzhylin O.",
-      "matches": 4,
-      "wins": 3,
+      "matches": 5,
+      "wins": 4,
       "losses": 1,
-      "win_percentage": 75.0,
+      "win_percentage": 80.0,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
@@ -152459,12 +153321,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "621992",
+          "opponent": "Dukhovenko O.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
-          "wins": 3,
+          "matches": 5,
+          "wins": 4,
           "losses": 1
         }
       },
@@ -152488,16 +153358,21 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "621992": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1524.03
+      "elo_descriptive_only": 1534.38
     },
     "620278": {
       "display_name": "Pysmennyi Y.",
-      "matches": 4,
+      "matches": 5,
       "wins": 1,
-      "losses": 3,
-      "win_percentage": 25.0,
+      "losses": 4,
+      "win_percentage": 20.0,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
@@ -152531,88 +153406,109 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "619723",
+          "opponent": "Masko Y.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
+          "matches": 5,
           "wins": 1,
+          "losses": 4
+        }
+      },
+      "opponent_records": {
+        "804350": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "621992": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "619722": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "619238": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "619723": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "elo_descriptive_only": 1466.4
+    },
+    "619722": {
+      "display_name": "Melnyk V.",
+      "matches": 5,
+      "wins": 2,
+      "losses": 3,
+      "win_percentage": 40.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-20",
+          "opponent_id": "619723",
+          "opponent": "Masko Y.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "804350",
+          "opponent": "Tuzhylin O.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "620278",
+          "opponent": "Pysmennyi Y.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "621992",
+          "opponent": "Dukhovenko O.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "619238",
+          "opponent": "Roman Cherevko",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        }
+      ],
+      "competition_records": {
+        "Setka Cup": {
+          "matches": 5,
+          "wins": 2,
           "losses": 3
         }
       },
       "opponent_records": {
-        "804350": {
-          "matches": 1,
-          "wins": 0,
-          "losses": 1
-        },
-        "621992": {
-          "matches": 1,
-          "wins": 0,
-          "losses": 1
-        },
-        "619722": {
-          "matches": 1,
-          "wins": 1,
-          "losses": 0
-        },
-        "619238": {
-          "matches": 1,
-          "wins": 0,
-          "losses": 1
-        }
-      },
-      "elo_descriptive_only": 1477.62
-    },
-    "619722": {
-      "display_name": "Melnyk V.",
-      "matches": 4,
-      "wins": 2,
-      "losses": 2,
-      "win_percentage": 50.0,
-      "last_match_date": "2026-11-21",
-      "recent_form_last_10": [
-        {
-          "date": "2026-11-20",
-          "opponent_id": "619723",
-          "opponent": "Masko Y.",
-          "result": "L",
-          "sets_for": 2,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-21",
-          "opponent_id": "804350",
-          "opponent": "Tuzhylin O.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 0
-        },
-        {
-          "date": "2026-11-21",
-          "opponent_id": "620278",
-          "opponent": "Pysmennyi Y.",
-          "result": "L",
-          "sets_for": 1,
-          "sets_against": 3
-        },
-        {
-          "date": "2026-11-21",
-          "opponent_id": "621992",
-          "opponent": "Dukhovenko O.",
-          "result": "W",
-          "sets_for": 3,
-          "sets_against": 1
-        }
-      ],
-      "competition_records": {
-        "Setka Cup": {
-          "matches": 4,
-          "wins": 2,
-          "losses": 2
-        }
-      },
-      "opponent_records": {
         "619723": {
           "matches": 1,
           "wins": 0,
@@ -152632,16 +153528,21 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "619238": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
         }
       },
-      "elo_descriptive_only": 1499.97
+      "elo_descriptive_only": 1488.75
     },
     "619723": {
       "display_name": "Masko Y.",
-      "matches": 4,
-      "wins": 2,
+      "matches": 5,
+      "wins": 3,
       "losses": 2,
-      "win_percentage": 50.0,
+      "win_percentage": 60.0,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
@@ -152675,12 +153576,20 @@
           "result": "L",
           "sets_for": 0,
           "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "620278",
+          "opponent": "Pysmennyi Y.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 4,
-          "wins": 2,
+          "matches": 5,
+          "wins": 3,
           "losses": 2
         }
       },
@@ -152704,9 +153613,80 @@
           "matches": 1,
           "wins": 0,
           "losses": 1
+        },
+        "620278": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1500.0
+      "elo_descriptive_only": 1511.23
+    },
+    "51784": {
+      "display_name": "Aleksandr Pavlov",
+      "matches": 1,
+      "wins": 0,
+      "losses": 1,
+      "win_percentage": 0.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649704",
+          "opponent": "Aleksandr Kazak",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        }
+      ],
+      "competition_records": {
+        "Liga Pro": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "opponent_records": {
+        "649704": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "elo_descriptive_only": 1488.8
+    },
+    "58537": {
+      "display_name": "Masharskiy A.",
+      "matches": 1,
+      "wins": 0,
+      "losses": 1,
+      "win_percentage": 0.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649704",
+          "opponent": "Aleksandr Kazak",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        }
+      ],
+      "competition_records": {
+        "Liga Pro": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "opponent_records": {
+        "649704": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "elo_descriptive_only": 1489.19
     },
     "51735": {
       "display_name": "Cernik J.",
@@ -152767,6 +153747,39 @@
       },
       "elo_descriptive_only": 1514.28
     },
+    "719041": {
+      "display_name": "Skalicky J.",
+      "matches": 1,
+      "wins": 0,
+      "losses": 1,
+      "win_percentage": 0.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "619223",
+          "opponent": "Mrowetz B.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        }
+      ],
+      "competition_records": {
+        "TT Cup": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "opponent_records": {
+        "619223": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "elo_descriptive_only": 1488.71
+    },
     "1200443": {
       "display_name": "Grabowski P.",
       "matches": 3,
@@ -152826,12 +153839,531 @@
       },
       "elo_descriptive_only": 1535.35
     },
-    "685010": {
-      "display_name": "Gomilko O.",
+    "274461": {
+      "display_name": "Spanik T.",
+      "matches": 2,
+      "wins": 1,
+      "losses": 1,
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "58510",
+          "opponent": "Jadczyk M.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "1033998",
+          "opponent": "Dosz A.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        }
+      ],
+      "competition_records": {
+        "TT Elite Series": {
+          "matches": 2,
+          "wins": 1,
+          "losses": 1
+        }
+      },
+      "opponent_records": {
+        "58510": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "1033998": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "elo_descriptive_only": 1506.53
+    },
+    "649743": {
+      "display_name": "Maruszak P.",
+      "matches": 1,
+      "wins": 1,
+      "losses": 0,
+      "win_percentage": 100.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "1147495",
+          "opponent": "Baran S.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        }
+      ],
+      "competition_records": {
+        "TT Elite Series": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "opponent_records": {
+        "1147495": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1512.0
+    },
+    "1147495": {
+      "display_name": "Baran S.",
+      "matches": 1,
+      "wins": 0,
+      "losses": 1,
+      "win_percentage": 0.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649743",
+          "opponent": "Maruszak P.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        }
+      ],
+      "competition_records": {
+        "TT Elite Series": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "opponent_records": {
+        "649743": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "elo_descriptive_only": 1488.0
+    },
+    "909714": {
+      "display_name": "Gritsenko A.",
+      "matches": 3,
+      "wins": 0,
+      "losses": 3,
+      "win_percentage": 0.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "631947",
+          "opponent": "Potapkov A.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "740683",
+          "opponent": "Golyshev A.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "168889",
+          "opponent": "Kharchenko E.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        }
+      ],
+      "competition_records": {
+        "Liga Pro": {
+          "matches": 3,
+          "wins": 0,
+          "losses": 3
+        }
+      },
+      "opponent_records": {
+        "631947": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "740683": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "168889": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "elo_descriptive_only": 1464.44
+    },
+    "706929": {
+      "display_name": "Troshkin A.",
+      "matches": 2,
+      "wins": 2,
+      "losses": 0,
+      "win_percentage": 100.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202178",
+          "opponent": "Novikov I.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "58518",
+          "opponent": "Lobanov A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        }
+      ],
+      "competition_records": {
+        "Liga Pro": {
+          "matches": 2,
+          "wins": 2,
+          "losses": 0
+        }
+      },
+      "opponent_records": {
+        "202178": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "58518": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1524.34
+    },
+    "740683": {
+      "display_name": "Golyshev A.",
+      "matches": 3,
+      "wins": 3,
+      "losses": 0,
+      "win_percentage": 100.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "168889",
+          "opponent": "Kharchenko E.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "909714",
+          "opponent": "Gritsenko A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "631947",
+          "opponent": "Potapkov A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        }
+      ],
+      "competition_records": {
+        "Liga Pro": {
+          "matches": 3,
+          "wins": 3,
+          "losses": 0
+        }
+      },
+      "opponent_records": {
+        "168889": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "909714": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "631947": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1534.79
+    },
+    "168889": {
+      "display_name": "Kharchenko E.",
       "matches": 3,
       "wins": 1,
       "losses": 2,
       "win_percentage": 33.33,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "740683",
+          "opponent": "Golyshev A.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "631947",
+          "opponent": "Potapkov A.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "909714",
+          "opponent": "Gritsenko A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        }
+      ],
+      "competition_records": {
+        "Liga Pro": {
+          "matches": 3,
+          "wins": 1,
+          "losses": 2
+        }
+      },
+      "opponent_records": {
+        "740683": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "631947": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "909714": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1488.44
+    },
+    "649774": {
+      "display_name": "Kononenko A.",
+      "matches": 2,
+      "wins": 1,
+      "losses": 1,
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "647174",
+          "opponent": "Aksentyev S.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "686764",
+          "opponent": "Chereugin S.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        }
+      ],
+      "competition_records": {
+        "Liga Pro": {
+          "matches": 2,
+          "wins": 1,
+          "losses": 1
+        }
+      },
+      "opponent_records": {
+        "647174": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "686764": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1500.41
+    },
+    "647174": {
+      "display_name": "Aksentyev S.",
+      "matches": 2,
+      "wins": 2,
+      "losses": 0,
+      "win_percentage": 100.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649774",
+          "opponent": "Kononenko A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "686764",
+          "opponent": "Chereugin S.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
+        }
+      ],
+      "competition_records": {
+        "Liga Pro": {
+          "matches": 2,
+          "wins": 2,
+          "losses": 0
+        }
+      },
+      "opponent_records": {
+        "649774": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "686764": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1523.16
+    },
+    "651730": {
+      "display_name": "Krikunov I.",
+      "matches": 2,
+      "wins": 1,
+      "losses": 1,
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "58518",
+          "opponent": "Lobanov A.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202178",
+          "opponent": "Novikov I.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
+        }
+      ],
+      "competition_records": {
+        "Liga Pro": {
+          "matches": 2,
+          "wins": 1,
+          "losses": 1
+        }
+      },
+      "opponent_records": {
+        "58518": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "202178": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1500.34
+    },
+    "686764": {
+      "display_name": "Chereugin S.",
+      "matches": 2,
+      "wins": 0,
+      "losses": 2,
+      "win_percentage": 0.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "649774",
+          "opponent": "Kononenko A.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "647174",
+          "opponent": "Aksentyev S.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        }
+      ],
+      "competition_records": {
+        "Liga Pro": {
+          "matches": 2,
+          "wins": 0,
+          "losses": 2
+        }
+      },
+      "opponent_records": {
+        "649774": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "647174": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "elo_descriptive_only": 1476.43
+    },
+    "685010": {
+      "display_name": "Gomilko O.",
+      "matches": 4,
+      "wins": 2,
+      "losses": 2,
+      "win_percentage": 50.0,
       "last_match_date": "2026-11-21",
       "recent_form_last_10": [
         {
@@ -152857,12 +154389,20 @@
           "result": "W",
           "sets_for": 3,
           "sets_against": 2
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "685006",
+          "opponent": "Marchuk M.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
         }
       ],
       "competition_records": {
         "Setka Cup": {
-          "matches": 3,
-          "wins": 1,
+          "matches": 4,
+          "wins": 2,
           "losses": 2
         }
       },
@@ -152881,9 +154421,383 @@
           "matches": 1,
           "wins": 1,
           "losses": 0
+        },
+        "685006": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
         }
       },
-      "elo_descriptive_only": 1487.86
+      "elo_descriptive_only": 1499.82
+    },
+    "278228": {
+      "display_name": "Ziakun V.",
+      "matches": 2,
+      "wins": 1,
+      "losses": 1,
+      "win_percentage": 50.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "51777",
+          "opponent": "Fastov A.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202183",
+          "opponent": "Boklah R.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        }
+      ],
+      "competition_records": {
+        "Setka Cup": {
+          "matches": 2,
+          "wins": 1,
+          "losses": 1
+        }
+      },
+      "opponent_records": {
+        "51777": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        },
+        "202183": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1500.9
+    },
+    "1198856": {
+      "display_name": "Lobanov A.",
+      "matches": 2,
+      "wins": 2,
+      "losses": 0,
+      "win_percentage": 100.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "622778",
+          "opponent": "Kovshun Y.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "622735",
+          "opponent": "Volkov Y.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        }
+      ],
+      "competition_records": {
+        "Setka Cup": {
+          "matches": 2,
+          "wins": 2,
+          "losses": 0
+        }
+      },
+      "opponent_records": {
+        "622778": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "622735": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1525.53
+    },
+    "706350": {
+      "display_name": "Khavanskyi D.",
+      "matches": 1,
+      "wins": 0,
+      "losses": 1,
+      "win_percentage": 0.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "639824",
+          "opponent": "Ponomarenko O.",
+          "result": "L",
+          "sets_for": 1,
+          "sets_against": 3
+        }
+      ],
+      "competition_records": {
+        "Setka Cup": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "opponent_records": {
+        "639824": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "elo_descriptive_only": 1489.89
+    },
+    "202190": {
+      "display_name": "Taranko M.",
+      "matches": 2,
+      "wins": 2,
+      "losses": 0,
+      "win_percentage": 100.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "1198861",
+          "opponent": "Botka J.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        },
+        {
+          "date": "2026-11-21",
+          "opponent_id": "51779",
+          "opponent": "Hendrych L.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 1
+        }
+      ],
+      "competition_records": {
+        "Setka Cup": {
+          "matches": 2,
+          "wins": 2,
+          "losses": 0
+        }
+      },
+      "opponent_records": {
+        "1198861": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        },
+        "51779": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1522.46
+    },
+    "1198861": {
+      "display_name": "Botka J.",
+      "matches": 1,
+      "wins": 0,
+      "losses": 1,
+      "win_percentage": 0.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202190",
+          "opponent": "Taranko M.",
+          "result": "L",
+          "sets_for": 0,
+          "sets_against": 3
+        }
+      ],
+      "competition_records": {
+        "Setka Cup": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "opponent_records": {
+        "202190": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "elo_descriptive_only": 1488.0
+    },
+    "233806": {
+      "display_name": "Ivanytskyi V.",
+      "matches": 1,
+      "wins": 1,
+      "losses": 0,
+      "win_percentage": 100.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "233805",
+          "opponent": "Nikolenko A.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 0
+        }
+      ],
+      "competition_records": {
+        "Setka Cup": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "opponent_records": {
+        "233805": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1512.44
+    },
+    "647449": {
+      "display_name": "Orlowski P.",
+      "matches": 1,
+      "wins": 1,
+      "losses": 0,
+      "win_percentage": 100.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "202185",
+          "opponent": "Kanka T.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        }
+      ],
+      "competition_records": {
+        "Setka Cup": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "opponent_records": {
+        "202185": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1512.0
+    },
+    "741920": {
+      "display_name": "Serdiuk I.",
+      "matches": 1,
+      "wins": 0,
+      "losses": 1,
+      "win_percentage": 0.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "626507",
+          "opponent": "Kolos O.",
+          "result": "L",
+          "sets_for": 2,
+          "sets_against": 3
+        }
+      ],
+      "competition_records": {
+        "Setka Cup": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "opponent_records": {
+        "626507": {
+          "matches": 1,
+          "wins": 0,
+          "losses": 1
+        }
+      },
+      "elo_descriptive_only": 1488.0
+    },
+    "626507": {
+      "display_name": "Kolos O.",
+      "matches": 1,
+      "wins": 1,
+      "losses": 0,
+      "win_percentage": 100.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "741920",
+          "opponent": "Serdiuk I.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        }
+      ],
+      "competition_records": {
+        "Setka Cup": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "opponent_records": {
+        "741920": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1512.0
+    },
+    "691707": {
+      "display_name": "Oleh Stopin",
+      "matches": 1,
+      "wins": 1,
+      "losses": 0,
+      "win_percentage": 100.0,
+      "last_match_date": "2026-11-21",
+      "recent_form_last_10": [
+        {
+          "date": "2026-11-21",
+          "opponent_id": "278222",
+          "opponent": "Yakimenko S.",
+          "result": "W",
+          "sets_for": 3,
+          "sets_against": 2
+        }
+      ],
+      "competition_records": {
+        "Setka Cup": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "opponent_records": {
+        "278222": {
+          "matches": 1,
+          "wins": 1,
+          "losses": 0
+        }
+      },
+      "elo_descriptive_only": 1508.9
     }
   }
 }

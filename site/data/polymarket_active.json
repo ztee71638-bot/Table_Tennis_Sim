@@ -1,17 +1,17 @@
 {
   "source": "Polymarket US public read-only listings",
-  "retrieved_at_utc": "2026-11-21T04:35:44.726616+00:00",
+  "retrieved_at_utc": "2026-11-21T07:40:03.268960+00:00",
   "events_count": 104,
-  "players_count": 72,
+  "players_count": 71,
   "history_source": {
     "available": true,
-    "matches_loaded": 6918,
+    "matches_loaded": 6997,
     "source_key": "datasportsapi_table_tennis"
   },
   "tabletennisapi_source": {
     "available": true,
     "source": "Table Tennis API (DeveloperData)",
-    "retrieved_at_utc": "2026-11-21T04:35:28.813351+00:00",
+    "retrieved_at_utc": "2026-11-21T07:39:53.080009+00:00",
     "names_checked": 8,
     "players_checked_today": 8,
     "calls_today": 21,
@@ -163,6 +163,98 @@
             1
           ],
           "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
+        }
+      }
+    },
+    {
+      "event_id": "292239",
+      "slug": "czechligapro-id2503634976982588",
+      "title": "Martin Nypl vs. Jiri Jira",
+      "competition": "Czech Liga Pro",
+      "start_time_utc": "2026-11-21T07:30:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/czechligapro-id2503634976982588",
+      "player_a": {
+        "name": "Martin Nypl",
+        "history": {
+          "status": "not_found",
+          "candidate_count": 0,
+          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "matches": []
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Jiri Jira",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Jira J.",
+          "source_player_id": "684611",
+          "matches_count": 6,
+          "wins": 4,
+          "losses": 2,
+          "last_match_date": "2026-11-17",
+          "competition_matches": 6,
+          "recent_matches": [
+            {
+              "date": "2026-11-17",
+              "time": "09:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Bunchuzhnyi A.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "08:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Rychtar J.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "07:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Koch J.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "09:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Serak P.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "08:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Roeckel S.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "07:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Koch J.",
+              "result": "W",
+              "score": "3-2"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
         }
       }
     },
@@ -809,6 +901,225 @@
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "292240",
+      "slug": "czechligapro-id2503634976982300",
+      "title": "Richard Skacelik vs. Samuel Byrtus",
+      "competition": "Czech Liga Pro",
+      "start_time_utc": "2026-11-21T08:00:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/czechligapro-id2503634976982300",
+      "player_a": {
+        "name": "Richard Skacelik",
+        "history": {
+          "status": "exact_name_match_identity_unverified",
+          "display_name": "Richard Skacelik",
+          "source_player_id": "58495",
+          "matches_count": 7,
+          "wins": 6,
+          "losses": 1,
+          "last_match_date": "2026-11-16",
+          "competition_matches": 7,
+          "recent_matches": [
+            {
+              "date": "2026-11-16",
+              "time": "13:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Machander D.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Samuel Byrtus",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "11:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Heczko D.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "14:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Levicky J.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "13:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Heczko M.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Blejchar M.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "11:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Levicky J.",
+              "result": "W",
+              "score": "3-2"
+            }
+          ],
+          "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Samuel Byrtus",
+        "history": {
+          "status": "exact_name_match_identity_unverified",
+          "display_name": "Samuel Byrtus",
+          "source_player_id": "278202",
+          "matches_count": 14,
+          "wins": 8,
+          "losses": 6,
+          "last_match_date": "2026-11-19",
+          "competition_matches": 14,
+          "recent_matches": [
+            {
+              "date": "2026-11-19",
+              "time": "22:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Velicka L.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "21:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vavrecka R.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "20:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Levicky J.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "19:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Velicka L.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "17:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Heczko M.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "16:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Danko P.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Stoch J.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "13:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Heczko D.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Richard Skacelik",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "11:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Machander D.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:09:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Blejchar M.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "09:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Heczko D.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "08:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Levicky J.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "07:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Blejchar M.",
+              "result": "L",
+              "score": "1-3"
+            }
+          ],
+          "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
         },
         "model_record": {
           "status": "not_applicable",
@@ -2377,1011 +2688,6 @@
       }
     },
     {
-      "event_id": "294012",
-      "slug": "setkamemd-mocdav-urevad-2026-11-21",
-      "title": "Mocan David vs. Urechean Vadim",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-21T21:45:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkamemd-mocdav-urevad-2026-11-21",
-      "player_a": {
-        "name": "Mocan David",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Mocan D.",
-          "source_player_id": "274468",
-          "matches_count": 4,
-          "wins": 2,
-          "losses": 2,
-          "last_match_date": "2026-11-20",
-          "competition_matches": 4,
-          "recent_matches": [
-            {
-              "date": "2026-11-20",
-              "time": "19:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Urechean V.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "18:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Bucos O.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "17:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Damian Petrascu",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "16:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Urechean V.",
-              "result": "L",
-              "score": "1-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Urechean Vadim",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Urechean V.",
-          "source_player_id": "631233",
-          "matches_count": 8,
-          "wins": 6,
-          "losses": 2,
-          "last_match_date": "2026-11-20",
-          "competition_matches": 8,
-          "recent_matches": [
-            {
-              "date": "2026-11-20",
-              "time": "19:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Mocan D.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "18:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Damian Petrascu",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "17:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Bucos O.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "16:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Mocan D.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "00:35:00",
-              "competition": "Setka Cup",
-              "opponent": "Paniivan H.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "23:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Cherdivar V.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "22:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Paniivan H.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "21:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Yavorskiy O.",
-              "result": "W",
-              "score": "3-1"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294015",
-      "slug": "setkamemd-mitana-iskchr-2026-11-21",
-      "title": "Mitul Anatoli vs. Iskander Christopher",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-21T22:00:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkamemd-mitana-iskchr-2026-11-21",
-      "player_a": {
-        "name": "Mitul Anatoli",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Mitul A.",
-          "source_player_id": "133380",
-          "matches_count": 9,
-          "wins": 4,
-          "losses": 5,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 9,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "19:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Petrea S.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "18:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Petrea S.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "17:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Gashlama A.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "16:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Ciubinidze M.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "22:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Petrea S.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "21:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Veremiichuk Y.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "00:50:00",
-              "competition": "Setka Cup",
-              "opponent": "Marenco A.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "23:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Petrea S.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "21:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Marenco A.",
-              "result": "W",
-              "score": "3-2"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Iskander Christopher",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Iskander C.",
-          "source_player_id": "620136",
-          "matches_count": 8,
-          "wins": 1,
-          "losses": 7,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 8,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "23:20:00",
-              "competition": "Setka Cup",
-              "opponent": "Turcanu R.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "22:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Turcanu R.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "21:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Otgon A.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "20:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Ursu S.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "16:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Ciubinidze M.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "15:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Cojocaru D.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "14:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Ciubinidze M.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "13:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Ursu S.",
-              "result": "L",
-              "score": "0-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294013",
-      "slug": "setkamemd-chevic-mocdav-2026-11-21",
-      "title": "Cherdivar Victor vs. Mocan David",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-21T22:15:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkamemd-chevic-mocdav-2026-11-21",
-      "player_a": {
-        "name": "Cherdivar Victor",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Cherdivar V.",
-          "source_player_id": "622546",
-          "matches_count": 8,
-          "wins": 2,
-          "losses": 6,
-          "last_match_date": "2026-11-20",
-          "competition_matches": 8,
-          "recent_matches": [
-            {
-              "date": "2026-11-20",
-              "time": "00:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Yavorskiy O.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "23:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Urechean V.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "22:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Yavorskiy O.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "21:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Paniivan H.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "00:40:00",
-              "competition": "Setka Cup",
-              "opponent": "Ghimp F.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "23:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Ghimp F.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "22:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Yavorskiy O.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "21:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Paniivan H.",
-              "result": "W",
-              "score": "3-0"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Mocan David",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Mocan D.",
-          "source_player_id": "274468",
-          "matches_count": 4,
-          "wins": 2,
-          "losses": 2,
-          "last_match_date": "2026-11-20",
-          "competition_matches": 4,
-          "recent_matches": [
-            {
-              "date": "2026-11-20",
-              "time": "19:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Urechean V.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "18:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Bucos O.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "17:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Damian Petrascu",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "16:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Urechean V.",
-              "result": "L",
-              "score": "1-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294009",
-      "slug": "setkameua-kryyev-kovvea-2026-11-21",
-      "title": "Kryvorotko Yevhen vs. Kovalenko Veacheslav",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-21T22:25:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkameua-kryyev-kovvea-2026-11-21",
-      "player_a": {
-        "name": "Kryvorotko Yevhen",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Kovalenko Veacheslav",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Kovalenko V.",
-          "source_player_id": "330",
-          "matches_count": 9,
-          "wins": 5,
-          "losses": 4,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 9,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "03:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Kovalchuk A.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "02:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Gavryshko O.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "00:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Plakushchyi P.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "22:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Eduard Rubtsov",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "05:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Gavryshko O.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "03:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Eduard Rubtsov",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "01:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Kovalchuk A.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "00:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Plakushchyi P.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "23:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Mishchenko O.",
-              "result": "W",
-              "score": "3-1"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294010",
-      "slug": "setkameua-khomak-paryur-2026-11-21",
-      "title": "Khomenko Maksym vs. Parahailo Yurii",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-21T22:30:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkameua-khomak-paryur-2026-11-21",
-      "player_a": {
-        "name": "Khomenko Maksym",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Parahailo Yurii",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294014",
-      "slug": "setkamemd-petste-melvla-2026-11-21",
-      "title": "Petrea Stefan vs. Melintii Vladimir",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-21T22:30:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkamemd-petste-melvla-2026-11-21",
-      "player_a": {
-        "name": "Petrea Stefan",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Petrea S.",
-          "source_player_id": "621743",
-          "matches_count": 9,
-          "wins": 2,
-          "losses": 7,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 9,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "19:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Mitul A.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "18:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Mitul A.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "17:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Ciubinidze M.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "16:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Gashlama A.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "00:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Veremiichuk Y.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "23:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Veremiichuk Y.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "22:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Mitul A.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "23:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Mitul A.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "22:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Marenco A.",
-              "result": "L",
-              "score": "2-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Melintii Vladimir",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Melintii V.",
-          "source_player_id": "630374",
-          "matches_count": 8,
-          "wins": 4,
-          "losses": 4,
-          "last_match_date": "2026-11-18",
-          "competition_matches": 8,
-          "recent_matches": [
-            {
-              "date": "2026-11-18",
-              "time": "15:43:00",
-              "competition": "Setka Cup",
-              "opponent": "Ursu S.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "14:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Ursu S.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "13:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Ciubinidze M.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "12:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Cojocaru D.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "20:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Otgon A.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "19:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Turcanu R.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "18:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Bucos O.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "17:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Otgon A.",
-              "result": "L",
-              "score": "0-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294011",
-      "slug": "setkameua-lobval-kroyan-2026-11-21",
-      "title": "Lobas Valentyn vs. Krol Yan",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-21T22:35:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkameua-lobval-kroyan-2026-11-21",
-      "player_a": {
-        "name": "Lobas Valentyn",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Krol Yan",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Krol Y.",
-          "source_player_id": "685009",
-          "matches_count": 4,
-          "wins": 3,
-          "losses": 1,
-          "last_match_date": "2026-11-21",
-          "competition_matches": 4,
-          "recent_matches": [
-            {
-              "date": "2026-11-21",
-              "time": "04:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Kobets V.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "01:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Gomilko O.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "23:35:00",
-              "competition": "Setka Cup",
-              "opponent": "Marchuk M.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "22:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Nemchenko D.",
-              "result": "W",
-              "score": "3-0"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294148",
-      "slug": "setkameua-gazole-slomyk-2026-11-21",
-      "title": "Gazhula Oleksii vs. Slozka Mykola",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-21T22:45:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkameua-gazole-slomyk-2026-11-21",
-      "player_a": {
-        "name": "Gazhula Oleksii",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Slozka Mykola",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Slozka M.",
-          "source_player_id": "170428",
-          "matches_count": 8,
-          "wins": 5,
-          "losses": 3,
-          "last_match_date": "2026-11-21",
-          "competition_matches": 8,
-          "recent_matches": [
-            {
-              "date": "2026-11-21",
-              "time": "04:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Volodymyr Korobko",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "02:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Kantarevych D.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "00:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Moshovskyi V.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "22:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Palii D.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "21:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Oleksandr S.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "02:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Maltsev D.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "23:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Volodymyr Korobko",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "21:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Maltsev D.",
-              "result": "L",
-              "score": "0-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
       "event_id": "294156",
       "slug": "setkamemd-ghifio-urevad-2026-11-21",
       "title": "Ghimp Fiodor vs. Urechean Vadim",
@@ -3553,122 +2859,6 @@
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294149",
-      "slug": "setkameua-cheser-rubedu-2026-11-21",
-      "title": "Chelpanov Serhii vs. Rubtsov Eduard",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-21T22:55:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkameua-cheser-rubedu-2026-11-21",
-      "player_a": {
-        "name": "Chelpanov Serhii",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Rubtsov Eduard",
-        "history": {
-          "status": "exact_name_match_identity_unverified",
-          "display_name": "Eduard Rubtsov",
-          "source_player_id": "186",
-          "matches_count": 9,
-          "wins": 2,
-          "losses": 7,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 9,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "05:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Kovalchuk A.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "03:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Gavryshko O.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "01:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Plakushchyi P.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "22:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Kovalenko V.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "04:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Kovalchuk A.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "03:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Kovalenko V.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "02:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Plakushchyi P.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "00:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Mishchenko O.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "22:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Gavryshko O.",
-              "result": "L",
-              "score": "2-3"
-            }
-          ],
-          "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
         },
         "model_record": {
           "status": "not_applicable",
@@ -4875,233 +4065,6 @@
               "time": "07:00:00",
               "competition": "Czech Liga Pro",
               "opponent": "Pleskot J.",
-              "result": "W",
-              "score": "3-1"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294147",
-      "slug": "setkameua-gomole-kobvit-2026-11-21",
-      "title": "Gomilko Oleksandr vs. Kobets Vitalii",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-21T23:05:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkameua-gomole-kobvit-2026-11-21",
-      "player_a": {
-        "name": "Gomilko Oleksandr",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Gomilko O.",
-          "source_player_id": "685010",
-          "matches_count": 3,
-          "wins": 1,
-          "losses": 2,
-          "last_match_date": "2026-11-21",
-          "competition_matches": 3,
-          "recent_matches": [
-            {
-              "date": "2026-11-21",
-              "time": "03:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Kobets V.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "01:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Krol Y.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "00:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Nemchenko D.",
-              "result": "L",
-              "score": "0-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Kobets Vitalii",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Kobets V.",
-          "source_player_id": "649137",
-          "matches_count": 19,
-          "wins": 7,
-          "losses": 12,
-          "last_match_date": "2026-11-21",
-          "competition_matches": 19,
-          "recent_matches": [
-            {
-              "date": "2026-11-21",
-              "time": "04:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Krol Y.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "03:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Gomilko O.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "02:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Nemchenko D.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "22:35:00",
-              "competition": "Setka Cup",
-              "opponent": "Marchuk M.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "05:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Derevynskyi D.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "03:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Khandetskyi S.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "01:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Rehotun D.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "00:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Ponomarenko T.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "23:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Hrynenko K.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "04:35:00",
-              "competition": "Setka Cup",
-              "opponent": "Khandetskyi S.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "02:35:00",
-              "competition": "Setka Cup",
-              "opponent": "Rehotun D.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "01:35:00",
-              "competition": "Setka Cup",
-              "opponent": "Derevynskyi D.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "00:35:00",
-              "competition": "Setka Cup",
-              "opponent": "Melashenko O.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "23:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Hrynenko K.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "21:25:00",
-              "competition": "Setka Cup",
-              "opponent": "Khandetskyi S.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "19:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Rehotun D.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "17:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Melashenko O.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "15:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Derevynskyi D.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "14:55:00",
-              "competition": "Setka Cup",
-              "opponent": "Pitsyk S.",
               "result": "W",
               "score": "3-1"
             }
@@ -7799,12 +6762,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Marchuk M.",
           "source_player_id": "685006",
-          "matches_count": 3,
+          "matches_count": 4,
           "wins": 1,
-          "losses": 2,
+          "losses": 3,
           "last_match_date": "2026-11-21",
-          "competition_matches": 3,
+          "competition_matches": 4,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "05:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Gomilko O.",
+              "result": "L",
+              "score": "0-3"
+            },
             {
               "date": "2026-11-21",
               "time": "03:35:00",
@@ -9011,12 +7982,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Gomilko O.",
           "source_player_id": "685010",
-          "matches_count": 3,
-          "wins": 1,
+          "matches_count": 4,
+          "wins": 2,
           "losses": 2,
           "last_match_date": "2026-11-21",
-          "competition_matches": 3,
+          "competition_matches": 4,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "05:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Marchuk M.",
+              "result": "W",
+              "score": "3-0"
+            },
             {
               "date": "2026-11-21",
               "time": "03:05:00",
@@ -11560,12 +10539,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Gomilko O.",
           "source_player_id": "685010",
-          "matches_count": 3,
-          "wins": 1,
+          "matches_count": 4,
+          "wins": 2,
           "losses": 2,
           "last_match_date": "2026-11-21",
-          "competition_matches": 3,
+          "competition_matches": 4,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "05:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Marchuk M.",
+              "result": "W",
+              "score": "3-0"
+            },
             {
               "date": "2026-11-21",
               "time": "03:05:00",
@@ -12952,12 +11939,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Marchuk M.",
           "source_player_id": "685006",
-          "matches_count": 3,
+          "matches_count": 4,
           "wins": 1,
-          "losses": 2,
+          "losses": 3,
           "last_match_date": "2026-11-21",
-          "competition_matches": 3,
+          "competition_matches": 4,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "05:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Gomilko O.",
+              "result": "L",
+              "score": "0-3"
+            },
             {
               "date": "2026-11-21",
               "time": "03:35:00",
@@ -14288,12 +13283,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Gomilko O.",
           "source_player_id": "685010",
-          "matches_count": 3,
-          "wins": 1,
+          "matches_count": 4,
+          "wins": 2,
           "losses": 2,
           "last_match_date": "2026-11-21",
-          "competition_matches": 3,
+          "competition_matches": 4,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "05:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Marchuk M.",
+              "result": "W",
+              "score": "3-0"
+            },
             {
               "date": "2026-11-21",
               "time": "03:05:00",
@@ -15390,273 +14393,6 @@
       }
     },
     {
-      "event_id": "294849",
-      "slug": "czechligapro-id2503634976982312",
-      "title": "Martin Sochor vs. Jaroslav Prokupek",
-      "competition": "Czech Liga Pro",
-      "start_time_utc": "2026-11-22T03:00:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/czechligapro-id2503634976982312",
-      "player_a": {
-        "name": "Martin Sochor",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Sochor M.",
-          "source_player_id": "1065589",
-          "matches_count": 8,
-          "wins": 1,
-          "losses": 7,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 8,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "22:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "17:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Dedek J.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "16:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Volf M.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "15:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Sedlak M.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "03:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Postelt V.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "01:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kouble D.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "00:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Tuma D.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "23:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Vladimir Cermak",
-              "result": "L",
-              "score": "1-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Jaroslav Prokupek",
-        "history": {
-          "status": "exact_name_match_identity_unverified",
-          "display_name": "Jaroslav Prokupek",
-          "source_player_id": "622982",
-          "matches_count": 19,
-          "wins": 10,
-          "losses": 9,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 19,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "22:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "20:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "19:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "04:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Fojt P.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "03:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "02:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "00:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "23:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Fojt P.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "09:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Bresky J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "08:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "07:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Pavelka R.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "14:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "13:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "12:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "11:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "22:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Dedek J.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "21:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "20:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Lukas Krok",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "19:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Dedek J.",
-              "result": "W",
-              "score": "3-2"
-            }
-          ],
-          "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
       "event_id": "294862",
       "slug": "setkameua-lobval-kobvit-2026-11-22",
       "title": "Lobas Valentyn vs. Kobets Vitalii",
@@ -16079,202 +14815,6 @@
               "opponent": "Parhomenko D.",
               "result": "W",
               "score": "3-1"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "294859",
-      "slug": "czechligapro-id2503634976982496",
-      "title": "Alexander Mikuska vs. Dmitro Parhomenko",
-      "competition": "Czech Liga Pro",
-      "start_time_utc": "2026-11-22T03:30:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/czechligapro-id2503634976982496",
-      "player_a": {
-        "name": "Alexander Mikuska",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Dmitro Parhomenko",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Parhomenko D.",
-          "source_player_id": "69498",
-          "matches_count": 19,
-          "wins": 7,
-          "losses": 12,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 19,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "13:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Varcl J.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "12:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Smrcek M.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "11:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kolar M.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "04:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "03:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "01:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Fojt P.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "00:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "23:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "13:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Kolar M.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "12:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Bresky J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "11:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "18:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "17:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Darin K.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "16:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Plachy J.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "15:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "04:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Svoboda A.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "03:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Budinsky P.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "02:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Holovatiuk Y.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "00:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Svoboda A.",
-              "result": "L",
-              "score": "1-3"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -17278,12 +15818,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Marchuk M.",
           "source_player_id": "685006",
-          "matches_count": 3,
+          "matches_count": 4,
           "wins": 1,
-          "losses": 2,
+          "losses": 3,
           "last_match_date": "2026-11-21",
-          "competition_matches": 3,
+          "competition_matches": 4,
           "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "05:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Gomilko O.",
+              "result": "L",
+              "score": "0-3"
+            },
             {
               "date": "2026-11-21",
               "time": "03:35:00",
@@ -17310,6 +15858,1172 @@
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "294961",
+      "slug": "setkameua-paldmy-pruser-2026-11-22",
+      "title": "Palii Dmytro vs. Prus Serhii",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-22T03:45:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-paldmy-pruser-2026-11-22",
+      "player_a": {
+        "name": "Palii Dmytro",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Palii D.",
+          "source_player_id": "899044",
+          "matches_count": 5,
+          "wins": 3,
+          "losses": 2,
+          "last_match_date": "2026-11-21",
+          "competition_matches": 5,
+          "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "03:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Oleksandr S.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "01:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Moshovskyi V.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "00:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Volodymyr Korobko",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "22:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Slozka M.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "21:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Kantarevych D.",
+              "result": "W",
+              "score": "3-0"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Prus Serhii",
+        "history": {
+          "status": "not_found",
+          "candidate_count": 0,
+          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "matches": []
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "294964",
+      "slug": "setkameua-rubedu-kovvea-2026-11-22",
+      "title": "Rubtsov Eduard vs. Kovalenko Veacheslav",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-22T03:55:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-rubedu-kovvea-2026-11-22",
+      "player_a": {
+        "name": "Rubtsov Eduard",
+        "history": {
+          "status": "exact_name_match_identity_unverified",
+          "display_name": "Eduard Rubtsov",
+          "source_player_id": "186",
+          "matches_count": 9,
+          "wins": 2,
+          "losses": 7,
+          "last_match_date": "2026-11-19",
+          "competition_matches": 9,
+          "recent_matches": [
+            {
+              "date": "2026-11-19",
+              "time": "05:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalchuk A.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "03:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Gavryshko O.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "01:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Plakushchyi P.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "22:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalenko V.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "04:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalchuk A.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "03:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalenko V.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "02:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Plakushchyi P.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "00:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Mishchenko O.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "22:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Gavryshko O.",
+              "result": "L",
+              "score": "2-3"
+            }
+          ],
+          "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Kovalenko Veacheslav",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Kovalenko V.",
+          "source_player_id": "330",
+          "matches_count": 9,
+          "wins": 5,
+          "losses": 4,
+          "last_match_date": "2026-11-19",
+          "competition_matches": 9,
+          "recent_matches": [
+            {
+              "date": "2026-11-19",
+              "time": "03:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalchuk A.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "02:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Gavryshko O.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "00:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Plakushchyi P.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "22:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Eduard Rubtsov",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "05:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Gavryshko O.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "03:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Eduard Rubtsov",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "01:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalchuk A.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "00:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Plakushchyi P.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "23:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Mishchenko O.",
+              "result": "W",
+              "score": "3-1"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "294963",
+      "slug": "setkameua-stoole-paryur-2026-11-22",
+      "title": "Storozhenko Oleksandr vs. Parahailo Yurii",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-22T04:00:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-stoole-paryur-2026-11-22",
+      "player_a": {
+        "name": "Storozhenko Oleksandr",
+        "history": {
+          "status": "ambiguous",
+          "candidate_count": 2,
+          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "matches": []
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Parahailo Yurii",
+        "history": {
+          "status": "not_found",
+          "candidate_count": 0,
+          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "matches": []
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "294962",
+      "slug": "setkameua-nemden-lobval-2026-11-22",
+      "title": "Nemchenko Denys vs. Lobas Valentyn",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-22T04:05:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-nemden-lobval-2026-11-22",
+      "player_a": {
+        "name": "Nemchenko Denys",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Nemchenko D.",
+          "source_player_id": "698131",
+          "matches_count": 4,
+          "wins": 2,
+          "losses": 2,
+          "last_match_date": "2026-11-21",
+          "competition_matches": 4,
+          "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "03:35:00",
+              "competition": "Setka Cup",
+              "opponent": "Marchuk M.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "02:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Kobets V.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "00:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Gomilko O.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "22:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Krol Y.",
+              "result": "L",
+              "score": "0-3"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Lobas Valentyn",
+        "history": {
+          "status": "not_found",
+          "candidate_count": 0,
+          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "matches": []
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "294965",
+      "slug": "setkameua-kanden-slomyk-2026-11-22",
+      "title": "Kantarevych Denys vs. Slozka Mykola",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-22T04:15:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-kanden-slomyk-2026-11-22",
+      "player_a": {
+        "name": "Kantarevych Denys",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Kantarevych D.",
+          "source_player_id": "1176257",
+          "matches_count": 5,
+          "wins": 2,
+          "losses": 3,
+          "last_match_date": "2026-11-21",
+          "competition_matches": 5,
+          "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "03:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Moshovskyi V.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "02:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Slozka M.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "01:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Oleksandr S.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "23:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Volodymyr Korobko",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "21:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Palii D.",
+              "result": "L",
+              "score": "0-3"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Slozka Mykola",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Slozka M.",
+          "source_player_id": "170428",
+          "matches_count": 8,
+          "wins": 5,
+          "losses": 3,
+          "last_match_date": "2026-11-21",
+          "competition_matches": 8,
+          "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Volodymyr Korobko",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "02:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Kantarevych D.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "00:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Moshovskyi V.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "22:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Palii D.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "21:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Oleksandr S.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "02:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Maltsev D.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "23:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Volodymyr Korobko",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "21:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Maltsev D.",
+              "result": "L",
+              "score": "0-3"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "294966",
+      "slug": "setkameua-kryyev-cheser-2026-11-22",
+      "title": "Kryvorotko Yevhen vs. Chelpanov Serhii",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-22T04:25:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-kryyev-cheser-2026-11-22",
+      "player_a": {
+        "name": "Kryvorotko Yevhen",
+        "history": {
+          "status": "not_found",
+          "candidate_count": 0,
+          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "matches": []
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Chelpanov Serhii",
+        "history": {
+          "status": "not_found",
+          "candidate_count": 0,
+          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "matches": []
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "294967",
+      "slug": "setkameua-gomole-marmak-2026-11-22",
+      "title": "Gomilko Oleksandr vs. Marchuk Maksym",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-22T04:35:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-gomole-marmak-2026-11-22",
+      "player_a": {
+        "name": "Gomilko Oleksandr",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Gomilko O.",
+          "source_player_id": "685010",
+          "matches_count": 4,
+          "wins": 2,
+          "losses": 2,
+          "last_match_date": "2026-11-21",
+          "competition_matches": 4,
+          "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "05:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Marchuk M.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "03:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Kobets V.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "01:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Krol Y.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "00:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Nemchenko D.",
+              "result": "L",
+              "score": "0-3"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Marchuk Maksym",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Marchuk M.",
+          "source_player_id": "685006",
+          "matches_count": 4,
+          "wins": 1,
+          "losses": 3,
+          "last_match_date": "2026-11-21",
+          "competition_matches": 4,
+          "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "05:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Gomilko O.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "03:35:00",
+              "competition": "Setka Cup",
+              "opponent": "Nemchenko D.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "23:35:00",
+              "competition": "Setka Cup",
+              "opponent": "Krol Y.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "22:35:00",
+              "competition": "Setka Cup",
+              "opponent": "Kobets V.",
+              "result": "L",
+              "score": "2-3"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "295310",
+      "slug": "setkameua-cheart-kovvea-2026-11-22",
+      "title": "Chepurnyi Artem vs. Kovalenko Veacheslav",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-22T04:55:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-cheart-kovvea-2026-11-22",
+      "player_a": {
+        "name": "Chepurnyi Artem",
+        "history": {
+          "status": "not_found",
+          "candidate_count": 0,
+          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "matches": []
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Kovalenko Veacheslav",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Kovalenko V.",
+          "source_player_id": "330",
+          "matches_count": 9,
+          "wins": 5,
+          "losses": 4,
+          "last_match_date": "2026-11-19",
+          "competition_matches": 9,
+          "recent_matches": [
+            {
+              "date": "2026-11-19",
+              "time": "03:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalchuk A.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "02:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Gavryshko O.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "00:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Plakushchyi P.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "22:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Eduard Rubtsov",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "05:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Gavryshko O.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "03:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Eduard Rubtsov",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "01:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalchuk A.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "00:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Plakushchyi P.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "23:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Mishchenko O.",
+              "result": "W",
+              "score": "3-1"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "295309",
+      "slug": "setkameua-kobvit-kroyan-2026-11-22",
+      "title": "Kobets Vitalii vs. Krol Yan",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-22T05:05:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-kobvit-kroyan-2026-11-22",
+      "player_a": {
+        "name": "Kobets Vitalii",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Kobets V.",
+          "source_player_id": "649137",
+          "matches_count": 19,
+          "wins": 7,
+          "losses": 12,
+          "last_match_date": "2026-11-21",
+          "competition_matches": 19,
+          "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Krol Y.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "03:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Gomilko O.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "02:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Nemchenko D.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "22:35:00",
+              "competition": "Setka Cup",
+              "opponent": "Marchuk M.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "05:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Derevynskyi D.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "03:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Khandetskyi S.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "01:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Rehotun D.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "00:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Ponomarenko T.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "23:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Hrynenko K.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "04:35:00",
+              "competition": "Setka Cup",
+              "opponent": "Khandetskyi S.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "02:35:00",
+              "competition": "Setka Cup",
+              "opponent": "Rehotun D.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "01:35:00",
+              "competition": "Setka Cup",
+              "opponent": "Derevynskyi D.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "00:35:00",
+              "competition": "Setka Cup",
+              "opponent": "Melashenko O.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "23:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Hrynenko K.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "21:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Khandetskyi S.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "19:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Rehotun D.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "17:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Melashenko O.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "15:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Derevynskyi D.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "14:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Pitsyk S.",
+              "result": "W",
+              "score": "3-1"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Krol Yan",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Krol Y.",
+          "source_player_id": "685009",
+          "matches_count": 4,
+          "wins": 3,
+          "losses": 1,
+          "last_match_date": "2026-11-21",
+          "competition_matches": 4,
+          "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "04:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Kobets V.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "01:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Gomilko O.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "23:35:00",
+              "competition": "Setka Cup",
+              "opponent": "Marchuk M.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "22:05:00",
+              "competition": "Setka Cup",
+              "opponent": "Nemchenko D.",
+              "result": "W",
+              "score": "3-0"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "295308",
+      "slug": "setkameua-kovole-rubedu-2026-11-22",
+      "title": "Kovalchuk Oleksandr vs. Rubtsov Eduard",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-22T05:25:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-kovole-rubedu-2026-11-22",
+      "player_a": {
+        "name": "Kovalchuk Oleksandr",
+        "history": {
+          "status": "not_found",
+          "candidate_count": 0,
+          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "matches": []
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Rubtsov Eduard",
+        "history": {
+          "status": "exact_name_match_identity_unverified",
+          "display_name": "Eduard Rubtsov",
+          "source_player_id": "186",
+          "matches_count": 9,
+          "wins": 2,
+          "losses": 7,
+          "last_match_date": "2026-11-19",
+          "competition_matches": 9,
+          "recent_matches": [
+            {
+              "date": "2026-11-19",
+              "time": "05:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalchuk A.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "03:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Gavryshko O.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "01:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Plakushchyi P.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "22:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalenko V.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "04:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalchuk A.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "03:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalenko V.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "02:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Plakushchyi P.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "00:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Mishchenko O.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "22:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Gavryshko O.",
+              "result": "L",
+              "score": "2-3"
+            }
+          ],
+          "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
         },
         "model_record": {
           "status": "not_applicable",
@@ -17415,11 +17129,6 @@
           "title": "Alexander Mikuska vs. Adam Svoboda",
           "competition": "Czech Liga Pro",
           "url": "https://polymarket.us/event/czechligapro-id2503634976998674"
-        },
-        {
-          "title": "Alexander Mikuska vs. Dmitro Parhomenko",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982496"
         },
         {
           "title": "Alexander Mikuska vs. Martin Sochor",
@@ -17539,11 +17248,6 @@
       "name": "Chelpanov Serhii",
       "events": [
         {
-          "title": "Chelpanov Serhii vs. Rubtsov Eduard",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-cheser-rubedu-2026-11-21"
-        },
-        {
           "title": "Chelpanov Serhii vs. Chepurnyi Artem",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-cheser-cheart-2026-11-22"
@@ -17557,6 +17261,11 @@
           "title": "Chelpanov Serhii vs. Kovalchuk Oleksandr",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-cheser-kovole-2026-11-22"
+        },
+        {
+          "title": "Kryvorotko Yevhen vs. Chelpanov Serhii",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-kryyev-cheser-2026-11-22"
         }
       ],
       "history": {
@@ -17592,6 +17301,11 @@
           "title": "Kryvorotko Yevhen vs. Chepurnyi Artem",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-kryyev-cheart-2026-11-22"
+        },
+        {
+          "title": "Chepurnyi Artem vs. Kovalenko Veacheslav",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-cheart-kovvea-2026-11-22"
         }
       ],
       "history": {
@@ -17599,97 +17313,6 @@
         "candidate_count": 0,
         "identity_note": "No unique source-scoped player candidate; history is not attached.",
         "matches": []
-      },
-      "model_record": {
-        "status": "not_applicable",
-        "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
-      "name": "Cherdivar Victor",
-      "events": [
-        {
-          "title": "Cherdivar Victor vs. Mocan David",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamemd-chevic-mocdav-2026-11-21"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Cherdivar V.",
-        "source_player_id": "622546",
-        "matches_count": 8,
-        "wins": 2,
-        "losses": 6,
-        "last_match_date": "2026-11-20",
-        "competition_matches": 8,
-        "recent_matches": [
-          {
-            "date": "2026-11-20",
-            "time": "00:05:00",
-            "competition": "Setka Cup",
-            "opponent": "Yavorskiy O.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "23:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Urechean V.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "22:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Yavorskiy O.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "21:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Paniivan H.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-18",
-            "time": "00:40:00",
-            "competition": "Setka Cup",
-            "opponent": "Ghimp F.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-17",
-            "time": "23:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Ghimp F.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-17",
-            "time": "22:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Yavorskiy O.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-17",
-            "time": "21:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Paniivan H.",
-            "result": "W",
-            "score": "3-0"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
       },
       "model_record": {
         "status": "not_applicable",
@@ -17738,11 +17361,6 @@
           "title": "Dmitro Parhomenko vs. Jaroslav Prokupek",
           "competition": "Czech Liga Pro",
           "url": "https://polymarket.us/event/czechligapro-id2503634976989018"
-        },
-        {
-          "title": "Alexander Mikuska vs. Dmitro Parhomenko",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982496"
         }
       ],
       "history": {
@@ -18202,11 +17820,6 @@
       "name": "Gazhula Oleksii",
       "events": [
         {
-          "title": "Gazhula Oleksii vs. Slozka Mykola",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-gazole-slomyk-2026-11-21"
-        },
-        {
           "title": "Gazhula Oleksii vs. Kantarevych Denys",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-gazole-kanden-2026-11-22"
@@ -18328,11 +17941,6 @@
       "name": "Gomilko Oleksandr",
       "events": [
         {
-          "title": "Gomilko Oleksandr vs. Kobets Vitalii",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-gomole-kobvit-2026-11-21"
-        },
-        {
           "title": "Lobas Valentyn vs. Gomilko Oleksandr",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-lobval-gomole-2026-11-22"
@@ -18346,18 +17954,31 @@
           "title": "Nemchenko Denys vs. Gomilko Oleksandr",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-nemden-gomole-2026-11-22"
+        },
+        {
+          "title": "Gomilko Oleksandr vs. Marchuk Maksym",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-gomole-marmak-2026-11-22"
         }
       ],
       "history": {
         "status": "name_initial_match_review_only",
         "display_name": "Gomilko O.",
         "source_player_id": "685010",
-        "matches_count": 3,
-        "wins": 1,
+        "matches_count": 4,
+        "wins": 2,
         "losses": 2,
         "last_match_date": "2026-11-21",
-        "competition_matches": 3,
+        "competition_matches": 4,
         "recent_matches": [
+          {
+            "date": "2026-11-21",
+            "time": "05:05:00",
+            "competition": "Setka Cup",
+            "opponent": "Marchuk M.",
+            "result": "W",
+            "score": "3-0"
+          },
           {
             "date": "2026-11-21",
             "time": "03:05:00",
@@ -18485,11 +18106,6 @@
     {
       "name": "Iskander Christopher",
       "events": [
-        {
-          "title": "Mitul Anatoli vs. Iskander Christopher",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamemd-mitana-iskchr-2026-11-21"
-        },
         {
           "title": "Iskander Christopher vs. Melintii Vladimir",
           "competition": "Setka Cup",
@@ -18985,11 +18601,6 @@
           "title": "Dmitro Parhomenko vs. Jaroslav Prokupek",
           "competition": "Czech Liga Pro",
           "url": "https://polymarket.us/event/czechligapro-id2503634976989018"
-        },
-        {
-          "title": "Martin Sochor vs. Jaroslav Prokupek",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982312"
         }
       ],
       "history": {
@@ -19165,6 +18776,11 @@
     {
       "name": "Jiri Jira",
       "events": [
+        {
+          "title": "Martin Nypl vs. Jiri Jira",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634976982588"
+        },
         {
           "title": "Jiri Jira vs. Artem Bunchuzhnyi",
           "competition": "Czech Liga Pro",
@@ -19658,6 +19274,11 @@
           "title": "Sydorchuk Oleksandr vs. Kantarevych Denys",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-sydole-kanden-2026-11-22"
+        },
+        {
+          "title": "Kantarevych Denys vs. Slozka Mykola",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-kanden-slomyk-2026-11-22"
         }
       ],
       "history": {
@@ -19722,11 +19343,6 @@
       "name": "Khomenko Maksym",
       "events": [
         {
-          "title": "Khomenko Maksym vs. Parahailo Yurii",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-khomak-paryur-2026-11-21"
-        },
-        {
           "title": "Khomenko Maksym vs. Storozhenko Oleksandr",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-khomak-stoole-2026-11-22"
@@ -19757,11 +19373,6 @@
       "name": "Kobets Vitalii",
       "events": [
         {
-          "title": "Gomilko Oleksandr vs. Kobets Vitalii",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-gomole-kobvit-2026-11-21"
-        },
-        {
           "title": "Kobets Vitalii vs. Marchuk Maksym",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-kobvit-marmak-2026-11-22"
@@ -19775,6 +19386,11 @@
           "title": "Lobas Valentyn vs. Kobets Vitalii",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-lobval-kobvit-2026-11-22"
+        },
+        {
+          "title": "Kobets Vitalii vs. Krol Yan",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-kobvit-kroyan-2026-11-22"
         }
       ],
       "history": {
@@ -19969,6 +19585,11 @@
           "title": "Chelpanov Serhii vs. Kovalchuk Oleksandr",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-cheser-kovole-2026-11-22"
+        },
+        {
+          "title": "Kovalchuk Oleksandr vs. Rubtsov Eduard",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-kovole-rubedu-2026-11-22"
         }
       ],
       "history": {
@@ -20068,11 +19689,6 @@
       "name": "Kovalenko Veacheslav",
       "events": [
         {
-          "title": "Kryvorotko Yevhen vs. Kovalenko Veacheslav",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-kryyev-kovvea-2026-11-21"
-        },
-        {
           "title": "Kovalchuk Oleksandr vs. Kovalenko Veacheslav",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-kovole-kovvea-2026-11-22"
@@ -20081,6 +19697,16 @@
           "title": "Chelpanov Serhii vs. Kovalenko Veacheslav",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-cheser-kovvea-2026-11-22"
+        },
+        {
+          "title": "Rubtsov Eduard vs. Kovalenko Veacheslav",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-rubedu-kovvea-2026-11-22"
+        },
+        {
+          "title": "Chepurnyi Artem vs. Kovalenko Veacheslav",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-cheart-kovvea-2026-11-22"
         }
       ],
       "history": {
@@ -20177,11 +19803,6 @@
       "name": "Krol Yan",
       "events": [
         {
-          "title": "Lobas Valentyn vs. Krol Yan",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-lobval-kroyan-2026-11-21"
-        },
-        {
           "title": "Nemchenko Denys vs. Krol Yan",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-nemden-kroyan-2026-11-21"
@@ -20195,6 +19816,11 @@
           "title": "Krol Yan vs. Marchuk Maksym",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-kroyan-marmak-2026-11-22"
+        },
+        {
+          "title": "Kobets Vitalii vs. Krol Yan",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-kobvit-kroyan-2026-11-22"
         }
       ],
       "history": {
@@ -20251,11 +19877,6 @@
       "name": "Kryvorotko Yevhen",
       "events": [
         {
-          "title": "Kryvorotko Yevhen vs. Kovalenko Veacheslav",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-kryyev-kovvea-2026-11-21"
-        },
-        {
           "title": "Kryvorotko Yevhen vs. Rubtsov Eduard",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-kryyev-rubedu-2026-11-21"
@@ -20269,6 +19890,11 @@
           "title": "Kryvorotko Yevhen vs. Chepurnyi Artem",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-kryyev-cheart-2026-11-22"
+        },
+        {
+          "title": "Kryvorotko Yevhen vs. Chelpanov Serhii",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-kryyev-cheser-2026-11-22"
         }
       ],
       "history": {
@@ -20686,11 +20312,6 @@
       "name": "Lobas Valentyn",
       "events": [
         {
-          "title": "Lobas Valentyn vs. Krol Yan",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-lobval-kroyan-2026-11-21"
-        },
-        {
           "title": "Lobas Valentyn vs. Gomilko Oleksandr",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-lobval-gomole-2026-11-22"
@@ -20704,6 +20325,11 @@
           "title": "Lobas Valentyn vs. Kobets Vitalii",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-lobval-kobvit-2026-11-22"
+        },
+        {
+          "title": "Nemchenko Denys vs. Lobas Valentyn",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-nemden-lobval-2026-11-22"
         }
       ],
       "history": {
@@ -20999,18 +20625,31 @@
           "title": "Krol Yan vs. Marchuk Maksym",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-kroyan-marmak-2026-11-22"
+        },
+        {
+          "title": "Gomilko Oleksandr vs. Marchuk Maksym",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-gomole-marmak-2026-11-22"
         }
       ],
       "history": {
         "status": "name_initial_match_review_only",
         "display_name": "Marchuk M.",
         "source_player_id": "685006",
-        "matches_count": 3,
+        "matches_count": 4,
         "wins": 1,
-        "losses": 2,
+        "losses": 3,
         "last_match_date": "2026-11-21",
-        "competition_matches": 3,
+        "competition_matches": 4,
         "recent_matches": [
+          {
+            "date": "2026-11-21",
+            "time": "05:05:00",
+            "competition": "Setka Cup",
+            "opponent": "Gomilko O.",
+            "result": "L",
+            "score": "0-3"
+          },
           {
             "date": "2026-11-21",
             "time": "03:35:00",
@@ -21126,6 +20765,11 @@
       "name": "Martin Nypl",
       "events": [
         {
+          "title": "Martin Nypl vs. Jiri Jira",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634976982588"
+        },
+        {
           "title": "Jiri Rychtar vs. Martin Nypl",
           "competition": "Czech Liga Pro",
           "url": "https://polymarket.us/event/czechligapro-id2503634976982490"
@@ -21164,11 +20808,6 @@
           "title": "Frantisek Briza vs. Martin Sochor",
           "competition": "Czech Liga Pro",
           "url": "https://polymarket.us/event/czechligapro-id2503634976989026"
-        },
-        {
-          "title": "Martin Sochor vs. Jaroslav Prokupek",
-          "competition": "Czech Liga Pro",
-          "url": "https://polymarket.us/event/czechligapro-id2503634976982312"
         },
         {
           "title": "Alexander Mikuska vs. Martin Sochor",
@@ -21473,11 +21112,6 @@
     {
       "name": "Melintii Vladimir",
       "events": [
-        {
-          "title": "Petrea Stefan vs. Melintii Vladimir",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamemd-petste-melvla-2026-11-21"
-        },
         {
           "title": "Iskander Christopher vs. Melintii Vladimir",
           "competition": "Setka Cup",
@@ -21833,11 +21467,6 @@
       "name": "Mitul Anatoli",
       "events": [
         {
-          "title": "Mitul Anatoli vs. Iskander Christopher",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamemd-mitana-iskchr-2026-11-21"
-        },
-        {
           "title": "Mitul Anatoli vs. Petrea Stefan",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkamemd-mitana-petste-2026-11-21"
@@ -21934,70 +21563,6 @@
       }
     },
     {
-      "name": "Mocan David",
-      "events": [
-        {
-          "title": "Mocan David vs. Urechean Vadim",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamemd-mocdav-urevad-2026-11-21"
-        },
-        {
-          "title": "Cherdivar Victor vs. Mocan David",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamemd-chevic-mocdav-2026-11-21"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Mocan D.",
-        "source_player_id": "274468",
-        "matches_count": 4,
-        "wins": 2,
-        "losses": 2,
-        "last_match_date": "2026-11-20",
-        "competition_matches": 4,
-        "recent_matches": [
-          {
-            "date": "2026-11-20",
-            "time": "19:45:00",
-            "competition": "Setka Cup",
-            "opponent": "Urechean V.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "18:45:00",
-            "competition": "Setka Cup",
-            "opponent": "Bucos O.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "17:15:00",
-            "competition": "Setka Cup",
-            "opponent": "Damian Petrascu",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "16:45:00",
-            "competition": "Setka Cup",
-            "opponent": "Urechean V.",
-            "result": "L",
-            "score": "1-3"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "not_applicable",
-        "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
       "name": "Nemchenko Denys",
       "events": [
         {
@@ -22014,6 +21579,11 @@
           "title": "Nemchenko Denys vs. Gomilko Oleksandr",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-nemden-gomole-2026-11-22"
+        },
+        {
+          "title": "Nemchenko Denys vs. Lobas Valentyn",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-nemden-lobval-2026-11-22"
         }
       ],
       "history": {
@@ -22083,6 +21653,11 @@
           "title": "Gazhula Oleksii vs. Palii Dmytro",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-gazole-paldmy-2026-11-22"
+        },
+        {
+          "title": "Palii Dmytro vs. Prus Serhii",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-paldmy-pruser-2026-11-22"
         }
       ],
       "history": {
@@ -22147,11 +21722,6 @@
       "name": "Parahailo Yurii",
       "events": [
         {
-          "title": "Khomenko Maksym vs. Parahailo Yurii",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-khomak-paryur-2026-11-21"
-        },
-        {
           "title": "Kovalchuk Vladyslav vs. Parahailo Yurii",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-kovvla-paryur-2026-11-22"
@@ -22160,6 +21730,11 @@
           "title": "Parahailo Yurii vs. Maltsev Denys",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-paryur-malden-2026-11-22"
+        },
+        {
+          "title": "Storozhenko Oleksandr vs. Parahailo Yurii",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-stoole-paryur-2026-11-22"
         }
       ],
       "history": {
@@ -22350,11 +21925,6 @@
       "name": "Petrea Stefan",
       "events": [
         {
-          "title": "Petrea Stefan vs. Melintii Vladimir",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamemd-petste-melvla-2026-11-21"
-        },
-        {
           "title": "Mitul Anatoli vs. Petrea Stefan",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkamemd-mitana-petste-2026-11-21"
@@ -22467,6 +22037,11 @@
           "title": "Slozka Mykola vs. Prus Serhii",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-slomyk-pruser-2026-11-22"
+        },
+        {
+          "title": "Palii Dmytro vs. Prus Serhii",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-paldmy-pruser-2026-11-22"
         }
       ],
       "history": {
@@ -22481,13 +22056,91 @@
       }
     },
     {
-      "name": "Rubtsov Eduard",
+      "name": "Richard Skacelik",
       "events": [
         {
-          "title": "Chelpanov Serhii vs. Rubtsov Eduard",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-cheser-rubedu-2026-11-21"
-        },
+          "title": "Richard Skacelik vs. Samuel Byrtus",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634976982300"
+        }
+      ],
+      "history": {
+        "status": "exact_name_match_identity_unverified",
+        "display_name": "Richard Skacelik",
+        "source_player_id": "58495",
+        "matches_count": 7,
+        "wins": 6,
+        "losses": 1,
+        "last_match_date": "2026-11-16",
+        "competition_matches": 7,
+        "recent_matches": [
+          {
+            "date": "2026-11-16",
+            "time": "13:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Machander D.",
+            "result": "W",
+            "score": "3-1"
+          },
+          {
+            "date": "2026-11-16",
+            "time": "12:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Samuel Byrtus",
+            "result": "W",
+            "score": "3-2"
+          },
+          {
+            "date": "2026-11-16",
+            "time": "11:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Heczko D.",
+            "result": "L",
+            "score": "2-3"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "14:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Levicky J.",
+            "result": "W",
+            "score": "3-2"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "13:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Heczko M.",
+            "result": "W",
+            "score": "3-2"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "12:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Blejchar M.",
+            "result": "W",
+            "score": "3-2"
+          },
+          {
+            "date": "2026-11-14",
+            "time": "11:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Levicky J.",
+            "result": "W",
+            "score": "3-2"
+          }
+        ],
+        "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
+      },
+      "model_record": {
+        "status": "not_applicable",
+        "identity_note": "WTT model lookup is only used for WTT listings."
+      }
+    },
+    {
+      "name": "Rubtsov Eduard",
+      "events": [
         {
           "title": "Kryvorotko Yevhen vs. Rubtsov Eduard",
           "competition": "Setka Cup",
@@ -22497,6 +22150,16 @@
           "title": "Chepurnyi Artem vs. Rubtsov Eduard",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-cheart-rubedu-2026-11-22"
+        },
+        {
+          "title": "Rubtsov Eduard vs. Kovalenko Veacheslav",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-rubedu-kovvea-2026-11-22"
+        },
+        {
+          "title": "Kovalchuk Oleksandr vs. Rubtsov Eduard",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-kovole-rubedu-2026-11-22"
         }
       ],
       "history": {
@@ -22592,6 +22255,11 @@
     {
       "name": "Samuel Byrtus",
       "events": [
+        {
+          "title": "Richard Skacelik vs. Samuel Byrtus",
+          "competition": "Czech Liga Pro",
+          "url": "https://polymarket.us/event/czechligapro-id2503634976982300"
+        },
         {
           "title": "Frantisek Laburda vs. Samuel Byrtus",
           "competition": "Czech Liga Pro",
@@ -22868,11 +22536,6 @@
       "name": "Slozka Mykola",
       "events": [
         {
-          "title": "Gazhula Oleksii vs. Slozka Mykola",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkameua-gazole-slomyk-2026-11-21"
-        },
-        {
           "title": "Palii Dmytro vs. Slozka Mykola",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-paldmy-slomyk-2026-11-22"
@@ -22881,6 +22544,11 @@
           "title": "Slozka Mykola vs. Prus Serhii",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-slomyk-pruser-2026-11-22"
+        },
+        {
+          "title": "Kantarevych Denys vs. Slozka Mykola",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-kanden-slomyk-2026-11-22"
         }
       ],
       "history": {
@@ -22982,6 +22650,11 @@
           "title": "Tebenko Yaroslav vs. Storozhenko Oleksandr",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-tebyar-stoole-2026-11-22"
+        },
+        {
+          "title": "Storozhenko Oleksandr vs. Parahailo Yurii",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-stoole-paryur-2026-11-22"
         }
       ],
       "history": {
@@ -23404,11 +23077,6 @@
     {
       "name": "Urechean Vadim",
       "events": [
-        {
-          "title": "Mocan David vs. Urechean Vadim",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamemd-mocdav-urevad-2026-11-21"
-        },
         {
           "title": "Ghimp Fiodor vs. Urechean Vadim",
           "competition": "Setka Cup",
