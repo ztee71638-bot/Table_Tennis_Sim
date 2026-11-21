@@ -64,6 +64,31 @@ class ReconcilePolymarketTests(unittest.TestCase):
         self.assertIn("no automatic", matchups[0]["identity_decision"])
         self.assertEqual(len(players), 2)
 
+    def test_joint_candidates_rank_same_competition_h2h_without_approval(self):
+        a = [
+            {"source_player_id": "a1", "display_name": "A One", "relevant_matches": [{}, {}]},
+            {"source_player_id": "a2", "display_name": "A Two", "relevant_matches": [{}]},
+        ]
+        b = [
+            {"source_player_id": "b1", "display_name": "B One", "relevant_matches": [{}, {}]},
+            {"source_player_id": "b2", "display_name": "B Two", "relevant_matches": [{}]},
+        ]
+        history = {
+            frozenset(("a2", "b1")): [
+                {"competition": "Setka Cup", "match_date": "2026-11-18"},
+                {"competition": "Setka Cup", "match_date": "2026-11-19"},
+            ],
+            frozenset(("a1", "b2")): [
+                {"competition": "Czech Liga Pro", "match_date": "2026-11-20"},
+            ],
+        }
+        ranked = MODULE.rank_joint_candidates(a, b, history, "Setka Cup")
+        self.assertEqual(ranked[0]["player_a_source_id"], "a2")
+        self.assertEqual(ranked[0]["player_b_source_id"], "b1")
+        self.assertEqual(ranked[0]["h2h_matches_in_competition"], 2)
+        self.assertEqual(ranked[0]["evidence_status"], "repeated_head_to_head_review")
+        self.assertEqual(ranked[0]["decision"], "review_only_no_identity_merge")
+
     def test_missing_source_does_not_claim_not_found(self):
         events = [{"title": "Erik Mares vs. Jakub Pilch"}]
         _, matchups, _ = MODULE.reconcile(events, [], {"available": False})
