@@ -20,6 +20,7 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 .history-line{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.45}
 .market-actions{display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap}.market-simulate{width:auto;margin:0;padding:10px 13px;background:var(--accent);color:#06221c;border:0;font-weight:800;cursor:pointer}.market-simulate:disabled{opacity:.45;cursor:not-allowed}.market-sim-note{font-size:11px;color:var(--muted)}
 .market-link{color:var(--accent);font-weight:700;text-decoration:none}.market-link:hover{text-decoration:underline}
+.history-search-result{background:#0d1726;border:1px solid var(--line);border-radius:10px;padding:12px;margin:9px 0}.history-search-result b{display:block}.history-search-result .history-line{margin-top:6px}
 #polymarket-results{margin-top:10px}.market-empty{padding:14px;color:var(--muted)}
 @media(max-width:560px){.market-players{grid-template-columns:1fr}}
 
@@ -36,6 +37,14 @@ ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn
 <p id="polymarket-updated" class="muted">Loading current Polymarket listings…</p>
 <div id="polymarket-results"><div class="market-empty">Loading active matchups…</div></div>
 <p class="muted">Player profile source: <a class="market-link" href="https://tabletennisapi.com/" target="_blank" rel="noopener">Table Tennis API</a>. Profiles are checked in a rotating queue within the free 50-call daily limit. Names remain unverified candidates; provider profiles are not used for model training. New listings without matching history still appear here.</p>
+</section>
+<section class="panel" id="history-search-panel">
+<div style="font-weight:800;font-size:18px">Search additional player histories</div>
+<p>Search the recent domestic singles database independently of the WTT prediction model. Results show source-scoped records and recent form; they are not automatically eligible for simulations.</p>
+<label for="history-player-search">Find a player across recent domestic results</label>
+<input id="history-player-search" type="search" placeholder="Type a player name…" autocomplete="off">
+<p id="history-search-status" class="muted">Loading additional player history…</p>
+<div id="history-search-results"><div class="market-empty">Loading player records…</div></div>
 </section>
 <section class="panel">
 <div id="load">Loading player database…</div>
@@ -191,6 +200,35 @@ async function loadPolymarket(){
   renderPolymarket();
  }catch(err){$('polymarket-updated').textContent='Live listing refresh unavailable: '+err.message;$('polymarket-results').innerHTML='<div class="market-empty">The simulator will keep its historical player search available while the live feed is unavailable.</div>';}
 }
+let domesticPlayerData=null,domesticPlayerRows=[];
+async function loadDomesticPlayerIndex(){
+ const status=$('history-search-status'),box=$('history-search-results'),input=$('history-player-search');
+ try{
+  const response=await fetch('./data/datasportsapi_player_records.json?refresh='+Date.now());
+  if(!response.ok)throw Error('The recent domestic history file has not been published yet.');
+  domesticPlayerData=await response.json();
+  const records=domesticPlayerData.records||{};
+  domesticPlayerRows=Object.entries(records).map(([id,p])=>({id,...p})).filter(p=>p.display_name);
+  status.textContent=domesticPlayerRows.length.toLocaleString()+' source-specific player records · '+Number(domesticPlayerData.individual_singles_matches||0).toLocaleString()+' valid singles matches · source: DataSportsAPI';
+  input.addEventListener('input',renderDomesticPlayerSearch);
+  renderDomesticPlayerSearch();
+ }catch(err){
+  status.textContent='Additional player histories unavailable: '+err.message;
+  box.innerHTML='<div class="market-empty">The WTT player simulator remains available. Domestic history will appear after the next successful data refresh.</div>';
+ }
+}
+function renderDomesticPlayerSearch(){
+ const q=($('history-player-search').value||'').trim().toLocaleLowerCase(),box=$('history-search-results');
+ if(!q){box.innerHTML='<div class="market-empty">Enter a player name to search recent domestic results.</div>';return;}
+ const rows=domesticPlayerRows.filter(p=>String(p.display_name||'').toLocaleLowerCase().includes(q)).sort((a,b)=>(b.matches||0)-(a.matches||0));
+ const shown=rows.slice(0,30);
+ box.innerHTML=shown.length?shown.map(p=>{
+  const competitions=Object.entries(p.competition_records||{}).sort((a,b)=>(b[1].matches||0)-(a[1].matches||0)).slice(0,4).map(([name,r])=>escapeHtml(name)+': '+r.wins+'–'+r.losses+' ('+r.matches+')').join(' · ');
+  const recent=(p.recent_form_last_10||[]).slice().reverse().slice(0,5).map(m=>escapeHtml(m.date)+' '+escapeHtml(m.result)+' vs '+escapeHtml(m.opponent||'unknown')).join(' · ');
+  return '<article class="history-search-result"><b>'+escapeHtml(p.display_name)+'</b><div class="history-line">DataSportsAPI source ID: '+escapeHtml(p.id)+' · '+Number(p.matches||0)+' matches · '+Number(p.wins||0)+'–'+Number(p.losses||0)+' · '+Number(p.win_percentage||0).toFixed(1)+'% wins</div><div class="history-line">Last recorded: '+escapeHtml(p.last_match_date||'unknown')+'</div><div class="history-line">'+(competitions||'No competition breakdown')+'</div><div class="history-line">Recent: '+(recent||'No recent match rows')+'</div><div class="history-line">History only — identity is source-scoped and no domestic prediction model is validated yet.</div></article>';
+ }).join(''):'<div class="market-empty">No matching domestic player records found.</div>';
+ if(rows.length>30)box.innerHTML+='<div class="market-empty">Showing 30 of '+rows.length+' matches. Refine your search.</div>';
+}
 async function init(){try{const [s,m]=await Promise.all([fetch('./data/current_player_states.json'),fetch('./data/prediction_model.json')]);if(!s.ok||!m.ok)throw Error('The published player data is not available yet.');pools=await s.json();model=await m.json();const keys=Object.keys(pools);$('source').innerHTML=keys.map(k=>'<option value="'+k+'">'+k+'</option>').join('');$('source').addEventListener('change',fill);fill();$('load').hidden=true;$('form').hidden=false;const sourceStats=Object.entries(pools).map(([key,pool])=>{const entries=Object.entries(pool);const latest=entries.map(([,p])=>p.last_date).filter(Boolean).sort().at(-1)||'unknown';const players=entries.length;const matches=Math.round(entries.reduce((sum,[,p])=>sum+(p.matches||0),0)/2);return {key,players,matches,latest};});const totalPlayers=sourceStats.reduce((n,x)=>n+x.players,0);const totalMatches=sourceStats.reduce((n,x)=>n+x.matches,0);const latestDate=sourceStats.map(x=>x.latest).filter(x=>x!=='unknown').sort().at(-1)||'unknown';$('coverage-text').textContent='Sources: '+sourceStats.map(x=>x.key).join(', ')+'. '+totalPlayers.toLocaleString()+' source-scoped player records and approximately '+totalMatches.toLocaleString()+' match appearances counted as matches. Latest player match date: '+latestDate+'. Chronological holdout: '+(model.holdout_start||'unknown')+' through '+(model.holdout_end||'unknown')+'.';$('freshness').textContent='Model holdout data: '+(model.holdout_start||'unknown')+' through '+(model.holdout_end||'unknown')+'. Latest result date in selected historical dataset: '+latestDate+'. Recent domestic results are not included in the WTT-trained prediction model.';if(polymarketEvents.length)renderPolymarket();}catch(e){$('load').textContent=e.message;$('load').className='error';}}
 function escapeHtml(s){return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;')}
 function searchPlayers(which){const input=$(which),box=$(which+'-results'),q=input.value.trim().toLocaleLowerCase();input.dataset.playerId='';if(!q){box.classList.remove('open');box.innerHTML='';return}const pool=pools[$('source').value]||{};const matches=Object.entries(pool).filter(([id,p])=>(p.display_name||'').toLocaleLowerCase().includes(q)).sort((a,b)=>(a[1].display_name||'').localeCompare(b[1].display_name||''));const shown=matches.slice(0,25);box.innerHTML=shown.length?shown.map(([id,p])=>'<button type="button" class="search-result" role="option" data-player-id="'+escapeHtml(id)+'"><span>'+escapeHtml(p.display_name||'(unnamed)')+'</span><small>Player ID: '+escapeHtml(id)+'</small></button>').join(''):'<div class="search-empty">No matching players in this dataset.</div>';if(matches.length>25)box.innerHTML+='<div class="search-empty">Showing first 25 of '+matches.length+' matches. Refine your search.</div>';box.classList.add('open')}
@@ -200,5 +238,6 @@ $('run').addEventListener('click',()=>{const pool=pools[$('source').value],a=res
 attachPlayerSearch('a');attachPlayerSearch('b');
 init();
 loadPolymarket();
+loadDomesticPlayerIndex();
 setInterval(loadPolymarket,300000);
 </script></body></html>
