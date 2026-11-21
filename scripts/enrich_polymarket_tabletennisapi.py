@@ -181,7 +181,7 @@ def event_players() -> list[tuple[str, str]]:
             continue
         a, b = reconciliation.event_pair(event)
         for name in (a, b):
-            if name and len(tokens(name)) >= 2:
+            if name and len(tokens(name)) >= 2 and len(search_term(name)) >= 2:
                 found.setdefault(normalized_name(name), (name, scope))
     return list(found.values())
 
