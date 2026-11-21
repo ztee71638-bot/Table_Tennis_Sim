@@ -104,6 +104,7 @@ function historySummary(player){
 }
 let polymarketEvents=[];
 function findPolymarketModelPair(event){
+ if(String(event.competition||'').trim().toLocaleUpperCase()!=='WTT')return null;
  const norm=s=>String(s||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').match(/[a-z0-9]+/g)?.sort().join(' ')||'';
  for(const [source,pool] of Object.entries(pools)){
   const find=name=>Object.entries(pool).filter(([,p])=>norm(p.display_name)===norm(name));
