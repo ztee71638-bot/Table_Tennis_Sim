@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publish current Polymarket table-tennis events and source-scoped player histories."""
+"""Publish current Polymarket events and source-scoped player/profile summaries."""
 from __future__ import annotations
 
 import json
