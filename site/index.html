@@ -14,11 +14,29 @@ label{display:block;font-weight:650;margin:12px 0 6px}input,select,button{width:
 .muted{color:var(--muted);font-size:13px}.result{display:none}.decision{font-size:22px;font-weight:850;margin:4px 0 12px}.pass{color:var(--warn)}.lean{color:var(--accent)}
 .metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.metric{background:#0d1726;border-radius:12px;padding:12px}.metric strong{display:block;font-size:20px;margin-top:4px}
 ul{padding-left:20px;color:var(--muted)}.notice{border-left:3px solid var(--warn);padding:8px 12px;background:#241f15;border-radius:6px;color:#f7dfad;margin-top:12px}
+.market-card{background:#0d1726;border:1px solid var(--line);border-radius:12px;padding:13px;margin:10px 0}
+.market-title{font-weight:750;font-size:16px}.market-players{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.market-player{background:#142338;border-radius:9px;padding:10px;min-width:0}.market-player b{display:block;overflow-wrap:anywhere}
+.history-line{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.45}
+.market-actions{display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap}
+.market-link{color:var(--accent);font-weight:700;text-decoration:none}.market-link:hover{text-decoration:underline}
+#polymarket-results{margin-top:10px}.market-empty{padding:14px;color:var(--muted)}
+@media(max-width:560px){.market-players{grid-template-columns:1fr}}
+
 .error{color:var(--bad)}footer{font-size:12px;color:var(--muted);margin-top:20px}
 @media(max-width:560px){.grid{grid-template-columns:1fr}.panel{padding:14px}h1{font-size:24px}}
 </style></head>
 <body><main>
 <header><h1>Table Tennis Match Simulator</h1><p>Compare two players using historical WTT records, form, head-to-head and shared opponents.</p></header>
+<section class="panel" id="polymarket-panel">
+<div style="font-weight:800;font-size:18px">Live Polymarket matches &amp; player histories</div>
+<p>Search active table-tennis listings and inspect available recent match histories. Listings refresh automatically with the data update workflow.</p>
+<label for="polymarket-search">Search active matches or players</label>
+<input id="polymarket-search" type="search" placeholder="Search a player, opponent or competition…" autocomplete="off">
+<p id="polymarket-updated" class="muted">Loading current Polymarket listings…</p>
+<div id="polymarket-results"><div class="market-empty">Loading active matchups…</div></div>
+<p class="muted">History is shown only where a unique exact-name candidate exists in the recent-results source. Identity is not independently verified. New listings without matching history still appear here.</p>
+</section>
 <section class="panel">
 <div id="load">Loading player database…</div>
 <div id="form" hidden>
@@ -69,6 +87,33 @@ $('metrics').innerHTML=[['Model probability — A',fmt(r.p)],['Elo probability �
 const warns=[];if(r.da>120)warns.push('Player A last recorded match was '+r.da+' days ago. Check season breaks, injury and source coverage.');if(r.db>120)warns.push('Player B last recorded match was '+r.db+' days ago. Check season breaks, injury and source coverage.');$('warnings').innerHTML=warns.map(x=>'<div class="notice">'+x+'</div>').join('');
 $('h2h').innerHTML=r.details.length?'<p>'+r.details.length+' shared opponents with comparable records.</p><ul>'+r.details.slice(0,30).map(d=>'<li>'+String(d.id).replaceAll('<','&lt;')+': A '+d.x.wins+'-'+d.x.losses+', B '+d.y.wins+'-'+d.y.losses+'</li>').join('')+'</ul>':'<p>No shared opponents with usable prior records were found.</p>';
 }
+function historySummary(player){
+ const h=player.history||{};
+ if(h.status==='exact_name_match_identity_unverified'){
+  const recent=(h.recent_matches||[]).slice(0,5).map(m=>escapeHtml(m.date)+' '+escapeHtml(m.result)+' '+escapeHtml(m.opponent)+' ('+escapeHtml(m.score)+')').join('<br>');
+  return '<div class="history-line">'+h.wins+'–'+h.losses+' across '+h.matches_count+' recorded matches · last: '+escapeHtml(h.last_match_date||'unknown')+'</div><div class="history-line">'+(recent||'No recent match rows available')+'</div><div class="history-line">'+escapeHtml(h.identity_note)+'</div>';
+ }
+ const labels={ambiguous:'Multiple possible source records; history withheld.',not_found:'No exact source-name match found yet.',other_competition_only:'Same-name record found only in another competition.',source_not_loaded:'Recent results source was unavailable in this refresh.'};
+ return '<div class="history-line">'+escapeHtml(labels[h.status]||'No verified history available.')+'</div>';
+}
+let polymarketEvents=[];
+function renderPolymarket(){
+ const q=($('polymarket-search').value||'').trim().toLocaleLowerCase();
+ const rows=polymarketEvents.filter(e=>([e.title,e.competition,e.player_a?.name,e.player_b?.name].join(' ').toLocaleLowerCase()).includes(q));
+ $('polymarket-results').innerHTML=rows.length?rows.slice(0,60).map(e=>'<article class="market-card"><div class="market-title">'+escapeHtml(e.title)+'</div><div class="muted">'+escapeHtml(e.competition||'Table Tennis')+' · '+escapeHtml(e.start_time_utc||'Start time unavailable')+'</div><div class="market-players"><div class="market-player"><b>'+escapeHtml(e.player_a.name)+'</b>'+historySummary(e.player_a)+'</div><div class="market-player"><b>'+escapeHtml(e.player_b.name)+'</b>'+historySummary(e.player_b)+'</div></div><div class="market-actions"><a class="market-link" href="'+escapeHtml(e.url)+'" target="_blank" rel="noopener noreferrer">View Polymarket listing ↗</a></div></article>').join(''):'<div class="market-empty">No active matchups match that search.</div>';
+ if(rows.length>60)$('polymarket-results').innerHTML+='<div class="market-empty">Showing first 60 results. Refine your search.</div>';
+}
+async function loadPolymarket(){
+ try{
+  const response=await fetch('./data/polymarket_active.json?refresh='+Date.now());
+  if(!response.ok)throw Error('Current listing feed is not published yet.');
+  const data=await response.json();
+  polymarketEvents=(data.events||[]).filter(e=>e.active&&!e.closed);
+  $('polymarket-updated').textContent=polymarketEvents.length+' active matchups · '+(data.players_count||0)+' listed players · refreshed '+new Date(data.retrieved_at_utc).toLocaleString();
+  $('polymarket-search').addEventListener('input',renderPolymarket);
+  renderPolymarket();
+ }catch(err){$('polymarket-updated').textContent='Live listing refresh unavailable: '+err.message;$('polymarket-results').innerHTML='<div class="market-empty">The simulator will keep its historical player search available while the live feed is unavailable.</div>';}
+}
 async function init(){try{const [s,m]=await Promise.all([fetch('./data/current_player_states.json'),fetch('./data/prediction_model.json')]);if(!s.ok||!m.ok)throw Error('The published player data is not available yet.');pools=await s.json();model=await m.json();const keys=Object.keys(pools);$('source').innerHTML=keys.map(k=>'<option value="'+k+'">'+k+'</option>').join('');$('source').addEventListener('change',fill);fill();$('load').hidden=true;$('form').hidden=false;const sourceStats=Object.entries(pools).map(([key,pool])=>{const entries=Object.entries(pool);const latest=entries.map(([,p])=>p.last_date).filter(Boolean).sort().at(-1)||'unknown';const players=entries.length;const matches=Math.round(entries.reduce((sum,[,p])=>sum+(p.matches||0),0)/2);return {key,players,matches,latest};});const totalPlayers=sourceStats.reduce((n,x)=>n+x.players,0);const totalMatches=sourceStats.reduce((n,x)=>n+x.matches,0);const latestDate=sourceStats.map(x=>x.latest).filter(x=>x!=='unknown').sort().at(-1)||'unknown';$('coverage-text').textContent='Sources: '+sourceStats.map(x=>x.key).join(', ')+'. '+totalPlayers.toLocaleString()+' source-scoped player records and approximately '+totalMatches.toLocaleString()+' match appearances counted as matches. Latest player match date: '+latestDate+'. Chronological holdout: '+(model.holdout_start||'unknown')+' through '+(model.holdout_end||'unknown')+'.';$('freshness').textContent='Model holdout data: '+(model.holdout_start||'unknown')+' through '+(model.holdout_end||'unknown')+'. Latest result date in selected historical dataset: '+latestDate+'. Recent domestic results are not included in the WTT-trained prediction model.';}catch(e){$('load').textContent=e.message;$('load').className='error';}}
 function escapeHtml(s){return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;')}
 function searchPlayers(which){const input=$(which),box=$(which+'-results'),q=input.value.trim().toLocaleLowerCase();input.dataset.playerId='';if(!q){box.classList.remove('open');box.innerHTML='';return}const pool=pools[$('source').value]||{};const matches=Object.entries(pool).filter(([id,p])=>(p.display_name||'').toLocaleLowerCase().includes(q)).sort((a,b)=>(a[1].display_name||'').localeCompare(b[1].display_name||''));const shown=matches.slice(0,25);box.innerHTML=shown.length?shown.map(([id,p])=>'<button type="button" class="search-result" role="option" data-player-id="'+escapeHtml(id)+'"><span>'+escapeHtml(p.display_name||'(unnamed)')+'</span><small>Player ID: '+escapeHtml(id)+'</small></button>').join(''):'<div class="search-empty">No matching players in this dataset.</div>';if(matches.length>25)box.innerHTML+='<div class="search-empty">Showing first 25 of '+matches.length+' matches. Refine your search.</div>';box.classList.add('open')}
@@ -77,4 +122,5 @@ function fill(){const p=pools[$('source').value]||{};for(const id of ['a','b']){
 $('run').addEventListener('click',()=>{const pool=pools[$('source').value],a=resolve(pool,$('a')),b=resolve(pool,$('b'));if(!a||!b){alert('Choose an exact, unique player name from the suggestions.');return}if(a===b){alert('Choose two different players.');return}$('run').disabled=true;$('run').textContent='Simulating…';try{show(simulate(a,b,$('competition').value.trim()||'UNKNOWN'));}catch(e){alert('Unable to simulate: '+e.message)}finally{$('run').disabled=false;$('run').textContent='Run 100,000 simulations';}});
 attachPlayerSearch('a');attachPlayerSearch('b');
 init();
+loadPolymarket();
 </script></body></html>
