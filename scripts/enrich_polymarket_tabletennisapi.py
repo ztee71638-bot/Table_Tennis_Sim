@@ -42,6 +42,15 @@ def normalized_name(value: str) -> str:
     return " ".join(sorted(tokens(value)))
 
 
+def search_term(value: str) -> str:
+    parts = tokens(value)
+    if not parts:
+        return ""
+    # The provider's q parameter searches a substring of the stored name.
+    # A distinctive token works even when the provider lists family name first.
+    return max(parts, key=len)
+
+
 def name_match_type(query_name: str, candidate_name: str) -> str | None:
     left, right = tokens(query_name), tokens(candidate_name)
     if not left or len(left) != len(right):
@@ -194,7 +203,7 @@ def lookup_one(name: str, state: dict, calls: int) -> tuple[dict, int]:
     key = normalized_name(name)
     looked_at = datetime.now(timezone.utc).isoformat()
     try:
-        payload = api_get("/players", {"q": name, "per_page": 50})
+        payload = api_get("/players", {"q": search_term(name), "per_page": 50})
         calls += 1
         candidates = payload.get("data") if isinstance(payload.get("data"), list) else []
         status, candidate, possible = select_candidate(name, candidates)
