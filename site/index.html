@@ -98,10 +98,10 @@ function tableTennisApiSummary(player){
   const recordHtml=records.slice(0,3).map(r=>{
    const played=Number(r.played||0),won=Number(r.won||0),lost=Number(r.lost||0);
    const rate=played?(' · '+(100*won/played).toFixed(1)+'% wins'):'';
-   return escapeHtml(r.discipline)+': '+won+'–'+lost+' from '+played+rate+' · last '+escapeHtml(r.last_match||'unknown');
+   return escapeHtml(r.discipline)+': '+won+'–'+lost+' from '+played+rate+' · window '+escapeHtml(r.first_match||'unknown')+' to '+escapeHtml(r.last_match||'unknown');
   }).join('<br>');
   const ranks=(t.world_ranks||[]).slice(0,2).map(r=>escapeHtml(r.discipline)+' rank #'+Number(r.rank||0)+' ('+escapeHtml(r.week||'')+')').join(' · ');
-  return '<div class="history-line">Table Tennis API profile · '+escapeHtml(t.display_name||'')+(t.country?' · '+escapeHtml(t.country):'')+'</div><div class="history-line">'+(recordHtml||'No discipline record listed')+'</div>'+(ranks?'<div class="history-line">'+ranks+'</div>':'')+'<div class="history-line">'+escapeHtml(t.identity_note||'')+'</div>';
+  return '<div class="history-line">Table Tennis API free-tier window profile · '+escapeHtml(t.display_name||'')+(t.country?' · '+escapeHtml(t.country):'')+'</div><div class="history-line">'+(recordHtml||'No discipline record listed')+'</div>'+(ranks?'<div class="history-line">'+ranks+'</div>':'')+'<div class="history-line">'+escapeHtml(t.record_window_note||'')+'</div><div class="history-line">'+escapeHtml(t.identity_note||'')+'</div>';
  }
  const labels={
   queued_not_checked:'Table Tennis API: queued for automatic free-tier player lookup.',
