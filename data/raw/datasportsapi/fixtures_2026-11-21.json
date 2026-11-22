@@ -44265,135 +44265,6 @@
             "attendance": null,
             "awarded": false,
             "away": {
-              "code": "VYS",
-              "id": 648295,
-              "image": "https://cdn.datasportsapi.com/v2/teams/648295/logo",
-              "name": "Vyskocil Z.",
-              "shortName": null,
-              "slug": "vyskocil-zbynek"
-            },
-            "awayManager": null,
-            "awayRanking": null,
-            "awayRecord": null,
-            "awayScore": {
-              "aggregated": null,
-              "current": 3,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {
-                "period1": 11,
-                "period2": 7,
-                "period3": 11,
-                "period4": 10,
-                "period5": 11
-              },
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "awaySeed": null,
-            "battingSide": null,
-            "bonus": null,
-            "clock": null,
-            "discipline": null,
-            "downAndDistance": null,
-            "durations": null,
-            "fightCard": null,
-            "fightDiscipline": null,
-            "fightResult": null,
-            "finalResultOnly": false,
-            "firstToServe": null,
-            "group": null,
-            "home": {
-              "code": "KRE",
-              "id": 686268,
-              "image": "https://cdn.datasportsapi.com/v2/teams/686268/logo",
-              "name": "Krejci T.",
-              "shortName": null,
-              "slug": "krejci-tomas"
-            },
-            "homeManager": null,
-            "homeRanking": null,
-            "homeRecord": null,
-            "homeScore": {
-              "aggregated": null,
-              "current": 2,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {
-                "period1": 9,
-                "period2": 11,
-                "period3": 6,
-                "period4": 12,
-                "period5": 7
-              },
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "homeSeed": null,
-            "id": 1215109,
-            "inningState": null,
-            "league": {
-              "category": "Czech Republic",
-              "country": {
-                "code": "CZ",
-                "flag": "https://cdn.datasportsapi.com/v2/countries/CZ/flag",
-                "name": "Czechia"
-              },
-              "id": 4322,
-              "image": "https://cdn.datasportsapi.com/v2/leagues/4322/logo",
-              "name": "TT Cup",
-              "priority": 0,
-              "slug": "tt-cup",
-              "sport": "table-tennis"
-            },
-            "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
-            "matchFormat": null,
-            "matchesInTie": null,
-            "note": null,
-            "playerOfTheMatch": null,
-            "previousLegFixtureId": null,
-            "referee": null,
-            "round": null,
-            "season": null,
-            "servedFirst": null,
-            "serving": null,
-            "sport": "table-tennis",
-            "startTime": "2026-11-21T20:10:00.000Z",
-            "status": {
-              "code": 100,
-              "description": "Ended",
-              "finish": "regular",
-              "period": null,
-              "phase": "finished",
-              "type": "finished"
-            },
-            "surface": null,
-            "tier": null,
-            "timeouts": null,
-            "toss": null,
-            "tvUmpire": null,
-            "umpires": null,
-            "varCheck": null,
-            "venue": null,
-            "winner": "away"
-          },
-          {
-            "aggregateWinner": null,
-            "attendance": null,
-            "awarded": false,
-            "away": {
               "code": "HUD",
               "id": 699847,
               "image": "https://cdn.datasportsapi.com/v2/teams/699847/logo",
@@ -45658,6 +45529,135 @@
             "varCheck": null,
             "venue": null,
             "winner": "home"
+          },
+          {
+            "aggregateWinner": null,
+            "attendance": null,
+            "awarded": false,
+            "away": {
+              "code": "VYS",
+              "id": 648295,
+              "image": "https://cdn.datasportsapi.com/v2/teams/648295/logo",
+              "name": "Vyskocil Z.",
+              "shortName": null,
+              "slug": "vyskocil-zbynek"
+            },
+            "awayManager": null,
+            "awayRanking": null,
+            "awayRecord": null,
+            "awayScore": {
+              "aggregated": null,
+              "current": 3,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": null,
+              "penalties": null,
+              "periods": {
+                "period1": 11,
+                "period2": 7,
+                "period3": 11,
+                "period4": 10,
+                "period5": 11
+              },
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "awaySeed": null,
+            "battingSide": null,
+            "bonus": null,
+            "clock": null,
+            "discipline": null,
+            "downAndDistance": null,
+            "durations": null,
+            "fightCard": null,
+            "fightDiscipline": null,
+            "fightResult": null,
+            "finalResultOnly": false,
+            "firstToServe": null,
+            "group": null,
+            "home": {
+              "code": "KRE",
+              "id": 686268,
+              "image": "https://cdn.datasportsapi.com/v2/teams/686268/logo",
+              "name": "Krejci T.",
+              "shortName": null,
+              "slug": "krejci-tomas"
+            },
+            "homeManager": null,
+            "homeRanking": null,
+            "homeRecord": null,
+            "homeScore": {
+              "aggregated": null,
+              "current": 2,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": null,
+              "penalties": null,
+              "periods": {
+                "period1": 9,
+                "period2": 11,
+                "period3": 6,
+                "period4": 12,
+                "period5": 7
+              },
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "homeSeed": null,
+            "id": 1215109,
+            "inningState": null,
+            "league": {
+              "category": "Czech Republic",
+              "country": {
+                "code": "CZ",
+                "flag": "https://cdn.datasportsapi.com/v2/countries/CZ/flag",
+                "name": "Czechia"
+              },
+              "id": 4322,
+              "image": "https://cdn.datasportsapi.com/v2/leagues/4322/logo",
+              "name": "TT Cup",
+              "priority": 0,
+              "slug": "tt-cup",
+              "sport": "table-tennis"
+            },
+            "levels": [],
+            "lineupsAvailable": null,
+            "lineupsConfirmed": null,
+            "matchFormat": null,
+            "matchesInTie": null,
+            "note": null,
+            "playerOfTheMatch": null,
+            "previousLegFixtureId": null,
+            "referee": null,
+            "round": null,
+            "season": null,
+            "servedFirst": null,
+            "serving": null,
+            "sport": "table-tennis",
+            "startTime": "2026-11-21T21:10:00.000Z",
+            "status": {
+              "code": 100,
+              "description": "Ended",
+              "finish": "regular",
+              "period": null,
+              "phase": "finished",
+              "type": "finished"
+            },
+            "surface": null,
+            "tier": null,
+            "timeouts": null,
+            "toss": null,
+            "tvUmpire": null,
+            "umpires": null,
+            "varCheck": null,
+            "venue": null,
+            "winner": "away"
           },
           {
             "aggregateWinner": null,
@@ -88164,7 +88164,7 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "acaf8a528b8b0327bf7d71009ba05f4ee1ce935b95287ea470136dd14c77e02f"
+      "sha256": "46cca8d93d3e9612c0c82ef3a4e3a0137cad2468c5db3234d933d0d2d9ba1d0c"
     },
     {
       "page": 1,
@@ -161343,5 +161343,5 @@
       "sha256": "c9cb6b64e8b6280754a14a767559be90df19ca5fcaf9a6efda71fccd3d810798"
     }
   ],
-  "retrieved_at": "2026-11-22T13:24:49.916636+00:00"
+  "retrieved_at": "2026-11-22T19:16:42.377964+00:00"
 }
