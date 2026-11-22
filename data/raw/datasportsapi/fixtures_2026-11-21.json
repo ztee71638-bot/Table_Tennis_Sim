@@ -40203,7 +40203,7 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": null,
+              "current": 0,
               "errors": null,
               "hits": null,
               "innings": {},
@@ -40241,7 +40241,7 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": null,
+              "current": 0,
               "errors": null,
               "hits": null,
               "innings": {},
@@ -40286,12 +40286,12 @@
             "sport": "table-tennis",
             "startTime": "2026-11-21T16:35:00.000Z",
             "status": {
-              "code": 0,
-              "description": "Not started",
+              "code": 80,
+              "description": "Interrupted",
               "finish": null,
               "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
+              "phase": "interrupted",
+              "type": "interrupted"
             },
             "surface": null,
             "tier": null,
@@ -40958,11 +40958,11 @@
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 11,
-                "period2": 10,
-                "period3": 6,
+                "period1": 9,
+                "period2": 11,
+                "period3": 11,
                 "period4": 5,
-                "period5": 0
+                "period5": 11
               },
               "point": null,
               "redCards": null,
@@ -40995,18 +40995,18 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": 1,
+              "current": 2,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 7,
+                "period1": 11,
                 "period2": 7,
-                "period3": 5,
+                "period3": 7,
                 "period4": 11,
-                "period5": 0
+                "period5": 9
               },
               "point": null,
               "redCards": null,
@@ -84041,18 +84041,18 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": 1,
+              "current": 3,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 4,
-                "period2": 0,
-                "period3": 0,
-                "period4": 0,
-                "period5": 0
+                "period1": 11,
+                "period2": 9,
+                "period3": 11,
+                "period4": 10,
+                "period5": 12
               },
               "point": null,
               "redCards": null,
@@ -84085,18 +84085,18 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": 0,
+              "current": 2,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 3,
-                "period2": 0,
-                "period3": 0,
-                "period4": 0,
-                "period5": 0
+                "period1": 6,
+                "period2": 11,
+                "period3": 3,
+                "period4": 12,
+                "period5": 10
               },
               "point": null,
               "redCards": null,
@@ -88164,7 +88164,7 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "4440e02737f571ccc2ebcb95ca591a32aad230e02ef5824da1538bdf18549924"
+      "sha256": "acaf8a528b8b0327bf7d71009ba05f4ee1ce935b95287ea470136dd14c77e02f"
     },
     {
       "page": 1,
@@ -161343,5 +161343,5 @@
       "sha256": "c9cb6b64e8b6280754a14a767559be90df19ca5fcaf9a6efda71fccd3d810798"
     }
   ],
-  "retrieved_at": "2026-11-22T01:37:14.224724+00:00"
+  "retrieved_at": "2026-11-22T07:39:03.467826+00:00"
 }
