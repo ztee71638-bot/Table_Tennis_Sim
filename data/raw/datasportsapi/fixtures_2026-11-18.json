@@ -19441,123 +19441,6 @@
             "attendance": null,
             "awarded": false,
             "away": {
-              "code": "RUZ",
-              "id": 686055,
-              "image": "https://cdn.datasportsapi.com/v2/teams/686055/logo",
-              "name": "Ruzicka J.",
-              "shortName": null,
-              "slug": "ruzicka-jan"
-            },
-            "awayManager": null,
-            "awayRanking": null,
-            "awayRecord": null,
-            "awayScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "awaySeed": null,
-            "battingSide": null,
-            "bonus": null,
-            "clock": null,
-            "discipline": null,
-            "downAndDistance": null,
-            "durations": null,
-            "fightCard": null,
-            "fightDiscipline": null,
-            "fightResult": null,
-            "finalResultOnly": false,
-            "firstToServe": null,
-            "group": null,
-            "home": {
-              "code": "TRN",
-              "id": 58500,
-              "image": "https://cdn.datasportsapi.com/v2/teams/58500/logo",
-              "name": "Trnka T.",
-              "shortName": null,
-              "slug": "trnka-tomas"
-            },
-            "homeManager": null,
-            "homeRanking": null,
-            "homeRecord": null,
-            "homeScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "homeSeed": null,
-            "id": 1111537,
-            "inningState": null,
-            "league": {
-              "category": "Czech Republic",
-              "country": {
-                "code": "CZ",
-                "flag": "https://cdn.datasportsapi.com/v2/countries/CZ/flag",
-                "name": "Czechia"
-              },
-              "id": 4322,
-              "image": "https://cdn.datasportsapi.com/v2/leagues/4322/logo",
-              "name": "TT Cup",
-              "priority": 0,
-              "slug": "tt-cup",
-              "sport": "table-tennis"
-            },
-            "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
-            "matchFormat": null,
-            "matchesInTie": null,
-            "note": null,
-            "playerOfTheMatch": null,
-            "previousLegFixtureId": null,
-            "referee": null,
-            "round": null,
-            "season": null,
-            "servedFirst": null,
-            "serving": null,
-            "sport": "table-tennis",
-            "startTime": "2026-11-18T09:05:00.000Z",
-            "status": {
-              "code": 0,
-              "description": "Not started",
-              "finish": null,
-              "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
-            },
-            "surface": null,
-            "tier": null,
-            "timeouts": null,
-            "toss": null,
-            "tvUmpire": null,
-            "umpires": null,
-            "varCheck": null,
-            "venue": null,
-            "winner": null
-          },
-          {
-            "aggregateWinner": null,
-            "attendance": null,
-            "awarded": false,
-            "away": {
               "code": "BEN",
               "id": 69507,
               "image": "https://cdn.datasportsapi.com/v2/teams/69507/logo",
@@ -78717,7 +78600,7 @@
         ],
         "meta": {
           "complete": true,
-          "count": 595,
+          "count": 594,
           "date": "2026-11-18",
           "hasNextPage": true,
           "leagueCount": 10,
@@ -78725,7 +78608,7 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "7040cd4afd3d418469c7f3ceb03d1586588af63bc8ddf2d6e7d91effc0d0a706"
+      "sha256": "3b14b53408c3485327f1d0072246e1ce81939390264fbd57a0894b88d05dd143"
     },
     {
       "page": 1,
@@ -143440,5 +143323,5 @@
       "sha256": "eddbec2b32c7590f1883c5997abfcc29a79caefce9b35bf400ffe92e5abe5fc2"
     }
   ],
-  "retrieved_at": "2026-11-21T19:14:44.758703+00:00"
+  "retrieved_at": "2026-11-22T01:36:29.457371+00:00"
 }
