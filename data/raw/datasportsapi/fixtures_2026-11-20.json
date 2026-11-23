@@ -78037,11 +78037,12 @@
           "date": "2026-11-20",
           "hasNextPage": true,
           "leagueCount": 10,
+          "nextCursor": "fc2jBbGd-yTOAg8bHlyhd4V0",
           "page": 0,
           "sport": "table-tennis"
         }
       },
-      "sha256": "a0b1e23afc18d8d24062fe087ee0ee3661d4b8550f2b67cc0e94aa42bc0e2085"
+      "sha256": "03e4b61bd97e1e7a615c2496989f168118f32628ed22a43db6c698eb17d9c0ab"
     },
     {
       "page": 1,
@@ -146854,12 +146855,13 @@
           "date": "2026-11-20",
           "hasNextPage": false,
           "leagueCount": 2,
+          "nextCursor": null,
           "page": 1,
           "sport": "table-tennis"
         }
       },
-      "sha256": "b5f939032c0b2b443711082aa1eaadaec26cce9dd61966ed79e3ff88b43ebd41"
+      "sha256": "889be4aefaef59822d0f3e5521d1b4fb8fca06b654970c664a294d9ee017c49a"
     }
   ],
-  "retrieved_at": "2026-11-23T13:46:44.450600+00:00"
+  "retrieved_at": "2026-11-23T19:27:01.485209+00:00"
 }
