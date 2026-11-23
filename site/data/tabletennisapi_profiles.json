@@ -79,34 +79,84 @@
       "world_ranks": []
     },
     "campino laine louis": {
-      "status": "queued_not_checked",
+      "candidate_count": 0,
+      "identity_note": "No exact full-name candidate was found in the provider player directory.",
+      "looked_up_at_utc": "2026-11-23T08:01:45.045501+00:00",
+      "model_eligible": false,
+      "query_name": "Louis Laine Campino",
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "status": "not_found"
     },
     "eunseo kim": {
-      "status": "queued_not_checked",
+      "country": "KOR",
+      "display_name": "Kim Eunseo",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-23T08:01:51.211028+00:00",
+      "model_eligible": false,
+      "query_name": "Eunseo Kim",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_xa99zr6h",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": []
     },
     "agnes svensson": {
-      "status": "queued_not_checked",
+      "country": "SWE",
+      "display_name": "Svensson Agnes",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-23T08:02:03.556634+00:00",
+      "model_eligible": false,
+      "query_name": "Agnes Svensson",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_t1rmrh9v",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 150,
+          "rank": 93,
+          "week": "2026-47"
+        },
+        {
+          "discipline": "WD",
+          "list": "youth",
+          "points": 750,
+          "rank": 85,
+          "week": "2026-47"
+        }
+      ]
     },
     "brito eva": {
-      "status": "queued_not_checked",
+      "country": "DOM",
+      "display_name": "Brito Eva",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-23T08:02:15.949952+00:00",
+      "model_eligible": false,
+      "query_name": "Eva Brito",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_6tyt81tx",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": []
     },
     "benko lana": {
-      "status": "queued_not_checked",
+      "country": "CRO",
+      "display_name": "Benko Lana",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-23T08:02:28.353452+00:00",
+      "model_eligible": false,
+      "query_name": "Lana Benko",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_t11j0mxv",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": []
     },
     "hanka kodetova": {
       "status": "queued_not_checked",
