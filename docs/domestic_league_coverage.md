@@ -2,7 +2,9 @@
 
 ## Existing recent-result source
 
-The project already has an automated, read-only DataSportsAPI integration. The latest retained update examined 2026-11-14 through 2026-11-20 and contained these completed individual singles results:
+The project has an automated, read-only DataSportsAPI integration. The provider's human written reply on 2026-11-21 expressly permits retrieval within the seven-day Free-plan window, private retention of fetched records without a stated retention period, derived statistics/H2H/ratings, internal model training/testing/validation, and display of original derived outputs, including commercial use. No separate licence is required for that described scope. Raw records may not be resold, sublicensed, redistributed as a feed/API, or published in bulk as a substitute for the provider's service. The provider appreciates but does not require attribution. The Free plan allows 1,000 requests/day during beta and 100/day afterward.
+
+Latest scheduled update #39 (2026-11-23 UTC) retained 10 daily snapshots and classified 9,318 records; 9,205 were eligible individual singles, 113 were excluded from individual-player records, and 9,176 clean singles remained after 29 invalid results were excluded. These are cumulative rolling-feed/import counts, not full historical coverage. The older dated breakdown below is retained as a historical snapshot, not the latest total:
 
 | Competition | Matches |
 |---|---:|
@@ -15,7 +17,7 @@ The project already has an automated, read-only DataSportsAPI integration. The l
 
 These are a seven-day recent-results window, not a complete historical archive. Daily JSON snapshots are retained in `data/raw/datasportsapi/` so a later rebuild can replay the saved period. The separate SCORE Setka Cup dataset adds 7,851 historical rows dated 2022-06-10 through 2022-07-08; it is not interchangeable with the recent feed.
 
-The latest source classification audit contained 6,401 singles, 59 doubles, 34 team fixtures, and 16 unknown fixtures across all competitions. Only classified singles are used in individual player form and matchup evidence. Team, doubles, and unknown rows remain out of individual-player calculations.
+The latest source classification audit reports 9,318 classified records, with 9,205 eligible for individual-player records and 113 excluded as non-individual/ambiguous. After validation, 9,176 clean individual singles remain; 29 invalid results were excluded. Only clean singles are used in individual player form and matchup evidence.
 
 ## Build integration
 
@@ -42,7 +44,7 @@ A candidate match or historical head-to-head record is supporting evidence, not 
 
 ## Free-data boundaries
 
-- DataSportsAPI's existing free plan is the source used for the rolling recent-results import; its terms allow use in the project's own analysis but prohibit raw-feed resale/redistribution. The API key remains in GitHub Actions Secrets.
+- DataSportsAPI's Free plan is used for the rolling recent-results import. Written permission received 2026-11-21 explicitly covers private retention, derived statistics, internal model training/testing/validation, and display of original derived outputs, including commercial use. No separate licence is needed for that scope. Raw-feed resale, redistribution, and bulk raw publication that substitutes for its service remain prohibited. The API key stays in GitHub Actions Secrets. The source-specific chronological holdout is 55.10% versus 55.56% Elo, so this model is not promoted.
 - TT Data Lab advertises deeper historical CSV/JSON data across Czech Liga Pro, Setka Cup, TT Elite Series, and other circuits, but pricing is on request. No paid access or bulk export has been assumed.
 - TipManager's terms restrict portal content to personal, non-commercial use and prohibit reproducing or passing on its data without prior authorization. It is therefore not scraped or imported.
 - Table Tennis API's free plan is useful for professional event discovery and recent results, but its full archive is paid and its published coverage does not establish coverage of Czech Liga Pro or Setka Cup.
