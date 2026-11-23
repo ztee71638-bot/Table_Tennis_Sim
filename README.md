@@ -15,12 +15,13 @@ A source-aware, reproducible database for table-tennis match results, player rec
 
 | Source | Records | Meaning |
 |---|---:|---|
-| SCORE Setka Cup CSV | 7,851 | Match rows |
-| WTT men's 2022–2025 | 5,442 | Match rows |
-| WTT women's 2022–2025 | 4,850 | Match rows |
+| SCORE Setka Cup CSV | 7,851 | Historical match rows |
+| WTT men's 2022–2025 | 5,442 | Historical match rows |
+| WTT women's 2022–2025 | 4,850 | Historical match rows |
+| DataSportsAPI rolling feed | 9,318 | Classified recent-window records; 9,176 clean individual singles after 29 invalid results were excluded |
 | Lathise public Elo sample | 2,000 | Pre-match Elo observations, not additional matches |
 
-Total: 18,143 match rows plus 2,000 Elo observations. The database has 1,942 source-scoped player records. Player records from different sources are not automatically merged.
+Latest successful scheduled update #39 (2026-11-23 UTC): 27,461 total database match records, 3,718 source-scoped player records, and 10 retained daily DataSportsAPI snapshots. The DataSportsAPI classification included 9,318 records; 9,205 were eligible for individual-player records, 113 were excluded, and 9,176 clean individual singles remained after invalid-result filtering. Counts are source-scoped; player records from different sources are not automatically merged.
 
 ## Automated build and outputs
 
@@ -34,7 +35,7 @@ The artifact contains:
 
 ## Recent domestic-league coverage
 
-The main build now also refreshes the latest seven days of DataSportsAPI results when the existing `DATASPORTSAPI_KEY` secret is configured. The feed covers Czech Liga Pro, Setka Cup, TT Elite Series, TT Cup, and Liga Pro, among other competitions. Its player records remain source-isolated and descriptive; the WTT prediction model is not silently retrained on these leagues.
+The scheduled build refreshes the latest seven days of DataSportsAPI results using the existing `DATASPORTSAPI_KEY` secret. DataSportsAPI has provided written permission for private retention of lawfully fetched records, derived statistics, internal model training/testing/validation, and display of original derived outputs, including commercial use, with no separate licence for that scope. Raw records must not be redistributed or published in bulk as a substitute feed. Free access is 1,000 requests/day during beta and 100/day afterward. Its player records remain source-isolated. The DataSportsAPI-specific chronological backtest is kept separate and is not promoted: latest holdout accuracy was 55.10% versus 55.56% for its Elo baseline.
 
 The build also compares Polymarket's current table-tennis listings with recent player histories and exports competition-specific records, last-played dates, and historical head-to-head evidence. Initial-only and ambiguous name matches remain manual-review candidates. No player identities are automatically merged.
 
