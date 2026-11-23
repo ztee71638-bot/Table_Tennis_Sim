@@ -27,8 +27,10 @@ This project is free-only. A source is not automatically imported just because i
 - API endpoint: `https://api.datasportsapi.com/v2/fixtures`
 - Imported by `scripts/import_datasportsapi.py`; the scheduled workflow refreshes the latest seven days and retains daily raw JSON snapshots.
 - The free plan is used with the existing `DATASPORTSAPI_KEY` GitHub Actions secret. No paid plan is assumed.
-- Terms checked 2026-11-16: data may be used in the project's own apps/products/analysis; raw feed resale or redistribution is prohibited.
-- The 2026-11-14 through 2026-11-20 saved update contained 6,337 singles results across Czech Liga Pro (940), Setka Cup (1,526), TT Elite Series (2,023), TT Cup (1,119), and Liga Pro (729). These are recent-window counts, not full historical totals.
+- Written provider clarification received 2026-11-21 from `hello@datasportsapi.com`: the provider explicitly approved fetching within the Free plan's rolling history window and request limits; privately retaining fetched records for research with no stated retention period; calculating original derived statistics, form, H2H and ratings; internal statistical-model training/testing/validation; and displaying original derived aggregates/model outputs in the simulator. Commercial use is allowed under the same terms. No separate licence is required for these described uses.
+- Restrictions: do not resell, sublicense, redistribute or publish raw records as a feed/API; do not publish bulk raw result lists that could substitute for the provider's service; contact the provider before materially expanding to record-level sharing or a competing data service. Attribution (`Data: DataSportsAPI` with a provider link) is appreciated but not required. Provider states data is supplied as-is and may later be corrected.
+- Free-plan request allowance: 1,000 requests/day during beta, falling to 100/day after beta. The rolling API history window remains seven days. The provider's reply states no retention period for records already lawfully fetched; derived outputs remain usable after the history window moves forward. No paid access is needed for the approved scope.
+- Latest successful scheduled update #39 (2026-11-23 UTC) retained 10 daily snapshots and classified 9,318 records; 9,205 were eligible individual singles, 113 were excluded from individual-player records, and 9,176 clean singles remained after 29 invalid results were excluded. These are rolling-window cumulative database/import counts, not a complete historical archive.
 - Singles/doubles/team/unknown classifications are stored separately. Only completed individual singles are used for individual-player form and H2H; ambiguous/team/doubles records are excluded from those calculations.
 - The scheduled `update-datasportsapi.yml` workflow is the single automated owner of the rolling recent import, then reconciles Polymarket player listings against the matching competition. Deployment-only rebuilds reuse the latest published histories and do not make duplicate provider calls. Manual database builds serialize with the scheduled importer. See `docs/domestic_league_coverage.md`.
 
@@ -186,7 +188,7 @@ No data from these three candidates was imported in this qualification pass. No 
 - The user's non-commercial research-access request is awaiting a substantive response; the automated acknowledgement is not permission. A free account/key by itself does not override the terms.
 - Until written permission is received, keep this source as documentation-only. Do not place the key in GitHub Secrets or call bulk endpoints for the project. Never put a key in source control, logs, or chat.
 
-## Provider permission requests — awaiting written responses (2026-11-21)
+## Provider permission requests — status updated 2026-11-23
 
 The following requests have been sent. No source may be expanded beyond its already documented permitted scope until a substantive written response is received and recorded here.
 
@@ -201,10 +203,12 @@ The following requests have been sent. No source may be expanded beyond its alre
 - Requested only a no-cost sample or limited research access, with written clarification for private storage, derived statistics, model training/testing, and limited display of derived outputs. Paid access is not authorized.
 - Status: awaiting response. No scraping, bulk download, or import has been enabled.
 
-### DataSportsAPI
+### DataSportsAPI — written permission received
 - Request sent to `hello@datasportsapi.com`, subject: `Written clarification request: table-tennis results, derived statistics and model training`.
-- Asked for written confirmation of free-plan permissions for private retention of recent results, derived player statistics, statistical model training/testing, and limited display of derived outputs, including retention and commercial-use restrictions.
-- Status: awaiting response. Existing recent-results integration remains within its documented free-plan and source-isolation controls; do not expand retention, bulk use, or model training beyond the current approved scope until clarified.
+- Human response received 2026-11-21. The provider confirmed all five requested uses on the Free plan: recent retrieval within the plan window/limits, private retention without a stated retention period, derived statistics/H2H/ratings, internal model training/testing/validation, and display of original derived outputs. Commercial use is also allowed; no separate licence is required for the described scope.
+- Raw data must not be resold, sublicensed, redistributed as a feed/API, or reproduced in bulk in a way that substitutes for the provider's service. Attribution is appreciated but not required. Contact the provider before expanding to record-level sharing or a competing data service.
+- Free allowance is 1,000 requests/day during beta and 100/day afterward; the API history window is seven days. Derived outputs remain usable after the window rolls forward. Data is supplied as-is and may be corrected.
+- Status: approved for the exact scope above. Keep source attribution and raw-data access controls; do not expand into raw-data redistribution.
 
 ### Table Tennis API (DeveloperData)
 - Existing non-commercial research/licensing clarification request remains pending; automated acknowledgements or API-key issuance do not constitute permission.
