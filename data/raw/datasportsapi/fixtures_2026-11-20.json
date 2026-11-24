@@ -78475,12 +78475,12 @@
           "date": "2026-11-20",
           "hasNextPage": true,
           "leagueCount": 10,
-          "nextCursor": "878w-oXcXjdQFiYz6OBZkpW1",
+          "nextCursor": "s5qgaBEFhJl9ggfjtzdIxAXI",
           "page": 0,
           "sport": "table-tennis"
         }
       },
-      "sha256": "f09081e1ebef3c187dd374745ea7f4bb4baecfb2b9bfe51aee0ae3ef5e2577b8"
+      "sha256": "4a5e933b2dcb00e9eb73a3035bd302e0426bd85155d0dd483b8e8cd571b55ea1"
     },
     {
       "page": 1,
@@ -147301,5 +147301,5 @@
       "sha256": "889be4aefaef59822d0f3e5521d1b4fb8fca06b654970c664a294d9ee017c49a"
     }
   ],
-  "retrieved_at": "2026-11-24T07:48:39.255371+00:00"
+  "retrieved_at": "2026-11-24T13:42:25.729689+00:00"
 }
