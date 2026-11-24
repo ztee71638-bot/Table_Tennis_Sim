@@ -116855,12 +116855,12 @@
           "date": "2026-11-23",
           "hasNextPage": true,
           "leagueCount": 10,
-          "nextCursor": "baNmHn4gMA_CmhpOjwLkkqei",
+          "nextCursor": "Fx1cNaZhx5sow0RU5DbDDFkD",
           "page": 0,
           "sport": "table-tennis"
         }
       },
-      "sha256": "3682647ac68789b7cbfd13a11d9c6a4fa565b95d0d0646e86434153ebc1f9e54"
+      "sha256": "46a87f544148634af78dc32fa32589469f159f781d317f6cfdcbecc4c40e84fa"
     },
     {
       "page": 1,
@@ -139233,143 +139233,6 @@
             },
             "homeSeed": null,
             "id": 1245868,
-            "inningState": null,
-            "league": {
-              "category": "Russia",
-              "country": {
-                "code": "RU",
-                "flag": "https://cdn.datasportsapi.com/v2/countries/RU/flag",
-                "name": "Russia"
-              },
-              "id": 4324,
-              "image": "https://cdn.datasportsapi.com/v2/leagues/4324/logo",
-              "name": "Liga Pro",
-              "priority": 0,
-              "slug": "liga-pro",
-              "sport": "table-tennis"
-            },
-            "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
-            "matchFormat": null,
-            "matchesInTie": null,
-            "note": null,
-            "playerOfTheMatch": null,
-            "previousLegFixtureId": null,
-            "referee": null,
-            "round": null,
-            "season": {
-              "endYear": 2026,
-              "id": 4329,
-              "name": "2026",
-              "startYear": 2026,
-              "year": "2026"
-            },
-            "servedFirst": null,
-            "serving": null,
-            "sport": "table-tennis",
-            "stage": null,
-            "stale": false,
-            "startTime": "2026-11-23T23:45:00.000Z",
-            "status": {
-              "code": 100,
-              "description": "Ended",
-              "finish": "regular",
-              "period": null,
-              "phase": "finished",
-              "type": "finished"
-            },
-            "surface": null,
-            "tier": null,
-            "timeouts": null,
-            "toss": null,
-            "tvUmpire": null,
-            "umpires": null,
-            "varCheck": null,
-            "venue": null,
-            "winner": "away"
-          },
-          {
-            "aggregateWinner": null,
-            "attendance": null,
-            "awarded": false,
-            "away": {
-              "code": "R",
-              "id": 115040,
-              "image": "https://cdn.datasportsapi.com/v2/teams/115040/logo",
-              "name": "Sitnikov R.",
-              "shortName": null,
-              "slug": "sitnikov-roman"
-            },
-            "awayManager": null,
-            "awayMembers": null,
-            "awayRanking": null,
-            "awayRecord": null,
-            "awayScore": {
-              "aggregated": null,
-              "current": 3,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {
-                "period1": 11,
-                "period2": 8,
-                "period3": 11,
-                "period4": 11
-              },
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "awaySeed": null,
-            "battingSide": null,
-            "bonus": null,
-            "clock": null,
-            "discipline": null,
-            "downAndDistance": null,
-            "durations": null,
-            "fightCard": null,
-            "fightDiscipline": null,
-            "fightResult": null,
-            "finalResultOnly": false,
-            "firstToServe": null,
-            "group": null,
-            "home": {
-              "code": "A",
-              "id": 115039,
-              "image": "https://cdn.datasportsapi.com/v2/teams/115039/logo",
-              "name": "Shershnev A.",
-              "shortName": null,
-              "slug": "shershnev-alexey"
-            },
-            "homeManager": null,
-            "homeMembers": null,
-            "homeRanking": null,
-            "homeRecord": null,
-            "homeScore": {
-              "aggregated": null,
-              "current": 1,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {
-                "period1": 9,
-                "period2": 11,
-                "period3": 6,
-                "period4": 3
-              },
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "homeSeed": null,
-            "id": 1245869,
             "inningState": null,
             "league": {
               "category": "Russia",
@@ -189646,7 +189509,7 @@
         ],
         "meta": {
           "complete": true,
-          "count": 533,
+          "count": 532,
           "date": "2026-11-23",
           "hasNextPage": false,
           "leagueCount": 2,
@@ -189655,8 +189518,8 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "08c19392d0b0b56aa0793f74c1262f6a739c572d9991dc2d99e65907315a87af"
+      "sha256": "3f2c353a569138ceb5f1500faf9552a06b77b06c80832bade9db5576f1f8d776"
     }
   ],
-  "retrieved_at": "2026-11-24T01:43:48.536408+00:00"
+  "retrieved_at": "2026-11-24T07:49:25.441057+00:00"
 }
