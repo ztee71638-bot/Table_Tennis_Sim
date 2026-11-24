@@ -1798,7 +1798,24 @@
               "slug": "shah-m-u-thakkar-m-v"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "SHA",
+                "id": 1024953,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1024953/logo",
+                "name": "Shah M.",
+                "shortName": null,
+                "slug": "shah-manush-utpalbhai"
+              },
+              {
+                "code": "THA",
+                "id": 800251,
+                "image": "https://cdn.datasportsapi.com/v2/teams/800251/logo",
+                "name": "Thakkar M.",
+                "shortName": null,
+                "slug": "thakkar-manav-vikash"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -1842,7 +1859,24 @@
               "slug": "lim-j-oh-j"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "LIM",
+                "id": 760273,
+                "image": "https://cdn.datasportsapi.com/v2/teams/760273/logo",
+                "name": "Lim J.",
+                "shortName": null,
+                "slug": "lim-jonghoon"
+              },
+              {
+                "code": "JUN",
+                "id": 685937,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685937/logo",
+                "name": "Junsung Oh",
+                "shortName": "Junsung Oh",
+                "slug": "oh-junsung"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -3712,7 +3746,24 @@
               "slug": "ionescu-e-szocs-b-c"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "ION",
+                "id": 1011722,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1011722/logo",
+                "name": "Ionescu E.",
+                "shortName": "Ionescu E.",
+                "slug": "ionescu-eduard"
+              },
+              {
+                "code": "SZO",
+                "id": 760257,
+                "image": "https://cdn.datasportsapi.com/v2/teams/760257/logo",
+                "name": "Szocs B.",
+                "shortName": null,
+                "slug": "szocs-bernadette"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -3756,7 +3807,24 @@
               "slug": "dorr-e-yuan-j-n"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "DOR",
+                "id": 894094,
+                "image": "https://cdn.datasportsapi.com/v2/teams/894094/logo",
+                "name": "Esteban Dorr",
+                "shortName": "E. Dorr",
+                "slug": "dorr-esteban"
+              },
+              {
+                "code": "YUA",
+                "id": 685993,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685993/logo",
+                "name": "Yuan J.",
+                "shortName": "Yuan J.",
+                "slug": "yuan-jia-nan"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -3860,7 +3928,24 @@
               "slug": "togami-s-odo-s"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "ODO",
+                "id": 783314,
+                "image": "https://cdn.datasportsapi.com/v2/teams/783314/logo",
+                "name": "Odo Satsuki",
+                "shortName": "Odo S.",
+                "slug": "odo-satsuki"
+              },
+              {
+                "code": "TOG",
+                "id": 685938,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685938/logo",
+                "name": "Shunsuke Togami",
+                "shortName": "Togami S.",
+                "slug": "togami-shunsuke"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -3904,7 +3989,24 @@
               "slug": "lum-n-liu-y"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "LIU",
+                "id": 786741,
+                "image": "https://cdn.datasportsapi.com/v2/teams/786741/logo",
+                "name": "Liu Y.",
+                "shortName": null,
+                "slug": "liu-yangzi"
+              },
+              {
+                "code": "LUM",
+                "id": 685948,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685948/logo",
+                "name": "Lum N.",
+                "shortName": null,
+                "slug": "lum-nicholas"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -4008,7 +4110,24 @@
               "slug": "odo-s-yokoi-s"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "ODO",
+                "id": 783314,
+                "image": "https://cdn.datasportsapi.com/v2/teams/783314/logo",
+                "name": "Odo Satsuki",
+                "shortName": "Odo S.",
+                "slug": "odo-satsuki"
+              },
+              {
+                "code": "YOK",
+                "id": 1115213,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1115213/logo",
+                "name": "Yokoi S.",
+                "shortName": null,
+                "slug": "yokoi-sakura"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -4051,7 +4170,24 @@
               "slug": "joo-c-kim-n"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "JOO",
+                "id": 685988,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685988/logo",
+                "name": "Joo C.",
+                "shortName": null,
+                "slug": "joo-cheonhui"
+              },
+              {
+                "code": "KIM",
+                "id": 760256,
+                "image": "https://cdn.datasportsapi.com/v2/teams/760256/logo",
+                "name": "Kim N.",
+                "shortName": null,
+                "slug": "kim-nayeong"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -7849,6 +7985,278 @@
             "varCheck": null,
             "venue": null,
             "winner": "home"
+          },
+          {
+            "aggregateWinner": null,
+            "attendance": null,
+            "awarded": false,
+            "away": {
+              "code": "GAL",
+              "id": 628940,
+              "image": "https://cdn.datasportsapi.com/v2/teams/628940/logo",
+              "name": "Galimov M.",
+              "shortName": "Galimov M.",
+              "slug": "mihail-galimov"
+            },
+            "awayManager": null,
+            "awayMembers": null,
+            "awayRanking": null,
+            "awayRecord": null,
+            "awayScore": {
+              "aggregated": null,
+              "current": 3,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": null,
+              "penalties": null,
+              "periods": {
+                "period1": 11,
+                "period2": 8,
+                "period3": 11,
+                "period4": 11
+              },
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "awaySeed": null,
+            "battingSide": null,
+            "bonus": null,
+            "clock": null,
+            "discipline": null,
+            "downAndDistance": null,
+            "durations": null,
+            "fightCard": null,
+            "fightDiscipline": null,
+            "fightResult": null,
+            "finalResultOnly": false,
+            "firstToServe": null,
+            "group": null,
+            "home": {
+              "code": "DMI",
+              "id": 679697,
+              "image": "https://cdn.datasportsapi.com/v2/teams/679697/logo",
+              "name": "Dmitrii Kulesha",
+              "shortName": "Kulesha D.",
+              "slug": "kulesha-dmitrii"
+            },
+            "homeManager": null,
+            "homeMembers": null,
+            "homeRanking": null,
+            "homeRecord": null,
+            "homeScore": {
+              "aggregated": null,
+              "current": 1,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": null,
+              "penalties": null,
+              "periods": {
+                "period1": 6,
+                "period2": 11,
+                "period3": 7,
+                "period4": 7
+              },
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "homeSeed": null,
+            "id": 1196632,
+            "inningState": null,
+            "league": {
+              "category": "Belarus",
+              "country": {
+                "code": "BY",
+                "flag": "https://cdn.datasportsapi.com/v2/countries/BY/flag",
+                "name": "Belarus"
+              },
+              "id": 4325,
+              "image": null,
+              "name": "Liga Pro",
+              "priority": 0,
+              "slug": "liga-pro",
+              "sport": "table-tennis"
+            },
+            "levels": [],
+            "lineupsAvailable": null,
+            "lineupsConfirmed": null,
+            "matchFormat": null,
+            "matchesInTie": null,
+            "note": null,
+            "playerOfTheMatch": null,
+            "previousLegFixtureId": null,
+            "referee": null,
+            "round": null,
+            "season": {
+              "endYear": 2026,
+              "id": 4333,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
+            "servedFirst": null,
+            "serving": null,
+            "sport": "table-tennis",
+            "stage": null,
+            "stale": false,
+            "startTime": "2026-11-20T20:00:00.000Z",
+            "status": {
+              "code": 100,
+              "description": "Ended",
+              "finish": "regular",
+              "period": null,
+              "phase": "finished",
+              "type": "finished"
+            },
+            "surface": null,
+            "tier": null,
+            "timeouts": null,
+            "toss": null,
+            "tvUmpire": null,
+            "umpires": null,
+            "varCheck": null,
+            "venue": null,
+            "winner": "away"
+          },
+          {
+            "aggregateWinner": null,
+            "attendance": null,
+            "awarded": false,
+            "away": {
+              "code": "LOG",
+              "id": 723128,
+              "image": "https://cdn.datasportsapi.com/v2/teams/723128/logo",
+              "name": "Logunov A.",
+              "shortName": "Logunov A.",
+              "slug": "alexander-logunov"
+            },
+            "awayManager": null,
+            "awayMembers": null,
+            "awayRanking": null,
+            "awayRecord": null,
+            "awayScore": {
+              "aggregated": null,
+              "current": 3,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": null,
+              "penalties": null,
+              "periods": {
+                "period1": 11,
+                "period2": 11,
+                "period3": 11
+              },
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "awaySeed": null,
+            "battingSide": null,
+            "bonus": null,
+            "clock": null,
+            "discipline": null,
+            "downAndDistance": null,
+            "durations": null,
+            "fightCard": null,
+            "fightDiscipline": null,
+            "fightResult": null,
+            "finalResultOnly": false,
+            "firstToServe": null,
+            "group": null,
+            "home": {
+              "code": "LVO",
+              "id": 628724,
+              "image": "https://cdn.datasportsapi.com/v2/teams/628724/logo",
+              "name": "Lvov D.",
+              "shortName": "Lvov D.",
+              "slug": "danila-lvov"
+            },
+            "homeManager": null,
+            "homeMembers": null,
+            "homeRanking": null,
+            "homeRecord": null,
+            "homeScore": {
+              "aggregated": null,
+              "current": 0,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": null,
+              "penalties": null,
+              "periods": {
+                "period1": 8,
+                "period2": 5,
+                "period3": 7
+              },
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "homeSeed": null,
+            "id": 1196884,
+            "inningState": null,
+            "league": {
+              "category": "Belarus",
+              "country": {
+                "code": "BY",
+                "flag": "https://cdn.datasportsapi.com/v2/countries/BY/flag",
+                "name": "Belarus"
+              },
+              "id": 4325,
+              "image": null,
+              "name": "Liga Pro",
+              "priority": 0,
+              "slug": "liga-pro",
+              "sport": "table-tennis"
+            },
+            "levels": [],
+            "lineupsAvailable": null,
+            "lineupsConfirmed": null,
+            "matchFormat": null,
+            "matchesInTie": null,
+            "note": null,
+            "playerOfTheMatch": null,
+            "previousLegFixtureId": null,
+            "referee": null,
+            "round": null,
+            "season": {
+              "endYear": 2026,
+              "id": 4333,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
+            "servedFirst": null,
+            "serving": null,
+            "sport": "table-tennis",
+            "stage": null,
+            "stale": false,
+            "startTime": "2026-11-20T20:30:00.000Z",
+            "status": {
+              "code": 100,
+              "description": "Ended",
+              "finish": "regular",
+              "period": null,
+              "phase": "finished",
+              "type": "finished"
+            },
+            "surface": null,
+            "tier": null,
+            "timeouts": null,
+            "toss": null,
+            "tvUmpire": null,
+            "umpires": null,
+            "varCheck": null,
+            "venue": null,
+            "winner": "away"
           },
           {
             "aggregateWinner": null,
@@ -15768,6 +16176,278 @@
             "stage": null,
             "stale": false,
             "startTime": "2026-11-20T09:30:00.000Z",
+            "status": {
+              "code": 100,
+              "description": "Ended",
+              "finish": "regular",
+              "period": null,
+              "phase": "finished",
+              "type": "finished"
+            },
+            "surface": null,
+            "tier": null,
+            "timeouts": null,
+            "toss": null,
+            "tvUmpire": null,
+            "umpires": null,
+            "varCheck": null,
+            "venue": null,
+            "winner": "away"
+          },
+          {
+            "aggregateWinner": null,
+            "attendance": null,
+            "awarded": false,
+            "away": {
+              "code": "PAR",
+              "id": 69498,
+              "image": "https://cdn.datasportsapi.com/v2/teams/69498/logo",
+              "name": "Parhomenko D.",
+              "shortName": null,
+              "slug": "parhomenko-dmitro"
+            },
+            "awayManager": null,
+            "awayMembers": null,
+            "awayRanking": null,
+            "awayRecord": null,
+            "awayScore": {
+              "aggregated": null,
+              "current": 3,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": 3,
+              "penalties": null,
+              "periods": {
+                "period1": 4,
+                "period2": 11,
+                "period3": 11,
+                "period4": 14
+              },
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "awaySeed": null,
+            "battingSide": null,
+            "bonus": null,
+            "clock": null,
+            "discipline": null,
+            "downAndDistance": null,
+            "durations": null,
+            "fightCard": null,
+            "fightDiscipline": null,
+            "fightResult": null,
+            "finalResultOnly": false,
+            "firstToServe": null,
+            "group": null,
+            "home": {
+              "code": "HOL",
+              "id": 170409,
+              "image": "https://cdn.datasportsapi.com/v2/teams/170409/logo",
+              "name": "Holovatiuk Y.",
+              "shortName": null,
+              "slug": "holovatiuk-yurii"
+            },
+            "homeManager": null,
+            "homeMembers": null,
+            "homeRanking": null,
+            "homeRecord": null,
+            "homeScore": {
+              "aggregated": null,
+              "current": 1,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": 1,
+              "penalties": null,
+              "periods": {
+                "period1": 11,
+                "period2": 3,
+                "period3": 9,
+                "period4": 12
+              },
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "homeSeed": null,
+            "id": 1257652,
+            "inningState": null,
+            "league": {
+              "category": "Czech Republic",
+              "country": {
+                "code": "CZ",
+                "flag": "https://cdn.datasportsapi.com/v2/countries/CZ/flag",
+                "name": "Czechia"
+              },
+              "id": 178,
+              "image": "https://cdn.datasportsapi.com/v2/leagues/178/logo",
+              "name": "Czech Liga Pro",
+              "priority": 0,
+              "slug": "czech-liga-pro",
+              "sport": "table-tennis"
+            },
+            "levels": [],
+            "lineupsAvailable": null,
+            "lineupsConfirmed": null,
+            "matchFormat": null,
+            "matchesInTie": null,
+            "note": null,
+            "playerOfTheMatch": null,
+            "previousLegFixtureId": null,
+            "referee": null,
+            "round": null,
+            "season": {
+              "endYear": 2026,
+              "id": 174,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
+            "servedFirst": null,
+            "serving": null,
+            "sport": "table-tennis",
+            "stage": null,
+            "stale": false,
+            "startTime": "2026-11-20T17:00:00.000Z",
+            "status": {
+              "code": 100,
+              "description": "Ended",
+              "finish": "regular",
+              "period": null,
+              "phase": "finished",
+              "type": "finished"
+            },
+            "surface": null,
+            "tier": null,
+            "timeouts": null,
+            "toss": null,
+            "tvUmpire": null,
+            "umpires": null,
+            "varCheck": null,
+            "venue": null,
+            "winner": "away"
+          },
+          {
+            "aggregateWinner": null,
+            "attendance": null,
+            "awarded": false,
+            "away": {
+              "code": "PUS",
+              "id": 706926,
+              "image": "https://cdn.datasportsapi.com/v2/teams/706926/logo",
+              "name": "Pusch F.",
+              "shortName": null,
+              "slug": "pusch-frantisek"
+            },
+            "awayManager": null,
+            "awayMembers": null,
+            "awayRanking": null,
+            "awayRecord": null,
+            "awayScore": {
+              "aggregated": null,
+              "current": 3,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": 3,
+              "penalties": null,
+              "periods": {
+                "period1": 13,
+                "period2": 14,
+                "period3": 11
+              },
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "awaySeed": null,
+            "battingSide": null,
+            "bonus": null,
+            "clock": null,
+            "discipline": null,
+            "downAndDistance": null,
+            "durations": null,
+            "fightCard": null,
+            "fightDiscipline": null,
+            "fightResult": null,
+            "finalResultOnly": false,
+            "firstToServe": null,
+            "group": null,
+            "home": {
+              "code": "ZAH",
+              "id": 635180,
+              "image": "https://cdn.datasportsapi.com/v2/teams/635180/logo",
+              "name": "Zahradka M.",
+              "shortName": null,
+              "slug": "zahradka-michal"
+            },
+            "homeManager": null,
+            "homeMembers": null,
+            "homeRanking": null,
+            "homeRecord": null,
+            "homeScore": {
+              "aggregated": null,
+              "current": 0,
+              "errors": null,
+              "hits": null,
+              "innings": {},
+              "normalTime": 0,
+              "penalties": null,
+              "periods": {
+                "period1": 11,
+                "period2": 12,
+                "period3": 9
+              },
+              "point": null,
+              "redCards": null,
+              "series": null,
+              "tieBreaks": {}
+            },
+            "homeSeed": null,
+            "id": 1257653,
+            "inningState": null,
+            "league": {
+              "category": "Czech Republic",
+              "country": {
+                "code": "CZ",
+                "flag": "https://cdn.datasportsapi.com/v2/countries/CZ/flag",
+                "name": "Czechia"
+              },
+              "id": 178,
+              "image": "https://cdn.datasportsapi.com/v2/leagues/178/logo",
+              "name": "Czech Liga Pro",
+              "priority": 0,
+              "slug": "czech-liga-pro",
+              "sport": "table-tennis"
+            },
+            "levels": [],
+            "lineupsAvailable": null,
+            "lineupsConfirmed": null,
+            "matchFormat": null,
+            "matchesInTie": null,
+            "note": null,
+            "playerOfTheMatch": null,
+            "previousLegFixtureId": null,
+            "referee": null,
+            "round": null,
+            "season": {
+              "endYear": 2026,
+              "id": 174,
+              "name": "2026",
+              "startYear": 2026,
+              "year": "2026"
+            },
+            "servedFirst": null,
+            "serving": null,
+            "sport": "table-tennis",
+            "stage": null,
+            "stale": false,
+            "startTime": "2026-11-20T17:30:00.000Z",
             "status": {
               "code": 100,
               "description": "Ended",
@@ -26285,127 +26965,6 @@
             "attendance": null,
             "awarded": false,
             "away": {
-              "code": "KED",
-              "id": 635400,
-              "image": "https://cdn.datasportsapi.com/v2/teams/635400/logo",
-              "name": "Kedzierski P.",
-              "shortName": "Kedzierski P.",
-              "slug": "kedzierski-piotr"
-            },
-            "awayManager": null,
-            "awayMembers": null,
-            "awayRanking": null,
-            "awayRecord": null,
-            "awayScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "awaySeed": null,
-            "battingSide": null,
-            "bonus": null,
-            "clock": null,
-            "discipline": null,
-            "downAndDistance": null,
-            "durations": null,
-            "fightCard": null,
-            "fightDiscipline": null,
-            "fightResult": null,
-            "finalResultOnly": false,
-            "firstToServe": null,
-            "group": null,
-            "home": {
-              "code": "PKA",
-              "id": 745987,
-              "image": "https://cdn.datasportsapi.com/v2/teams/745987/logo",
-              "name": "Pasek K.",
-              "shortName": "Pasek K.",
-              "slug": "pasek-kamil"
-            },
-            "homeManager": null,
-            "homeMembers": null,
-            "homeRanking": null,
-            "homeRecord": null,
-            "homeScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "homeSeed": null,
-            "id": 1190589,
-            "inningState": null,
-            "league": {
-              "category": "Czech Republic",
-              "country": {
-                "code": "CZ",
-                "flag": "https://cdn.datasportsapi.com/v2/countries/CZ/flag",
-                "name": "Czechia"
-              },
-              "id": 4322,
-              "image": "https://cdn.datasportsapi.com/v2/leagues/4322/logo",
-              "name": "TT Cup",
-              "priority": 0,
-              "slug": "tt-cup",
-              "sport": "table-tennis"
-            },
-            "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
-            "matchFormat": null,
-            "matchesInTie": null,
-            "note": null,
-            "playerOfTheMatch": null,
-            "previousLegFixtureId": null,
-            "referee": null,
-            "round": null,
-            "season": null,
-            "servedFirst": null,
-            "serving": null,
-            "sport": "table-tennis",
-            "stage": null,
-            "stale": false,
-            "startTime": "2026-11-20T15:30:00.000Z",
-            "status": {
-              "code": 0,
-              "description": "Not started",
-              "finish": null,
-              "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
-            },
-            "surface": null,
-            "tier": null,
-            "timeouts": null,
-            "toss": null,
-            "tvUmpire": null,
-            "umpires": null,
-            "varCheck": null,
-            "venue": null,
-            "winner": null
-          },
-          {
-            "aggregateWinner": null,
-            "attendance": null,
-            "awarded": false,
-            "away": {
               "code": "PES",
               "id": 168881,
               "image": "https://cdn.datasportsapi.com/v2/teams/168881/logo",
@@ -29419,127 +29978,6 @@
             "varCheck": null,
             "venue": null,
             "winner": "home"
-          },
-          {
-            "aggregateWinner": null,
-            "attendance": null,
-            "awarded": false,
-            "away": {
-              "code": "WIE",
-              "id": 619224,
-              "image": "https://cdn.datasportsapi.com/v2/teams/619224/logo",
-              "name": "Wiekiera A.",
-              "shortName": "Wiekiera A.",
-              "slug": "wiekiera-arkadiusz"
-            },
-            "awayManager": null,
-            "awayMembers": null,
-            "awayRanking": null,
-            "awayRecord": null,
-            "awayScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "awaySeed": null,
-            "battingSide": null,
-            "bonus": null,
-            "clock": null,
-            "discipline": null,
-            "downAndDistance": null,
-            "durations": null,
-            "fightCard": null,
-            "fightDiscipline": null,
-            "fightResult": null,
-            "finalResultOnly": false,
-            "firstToServe": null,
-            "group": null,
-            "home": {
-              "code": "PKA",
-              "id": 745987,
-              "image": "https://cdn.datasportsapi.com/v2/teams/745987/logo",
-              "name": "Pasek K.",
-              "shortName": "Pasek K.",
-              "slug": "pasek-kamil"
-            },
-            "homeManager": null,
-            "homeMembers": null,
-            "homeRanking": null,
-            "homeRecord": null,
-            "homeScore": {
-              "aggregated": null,
-              "current": null,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {},
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "homeSeed": null,
-            "id": 1192092,
-            "inningState": null,
-            "league": {
-              "category": "Czech Republic",
-              "country": {
-                "code": "CZ",
-                "flag": "https://cdn.datasportsapi.com/v2/countries/CZ/flag",
-                "name": "Czechia"
-              },
-              "id": 4322,
-              "image": "https://cdn.datasportsapi.com/v2/leagues/4322/logo",
-              "name": "TT Cup",
-              "priority": 0,
-              "slug": "tt-cup",
-              "sport": "table-tennis"
-            },
-            "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
-            "matchFormat": null,
-            "matchesInTie": null,
-            "note": null,
-            "playerOfTheMatch": null,
-            "previousLegFixtureId": null,
-            "referee": null,
-            "round": null,
-            "season": null,
-            "servedFirst": null,
-            "serving": null,
-            "sport": "table-tennis",
-            "stage": null,
-            "stale": false,
-            "startTime": "2026-11-20T17:30:00.000Z",
-            "status": {
-              "code": 0,
-              "description": "Not started",
-              "finish": null,
-              "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
-            },
-            "surface": null,
-            "tier": null,
-            "timeouts": null,
-            "toss": null,
-            "tvUmpire": null,
-            "umpires": null,
-            "varCheck": null,
-            "venue": null,
-            "winner": null
           },
           {
             "aggregateWinner": null,
@@ -37383,7 +37821,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-20T07:30:00.000Z",
             "status": {
@@ -37535,7 +37973,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-20T08:00:00.000Z",
             "status": {
@@ -37685,7 +38123,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-20T08:30:00.000Z",
             "status": {
@@ -37837,7 +38275,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-20T09:00:00.000Z",
             "status": {
@@ -37987,7 +38425,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-20T09:30:00.000Z",
             "status": {
@@ -38137,7 +38575,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Playoffs",
             "stale": false,
             "startTime": "2026-11-20T10:15:00.000Z",
             "status": {
@@ -38291,7 +38729,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Playoffs",
             "stale": false,
             "startTime": "2026-11-20T10:45:00.000Z",
             "status": {
@@ -38443,7 +38881,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Playoffs",
             "stale": false,
             "startTime": "2026-11-20T11:40:00.000Z",
             "status": {
@@ -38597,7 +39035,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Playoffs",
             "stale": false,
             "startTime": "2026-11-20T12:10:00.000Z",
             "status": {
@@ -78033,16 +78471,16 @@
         ],
         "meta": {
           "complete": true,
-          "count": 574,
+          "count": 576,
           "date": "2026-11-20",
           "hasNextPage": true,
           "leagueCount": 10,
-          "nextCursor": "fc2jBbGd-yTOAg8bHlyhd4V0",
+          "nextCursor": "hSkxvhpA3jJivXbA6f86PuP3",
           "page": 0,
           "sport": "table-tennis"
         }
       },
-      "sha256": "03e4b61bd97e1e7a615c2496989f168118f32628ed22a43db6c698eb17d9c0ab"
+      "sha256": "2d99f6a53d2cc6c6d39be28aae085531b93389326b16008610a7657ec7c90eb0"
     },
     {
       "page": 1,
@@ -146863,5 +147301,5 @@
       "sha256": "889be4aefaef59822d0f3e5521d1b4fb8fca06b654970c664a294d9ee017c49a"
     }
   ],
-  "retrieved_at": "2026-11-23T19:27:01.485209+00:00"
+  "retrieved_at": "2026-11-24T01:42:57.485138+00:00"
 }

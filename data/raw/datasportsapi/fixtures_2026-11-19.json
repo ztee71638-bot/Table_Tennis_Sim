@@ -2380,7 +2380,24 @@
               "slug": "katsman-l-grebnev-m"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "GRE",
+                "id": 978543,
+                "image": "https://cdn.datasportsapi.com/v2/teams/978543/logo",
+                "name": "Grebnev M.",
+                "shortName": null,
+                "slug": "grebnev-maksim"
+              },
+              {
+                "code": "KAT",
+                "id": 1024792,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1024792/logo",
+                "name": "Katsman L.",
+                "shortName": null,
+                "slug": "katsman-lev"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -2425,7 +2442,24 @@
               "slug": "coton-f-gauzy-s"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "COT",
+                "id": 781864,
+                "image": "https://cdn.datasportsapi.com/v2/teams/781864/logo",
+                "name": "Flavien Coton",
+                "shortName": "Coton F.",
+                "slug": "coton-flavien"
+              },
+              {
+                "code": "GAU",
+                "id": 783114,
+                "image": "https://cdn.datasportsapi.com/v2/teams/783114/logo",
+                "name": "Gauzy Simon",
+                "shortName": "Gauzy S.",
+                "slug": "gauzy-simon"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -2530,7 +2564,24 @@
               "slug": "picard-v-seyfried-j"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "PIC",
+                "id": 302080,
+                "image": "https://cdn.datasportsapi.com/v2/teams/302080/logo",
+                "name": "Picard V.",
+                "shortName": null,
+                "slug": "picard-vincent"
+              },
+              {
+                "code": "SEY",
+                "id": 685087,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685087/logo",
+                "name": "Seyfried J.",
+                "shortName": null,
+                "slug": "seyfried-joe"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -2573,7 +2624,24 @@
               "slug": "lim-j-oh-j"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "LIM",
+                "id": 760273,
+                "image": "https://cdn.datasportsapi.com/v2/teams/760273/logo",
+                "name": "Lim J.",
+                "shortName": null,
+                "slug": "lim-jonghoon"
+              },
+              {
+                "code": "JUN",
+                "id": 685937,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685937/logo",
+                "name": "Junsung Oh",
+                "shortName": "Junsung Oh",
+                "slug": "oh-junsung"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -2676,7 +2744,24 @@
               "slug": "ban-i-gacina-a"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "BAN",
+                "id": 1092915,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1092915/logo",
+                "name": "Ban I.",
+                "shortName": null,
+                "slug": "ban-ivor"
+              },
+              {
+                "code": "GAC",
+                "id": 1111394,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1111394/logo",
+                "name": "Gacina A.",
+                "shortName": null,
+                "slug": "gacina-andrej"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -2721,7 +2806,24 @@
               "slug": "bardet-l-de-nodrest-l"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "BAR",
+                "id": 897329,
+                "image": "https://cdn.datasportsapi.com/v2/teams/897329/logo",
+                "name": "Bardet L.",
+                "shortName": "Bardet L.",
+                "slug": "bardet-lilian"
+              },
+              {
+                "code": "DE",
+                "id": 649696,
+                "image": "https://cdn.datasportsapi.com/v2/teams/649696/logo",
+                "name": "De Nodrest L.",
+                "shortName": null,
+                "slug": "de-nodrest-leo"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -2826,7 +2928,24 @@
               "slug": "shah-m-u-thakkar-m-v"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "SHA",
+                "id": 1024953,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1024953/logo",
+                "name": "Shah M.",
+                "shortName": null,
+                "slug": "shah-manush-utpalbhai"
+              },
+              {
+                "code": "THA",
+                "id": 800251,
+                "image": "https://cdn.datasportsapi.com/v2/teams/800251/logo",
+                "name": "Thakkar M.",
+                "shortName": null,
+                "slug": "thakkar-manav-vikash"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -2871,7 +2990,24 @@
               "slug": "bertelsmeier-a-verdonschot-w"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "BER",
+                "id": 1012980,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1012980/logo",
+                "name": "Bertelsmeier A.",
+                "shortName": null,
+                "slug": "bertelsmeier-andre"
+              },
+              {
+                "code": "VER",
+                "id": 851850,
+                "image": "https://cdn.datasportsapi.com/v2/teams/851850/logo",
+                "name": "Verdonschot W.",
+                "shortName": null,
+                "slug": "verdonschot-wim"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -2976,7 +3112,24 @@
               "slug": "bardet-l-de-nodrest-l"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "BAR",
+                "id": 897329,
+                "image": "https://cdn.datasportsapi.com/v2/teams/897329/logo",
+                "name": "Bardet L.",
+                "shortName": "Bardet L.",
+                "slug": "bardet-lilian"
+              },
+              {
+                "code": "DE",
+                "id": 649696,
+                "image": "https://cdn.datasportsapi.com/v2/teams/649696/logo",
+                "name": "De Nodrest L.",
+                "shortName": null,
+                "slug": "de-nodrest-leo"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -3020,7 +3173,24 @@
               "slug": "lim-j-oh-j"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "LIM",
+                "id": 760273,
+                "image": "https://cdn.datasportsapi.com/v2/teams/760273/logo",
+                "name": "Lim J.",
+                "shortName": null,
+                "slug": "lim-jonghoon"
+              },
+              {
+                "code": "JUN",
+                "id": 685937,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685937/logo",
+                "name": "Junsung Oh",
+                "shortName": "Junsung Oh",
+                "slug": "oh-junsung"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -3124,7 +3294,24 @@
               "slug": "shah-m-u-thakkar-m-v"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "SHA",
+                "id": 1024953,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1024953/logo",
+                "name": "Shah M.",
+                "shortName": null,
+                "slug": "shah-manush-utpalbhai"
+              },
+              {
+                "code": "THA",
+                "id": 800251,
+                "image": "https://cdn.datasportsapi.com/v2/teams/800251/logo",
+                "name": "Thakkar M.",
+                "shortName": null,
+                "slug": "thakkar-manav-vikash"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -3168,7 +3355,24 @@
               "slug": "coton-f-gauzy-s"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "COT",
+                "id": 781864,
+                "image": "https://cdn.datasportsapi.com/v2/teams/781864/logo",
+                "name": "Flavien Coton",
+                "shortName": "Coton F.",
+                "slug": "coton-flavien"
+              },
+              {
+                "code": "GAU",
+                "id": 783114,
+                "image": "https://cdn.datasportsapi.com/v2/teams/783114/logo",
+                "name": "Gauzy Simon",
+                "shortName": "Gauzy S.",
+                "slug": "gauzy-simon"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -5648,7 +5852,24 @@
               "slug": "dorr-e-yuan-j-n"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "DOR",
+                "id": 894094,
+                "image": "https://cdn.datasportsapi.com/v2/teams/894094/logo",
+                "name": "Esteban Dorr",
+                "shortName": "E. Dorr",
+                "slug": "dorr-esteban"
+              },
+              {
+                "code": "YUA",
+                "id": 685993,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685993/logo",
+                "name": "Yuan J.",
+                "shortName": "Yuan J.",
+                "slug": "yuan-jia-nan"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -5693,7 +5914,24 @@
               "slug": "robles-a-xiao-m"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "ROB",
+                "id": 302081,
+                "image": "https://cdn.datasportsapi.com/v2/teams/302081/logo",
+                "name": "Robles A.",
+                "shortName": null,
+                "slug": "robles-alvaro"
+              },
+              {
+                "code": "XIA",
+                "id": 893970,
+                "image": "https://cdn.datasportsapi.com/v2/teams/893970/logo",
+                "name": "Xiao M.",
+                "shortName": null,
+                "slug": "xiao-maria"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -5798,7 +6036,24 @@
               "slug": "yokotani-j-muramatsu-c"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "MUR",
+                "id": 792937,
+                "image": "https://cdn.datasportsapi.com/v2/teams/792937/logo",
+                "name": "Muramatsu C.",
+                "shortName": null,
+                "slug": "muramatsu-cocona"
+              },
+              {
+                "code": "YOK",
+                "id": 989443,
+                "image": "https://cdn.datasportsapi.com/v2/teams/989443/logo",
+                "name": "Yokotani J.",
+                "shortName": null,
+                "slug": "yokotani-jo"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -5841,7 +6096,24 @@
               "slug": "ionescu-e-szocs-b-c"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "ION",
+                "id": 1011722,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1011722/logo",
+                "name": "Ionescu E.",
+                "shortName": "Ionescu E.",
+                "slug": "ionescu-eduard"
+              },
+              {
+                "code": "SZO",
+                "id": 760257,
+                "image": "https://cdn.datasportsapi.com/v2/teams/760257/logo",
+                "name": "Szocs B.",
+                "shortName": null,
+                "slug": "szocs-bernadette"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -5944,7 +6216,24 @@
               "slug": "togami-s-odo-s"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "ODO",
+                "id": 783314,
+                "image": "https://cdn.datasportsapi.com/v2/teams/783314/logo",
+                "name": "Odo Satsuki",
+                "shortName": "Odo S.",
+                "slug": "odo-satsuki"
+              },
+              {
+                "code": "TOG",
+                "id": 685938,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685938/logo",
+                "name": "Shunsuke Togami",
+                "shortName": "Togami S.",
+                "slug": "togami-shunsuke"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -5987,7 +6276,24 @@
               "slug": "park-g-joo-c"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "JOO",
+                "id": 685988,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685988/logo",
+                "name": "Joo C.",
+                "shortName": null,
+                "slug": "joo-cheonhui"
+              },
+              {
+                "code": "PAR",
+                "id": 1111389,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1111389/logo",
+                "name": "Park G.",
+                "shortName": null,
+                "slug": "park-ganghyeon"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -6090,7 +6396,24 @@
               "slug": "lum-n-liu-y"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "LIU",
+                "id": 786741,
+                "image": "https://cdn.datasportsapi.com/v2/teams/786741/logo",
+                "name": "Liu Y.",
+                "shortName": null,
+                "slug": "liu-yangzi"
+              },
+              {
+                "code": "LUM",
+                "id": 685948,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685948/logo",
+                "name": "Lum N.",
+                "shortName": null,
+                "slug": "lum-nicholas"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -6135,7 +6458,24 @@
               "slug": "yuan-l-wang-x"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "WAN",
+                "id": 990004,
+                "image": "https://cdn.datasportsapi.com/v2/teams/990004/logo",
+                "name": "Wang X.",
+                "shortName": null,
+                "slug": "wang-xiaotong"
+              },
+              {
+                "code": "YUA",
+                "id": 989810,
+                "image": "https://cdn.datasportsapi.com/v2/teams/989810/logo",
+                "name": "Yuan L.",
+                "shortName": null,
+                "slug": "yuan-licen"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -6240,7 +6580,24 @@
               "slug": "fan-s-feng-y"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "FAN",
+                "id": 989297,
+                "image": "https://cdn.datasportsapi.com/v2/teams/989297/logo",
+                "name": "Fan S.",
+                "shortName": null,
+                "slug": "fan-shuhan"
+              },
+              {
+                "code": "FEN",
+                "id": 982501,
+                "image": "https://cdn.datasportsapi.com/v2/teams/982501/logo",
+                "name": "Feng Y.",
+                "shortName": null,
+                "slug": "feng-yixuan"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -6284,7 +6641,24 @@
               "slug": "aoki-s-shibata-s"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "AOK",
+                "id": 1111437,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1111437/logo",
+                "name": "Aoki S.",
+                "shortName": null,
+                "slug": "aoki-sachi"
+              },
+              {
+                "code": "SHI",
+                "id": 1011650,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1011650/logo",
+                "name": "Shibata S.",
+                "shortName": null,
+                "slug": "shibata-saki"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -6388,7 +6762,24 @@
               "slug": "hashimoto-h-nagasaki-m"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "HAS",
+                "id": 1011828,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1011828/logo",
+                "name": "Hashimoto H.",
+                "shortName": "Hashimoto H.",
+                "slug": "hashimoto-honoka"
+              },
+              {
+                "code": "NAG",
+                "id": 1011532,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1011532/logo",
+                "name": "Nagasaki M.",
+                "shortName": null,
+                "slug": "nagasaki-miyu"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -6433,7 +6824,24 @@
               "slug": "joo-c-kim-n"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "JOO",
+                "id": 685988,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685988/logo",
+                "name": "Joo C.",
+                "shortName": null,
+                "slug": "joo-cheonhui"
+              },
+              {
+                "code": "KIM",
+                "id": 760256,
+                "image": "https://cdn.datasportsapi.com/v2/teams/760256/logo",
+                "name": "Kim N.",
+                "shortName": null,
+                "slug": "kim-nayeong"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -6538,7 +6946,24 @@
               "slug": "odo-s-yokoi-s"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "ODO",
+                "id": 783314,
+                "image": "https://cdn.datasportsapi.com/v2/teams/783314/logo",
+                "name": "Odo Satsuki",
+                "shortName": "Odo S.",
+                "slug": "odo-satsuki"
+              },
+              {
+                "code": "YOK",
+                "id": 1115213,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1115213/logo",
+                "name": "Yokoi S.",
+                "shortName": null,
+                "slug": "yokoi-sakura"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -6582,7 +7007,24 @@
               "slug": "wang-xiaot-xu-yi"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "WAN",
+                "id": 990004,
+                "image": "https://cdn.datasportsapi.com/v2/teams/990004/logo",
+                "name": "Wang X.",
+                "shortName": null,
+                "slug": "wang-xiaotong"
+              },
+              {
+                "code": "XUY",
+                "id": 1065511,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1065511/logo",
+                "name": "YI XU.",
+                "shortName": null,
+                "slug": "xu-yi"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -6686,7 +7128,24 @@
               "slug": "samara-e-szocs-b"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "SAM",
+                "id": 685997,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685997/logo",
+                "name": "Samara E.",
+                "shortName": null,
+                "slug": "samara-elizabeta"
+              },
+              {
+                "code": "SZO",
+                "id": 760257,
+                "image": "https://cdn.datasportsapi.com/v2/teams/760257/logo",
+                "name": "Szocs B.",
+                "shortName": null,
+                "slug": "szocs-bernadette"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -6729,7 +7188,24 @@
               "slug": "batra-m-ghosh-sw"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "BAT",
+                "id": 1111438,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1111438/logo",
+                "name": "Batra M.",
+                "shortName": null,
+                "slug": "batra-manika"
+              },
+              {
+                "code": "GHO",
+                "id": 792948,
+                "image": "https://cdn.datasportsapi.com/v2/teams/792948/logo",
+                "name": "Ghosh S.",
+                "shortName": null,
+                "slug": "ghosh-swastika"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -6832,7 +7308,24 @@
               "slug": "aoki-s-shibata-s"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "AOK",
+                "id": 1111437,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1111437/logo",
+                "name": "Aoki S.",
+                "shortName": null,
+                "slug": "aoki-sachi"
+              },
+              {
+                "code": "SHI",
+                "id": 1011650,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1011650/logo",
+                "name": "Shibata S.",
+                "shortName": null,
+                "slug": "shibata-saki"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -6876,7 +7369,24 @@
               "slug": "joo-c-kim-n"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "JOO",
+                "id": 685988,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685988/logo",
+                "name": "Joo C.",
+                "shortName": null,
+                "slug": "joo-cheonhui"
+              },
+              {
+                "code": "KIM",
+                "id": 760256,
+                "image": "https://cdn.datasportsapi.com/v2/teams/760256/logo",
+                "name": "Kim N.",
+                "shortName": null,
+                "slug": "kim-nayeong"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -6980,7 +7490,24 @@
               "slug": "odo-s-yokoi-s"
             },
             "awayManager": null,
-            "awayMembers": null,
+            "awayMembers": [
+              {
+                "code": "ODO",
+                "id": 783314,
+                "image": "https://cdn.datasportsapi.com/v2/teams/783314/logo",
+                "name": "Odo Satsuki",
+                "shortName": "Odo S.",
+                "slug": "odo-satsuki"
+              },
+              {
+                "code": "YOK",
+                "id": 1115213,
+                "image": "https://cdn.datasportsapi.com/v2/teams/1115213/logo",
+                "name": "Yokoi S.",
+                "shortName": null,
+                "slug": "yokoi-sakura"
+              }
+            ],
             "awayRanking": null,
             "awayRecord": null,
             "awayScore": {
@@ -7023,7 +7550,24 @@
               "slug": "samara-e-szocs-b"
             },
             "homeManager": null,
-            "homeMembers": null,
+            "homeMembers": [
+              {
+                "code": "SAM",
+                "id": 685997,
+                "image": "https://cdn.datasportsapi.com/v2/teams/685997/logo",
+                "name": "Samara E.",
+                "shortName": null,
+                "slug": "samara-elizabeta"
+              },
+              {
+                "code": "SZO",
+                "id": 760257,
+                "image": "https://cdn.datasportsapi.com/v2/teams/760257/logo",
+                "name": "Szocs B.",
+                "shortName": null,
+                "slug": "szocs-bernadette"
+              }
+            ],
             "homeRanking": null,
             "homeRecord": null,
             "homeScore": {
@@ -56899,7 +57443,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "TUR",
               "id": 623003,
@@ -56968,7 +57512,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T07:30:00.000Z",
             "status": {
@@ -57047,7 +57591,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "FUC",
               "id": 1140465,
@@ -57122,7 +57666,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T08:00:00.000Z",
             "status": {
@@ -57200,7 +57744,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "ZEC",
               "id": 652318,
@@ -57274,7 +57818,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T08:30:00.000Z",
             "status": {
@@ -57353,7 +57897,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "BLU",
               "id": 1140469,
@@ -57428,7 +57972,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T09:00:00.000Z",
             "status": {
@@ -57507,7 +58051,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "TUR",
               "id": 623003,
@@ -57582,7 +58126,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T09:30:00.000Z",
             "status": {
@@ -57659,7 +58203,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "ZEC",
               "id": 652318,
@@ -57732,7 +58276,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T10:00:00.000Z",
             "status": {
@@ -57809,7 +58353,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "BLU",
               "id": 1140469,
@@ -57882,7 +58426,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T10:30:00.000Z",
             "status": {
@@ -57961,7 +58505,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "ALB",
               "id": 1140470,
@@ -58036,7 +58580,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T11:00:00.000Z",
             "status": {
@@ -58113,7 +58657,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "TUR",
               "id": 623003,
@@ -58186,7 +58730,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T11:30:00.000Z",
             "status": {
@@ -58263,7 +58807,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "FUC",
               "id": 1140465,
@@ -58336,7 +58880,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T12:00:00.000Z",
             "status": {
@@ -58414,7 +58958,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "ALB",
               "id": 1140470,
@@ -58488,7 +59032,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T12:30:00.000Z",
             "status": {
@@ -58565,7 +59109,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "BLU",
               "id": 1140469,
@@ -58638,7 +59182,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T13:00:00.000Z",
             "status": {
@@ -58716,7 +59260,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "FUC",
               "id": 1140465,
@@ -58790,7 +59334,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T13:30:00.000Z",
             "status": {
@@ -58869,7 +59413,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "CHE",
               "id": 652387,
@@ -58944,7 +59488,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T14:00:00.000Z",
             "status": {
@@ -59022,7 +59566,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "ALB",
               "id": 1140470,
@@ -59096,7 +59640,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T14:30:00.000Z",
             "status": {
@@ -59173,7 +59717,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "TUR",
               "id": 623003,
@@ -59246,7 +59790,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T15:00:00.000Z",
             "status": {
@@ -59323,7 +59867,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "ZEC",
               "id": 652318,
@@ -59396,7 +59940,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T15:30:00.000Z",
             "status": {
@@ -59474,7 +60018,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "TUR",
               "id": 623003,
@@ -59548,7 +60092,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T16:00:00.000Z",
             "status": {
@@ -59627,7 +60171,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "CHE",
               "id": 652387,
@@ -59702,7 +60246,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T16:30:00.000Z",
             "status": {
@@ -59779,7 +60323,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "FUC",
               "id": 1140465,
@@ -59852,7 +60396,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T17:00:00.000Z",
             "status": {
@@ -59929,7 +60473,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "ZEC",
               "id": 652318,
@@ -60002,7 +60546,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T17:30:00.000Z",
             "status": {
@@ -60079,7 +60623,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "TUR",
               "id": 623003,
@@ -60152,7 +60696,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T18:00:00.000Z",
             "status": {
@@ -60230,7 +60774,7 @@
             "fightResult": null,
             "finalResultOnly": false,
             "firstToServe": null,
-            "group": null,
+            "group": "Group stage",
             "home": {
               "code": "BLU",
               "id": 1140469,
@@ -60304,7 +60848,7 @@
             "servedFirst": null,
             "serving": null,
             "sport": "table-tennis",
-            "stage": null,
+            "stage": "Challenger Series, Group stage",
             "stale": false,
             "startTime": "2026-11-19T18:30:00.000Z",
             "status": {
@@ -101940,12 +102484,12 @@
           "date": "2026-11-19",
           "hasNextPage": true,
           "leagueCount": 10,
-          "nextCursor": "naVx69HTTh5kFiqC_tjTXfsE",
+          "nextCursor": "8Mfagisk-dfbv-9LzedPYEIx",
           "page": 0,
           "sport": "table-tennis"
         }
       },
-      "sha256": "b97bfac8afd96339fa8cb62572001dad556cd77366ab3db2b6c1893edafa459d"
+      "sha256": "9a88c881daca41971b1696302814db6494438297525f82a76eb7f3f427a2e212"
     },
     {
       "page": 1,
@@ -169928,5 +170472,5 @@
       "sha256": "fd4da619ec7366e212208990f71bc04994ecc2abc4ed0e15538ca293771c9c80"
     }
   ],
-  "retrieved_at": "2026-11-23T19:26:45.396409+00:00"
+  "retrieved_at": "2026-11-24T01:42:40.256796+00:00"
 }
