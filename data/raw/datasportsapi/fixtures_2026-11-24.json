@@ -14709,9 +14709,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 2
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -14750,9 +14748,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 1
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -14841,9 +14837,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 1
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -14882,9 +14876,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 1
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -14973,9 +14965,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 1
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -15014,9 +15004,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 1
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -107625,12 +107613,12 @@
           "date": "2026-11-24",
           "hasNextPage": true,
           "leagueCount": 10,
-          "nextCursor": "BOgVhw1-a7TNs4A4nV8O2_YA",
+          "nextCursor": "30ZcCYydOBoLmwx2Xv9MgZAX",
           "page": 0,
           "sport": "table-tennis"
         }
       },
-      "sha256": "5c3fb6313c6c2bad67a20ec4b73b87af4cf1e4b1cb4444787f156b087f2d6136"
+      "sha256": "08b168eb0dd4f0fc517f83f55d083290e33985331b4be7bf111c7c63b0867f0c"
     },
     {
       "page": 1,
@@ -122229,8 +122217,7 @@
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 7,
-                "period2": 0
+                "period1": 7
               },
               "point": null,
               "redCards": null,
@@ -122271,8 +122258,7 @@
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 11,
-                "period2": 0
+                "period1": 11
               },
               "point": null,
               "redCards": null,
@@ -177898,8 +177884,8 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "edbb8b4dcd5680743d0d95f967ffe92b0a70172e3cdedbd8edfc42a2ffc54e8e"
+      "sha256": "d4d75512220fb56174804e26f902a62b17b7f9570d69040e4d6453a4b469e0e0"
     }
   ],
-  "retrieved_at": "2026-11-25T01:47:35.510757+00:00"
+  "retrieved_at": "2026-11-25T07:52:45.285290+00:00"
 }

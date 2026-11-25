@@ -188,28 +188,75 @@
       "world_ranks": []
     },
     "arlia nicole": {
-      "status": "queued_not_checked",
+      "country": "ITA",
+      "display_name": "Arlia Nicole",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-25T07:54:24.694170+00:00",
+      "model_eligible": false,
+      "query_name": "Nicole Arlia",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_ng71x1xj",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 530,
+          "rank": 35,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 530,
+          "rank": 78,
+          "week": "2026-48"
+        }
+      ]
     },
     "ivana malobabic": {
-      "status": "queued_not_checked",
+      "country": "CRO",
+      "display_name": "Malobabic Ivana",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-25T07:54:37.009534+00:00",
+      "model_eligible": false,
+      "query_name": "Ivana Malobabic",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_sbn5ehcg",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": []
     },
     "clea de stoppeleire": {
-      "status": "queued_not_checked",
+      "country": "FRA",
+      "display_name": "De Stoppeleire Clea",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-25T07:54:49.403528+00:00",
+      "model_eligible": false,
+      "query_name": "Clea de Stoppeleire",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_97ejva5e",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": []
     },
     "sara tokic": {
-      "status": "queued_not_checked",
+      "country": "SLO",
+      "display_name": "Tokic Sara",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-25T07:55:02.073252+00:00",
+      "model_eligible": false,
+      "query_name": "Sara Tokic",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_t6b3fbk3",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": []
     },
     "hanka kodetova": {
       "candidate_count": 0,
@@ -221,10 +268,40 @@
       "status": "not_found"
     },
     "wan yuan": {
-      "status": "queued_not_checked",
+      "country": "GER",
+      "display_name": "Wan Yuan",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-25T07:55:14.283884+00:00",
+      "model_eligible": false,
+      "query_name": "Yuan Wan",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_jdae64bg",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 195,
+          "rank": 75,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 175,
+          "rank": 88,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 432,
+          "rank": 88,
+          "week": "2026-48"
+        }
+      ]
     },
     "hayeong kim": {
       "country": "KOR",
