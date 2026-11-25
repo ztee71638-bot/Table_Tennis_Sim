@@ -1,2223 +1,23 @@
 {
   "source": "Polymarket US public read-only listings",
-  "retrieved_at_utc": "2026-11-25T13:51:28.363512+00:00",
-  "events_count": 131,
-  "players_count": 131,
+  "retrieved_at_utc": "2026-11-25T19:27:04.252332+00:00",
+  "events_count": 108,
+  "players_count": 81,
   "history_source": {
     "available": true,
-    "matches_loaded": 12431,
+    "matches_loaded": 12804,
     "source_key": "datasportsapi_table_tennis"
   },
   "tabletennisapi_source": {
     "available": true,
     "source": "Table Tennis API (DeveloperData)",
-    "retrieved_at_utc": "2026-11-25T13:51:06.740097+00:00",
-    "names_checked": 46,
-    "players_checked_today": 10,
-    "calls_today": 30,
+    "retrieved_at_utc": "2026-11-25T19:26:44.938578+00:00",
+    "names_checked": 51,
+    "players_checked_today": 15,
+    "calls_today": 40,
     "daily_safety_budget": 40
   },
   "events": [
-    {
-      "event_id": "311998",
-      "slug": "setkamecz-holmar-obrmar-2026-11-25",
-      "title": "Holub Martin vs. Obraz Martin",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-25T13:45:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkamecz-holmar-obrmar-2026-11-25",
-      "player_a": {
-        "name": "Holub Martin",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Holub M.",
-          "source_player_id": "652954",
-          "matches_count": 19,
-          "wins": 8,
-          "losses": 11,
-          "last_match_date": "2026-11-25",
-          "competition_matches": 19,
-          "recent_matches": [
-            {
-              "date": "2026-11-25",
-              "time": "12:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Slunecko R.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-25",
-              "time": "11:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Puk J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-25",
-              "time": "10:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Obraz M.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-22",
-              "time": "22:10:00",
-              "competition": "Setka Cup",
-              "opponent": "Cuba M.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-22",
-              "time": "21:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Vrnak J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-22",
-              "time": "20:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Akopyan A.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-22",
-              "time": "18:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Cuba M.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "17:35:00",
-              "competition": "Setka Cup",
-              "opponent": "Coubal V.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "16:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Melisek M.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "16:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Coubal V.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "15:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Vydra M.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "22:10:00",
-              "competition": "Setka Cup",
-              "opponent": "Cuba M.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "21:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Cuba M.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "19:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Krutina L.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "19:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Snizek M.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "09:50:00",
-              "competition": "Setka Cup",
-              "opponent": "Cmil M.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "08:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Boura L.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "07:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Cmil M.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "06:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Vydra M.",
-              "result": "L",
-              "score": "1-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Obraz Martin",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Obraz M.",
-          "source_player_id": "686884",
-          "matches_count": 11,
-          "wins": 8,
-          "losses": 3,
-          "last_match_date": "2026-11-25",
-          "competition_matches": 11,
-          "recent_matches": [
-            {
-              "date": "2026-11-25",
-              "time": "12:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Puk J.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-25",
-              "time": "11:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Slunecko R.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-25",
-              "time": "10:15:00",
-              "competition": "Setka Cup",
-              "opponent": "Holub M.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "18:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Puk J.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "17:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Puk J.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "15:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Kucala V.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "15:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Coubal V.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "13:45:00",
-              "competition": "Setka Cup",
-              "opponent": "Cizek P.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "13:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Puk J.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "12:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Cizek P.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "10:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Blazek J.",
-              "result": "L",
-              "score": "1-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "311999",
-      "slug": "setkamecz-dufjak-melmar-2026-11-25",
-      "title": "Dufek Jakub Jr vs. Melisek Marian",
-      "competition": "Setka Cup",
-      "start_time_utc": "2026-11-25T14:10:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/setkamecz-dufjak-melmar-2026-11-25",
-      "player_a": {
-        "name": "Dufek Jakub Jr",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      },
-      "player_b": {
-        "name": "Melisek Marian",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Melisek M.",
-          "source_player_id": "644610",
-          "matches_count": 11,
-          "wins": 8,
-          "losses": 3,
-          "last_match_date": "2026-11-25",
-          "competition_matches": 11,
-          "recent_matches": [
-            {
-              "date": "2026-11-25",
-              "time": "12:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Blazek J.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-25",
-              "time": "12:00:00",
-              "competition": "Setka Cup",
-              "opponent": "David Lorenc",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-25",
-              "time": "11:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Dufek J.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-22",
-              "time": "18:10:00",
-              "competition": "Setka Cup",
-              "opponent": "Sabuka D.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-22",
-              "time": "16:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Vojtech Kral",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-22",
-              "time": "16:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Sabuka D.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-22",
-              "time": "15:00:00",
-              "competition": "Setka Cup",
-              "opponent": "Dufek J.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "18:05:00",
-              "competition": "Setka Cup",
-              "opponent": "Vydra M.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "16:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Holub M.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "15:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Vydra M.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "14:30:00",
-              "competition": "Setka Cup",
-              "opponent": "Coubal V.",
-              "result": "W",
-              "score": "3-2"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_applicable",
-          "identity_note": "WTT model lookup is only used for WTT listings."
-        }
-      }
-    },
-    {
-      "event_id": "311702",
-      "slug": "wtt-learak-yuawan-2026-11-25",
-      "title": "Lea Rakovac vs. Yuan Wan",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T16:05:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-learak-yuawan-2026-11-25",
-      "player_a": {
-        "name": "Lea Rakovac",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:RAKOVAC Lea|country:CRO",
-          "display_name": "RAKOVAC Lea",
-          "matches": 25,
-          "last_match_date": "2025-09-25",
-          "recent_form_last10": [
-            1,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Yuan Wan",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Wan Y.",
-          "source_player_id": "989896",
-          "matches_count": 2,
-          "wins": 1,
-          "losses": 1,
-          "last_match_date": "2026-11-25",
-          "competition_matches": 1,
-          "recent_matches": [
-            {
-              "date": "2026-11-25",
-              "time": "10:10:00",
-              "competition": "Feeder Dusseldorf II, WS",
-              "opponent": "Kodetova H.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "08:25:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Yang H.",
-              "result": "L",
-              "score": "0-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:Yuan WAN|country:GER",
-          "display_name": "Yuan WAN",
-          "matches": 52,
-          "last_match_date": "2025-09-25",
-          "recent_form_last10": [
-            1,
-            0,
-            1,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311704",
-      "slug": "wtt-nicarl-seokim-2026-11-25",
-      "title": "Nicole Arlia vs. Seongjin Kim",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T16:05:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-nicarl-seokim-2026-11-25",
-      "player_a": {
-        "name": "Nicole Arlia",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:ARLIA Nicole|country:ITA",
-          "display_name": "ARLIA Nicole",
-          "matches": 4,
-          "last_match_date": "2023-06-26",
-          "recent_form_last10": [
-            0,
-            1,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Seongjin Kim",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Kim S.",
-          "source_player_id": "893798",
-          "matches_count": 3,
-          "wins": 2,
-          "losses": 1,
-          "last_match_date": "2026-11-20",
-          "competition_matches": 3,
-          "recent_matches": [
-            {
-              "date": "2026-11-20",
-              "time": "07:40:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Hashimoto H.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "16:50:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Yeh Y.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "07:45:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Muramatsu C.",
-              "result": "W",
-              "score": "3-2"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:KIM Seongjin|country:KOR",
-          "display_name": "KIM Seongjin",
-          "matches": 16,
-          "last_match_date": "2025-06-24",
-          "recent_form_last10": [
-            1,
-            1,
-            0,
-            1,
-            1,
-            1,
-            1,
-            0,
-            1,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311826",
-      "slug": "wtt-sarmir-gahpar-2026-11-25",
-      "title": "Sarvinoz Mirkadirova vs. Gahyeon Park",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T16:05:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-sarmir-gahpar-2026-11-25",
-      "player_a": {
-        "name": "Sarvinoz Mirkadirova",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Mirkadirova S.",
-          "source_player_id": "896921",
-          "matches_count": 3,
-          "wins": 2,
-          "losses": 1,
-          "last_match_date": "2026-11-25",
-          "competition_matches": 2,
-          "recent_matches": [
-            {
-              "date": "2026-11-25",
-              "time": "09:55:00",
-              "competition": "Feeder Dusseldorf II, WS",
-              "opponent": "Moon C.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "16:05:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Shibata S.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "07:35:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Picard C.",
-              "result": "W",
-              "score": "3-0"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:MIRKADIROVA Sarvinoz|country:KAZ",
-          "display_name": "MIRKADIROVA Sarvinoz",
-          "matches": 5,
-          "last_match_date": "2025-09-01",
-          "recent_form_last10": [
-            0,
-            0,
-            1,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Gahyeon Park",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Park G.",
-          "source_player_id": "1111389",
-          "matches_count": 6,
-          "wins": 5,
-          "losses": 1,
-          "last_match_date": "2026-11-21",
-          "competition_matches": 6,
-          "recent_matches": [
-            {
-              "date": "2026-11-21",
-              "time": "14:35:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Shunsuke Togami",
-              "result": "L",
-              "score": "1-4"
-            },
-            {
-              "date": "2026-11-21",
-              "time": "09:00:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Junsung Oh",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "11:35:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Flavien Coton",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "06:25:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Sun Y.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "08:25:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "An Jaehyun",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "10:20:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Bardet L.",
-              "result": "W",
-              "score": "3-1"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:PARK Gahyeon|country:KOR",
-          "display_name": "PARK Gahyeon",
-          "matches": 16,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            1,
-            0,
-            0,
-            1,
-            0,
-            1,
-            1,
-            0,
-            1,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311703",
-      "slug": "wtt-yanliu-agaave-2026-11-25",
-      "title": "Yangzi Liu vs. Agathe Avezou",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T16:05:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-yanliu-agaave-2026-11-25",
-      "player_a": {
-        "name": "Yangzi Liu",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Liu Y.",
-          "source_player_id": "786741",
-          "matches_count": 3,
-          "wins": 2,
-          "losses": 1,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 1,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "08:00:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Yang X.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "19:00:00",
-              "competition": "ETTU Champions League, Women",
-              "opponent": "Sevcikova M.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-14",
-              "time": "18:00:00",
-              "competition": "ETTU Champions League, Women",
-              "opponent": "Grofova K.",
-              "result": "W",
-              "score": "2-1"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:LIU Yangzi|country:AUS",
-          "display_name": "LIU Yangzi",
-          "matches": 48,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Agathe Avezou",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique full-token WTT model record; no model match is assumed."
-        }
-      }
-    },
-    {
-      "event_id": "311707",
-      "slug": "wtt-audzar-giopic-2026-11-25",
-      "title": "Audrey Zarif vs. Giorgia Piccolin",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T16:40:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-audzar-giopic-2026-11-25",
-      "player_a": {
-        "name": "Audrey Zarif",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Zarif A.",
-          "source_player_id": "685160",
-          "matches_count": 4,
-          "wins": 3,
-          "losses": 1,
-          "last_match_date": "2026-11-25",
-          "competition_matches": 3,
-          "recent_matches": [
-            {
-              "date": "2026-11-25",
-              "time": "09:20:00",
-              "competition": "Feeder Dusseldorf II, WS",
-              "opponent": "Neumann J.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-20",
-              "time": "06:00:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Odo Satsuki",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "08:25:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Zhang M.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "13:55:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Lutz Camille",
-              "result": "W",
-              "score": "3-2"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:ZARIF Audrey|country:FRA",
-          "display_name": "ZARIF Audrey",
-          "matches": 45,
-          "last_match_date": "2025-09-25",
-          "recent_form_last10": [
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Giorgia Piccolin",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Piccolin G.",
-          "source_player_id": "133355",
-          "matches_count": 1,
-          "wins": 0,
-          "losses": 1,
-          "last_match_date": "2026-11-18",
-          "competition_matches": 1,
-          "recent_matches": [
-            {
-              "date": "2026-11-18",
-              "time": "15:05:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Wang X.",
-              "result": "L",
-              "score": "0-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:Giorgia PICCOLIN|country:ITA",
-          "display_name": "Giorgia PICCOLIN",
-          "matches": 51,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            0,
-            1,
-            1,
-            0,
-            1,
-            0,
-            1,
-            1,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311827",
-      "slug": "wtt-camlut-rinmen-2026-11-25",
-      "title": "Camille Lutz vs. Rin Mende",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T16:40:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-camlut-rinmen-2026-11-25",
-      "player_a": {
-        "name": "Camille Lutz",
-        "history": {
-          "status": "exact_name_match_identity_unverified",
-          "display_name": "Lutz Camille",
-          "source_player_id": "760253",
-          "matches_count": 2,
-          "wins": 1,
-          "losses": 1,
-          "last_match_date": "2026-11-25",
-          "competition_matches": 1,
-          "recent_matches": [
-            {
-              "date": "2026-11-25",
-              "time": "10:40:00",
-              "competition": "Feeder Dusseldorf II, WS",
-              "opponent": "Kim E.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "13:55:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Zarif A.",
-              "result": "L",
-              "score": "2-3"
-            }
-          ],
-          "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:LUTZ Camille|country:FRA",
-          "display_name": "LUTZ Camille",
-          "matches": 58,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            1,
-            1,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Rin Mende",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique full-token WTT model record; no model match is assumed."
-        }
-      }
-    },
-    {
-      "event_id": "311705",
-      "slug": "wtt-orapar-adidia-2026-11-25",
-      "title": "Orawan Paranang vs. Adina Diaconu",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T16:40:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-orapar-adidia-2026-11-25",
-      "player_a": {
-        "name": "Orawan Paranang",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:PARANANG Orawan|country:THA",
-          "display_name": "PARANANG Orawan",
-          "matches": 68,
-          "last_match_date": "2025-09-25",
-          "recent_form_last10": [
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Adina Diaconu",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Diaconu A.",
-          "source_player_id": "852038",
-          "matches_count": 2,
-          "wins": 1,
-          "losses": 1,
-          "last_match_date": "2026-11-25",
-          "competition_matches": 1,
-          "recent_matches": [
-            {
-              "date": "2026-11-25",
-              "time": "09:45:00",
-              "competition": "Feeder Dusseldorf II, WS",
-              "opponent": "Mischek K.",
-              "result": "W",
-              "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "13:00:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Wei J.",
-              "result": "L",
-              "score": "0-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:Adina DIACONU|country:ROU",
-          "display_name": "Adina DIACONU",
-          "matches": 70,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311829",
-      "slug": "wtt-sabsur-asusas-2026-11-25",
-      "title": "Sabina Surjan vs. Asuka Sasao",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T16:40:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-sabsur-asusas-2026-11-25",
-      "player_a": {
-        "name": "Sabina Surjan",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:Sabina SURJAN|country:SRB",
-          "display_name": "Sabina SURJAN",
-          "matches": 30,
-          "last_match_date": "2025-09-25",
-          "recent_form_last10": [
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            1,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Asuka Sasao",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:SASAO Asuka|country:JPN",
-          "display_name": "SASAO Asuka",
-          "matches": 28,
-          "last_match_date": "2025-04-22",
-          "recent_form_last10": [
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            0,
-            1,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311706",
-      "slug": "wtt-sacaok-lilmas-2026-11-25",
-      "title": "Sachi Aoki vs. Lilou Massart",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T16:40:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-sacaok-lilmas-2026-11-25",
-      "player_a": {
-        "name": "Sachi Aoki",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Aoki S.",
-          "source_player_id": "1111437",
-          "matches_count": 3,
-          "wins": 2,
-          "losses": 1,
-          "last_match_date": "2026-11-20",
-          "competition_matches": 3,
-          "recent_matches": [
-            {
-              "date": "2026-11-20",
-              "time": "06:30:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Szocs B.",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "13:00:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Yuan J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "10:20:00",
-              "competition": "WTT Star Contender Muscat, WS",
-              "opponent": "Zong G.",
-              "result": "W",
-              "score": "3-2"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique full-token WTT model record; no model match is assumed."
-        }
-      },
-      "player_b": {
-        "name": "Lilou Massart",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:MASSART Lilou|country:BEL",
-          "display_name": "MASSART Lilou",
-          "matches": 10,
-          "last_match_date": "2025-09-25",
-          "recent_form_last10": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311828",
-      "slug": "wtt-yuntsa-haecho-2026-11-25",
-      "title": "Yun-En Tsai vs. Haeeun Choi",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T16:40:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-yuntsa-haecho-2026-11-25",
-      "player_a": {
-        "name": "Yun-En Tsai",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique full-token WTT model record; no model match is assumed."
-        }
-      },
-      "player_b": {
-        "name": "Haeeun Choi",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:CHOI Haeeun|country:KOR",
-          "display_name": "CHOI Haeeun",
-          "matches": 7,
-          "last_match_date": "2025-06-24",
-          "recent_form_last10": [
-            0,
-            0,
-            1,
-            0,
-            1,
-            1,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311830",
-      "slug": "wtt-daelee-chezhu-2026-11-25",
-      "title": "Daeun (2005) Lee vs. Chengzhu Zhu",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:15:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-daelee-chezhu-2026-11-25",
-      "player_a": {
-        "name": "Daeun (2005) Lee",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:LEE Daeun|country:KOR",
-          "display_name": "LEE Daeun",
-          "matches": 20,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            0,
-            0,
-            0,
-            1,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Chengzhu Zhu",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:ZHU Chengzhu|country:HKG",
-          "display_name": "ZHU Chengzhu",
-          "matches": 67,
-          "last_match_date": "2025-09-25",
-          "recent_form_last10": [
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311708",
-      "slug": "wtt-hanryu-hanara-2026-11-25",
-      "title": "Hanna Ryu vs. Hana Arapovic",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:15:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-hanryu-hanara-2026-11-25",
-      "player_a": {
-        "name": "Hanna Ryu",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:RYU Hanna|country:KOR",
-          "display_name": "RYU Hanna",
-          "matches": 28,
-          "last_match_date": "2025-07-29",
-          "recent_form_last10": [
-            1,
-            0,
-            1,
-            1,
-            0,
-            1,
-            1,
-            0,
-            0,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Hana Arapovic",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:ARAPOVIC Hana|country:CRO",
-          "display_name": "ARAPOVIC Hana",
-          "matches": 27,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            1,
-            1,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311709",
-      "slug": "wtt-haykim-yiyeh-2026-11-25",
-      "title": "Hayeong Kim vs. Yi-Tian Yeh",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:15:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-haykim-yiyeh-2026-11-25",
-      "player_a": {
-        "name": "Hayeong Kim",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:KIM Hayeong|country:KOR",
-          "display_name": "KIM Hayeong",
-          "matches": 31,
-          "last_match_date": "2023-11-07",
-          "recent_form_last10": [
-            1,
-            1,
-            0,
-            1,
-            0,
-            1,
-            1,
-            0,
-            1,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Yi-Tian Yeh",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:YEH Yi-Tian|country:TPE",
-          "display_name": "YEH Yi-Tian",
-          "matches": 31,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            1,
-            1,
-            1,
-            0,
-            1,
-            1,
-            0,
-            1,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311710",
-      "slug": "wtt-seulee-sartok-2026-11-25",
-      "title": "Seungeun Lee vs. Sara Tokic",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:15:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-seulee-sartok-2026-11-25",
-      "player_a": {
-        "name": "Seungeun Lee",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Lee S.",
-          "source_player_id": "1065504",
-          "matches_count": 7,
-          "wins": 6,
-          "losses": 1,
-          "last_match_date": "2026-11-25",
-          "competition_matches": 2,
-          "recent_matches": [
-            {
-              "date": "2026-11-25",
-              "time": "12:15:00",
-              "competition": "Feeder Dusseldorf II, MS",
-              "opponent": "Lillo D.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-24",
-              "time": "18:20:00",
-              "competition": "Feeder Dusseldorf II, MS",
-              "opponent": "Varga B.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-24",
-              "time": "09:05:00",
-              "competition": "Feeder Dusseldorf II, MS",
-              "opponent": "De Boer M.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-23",
-              "time": "18:20:00",
-              "competition": "Feeder Dusseldorf II, MS",
-              "opponent": "Rzihauschek J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-23",
-              "time": "11:00:00",
-              "competition": "Feeder Dusseldorf II, MS",
-              "opponent": "Yeongjun MA.",
-              "result": "W",
-              "score": "3-1"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "08:15:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Yuan L.",
-              "result": "L",
-              "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "13:40:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "AL Riyami A.",
-              "result": "W",
-              "score": "3-1"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique full-token WTT model record; no model match is assumed."
-        }
-      },
-      "player_b": {
-        "name": "Sara Tokic",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:TOKIC Sara|country:SLO",
-          "display_name": "TOKIC Sara",
-          "matches": 7,
-          "last_match_date": "2025-06-17",
-          "recent_form_last10": [
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311712",
-      "slug": "wtt-vermat-tunchi-2026-11-25",
-      "title": "Veronika Matiunina vs. Tung-Chuan Chien",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:15:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-vermat-tunchi-2026-11-25",
-      "player_a": {
-        "name": "Veronika Matiunina",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique full-token WTT model record; no model match is assumed."
-        }
-      },
-      "player_b": {
-        "name": "Tung-Chuan Chien",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:CHIEN Tung-Chuan|country:TPE",
-          "display_name": "CHIEN Tung-Chuan",
-          "matches": 36,
-          "last_match_date": "2025-09-25",
-          "recent_form_last10": [
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311711",
-      "slug": "wtt-xiasha-darkis-2026-11-25",
-      "title": "Xiaona Shan vs. Darya Kisel",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:15:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-xiasha-darkis-2026-11-25",
-      "player_a": {
-        "name": "Xiaona Shan",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_women_2022_2025",
-          "source_player_id": "name:SHAN Xiaona|country:GER",
-          "display_name": "SHAN Xiaona",
-          "matches": 48,
-          "last_match_date": "2025-09-25",
-          "recent_form_last10": [
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Darya Kisel",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique full-token WTT model record; no model match is assumed."
-        }
-      }
-    },
-    {
-      "event_id": "311953",
-      "slug": "wtt-adrras-danber-2026-11-25",
-      "title": "Adrien Rassenfosse vs. Daniel Berzosa",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:50:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-adrras-danber-2026-11-25",
-      "player_a": {
-        "name": "Adrien Rassenfosse",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "123659",
-          "display_name": "RASSENFOSSE Adrien",
-          "matches": 49,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            1,
-            1,
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Daniel Berzosa",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "133633",
-          "display_name": "BERZOSA Daniel",
-          "matches": 2,
-          "last_match_date": "2025-08-14",
-          "recent_form_last10": [
-            0,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311981",
-      "slug": "wtt-hanjan-andber-2026-11-25",
-      "title": "Hanjae Jang vs. Andre Bertelsmeier",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:50:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-hanjan-andber-2026-11-25",
-      "player_a": {
-        "name": "Hanjae Jang",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique full-token WTT model record; no model match is assumed."
-        }
-      },
-      "player_b": {
-        "name": "Andre Bertelsmeier",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Bertelsmeier A.",
-          "source_player_id": "1012980",
-          "matches_count": 2,
-          "wins": 1,
-          "losses": 1,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 2,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "09:55:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Flavien Coton",
-              "result": "L",
-              "score": "0-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "14:15:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Tang Y.",
-              "result": "W",
-              "score": "3-2"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "145799",
-          "display_name": "BERTELSMEIER Andre",
-          "matches": 20,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            1,
-            1,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311958",
-      "slug": "wtt-jiwcho-tiaapo-2026-11-25",
-      "title": "Jiwook Choi vs. Tiago Apolonia",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:50:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-jiwcho-tiaapo-2026-11-25",
-      "player_a": {
-        "name": "Jiwook Choi",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique full-token WTT model record; no model match is assumed."
-        }
-      },
-      "player_b": {
-        "name": "Tiago Apolonia",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "100621",
-          "display_name": "APOLONIA Tiago",
-          "matches": 63,
-          "last_match_date": "2025-09-25",
-          "recent_form_last10": [
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            1,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311968",
-      "slug": "wtt-juaper-dimlev-2026-11-25",
-      "title": "Juan Perez vs. Dimitrije Levajac",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:50:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-juaper-dimlev-2026-11-25",
-      "player_a": {
-        "name": "Juan Perez",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "134625",
-          "display_name": "PEREZ Juan",
-          "matches": 11,
-          "last_match_date": "2025-09-01",
-          "recent_form_last10": [
-            0,
-            1,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
-            1,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Dimitrije Levajac",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "123192",
-          "display_name": "Dimitrije LEVAJAC",
-          "matches": 9,
-          "last_match_date": "2025-06-24",
-          "recent_form_last10": [
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311963",
-      "slug": "wtt-mackub-marall-2026-11-25",
-      "title": "Maciej Kubik vs. Martin Allegro",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:50:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-mackub-marall-2026-11-25",
-      "player_a": {
-        "name": "Maciej Kubik",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "131671",
-          "display_name": "KUBIK Maciej",
-          "matches": 22,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            0,
-            1,
-            1,
-            1,
-            0,
-            0,
-            1,
-            1,
-            1,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Martin Allegro",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "114848",
-          "display_name": "ALLEGRO Martin",
-          "matches": 53,
-          "last_match_date": "2025-11-17",
-          "recent_form_last10": [
-            0,
-            1,
-            0,
-            0,
-            1,
-            1,
-            1,
-            0,
-            1,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
-    {
-      "event_id": "311976",
-      "slug": "wtt-wimver-kwayiu-2026-11-25",
-      "title": "Wim Verdonschot vs. Kwan TO Yiu",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T17:50:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-wimver-kwayiu-2026-11-25",
-      "player_a": {
-        "name": "Wim Verdonschot",
-        "history": {
-          "status": "name_initial_match_review_only",
-          "display_name": "Verdonschot W.",
-          "source_player_id": "851850",
-          "matches_count": 1,
-          "wins": 0,
-          "losses": 1,
-          "last_match_date": "2026-11-19",
-          "competition_matches": 1,
-          "recent_matches": [
-            {
-              "date": "2026-11-19",
-              "time": "10:05:00",
-              "competition": "WTT Star Contender Muscat, MS",
-              "opponent": "Seyfried J.",
-              "result": "L",
-              "score": "0-3"
-            }
-          ],
-          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "201466",
-          "display_name": "VERDONSCHOT Wim",
-          "matches": 10,
-          "last_match_date": "2025-07-29",
-          "recent_form_last10": [
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Kwan TO Yiu",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "132325",
-          "display_name": "YIU Kwan To",
-          "matches": 25,
-          "last_match_date": "2025-06-24",
-          "recent_form_last10": [
-            0,
-            0,
-            1,
-            1,
-            0,
-            1,
-            1,
-            1,
-            0,
-            0
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      }
-    },
     {
       "event_id": "311993",
       "slug": "wtt-cedmei-fanmen-2026-11-25",
@@ -2231,9 +31,8 @@
       "player_a": {
         "name": "Cedric Meissner",
         "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "status": "other_competition_only",
+          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
           "matches": []
         },
         "model_record": {
@@ -2264,12 +63,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Meng F.",
           "source_player_id": "685078",
-          "matches_count": 2,
-          "wins": 1,
+          "matches_count": 3,
+          "wins": 2,
           "losses": 1,
           "last_match_date": "2026-11-25",
           "competition_matches": 1,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "18:30:00",
+              "competition": "Feeder Dusseldorf II, MS",
+              "opponent": "Meissner C.",
+              "result": "W",
+              "score": "3-1"
+            },
             {
               "date": "2026-11-25",
               "time": "11:15:00",
@@ -2328,12 +135,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Zeljko F.",
           "source_player_id": "685092",
-          "matches_count": 1,
+          "matches_count": 2,
           "wins": 0,
-          "losses": 1,
-          "last_match_date": "2026-11-17",
+          "losses": 2,
+          "last_match_date": "2026-11-25",
           "competition_matches": 1,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "18:20:00",
+              "competition": "Feeder Dusseldorf II, MS",
+              "opponent": "Gionis P.",
+              "result": "L",
+              "score": "2-3"
+            },
             {
               "date": "2026-11-17",
               "time": "08:00:00",
@@ -2413,12 +228,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Stoyanov N.",
           "source_player_id": "1065502",
-          "matches_count": 3,
-          "wins": 2,
+          "matches_count": 4,
+          "wins": 3,
           "losses": 1,
           "last_match_date": "2026-11-25",
           "competition_matches": 2,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "18:20:00",
+              "competition": "Feeder Dusseldorf II, MS",
+              "opponent": "Haug B.",
+              "result": "W",
+              "score": "3-2"
+            },
             {
               "date": "2026-11-25",
               "time": "12:40:00",
@@ -2474,12 +297,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Haug B.",
           "source_player_id": "989579",
-          "matches_count": 5,
+          "matches_count": 6,
           "wins": 3,
-          "losses": 2,
-          "last_match_date": "2026-11-18",
+          "losses": 3,
+          "last_match_date": "2026-11-25",
           "competition_matches": 5,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "18:20:00",
+              "competition": "Feeder Dusseldorf II, MS",
+              "opponent": "Stoyanov N.",
+              "result": "L",
+              "score": "2-3"
+            },
             {
               "date": "2026-11-18",
               "time": "09:40:00",
@@ -2559,9 +390,8 @@
       "player_a": {
         "name": "Sathiyan Gnanasekaran",
         "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "status": "other_competition_only",
+          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
           "matches": []
         },
         "model_record": {
@@ -2591,60 +421,6 @@
         "history": {
           "status": "other_competition_only",
           "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique full-token WTT model record; no model match is assumed."
-        }
-      }
-    },
-    {
-      "event_id": "311986",
-      "slug": "wtt-stemen-youabd-2026-11-25",
-      "title": "Steffen Mengel vs. Youssef Abdelaziz",
-      "competition": "WTT",
-      "start_time_utc": "2026-11-25T18:25:00Z",
-      "end_time_utc": "",
-      "active": true,
-      "closed": false,
-      "url": "https://polymarket.us/event/wtt-stemen-youabd-2026-11-25",
-      "player_a": {
-        "name": "Steffen Mengel",
-        "history": {
-          "status": "other_competition_only",
-          "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-          "matches": []
-        },
-        "model_record": {
-          "status": "wtt_model_record_identity_unverified",
-          "source": "wtt_men_2022_2025",
-          "source_player_id": "106050",
-          "display_name": "MENGEL Steffen",
-          "matches": 29,
-          "last_match_date": "2025-07-21",
-          "recent_form_last10": [
-            0,
-            0,
-            1,
-            1,
-            1,
-            1,
-            0,
-            0,
-            1,
-            1
-          ],
-          "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-        }
-      },
-      "player_b": {
-        "name": "Youssef Abdelaziz",
-        "history": {
-          "status": "not_found",
-          "candidate_count": 0,
-          "identity_note": "No unique source-scoped player candidate; history is not attached.",
           "matches": []
         },
         "model_record": {
@@ -3574,6 +1350,286 @@
               "opponent": "Marenco A.",
               "result": "L",
               "score": "2-3"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "309995",
+      "slug": "setkameua-mosvas-fasiva-2026-11-25",
+      "title": "Moshovskyi Vasyl vs. Fashchevskyi Ivan",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-25T23:15:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-mosvas-fasiva-2026-11-25",
+      "player_a": {
+        "name": "Moshovskyi Vasyl",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Moshovskyi V.",
+          "source_player_id": "634551",
+          "matches_count": 10,
+          "wins": 5,
+          "losses": 5,
+          "last_match_date": "2026-11-21",
+          "competition_matches": 10,
+          "recent_matches": [
+            {
+              "date": "2026-11-21",
+              "time": "03:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Kantarevych D.",
+              "result": "L",
+              "score": "2-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "01:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Palii D.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "00:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Slozka M.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "23:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Oleksandr S.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-20",
+              "time": "22:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Volodymyr Korobko",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "03:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Tebenko Y.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "01:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Storozhenko O.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "00:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Pytsko I.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "22:45:00",
+              "competition": "Setka Cup",
+              "opponent": "Maltsev D.",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "21:15:00",
+              "competition": "Setka Cup",
+              "opponent": "Fashchevskiy I.",
+              "result": "L",
+              "score": "1-3"
+            }
+          ],
+          "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Fashchevskyi Ivan",
+        "history": {
+          "status": "not_found",
+          "candidate_count": 0,
+          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "matches": []
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      }
+    },
+    {
+      "event_id": "309996",
+      "slug": "setkameua-kovole-kovvea-2026-11-25",
+      "title": "Kovalchuk Oleksandr vs. Kovalenko Veacheslav",
+      "competition": "Setka Cup",
+      "start_time_utc": "2026-11-25T23:25:00Z",
+      "end_time_utc": "",
+      "active": true,
+      "closed": false,
+      "url": "https://polymarket.us/event/setkameua-kovole-kovvea-2026-11-25",
+      "player_a": {
+        "name": "Kovalchuk Oleksandr",
+        "history": {
+          "status": "not_found",
+          "candidate_count": 0,
+          "identity_note": "No unique source-scoped player candidate; history is not attached.",
+          "matches": []
+        },
+        "model_record": {
+          "status": "not_applicable",
+          "identity_note": "WTT model lookup is only used for WTT listings."
+        }
+      },
+      "player_b": {
+        "name": "Kovalenko Veacheslav",
+        "history": {
+          "status": "name_initial_match_review_only",
+          "display_name": "Kovalenko V.",
+          "source_player_id": "330",
+          "matches_count": 14,
+          "wins": 8,
+          "losses": 6,
+          "last_match_date": "2026-11-22",
+          "competition_matches": 14,
+          "recent_matches": [
+            {
+              "date": "2026-11-22",
+              "time": "04:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Artem Chepurnyi",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-22",
+              "time": "03:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Eduard Rubtsov",
+              "result": "W",
+              "score": "3-0"
+            },
+            {
+              "date": "2026-11-22",
+              "time": "02:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Chelpanov S.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-22",
+              "time": "00:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalchuk A.",
+              "result": "L",
+              "score": "0-3"
+            },
+            {
+              "date": "2026-11-21",
+              "time": "22:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kryvorotko Y.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "03:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalchuk A.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "02:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Gavryshko O.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-19",
+              "time": "00:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Plakushchyi P.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "22:55:00",
+              "competition": "Setka Cup",
+              "opponent": "Eduard Rubtsov",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "05:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Gavryshko O.",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "03:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Eduard Rubtsov",
+              "result": "W",
+              "score": "3-2"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "01:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Kovalchuk A.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "00:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Plakushchyi P.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "23:25:00",
+              "competition": "Setka Cup",
+              "opponent": "Mishchenko O.",
+              "result": "W",
+              "score": "3-1"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -5981,12 +4037,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Sobisek M.",
           "source_player_id": "69501",
-          "matches_count": 23,
-          "wins": 9,
+          "matches_count": 24,
+          "wins": 10,
           "losses": 14,
-          "last_match_date": "2026-11-24",
-          "competition_matches": 23,
+          "last_match_date": "2026-11-25",
+          "competition_matches": 24,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Kulhanek T.",
+              "result": "W",
+              "score": "3-1"
+            },
             {
               "date": "2026-11-24",
               "time": "13:00:00",
@@ -6138,14 +4202,6 @@
               "opponent": "Chlebecek M.",
               "result": "L",
               "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "03:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Bayer A.",
-              "result": "W",
-              "score": "3-2"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -8950,12 +7006,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Kulhanek T.",
           "source_player_id": "1035785",
-          "matches_count": 41,
+          "matches_count": 42,
           "wins": 31,
-          "losses": 10,
-          "last_match_date": "2026-11-24",
-          "competition_matches": 41,
+          "losses": 11,
+          "last_match_date": "2026-11-25",
+          "competition_matches": 42,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Sobisek M.",
+              "result": "L",
+              "score": "1-3"
+            },
             {
               "date": "2026-11-24",
               "time": "10:30:00",
@@ -9107,14 +7171,6 @@
               "opponent": "Barta M.",
               "result": "W",
               "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "21:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Pleskot J.",
-              "result": "L",
-              "score": "0-3"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -9141,12 +7197,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Sobisek M.",
           "source_player_id": "69501",
-          "matches_count": 23,
-          "wins": 9,
+          "matches_count": 24,
+          "wins": 10,
           "losses": 14,
-          "last_match_date": "2026-11-24",
-          "competition_matches": 23,
+          "last_match_date": "2026-11-25",
+          "competition_matches": 24,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Kulhanek T.",
+              "result": "W",
+              "score": "3-1"
+            },
             {
               "date": "2026-11-24",
               "time": "13:00:00",
@@ -9298,14 +7362,6 @@
               "opponent": "Chlebecek M.",
               "result": "L",
               "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "03:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Bayer A.",
-              "result": "W",
-              "score": "3-2"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -13394,12 +11450,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Kulhanek T.",
           "source_player_id": "1035785",
-          "matches_count": 41,
+          "matches_count": 42,
           "wins": 31,
-          "losses": 10,
-          "last_match_date": "2026-11-24",
-          "competition_matches": 41,
+          "losses": 11,
+          "last_match_date": "2026-11-25",
+          "competition_matches": 42,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Sobisek M.",
+              "result": "L",
+              "score": "1-3"
+            },
             {
               "date": "2026-11-24",
               "time": "10:30:00",
@@ -13551,14 +11615,6 @@
               "opponent": "Barta M.",
               "result": "W",
               "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "21:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Pleskot J.",
-              "result": "L",
-              "score": "0-3"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -14500,12 +12556,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Sobisek M.",
           "source_player_id": "69501",
-          "matches_count": 23,
-          "wins": 9,
+          "matches_count": 24,
+          "wins": 10,
           "losses": 14,
-          "last_match_date": "2026-11-24",
-          "competition_matches": 23,
+          "last_match_date": "2026-11-25",
+          "competition_matches": 24,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Kulhanek T.",
+              "result": "W",
+              "score": "3-1"
+            },
             {
               "date": "2026-11-24",
               "time": "13:00:00",
@@ -14657,14 +12721,6 @@
               "opponent": "Chlebecek M.",
               "result": "L",
               "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "03:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Bayer A.",
-              "result": "W",
-              "score": "3-2"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -16811,12 +14867,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Kulhanek T.",
           "source_player_id": "1035785",
-          "matches_count": 41,
+          "matches_count": 42,
           "wins": 31,
-          "losses": 10,
-          "last_match_date": "2026-11-24",
-          "competition_matches": 41,
+          "losses": 11,
+          "last_match_date": "2026-11-25",
+          "competition_matches": 42,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Sobisek M.",
+              "result": "L",
+              "score": "1-3"
+            },
             {
               "date": "2026-11-24",
               "time": "10:30:00",
@@ -16968,14 +15032,6 @@
               "opponent": "Barta M.",
               "result": "W",
               "score": "3-0"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "21:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Pleskot J.",
-              "result": "L",
-              "score": "0-3"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -18558,12 +16614,20 @@
           "status": "name_initial_match_review_only",
           "display_name": "Sobisek M.",
           "source_player_id": "69501",
-          "matches_count": 23,
-          "wins": 9,
+          "matches_count": 24,
+          "wins": 10,
           "losses": 14,
-          "last_match_date": "2026-11-24",
-          "competition_matches": 23,
+          "last_match_date": "2026-11-25",
+          "competition_matches": 24,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "19:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Kulhanek T.",
+              "result": "W",
+              "score": "3-1"
+            },
             {
               "date": "2026-11-24",
               "time": "13:00:00",
@@ -18715,14 +16779,6 @@
               "opponent": "Chlebecek M.",
               "result": "L",
               "score": "1-3"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "03:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Bayer A.",
-              "result": "W",
-              "score": "3-2"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -23103,12 +21159,36 @@
           "status": "name_initial_match_review_only",
           "display_name": "Prikasky L.",
           "source_player_id": "4312",
-          "matches_count": 28,
-          "wins": 14,
-          "losses": 14,
+          "matches_count": 31,
+          "wins": 15,
+          "losses": 16,
           "last_match_date": "2026-11-25",
-          "competition_matches": 28,
+          "competition_matches": 31,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "17:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Navedla M.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-25",
+              "time": "16:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Chmela T.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-25",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vavrecka M.",
+              "result": "L",
+              "score": "1-3"
+            },
             {
               "date": "2026-11-25",
               "time": "13:00:00",
@@ -23244,30 +21324,6 @@
               "opponent": "Mares E.",
               "result": "L",
               "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "19:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Pilch J.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "22:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Ruzicka J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "21:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Zahradka M.",
-              "result": "W",
-              "score": "3-1"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -25858,12 +23914,36 @@
           "status": "name_initial_match_review_only",
           "display_name": "Prikasky L.",
           "source_player_id": "4312",
-          "matches_count": 28,
-          "wins": 14,
-          "losses": 14,
+          "matches_count": 31,
+          "wins": 15,
+          "losses": 16,
           "last_match_date": "2026-11-25",
-          "competition_matches": 28,
+          "competition_matches": 31,
           "recent_matches": [
+            {
+              "date": "2026-11-25",
+              "time": "17:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Navedla M.",
+              "result": "W",
+              "score": "3-1"
+            },
+            {
+              "date": "2026-11-25",
+              "time": "16:30:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Chmela T.",
+              "result": "L",
+              "score": "1-3"
+            },
+            {
+              "date": "2026-11-25",
+              "time": "15:00:00",
+              "competition": "Czech Liga Pro",
+              "opponent": "Vavrecka M.",
+              "result": "L",
+              "score": "1-3"
+            },
             {
               "date": "2026-11-25",
               "time": "13:00:00",
@@ -25999,30 +24079,6 @@
               "opponent": "Mares E.",
               "result": "L",
               "score": "0-3"
-            },
-            {
-              "date": "2026-11-19",
-              "time": "19:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Pilch J.",
-              "result": "L",
-              "score": "2-3"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "22:30:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Ruzicka J.",
-              "result": "W",
-              "score": "3-2"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "21:00:00",
-              "competition": "Czech Liga Pro",
-              "opponent": "Zahradka M.",
-              "result": "W",
-              "score": "3-1"
             }
           ],
           "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -28252,123 +26308,6 @@
       }
     },
     {
-      "name": "Adina Diaconu",
-      "events": [
-        {
-          "title": "Orawan Paranang vs. Adina Diaconu",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-orapar-adidia-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Diaconu A.",
-        "source_player_id": "852038",
-        "matches_count": 2,
-        "wins": 1,
-        "losses": 1,
-        "last_match_date": "2026-11-25",
-        "competition_matches": 1,
-        "recent_matches": [
-          {
-            "date": "2026-11-25",
-            "time": "09:45:00",
-            "competition": "Feeder Dusseldorf II, WS",
-            "opponent": "Mischek K.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-16",
-            "time": "13:00:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Wei J.",
-            "result": "L",
-            "score": "0-3"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:Adina DIACONU|country:ROU",
-        "display_name": "Adina DIACONU",
-        "matches": 70,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          0,
-          1,
-          0,
-          1,
-          0,
-          1,
-          1,
-          0,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Adrien Rassenfosse",
-      "events": [
-        {
-          "title": "Adrien Rassenfosse vs. Daniel Berzosa",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-adrras-danber-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "123659",
-        "display_name": "RASSENFOSSE Adrien",
-        "matches": 49,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          1,
-          1,
-          0,
-          1,
-          1,
-          1,
-          1,
-          1,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Agathe Avezou",
-      "events": [
-        {
-          "title": "Yangzi Liu vs. Agathe Avezou",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-yanliu-agaave-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique full-token WTT model record; no model match is assumed."
-      }
-    },
-    {
       "name": "Alesh Bayer",
       "events": [
         {
@@ -28895,179 +26834,6 @@
       }
     },
     {
-      "name": "Andre Bertelsmeier",
-      "events": [
-        {
-          "title": "Hanjae Jang vs. Andre Bertelsmeier",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-hanjan-andber-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Bertelsmeier A.",
-        "source_player_id": "1012980",
-        "matches_count": 2,
-        "wins": 1,
-        "losses": 1,
-        "last_match_date": "2026-11-19",
-        "competition_matches": 2,
-        "recent_matches": [
-          {
-            "date": "2026-11-19",
-            "time": "09:55:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Flavien Coton",
-            "result": "L",
-            "score": "0-3"
-          },
-          {
-            "date": "2026-11-18",
-            "time": "14:15:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Tang Y.",
-            "result": "W",
-            "score": "3-2"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "145799",
-        "display_name": "BERTELSMEIER Andre",
-        "matches": 20,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          1,
-          1,
-          0,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Asuka Sasao",
-      "events": [
-        {
-          "title": "Sabina Surjan vs. Asuka Sasao",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-sabsur-asusas-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:SASAO Asuka|country:JPN",
-        "display_name": "SASAO Asuka",
-        "matches": 28,
-        "last_match_date": "2025-04-22",
-        "recent_form_last10": [
-          0,
-          1,
-          1,
-          1,
-          1,
-          1,
-          0,
-          0,
-          1,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Audrey Zarif",
-      "events": [
-        {
-          "title": "Audrey Zarif vs. Giorgia Piccolin",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-audzar-giopic-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Zarif A.",
-        "source_player_id": "685160",
-        "matches_count": 4,
-        "wins": 3,
-        "losses": 1,
-        "last_match_date": "2026-11-25",
-        "competition_matches": 3,
-        "recent_matches": [
-          {
-            "date": "2026-11-25",
-            "time": "09:20:00",
-            "competition": "Feeder Dusseldorf II, WS",
-            "opponent": "Neumann J.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "06:00:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Odo Satsuki",
-            "result": "L",
-            "score": "0-3"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "08:25:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Zhang M.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-18",
-            "time": "13:55:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Lutz Camille",
-            "result": "W",
-            "score": "3-2"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:ZARIF Audrey|country:FRA",
-        "display_name": "ZARIF Audrey",
-        "matches": 45,
-        "last_match_date": "2025-09-25",
-        "recent_form_last10": [
-          0,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0,
-          1,
-          0,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Borgar Haug",
       "events": [
         {
@@ -29080,12 +26846,20 @@
         "status": "name_initial_match_review_only",
         "display_name": "Haug B.",
         "source_player_id": "989579",
-        "matches_count": 5,
+        "matches_count": 6,
         "wins": 3,
-        "losses": 2,
-        "last_match_date": "2026-11-18",
+        "losses": 3,
+        "last_match_date": "2026-11-25",
         "competition_matches": 5,
         "recent_matches": [
+          {
+            "date": "2026-11-25",
+            "time": "18:20:00",
+            "competition": "Feeder Dusseldorf II, MS",
+            "opponent": "Stoyanov N.",
+            "result": "L",
+            "score": "2-3"
+          },
           {
             "date": "2026-11-18",
             "time": "09:40:00",
@@ -29173,66 +26947,6 @@
       }
     },
     {
-      "name": "Camille Lutz",
-      "events": [
-        {
-          "title": "Camille Lutz vs. Rin Mende",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-camlut-rinmen-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "exact_name_match_identity_unverified",
-        "display_name": "Lutz Camille",
-        "source_player_id": "760253",
-        "matches_count": 2,
-        "wins": 1,
-        "losses": 1,
-        "last_match_date": "2026-11-25",
-        "competition_matches": 1,
-        "recent_matches": [
-          {
-            "date": "2026-11-25",
-            "time": "10:40:00",
-            "competition": "Feeder Dusseldorf II, WS",
-            "opponent": "Kim E.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-18",
-            "time": "13:55:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Zarif A.",
-            "result": "L",
-            "score": "2-3"
-          }
-        ],
-        "identity_note": "Exact name match in DataSportsAPI, but cross-source identity is not independently verified. Treat this history as a candidate, not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:LUTZ Camille|country:FRA",
-        "display_name": "LUTZ Camille",
-        "matches": 58,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          1,
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Cedric Meissner",
       "events": [
         {
@@ -29242,9 +26956,8 @@
         }
       ],
       "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
+        "status": "other_competition_only",
+        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
         "matches": []
       },
       "model_record": {
@@ -29265,42 +26978,6 @@
           1,
           1,
           0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Chengzhu Zhu",
-      "events": [
-        {
-          "title": "Daeun (2005) Lee vs. Chengzhu Zhu",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-daelee-chezhu-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:ZHU Chengzhu|country:HKG",
-        "display_name": "ZHU Chengzhu",
-        "matches": 67,
-        "last_match_date": "2025-09-25",
-        "recent_form_last10": [
-          0,
-          1,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0,
-          0,
-          1
         ],
         "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
       }
@@ -29511,71 +27188,6 @@
       }
     },
     {
-      "name": "Daeun (2005) Lee",
-      "events": [
-        {
-          "title": "Daeun (2005) Lee vs. Chengzhu Zhu",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-daelee-chezhu-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:LEE Daeun|country:KOR",
-        "display_name": "LEE Daeun",
-        "matches": 20,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          0,
-          0,
-          0,
-          1,
-          1,
-          0,
-          0,
-          1,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Daniel Berzosa",
-      "events": [
-        {
-          "title": "Adrien Rassenfosse vs. Daniel Berzosa",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-adrras-danber-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "133633",
-        "display_name": "BERZOSA Daniel",
-        "matches": 2,
-        "last_match_date": "2025-08-14",
-        "recent_form_last10": [
-          0,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Daniel Tuma",
       "events": [
         {
@@ -29770,62 +27382,6 @@
       "model_record": {
         "status": "not_applicable",
         "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
-      "name": "Darya Kisel",
-      "events": [
-        {
-          "title": "Xiaona Shan vs. Darya Kisel",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-xiasha-darkis-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique full-token WTT model record; no model match is assumed."
-      }
-    },
-    {
-      "name": "Dimitrije Levajac",
-      "events": [
-        {
-          "title": "Juan Perez vs. Dimitrije Levajac",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-juaper-dimlev-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "123192",
-        "display_name": "Dimitrije LEVAJAC",
-        "matches": 9,
-        "last_match_date": "2025-06-24",
-        "recent_form_last10": [
-          0,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
       }
     },
     {
@@ -30026,26 +27582,6 @@
       }
     },
     {
-      "name": "Dufek Jakub Jr",
-      "events": [
-        {
-          "title": "Dufek Jakub Jr vs. Melisek Marian",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamecz-dufjak-melmar-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "not_applicable",
-        "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
       "name": "Fanbo Meng",
       "events": [
         {
@@ -30058,12 +27594,20 @@
         "status": "name_initial_match_review_only",
         "display_name": "Meng F.",
         "source_player_id": "685078",
-        "matches_count": 2,
-        "wins": 1,
+        "matches_count": 3,
+        "wins": 2,
         "losses": 1,
         "last_match_date": "2026-11-25",
         "competition_matches": 1,
         "recent_matches": [
+          {
+            "date": "2026-11-25",
+            "time": "18:30:00",
+            "competition": "Feeder Dusseldorf II, MS",
+            "opponent": "Meissner C.",
+            "result": "W",
+            "score": "3-1"
+          },
           {
             "date": "2026-11-25",
             "time": "11:15:00",
@@ -30109,6 +27653,11 @@
       "name": "Fashchevskyi Ivan",
       "events": [
         {
+          "title": "Moshovskyi Vasyl vs. Fashchevskyi Ivan",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-mosvas-fasiva-2026-11-25"
+        },
+        {
           "title": "Korobko Volodymyr vs. Fashchevskyi Ivan",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-korvol-fasiva-2026-11-26"
@@ -30148,12 +27697,20 @@
         "status": "name_initial_match_review_only",
         "display_name": "Zeljko F.",
         "source_player_id": "685092",
-        "matches_count": 1,
+        "matches_count": 2,
         "wins": 0,
-        "losses": 1,
-        "last_match_date": "2026-11-17",
+        "losses": 2,
+        "last_match_date": "2026-11-25",
         "competition_matches": 1,
         "recent_matches": [
+          {
+            "date": "2026-11-25",
+            "time": "18:20:00",
+            "competition": "Feeder Dusseldorf II, MS",
+            "opponent": "Gionis P.",
+            "result": "L",
+            "score": "2-3"
+          },
           {
             "date": "2026-11-17",
             "time": "08:00:00",
@@ -30185,491 +27742,6 @@
           0
         ],
         "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Gahyeon Park",
-      "events": [
-        {
-          "title": "Sarvinoz Mirkadirova vs. Gahyeon Park",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-sarmir-gahpar-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Park G.",
-        "source_player_id": "1111389",
-        "matches_count": 6,
-        "wins": 5,
-        "losses": 1,
-        "last_match_date": "2026-11-21",
-        "competition_matches": 6,
-        "recent_matches": [
-          {
-            "date": "2026-11-21",
-            "time": "14:35:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Shunsuke Togami",
-            "result": "L",
-            "score": "1-4"
-          },
-          {
-            "date": "2026-11-21",
-            "time": "09:00:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Junsung Oh",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "11:35:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Flavien Coton",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "06:25:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Sun Y.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "08:25:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "An Jaehyun",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-18",
-            "time": "10:20:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Bardet L.",
-            "result": "W",
-            "score": "3-1"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:PARK Gahyeon|country:KOR",
-        "display_name": "PARK Gahyeon",
-        "matches": 16,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          1,
-          0,
-          0,
-          1,
-          0,
-          1,
-          1,
-          0,
-          1,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Giorgia Piccolin",
-      "events": [
-        {
-          "title": "Audrey Zarif vs. Giorgia Piccolin",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-audzar-giopic-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Piccolin G.",
-        "source_player_id": "133355",
-        "matches_count": 1,
-        "wins": 0,
-        "losses": 1,
-        "last_match_date": "2026-11-18",
-        "competition_matches": 1,
-        "recent_matches": [
-          {
-            "date": "2026-11-18",
-            "time": "15:05:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Wang X.",
-            "result": "L",
-            "score": "0-3"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:Giorgia PICCOLIN|country:ITA",
-        "display_name": "Giorgia PICCOLIN",
-        "matches": 51,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          0,
-          1,
-          1,
-          0,
-          1,
-          0,
-          1,
-          1,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Haeeun Choi",
-      "events": [
-        {
-          "title": "Yun-En Tsai vs. Haeeun Choi",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-yuntsa-haecho-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:CHOI Haeeun|country:KOR",
-        "display_name": "CHOI Haeeun",
-        "matches": 7,
-        "last_match_date": "2025-06-24",
-        "recent_form_last10": [
-          0,
-          0,
-          1,
-          0,
-          1,
-          1,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Hana Arapovic",
-      "events": [
-        {
-          "title": "Hanna Ryu vs. Hana Arapovic",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-hanryu-hanara-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:ARAPOVIC Hana|country:CRO",
-        "display_name": "ARAPOVIC Hana",
-        "matches": 27,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          1,
-          1,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Hanjae Jang",
-      "events": [
-        {
-          "title": "Hanjae Jang vs. Andre Bertelsmeier",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-hanjan-andber-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique full-token WTT model record; no model match is assumed."
-      }
-    },
-    {
-      "name": "Hanna Ryu",
-      "events": [
-        {
-          "title": "Hanna Ryu vs. Hana Arapovic",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-hanryu-hanara-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:RYU Hanna|country:KOR",
-        "display_name": "RYU Hanna",
-        "matches": 28,
-        "last_match_date": "2025-07-29",
-        "recent_form_last10": [
-          1,
-          0,
-          1,
-          1,
-          0,
-          1,
-          1,
-          0,
-          0,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Hayeong Kim",
-      "events": [
-        {
-          "title": "Hayeong Kim vs. Yi-Tian Yeh",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-haykim-yiyeh-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:KIM Hayeong|country:KOR",
-        "display_name": "KIM Hayeong",
-        "matches": 31,
-        "last_match_date": "2023-11-07",
-        "recent_form_last10": [
-          1,
-          1,
-          0,
-          1,
-          0,
-          1,
-          1,
-          0,
-          1,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Holub Martin",
-      "events": [
-        {
-          "title": "Holub Martin vs. Obraz Martin",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamecz-holmar-obrmar-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Holub M.",
-        "source_player_id": "652954",
-        "matches_count": 19,
-        "wins": 8,
-        "losses": 11,
-        "last_match_date": "2026-11-25",
-        "competition_matches": 19,
-        "recent_matches": [
-          {
-            "date": "2026-11-25",
-            "time": "12:45:00",
-            "competition": "Setka Cup",
-            "opponent": "Slunecko R.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-25",
-            "time": "11:45:00",
-            "competition": "Setka Cup",
-            "opponent": "Puk J.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-25",
-            "time": "10:15:00",
-            "competition": "Setka Cup",
-            "opponent": "Obraz M.",
-            "result": "L",
-            "score": "0-3"
-          },
-          {
-            "date": "2026-11-22",
-            "time": "22:10:00",
-            "competition": "Setka Cup",
-            "opponent": "Cuba M.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-22",
-            "time": "21:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Vrnak J.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-22",
-            "time": "20:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Akopyan A.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-22",
-            "time": "18:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Cuba M.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-21",
-            "time": "17:35:00",
-            "competition": "Setka Cup",
-            "opponent": "Coubal V.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-21",
-            "time": "16:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Melisek M.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-21",
-            "time": "16:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Coubal V.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-21",
-            "time": "15:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Vydra M.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "22:10:00",
-            "competition": "Setka Cup",
-            "opponent": "Cuba M.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "21:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Cuba M.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "19:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Krutina L.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "19:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Snizek M.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-17",
-            "time": "09:50:00",
-            "competition": "Setka Cup",
-            "opponent": "Cmil M.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-17",
-            "time": "08:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Boura L.",
-            "result": "L",
-            "score": "0-3"
-          },
-          {
-            "date": "2026-11-17",
-            "time": "07:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Cmil M.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-17",
-            "time": "06:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Vydra M.",
-            "result": "L",
-            "score": "1-3"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "not_applicable",
-        "identity_note": "WTT model lookup is only used for WTT listings."
       }
     },
     {
@@ -32171,62 +29243,6 @@
       }
     },
     {
-      "name": "Jiwook Choi",
-      "events": [
-        {
-          "title": "Jiwook Choi vs. Tiago Apolonia",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-jiwcho-tiaapo-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique full-token WTT model record; no model match is assumed."
-      }
-    },
-    {
-      "name": "Juan Perez",
-      "events": [
-        {
-          "title": "Juan Perez vs. Dimitrije Levajac",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-juaper-dimlev-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "134625",
-        "display_name": "PEREZ Juan",
-        "matches": 11,
-        "last_match_date": "2025-09-01",
-        "recent_form_last10": [
-          0,
-          1,
-          0,
-          1,
-          1,
-          0,
-          0,
-          0,
-          1,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Kay Stumper",
       "events": [
         {
@@ -32657,6 +29673,11 @@
       "name": "Kovalchuk Oleksandr",
       "events": [
         {
+          "title": "Kovalchuk Oleksandr vs. Kovalenko Veacheslav",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-kovole-kovvea-2026-11-25"
+        },
+        {
           "title": "Panasenko Volodymyr vs. Kovalchuk Oleksandr",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-panvol-kovole-2026-11-26"
@@ -32691,6 +29712,11 @@
     {
       "name": "Kovalenko Veacheslav",
       "events": [
+        {
+          "title": "Kovalchuk Oleksandr vs. Kovalenko Veacheslav",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-kovole-kovvea-2026-11-25"
+        },
         {
           "title": "Kovalenko Veacheslav vs. Chepurnyi Artem",
           "competition": "Setka Cup",
@@ -33040,79 +30066,6 @@
       }
     },
     {
-      "name": "Kwan TO Yiu",
-      "events": [
-        {
-          "title": "Wim Verdonschot vs. Kwan TO Yiu",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-wimver-kwayiu-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "132325",
-        "display_name": "YIU Kwan To",
-        "matches": 25,
-        "last_match_date": "2025-06-24",
-        "recent_form_last10": [
-          0,
-          0,
-          1,
-          1,
-          0,
-          1,
-          1,
-          1,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Lea Rakovac",
-      "events": [
-        {
-          "title": "Lea Rakovac vs. Yuan Wan",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-learak-yuawan-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:RAKOVAC Lea|country:CRO",
-        "display_name": "RAKOVAC Lea",
-        "matches": 25,
-        "last_match_date": "2025-09-25",
-        "recent_form_last10": [
-          1,
-          1,
-          0,
-          0,
-          1,
-          0,
-          0,
-          1,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Libor Prikasky",
       "events": [
         {
@@ -33130,12 +30083,36 @@
         "status": "name_initial_match_review_only",
         "display_name": "Prikasky L.",
         "source_player_id": "4312",
-        "matches_count": 28,
-        "wins": 14,
-        "losses": 14,
+        "matches_count": 31,
+        "wins": 15,
+        "losses": 16,
         "last_match_date": "2026-11-25",
-        "competition_matches": 28,
+        "competition_matches": 31,
         "recent_matches": [
+          {
+            "date": "2026-11-25",
+            "time": "17:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Navedla M.",
+            "result": "W",
+            "score": "3-1"
+          },
+          {
+            "date": "2026-11-25",
+            "time": "16:30:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Chmela T.",
+            "result": "L",
+            "score": "1-3"
+          },
+          {
+            "date": "2026-11-25",
+            "time": "15:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Vavrecka M.",
+            "result": "L",
+            "score": "1-3"
+          },
           {
             "date": "2026-11-25",
             "time": "13:00:00",
@@ -33271,30 +30248,6 @@
             "opponent": "Mares E.",
             "result": "L",
             "score": "0-3"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "19:30:00",
-            "competition": "Czech Liga Pro",
-            "opponent": "Pilch J.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-18",
-            "time": "22:30:00",
-            "competition": "Czech Liga Pro",
-            "opponent": "Ruzicka J.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-18",
-            "time": "21:00:00",
-            "competition": "Czech Liga Pro",
-            "opponent": "Zahradka M.",
-            "result": "W",
-            "score": "3-1"
           }
         ],
         "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -33302,42 +30255,6 @@
       "model_record": {
         "status": "not_applicable",
         "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
-      "name": "Lilou Massart",
-      "events": [
-        {
-          "title": "Sachi Aoki vs. Lilou Massart",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-sacaok-lilmas-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:MASSART Lilou|country:BEL",
-        "display_name": "MASSART Lilou",
-        "matches": 10,
-        "last_match_date": "2025-09-25",
-        "recent_form_last10": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
       }
     },
     {
@@ -33496,43 +30413,6 @@
       "model_record": {
         "status": "not_applicable",
         "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
-      "name": "Maciej Kubik",
-      "events": [
-        {
-          "title": "Maciej Kubik vs. Martin Allegro",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-mackub-marall-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "131671",
-        "display_name": "KUBIK Maciej",
-        "matches": 22,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          0,
-          1,
-          1,
-          1,
-          0,
-          0,
-          1,
-          1,
-          1,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
       }
     },
     {
@@ -33928,42 +30808,6 @@
       }
     },
     {
-      "name": "Martin Allegro",
-      "events": [
-        {
-          "title": "Maciej Kubik vs. Martin Allegro",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-mackub-marall-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "114848",
-        "display_name": "ALLEGRO Martin",
-        "matches": 53,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          0,
-          1,
-          0,
-          0,
-          1,
-          1,
-          1,
-          0,
-          1,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Martin Sobisek",
       "events": [
         {
@@ -33991,12 +30835,20 @@
         "status": "name_initial_match_review_only",
         "display_name": "Sobisek M.",
         "source_player_id": "69501",
-        "matches_count": 23,
-        "wins": 9,
+        "matches_count": 24,
+        "wins": 10,
         "losses": 14,
-        "last_match_date": "2026-11-24",
-        "competition_matches": 23,
+        "last_match_date": "2026-11-25",
+        "competition_matches": 24,
         "recent_matches": [
+          {
+            "date": "2026-11-25",
+            "time": "19:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Kulhanek T.",
+            "result": "W",
+            "score": "3-1"
+          },
           {
             "date": "2026-11-24",
             "time": "13:00:00",
@@ -34148,14 +31000,6 @@
             "opponent": "Chlebecek M.",
             "result": "L",
             "score": "1-3"
-          },
-          {
-            "date": "2026-11-16",
-            "time": "03:00:00",
-            "competition": "Czech Liga Pro",
-            "opponent": "Bayer A.",
-            "result": "W",
-            "score": "3-2"
           }
         ],
         "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -34518,121 +31362,6 @@
             "opponent": "Otgon A.",
             "result": "L",
             "score": "0-3"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "not_applicable",
-        "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
-      "name": "Melisek Marian",
-      "events": [
-        {
-          "title": "Dufek Jakub Jr vs. Melisek Marian",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamecz-dufjak-melmar-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Melisek M.",
-        "source_player_id": "644610",
-        "matches_count": 11,
-        "wins": 8,
-        "losses": 3,
-        "last_match_date": "2026-11-25",
-        "competition_matches": 11,
-        "recent_matches": [
-          {
-            "date": "2026-11-25",
-            "time": "12:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Blazek J.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-25",
-            "time": "12:00:00",
-            "competition": "Setka Cup",
-            "opponent": "David Lorenc",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-25",
-            "time": "11:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Dufek J.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-22",
-            "time": "18:10:00",
-            "competition": "Setka Cup",
-            "opponent": "Sabuka D.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-22",
-            "time": "16:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Vojtech Kral",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-22",
-            "time": "16:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Sabuka D.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-22",
-            "time": "15:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Dufek J.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-21",
-            "time": "18:05:00",
-            "competition": "Setka Cup",
-            "opponent": "Vydra M.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-21",
-            "time": "16:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Holub M.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-21",
-            "time": "15:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Vydra M.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-21",
-            "time": "14:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Coubal V.",
-            "result": "W",
-            "score": "3-2"
           }
         ],
         "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -35422,6 +32151,11 @@
       "name": "Moshovskyi Vasyl",
       "events": [
         {
+          "title": "Moshovskyi Vasyl vs. Fashchevskyi Ivan",
+          "competition": "Setka Cup",
+          "url": "https://polymarket.us/event/setkameua-mosvas-fasiva-2026-11-25"
+        },
+        {
           "title": "Prus Serhii vs. Moshovskyi Vasyl",
           "competition": "Setka Cup",
           "url": "https://polymarket.us/event/setkameua-pruser-mosvas-2026-11-26"
@@ -35548,12 +32282,20 @@
         "status": "name_initial_match_review_only",
         "display_name": "Stoyanov N.",
         "source_player_id": "1065502",
-        "matches_count": 3,
-        "wins": 2,
+        "matches_count": 4,
+        "wins": 3,
         "losses": 1,
         "last_match_date": "2026-11-25",
         "competition_matches": 2,
         "recent_matches": [
+          {
+            "date": "2026-11-25",
+            "time": "18:20:00",
+            "competition": "Feeder Dusseldorf II, MS",
+            "opponent": "Haug B.",
+            "result": "W",
+            "score": "3-2"
+          },
           {
             "date": "2026-11-25",
             "time": "12:40:00",
@@ -35599,36 +32341,6 @@
           0,
           1,
           1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Nicole Arlia",
-      "events": [
-        {
-          "title": "Nicole Arlia vs. Seongjin Kim",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-nicarl-seokim-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:ARLIA Nicole|country:ITA",
-        "display_name": "ARLIA Nicole",
-        "matches": 4,
-        "last_match_date": "2023-06-26",
-        "recent_form_last10": [
-          0,
-          1,
-          0,
-          0
         ],
         "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
       }
@@ -35761,121 +32473,6 @@
             "opponent": "Tebenko Y.",
             "result": "W",
             "score": "3-2"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "not_applicable",
-        "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
-      "name": "Obraz Martin",
-      "events": [
-        {
-          "title": "Holub Martin vs. Obraz Martin",
-          "competition": "Setka Cup",
-          "url": "https://polymarket.us/event/setkamecz-holmar-obrmar-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Obraz M.",
-        "source_player_id": "686884",
-        "matches_count": 11,
-        "wins": 8,
-        "losses": 3,
-        "last_match_date": "2026-11-25",
-        "competition_matches": 11,
-        "recent_matches": [
-          {
-            "date": "2026-11-25",
-            "time": "12:15:00",
-            "competition": "Setka Cup",
-            "opponent": "Puk J.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-25",
-            "time": "11:15:00",
-            "competition": "Setka Cup",
-            "opponent": "Slunecko R.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-25",
-            "time": "10:15:00",
-            "competition": "Setka Cup",
-            "opponent": "Holub M.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "18:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Puk J.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "17:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Puk J.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "15:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Kucala V.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-20",
-            "time": "15:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Coubal V.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "13:45:00",
-            "competition": "Setka Cup",
-            "opponent": "Cizek P.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "13:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Puk J.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "12:00:00",
-            "competition": "Setka Cup",
-            "opponent": "Cizek P.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "10:30:00",
-            "competition": "Setka Cup",
-            "opponent": "Blazek J.",
-            "result": "L",
-            "score": "1-3"
           }
         ],
         "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -36080,43 +32677,6 @@
       "model_record": {
         "status": "not_applicable",
         "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
-      "name": "Orawan Paranang",
-      "events": [
-        {
-          "title": "Orawan Paranang vs. Adina Diaconu",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-orapar-adidia-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:PARANANG Orawan|country:THA",
-        "display_name": "PARANANG Orawan",
-        "matches": 68,
-        "last_match_date": "2025-09-25",
-        "recent_form_last10": [
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
       }
     },
     {
@@ -37756,27 +34316,6 @@
       }
     },
     {
-      "name": "Rin Mende",
-      "events": [
-        {
-          "title": "Camille Lutz vs. Rin Mende",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-camlut-rinmen-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique full-token WTT model record; no model match is assumed."
-      }
-    },
-    {
       "name": "Rogelio Castro",
       "events": [
         {
@@ -37968,190 +34507,6 @@
       }
     },
     {
-      "name": "Sabina Surjan",
-      "events": [
-        {
-          "title": "Sabina Surjan vs. Asuka Sasao",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-sabsur-asusas-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:Sabina SURJAN|country:SRB",
-        "display_name": "Sabina SURJAN",
-        "matches": 30,
-        "last_match_date": "2025-09-25",
-        "recent_form_last10": [
-          0,
-          1,
-          0,
-          1,
-          0,
-          1,
-          0,
-          1,
-          1,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Sachi Aoki",
-      "events": [
-        {
-          "title": "Sachi Aoki vs. Lilou Massart",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-sacaok-lilmas-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Aoki S.",
-        "source_player_id": "1111437",
-        "matches_count": 3,
-        "wins": 2,
-        "losses": 1,
-        "last_match_date": "2026-11-20",
-        "competition_matches": 3,
-        "recent_matches": [
-          {
-            "date": "2026-11-20",
-            "time": "06:30:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Szocs B.",
-            "result": "L",
-            "score": "0-3"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "13:00:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Yuan J.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-18",
-            "time": "10:20:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Zong G.",
-            "result": "W",
-            "score": "3-2"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique full-token WTT model record; no model match is assumed."
-      }
-    },
-    {
-      "name": "Sara Tokic",
-      "events": [
-        {
-          "title": "Seungeun Lee vs. Sara Tokic",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-seulee-sartok-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:TOKIC Sara|country:SLO",
-        "display_name": "TOKIC Sara",
-        "matches": 7,
-        "last_match_date": "2025-06-17",
-        "recent_form_last10": [
-          0,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Sarvinoz Mirkadirova",
-      "events": [
-        {
-          "title": "Sarvinoz Mirkadirova vs. Gahyeon Park",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-sarmir-gahpar-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Mirkadirova S.",
-        "source_player_id": "896921",
-        "matches_count": 3,
-        "wins": 2,
-        "losses": 1,
-        "last_match_date": "2026-11-25",
-        "competition_matches": 2,
-        "recent_matches": [
-          {
-            "date": "2026-11-25",
-            "time": "09:55:00",
-            "competition": "Feeder Dusseldorf II, WS",
-            "opponent": "Moon C.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-18",
-            "time": "16:05:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Shibata S.",
-            "result": "L",
-            "score": "0-3"
-          },
-          {
-            "date": "2026-11-16",
-            "time": "07:35:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Picard C.",
-            "result": "W",
-            "score": "3-0"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:MIRKADIROVA Sarvinoz|country:KAZ",
-        "display_name": "MIRKADIROVA Sarvinoz",
-        "matches": 5,
-        "last_match_date": "2025-09-01",
-        "recent_form_last10": [
-          0,
-          0,
-          1,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Sathiyan Gnanasekaran",
       "events": [
         {
@@ -38161,9 +34516,8 @@
         }
       ],
       "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
+        "status": "other_competition_only",
+        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
         "matches": []
       },
       "model_record": {
@@ -38277,158 +34631,6 @@
       "model_record": {
         "status": "not_applicable",
         "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
-      "name": "Seongjin Kim",
-      "events": [
-        {
-          "title": "Nicole Arlia vs. Seongjin Kim",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-nicarl-seokim-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Kim S.",
-        "source_player_id": "893798",
-        "matches_count": 3,
-        "wins": 2,
-        "losses": 1,
-        "last_match_date": "2026-11-20",
-        "competition_matches": 3,
-        "recent_matches": [
-          {
-            "date": "2026-11-20",
-            "time": "07:40:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Hashimoto H.",
-            "result": "L",
-            "score": "0-3"
-          },
-          {
-            "date": "2026-11-19",
-            "time": "16:50:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Yeh Y.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-18",
-            "time": "07:45:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Muramatsu C.",
-            "result": "W",
-            "score": "3-2"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:KIM Seongjin|country:KOR",
-        "display_name": "KIM Seongjin",
-        "matches": 16,
-        "last_match_date": "2025-06-24",
-        "recent_form_last10": [
-          1,
-          1,
-          0,
-          1,
-          1,
-          1,
-          1,
-          0,
-          1,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Seungeun Lee",
-      "events": [
-        {
-          "title": "Seungeun Lee vs. Sara Tokic",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-seulee-sartok-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Lee S.",
-        "source_player_id": "1065504",
-        "matches_count": 7,
-        "wins": 6,
-        "losses": 1,
-        "last_match_date": "2026-11-25",
-        "competition_matches": 2,
-        "recent_matches": [
-          {
-            "date": "2026-11-25",
-            "time": "12:15:00",
-            "competition": "Feeder Dusseldorf II, MS",
-            "opponent": "Lillo D.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-24",
-            "time": "18:20:00",
-            "competition": "Feeder Dusseldorf II, MS",
-            "opponent": "Varga B.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-24",
-            "time": "09:05:00",
-            "competition": "Feeder Dusseldorf II, MS",
-            "opponent": "De Boer M.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-23",
-            "time": "18:20:00",
-            "competition": "Feeder Dusseldorf II, MS",
-            "opponent": "Rzihauschek J.",
-            "result": "W",
-            "score": "3-2"
-          },
-          {
-            "date": "2026-11-23",
-            "time": "11:00:00",
-            "competition": "Feeder Dusseldorf II, MS",
-            "opponent": "Yeongjun MA.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-17",
-            "time": "08:15:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Yuan L.",
-            "result": "L",
-            "score": "1-3"
-          },
-          {
-            "date": "2026-11-16",
-            "time": "13:40:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "AL Riyami A.",
-            "result": "W",
-            "score": "3-1"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique full-token WTT model record; no model match is assumed."
       }
     },
     {
@@ -39050,42 +35252,6 @@
       }
     },
     {
-      "name": "Steffen Mengel",
-      "events": [
-        {
-          "title": "Steffen Mengel vs. Youssef Abdelaziz",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-stemen-youabd-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "106050",
-        "display_name": "MENGEL Steffen",
-        "matches": 29,
-        "last_match_date": "2025-07-21",
-        "recent_form_last10": [
-          0,
-          0,
-          1,
-          1,
-          1,
-          1,
-          0,
-          0,
-          1,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Stepanchuk Yaroslav",
       "events": [
         {
@@ -39440,43 +35606,6 @@
       }
     },
     {
-      "name": "Tiago Apolonia",
-      "events": [
-        {
-          "title": "Jiwook Choi vs. Tiago Apolonia",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-jiwcho-tiaapo-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "100621",
-        "display_name": "APOLONIA Tiago",
-        "matches": 63,
-        "last_match_date": "2025-09-25",
-        "recent_form_last10": [
-          0,
-          1,
-          0,
-          1,
-          0,
-          1,
-          0,
-          0,
-          1,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Tomas Franek",
       "events": [
         {
@@ -39701,12 +35830,20 @@
         "status": "name_initial_match_review_only",
         "display_name": "Kulhanek T.",
         "source_player_id": "1035785",
-        "matches_count": 41,
+        "matches_count": 42,
         "wins": 31,
-        "losses": 10,
-        "last_match_date": "2026-11-24",
-        "competition_matches": 41,
+        "losses": 11,
+        "last_match_date": "2026-11-25",
+        "competition_matches": 42,
         "recent_matches": [
+          {
+            "date": "2026-11-25",
+            "time": "19:00:00",
+            "competition": "Czech Liga Pro",
+            "opponent": "Sobisek M.",
+            "result": "L",
+            "score": "1-3"
+          },
           {
             "date": "2026-11-24",
             "time": "10:30:00",
@@ -39858,14 +35995,6 @@
             "opponent": "Barta M.",
             "result": "W",
             "score": "3-0"
-          },
-          {
-            "date": "2026-11-16",
-            "time": "21:30:00",
-            "competition": "Czech Liga Pro",
-            "opponent": "Pleskot J.",
-            "result": "L",
-            "score": "0-3"
           }
         ],
         "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
@@ -39873,43 +36002,6 @@
       "model_record": {
         "status": "not_applicable",
         "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
-      "name": "Tung-Chuan Chien",
-      "events": [
-        {
-          "title": "Veronika Matiunina vs. Tung-Chuan Chien",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-vermat-tunchi-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:CHIEN Tung-Chuan|country:TPE",
-        "display_name": "CHIEN Tung-Chuan",
-        "matches": 36,
-        "last_match_date": "2025-09-25",
-        "recent_form_last10": [
-          0,
-          0,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
       }
     },
     {
@@ -40035,182 +36127,6 @@
       }
     },
     {
-      "name": "Veronika Matiunina",
-      "events": [
-        {
-          "title": "Veronika Matiunina vs. Tung-Chuan Chien",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-vermat-tunchi-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique full-token WTT model record; no model match is assumed."
-      }
-    },
-    {
-      "name": "Wim Verdonschot",
-      "events": [
-        {
-          "title": "Wim Verdonschot vs. Kwan TO Yiu",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-wimver-kwayiu-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Verdonschot W.",
-        "source_player_id": "851850",
-        "matches_count": 1,
-        "wins": 0,
-        "losses": 1,
-        "last_match_date": "2026-11-19",
-        "competition_matches": 1,
-        "recent_matches": [
-          {
-            "date": "2026-11-19",
-            "time": "10:05:00",
-            "competition": "WTT Star Contender Muscat, MS",
-            "opponent": "Seyfried J.",
-            "result": "L",
-            "score": "0-3"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_men_2022_2025",
-        "source_player_id": "201466",
-        "display_name": "VERDONSCHOT Wim",
-        "matches": 10,
-        "last_match_date": "2025-07-29",
-        "recent_form_last10": [
-          0,
-          1,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0,
-          1,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Xiaona Shan",
-      "events": [
-        {
-          "title": "Xiaona Shan vs. Darya Kisel",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-xiasha-darkis-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "other_competition_only",
-        "identity_note": "A same-name record exists, but no match in this event's competition was found.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:SHAN Xiaona|country:GER",
-        "display_name": "SHAN Xiaona",
-        "matches": 48,
-        "last_match_date": "2025-09-25",
-        "recent_form_last10": [
-          0,
-          1,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          1
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Yangzi Liu",
-      "events": [
-        {
-          "title": "Yangzi Liu vs. Agathe Avezou",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-yanliu-agaave-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Liu Y.",
-        "source_player_id": "786741",
-        "matches_count": 3,
-        "wins": 2,
-        "losses": 1,
-        "last_match_date": "2026-11-19",
-        "competition_matches": 1,
-        "recent_matches": [
-          {
-            "date": "2026-11-19",
-            "time": "08:00:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Yang X.",
-            "result": "L",
-            "score": "2-3"
-          },
-          {
-            "date": "2026-11-14",
-            "time": "19:00:00",
-            "competition": "ETTU Champions League, Women",
-            "opponent": "Sevcikova M.",
-            "result": "W",
-            "score": "3-0"
-          },
-          {
-            "date": "2026-11-14",
-            "time": "18:00:00",
-            "competition": "ETTU Champions League, Women",
-            "opponent": "Grofova K.",
-            "result": "W",
-            "score": "2-1"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:LIU Yangzi|country:AUS",
-        "display_name": "LIU Yangzi",
-        "matches": 48,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
       "name": "Yelfimov Ivan",
       "events": [
         {
@@ -40243,145 +36159,6 @@
       "model_record": {
         "status": "not_applicable",
         "identity_note": "WTT model lookup is only used for WTT listings."
-      }
-    },
-    {
-      "name": "Yi-Tian Yeh",
-      "events": [
-        {
-          "title": "Hayeong Kim vs. Yi-Tian Yeh",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-haykim-yiyeh-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:YEH Yi-Tian|country:TPE",
-        "display_name": "YEH Yi-Tian",
-        "matches": 31,
-        "last_match_date": "2025-11-17",
-        "recent_form_last10": [
-          1,
-          1,
-          1,
-          0,
-          1,
-          1,
-          0,
-          1,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Youssef Abdelaziz",
-      "events": [
-        {
-          "title": "Steffen Mengel vs. Youssef Abdelaziz",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-stemen-youabd-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique full-token WTT model record; no model match is assumed."
-      }
-    },
-    {
-      "name": "Yuan Wan",
-      "events": [
-        {
-          "title": "Lea Rakovac vs. Yuan Wan",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-learak-yuawan-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "name_initial_match_review_only",
-        "display_name": "Wan Y.",
-        "source_player_id": "989896",
-        "matches_count": 2,
-        "wins": 1,
-        "losses": 1,
-        "last_match_date": "2026-11-25",
-        "competition_matches": 1,
-        "recent_matches": [
-          {
-            "date": "2026-11-25",
-            "time": "10:10:00",
-            "competition": "Feeder Dusseldorf II, WS",
-            "opponent": "Kodetova H.",
-            "result": "W",
-            "score": "3-1"
-          },
-          {
-            "date": "2026-11-16",
-            "time": "08:25:00",
-            "competition": "WTT Star Contender Muscat, WS",
-            "opponent": "Yang H.",
-            "result": "L",
-            "score": "0-3"
-          }
-        ],
-        "identity_note": "Initial/surname-format candidate in DataSportsAPI. Review the source ID and competition before relying on this history; it is not a confirmed identity."
-      },
-      "model_record": {
-        "status": "wtt_model_record_identity_unverified",
-        "source": "wtt_women_2022_2025",
-        "source_player_id": "name:Yuan WAN|country:GER",
-        "display_name": "Yuan WAN",
-        "matches": 52,
-        "last_match_date": "2025-09-25",
-        "recent_form_last10": [
-          1,
-          0,
-          1,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "identity_note": "Unique full-token name candidate in the WTT-trained pool. Cross-source athlete identity is not independently verified; this record is evidence only."
-      }
-    },
-    {
-      "name": "Yun-En Tsai",
-      "events": [
-        {
-          "title": "Yun-En Tsai vs. Haeeun Choi",
-          "competition": "WTT",
-          "url": "https://polymarket.us/event/wtt-yuntsa-haecho-2026-11-25"
-        }
-      ],
-      "history": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique source-scoped player candidate; history is not attached.",
-        "matches": []
-      },
-      "model_record": {
-        "status": "not_found",
-        "candidate_count": 0,
-        "identity_note": "No unique full-token WTT model record; no model match is assumed."
       }
     }
   ],
