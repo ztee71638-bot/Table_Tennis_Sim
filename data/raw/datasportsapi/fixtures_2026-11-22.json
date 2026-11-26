@@ -115172,8 +115172,8 @@
               "sport": "table-tennis"
             },
             "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
+            "lineupsAvailable": true,
+            "lineupsConfirmed": false,
             "matchFormat": null,
             "matchesInTie": null,
             "note": null,
@@ -115452,8 +115452,8 @@
               "sport": "table-tennis"
             },
             "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
+            "lineupsAvailable": true,
+            "lineupsConfirmed": false,
             "matchFormat": null,
             "matchesInTie": null,
             "note": null,
@@ -115594,8 +115594,8 @@
               "sport": "table-tennis"
             },
             "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
+            "lineupsAvailable": true,
+            "lineupsConfirmed": false,
             "matchFormat": null,
             "matchesInTie": null,
             "note": null,
@@ -115732,8 +115732,8 @@
               "sport": "table-tennis"
             },
             "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
+            "lineupsAvailable": true,
+            "lineupsConfirmed": false,
             "matchFormat": null,
             "matchesInTie": null,
             "note": null,
@@ -115872,8 +115872,8 @@
               "sport": "table-tennis"
             },
             "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
+            "lineupsAvailable": true,
+            "lineupsConfirmed": false,
             "matchFormat": null,
             "matchesInTie": null,
             "note": null,
@@ -163511,8 +163511,8 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "c83ad971cd0304c5c4089360d96337f9ee82c7f060ae4d710f8d74c6bc1bd44e"
+      "sha256": "279afba8552c7883b87d1cb1b3da827c8efc8dbc5a8143bdeb78d8ec3b2b3e0d"
     }
   ],
-  "retrieved_at": "2026-11-25T19:22:22.105812+00:00"
+  "retrieved_at": "2026-11-26T01:46:58.761476+00:00"
 }

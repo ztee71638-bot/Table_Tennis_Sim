@@ -15803,8 +15803,8 @@
               "sport": "table-tennis"
             },
             "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
+            "lineupsAvailable": true,
+            "lineupsConfirmed": false,
             "matchFormat": null,
             "matchesInTie": null,
             "note": null,
@@ -15945,8 +15945,8 @@
               "sport": "table-tennis"
             },
             "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
+            "lineupsAvailable": true,
+            "lineupsConfirmed": false,
             "matchFormat": null,
             "matchesInTie": null,
             "note": null,
@@ -109184,12 +109184,12 @@
           "date": "2026-11-24",
           "hasNextPage": true,
           "leagueCount": 10,
-          "nextCursor": "cC6eahEcaNm8vHyALg4ALOrc",
+          "nextCursor": "OXSTBeX4jo3mf22K4I9lzjd3",
           "page": 0,
           "sport": "table-tennis"
         }
       },
-      "sha256": "bbe26bbb24675cca46e7cc8142cce878f0d3e47311f76ad728313192af021b72"
+      "sha256": "072026263a6298dc73d442950219420940e75af9d48c82e527c91c077b0081be"
     },
     {
       "page": 1,
@@ -132422,8 +132422,8 @@
               "sport": "table-tennis"
             },
             "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
+            "lineupsAvailable": true,
+            "lineupsConfirmed": false,
             "matchFormat": null,
             "matchesInTie": null,
             "note": null,
@@ -180475,8 +180475,8 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "e3e640fb0c9153cb74c1af71b56c4e9a82d603db671574f0b33530ec27dd348e"
+      "sha256": "b01d1859de9ef5174db6d4858f80f4726f905ae5206b227dfe946d371c251e56"
     }
   ],
-  "retrieved_at": "2026-11-25T19:22:54.108021+00:00"
+  "retrieved_at": "2026-11-26T01:47:28.181952+00:00"
 }

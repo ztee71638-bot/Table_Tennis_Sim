@@ -1,16 +1,55 @@
 {
   "profiles": {
-    "cedric meissner": {
-      "country": "GER",
-      "display_name": "Meissner Cedric",
+    "agathe avezou": {
+      "country": "FRA",
+      "display_name": "Avezou Agathe",
       "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
-      "looked_up_at_utc": "2026-11-25T19:25:43.152377+00:00",
+      "looked_up_at_utc": "2026-11-25T01:50:05.095707+00:00",
       "model_eligible": false,
-      "query_name": "Cedric Meissner",
+      "query_name": "Agathe Avezou",
       "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
       "records_by_discipline": [
         {
-          "discipline": "MS",
+          "discipline": "WS",
+          "first_match": "2026-11-24",
+          "last_match": "2026-11-24",
+          "lost": 0,
+          "played": 2,
+          "won": 2
+        },
+        {
+          "discipline": "XD",
+          "first_match": "2026-11-24",
+          "last_match": "2026-11-24",
+          "lost": 1,
+          "played": 1,
+          "won": 0
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_6kwd558d",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": []
+    },
+    "gahyeon park": {
+      "country": "KOR",
+      "display_name": "Park Gahyeon",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T01:49:35.061954+00:00",
+      "model_eligible": false,
+      "query_name": "Gahyeon Park",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        },
+        {
+          "discipline": "WD",
           "first_match": "2026-11-25",
           "last_match": "2026-11-25",
           "lost": 1,
@@ -19,24 +58,478 @@
         }
       ],
       "source": "Table Tennis API (DeveloperData)",
-      "source_player_id": "pl_6bs442ej",
+      "source_player_id": "pl_mkxysns5",
       "status": "exact_name_match_identity_unverified",
       "world_ranks": [
         {
-          "discipline": "MD",
+          "discipline": "WD",
           "list": "senior",
           "points": 125,
-          "rank": 97,
+          "rank": 99,
           "week": "2026-48"
         },
         {
-          "discipline": "MD",
+          "discipline": "XD",
           "list": "senior",
-          "points": 120,
-          "rank": 98,
+          "points": 175,
+          "rank": 78,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "youth",
+          "points": 1435,
+          "rank": 50,
           "week": "2026-48"
         }
       ]
+    },
+    "aoki sachi": {
+      "country": "JPN",
+      "display_name": "Aoki Sachi",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T01:49:47.240336+00:00",
+      "model_eligible": false,
+      "query_name": "Sachi Aoki",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_6kgmwza7",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WS",
+          "list": "senior",
+          "points": 640,
+          "rank": 55,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 1052,
+          "rank": 16,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 527,
+          "rank": 36,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 270,
+          "rank": 66,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 1845,
+          "rank": 21,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WS",
+          "list": "youth",
+          "points": 4065,
+          "rank": 36,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "youth",
+          "points": 845,
+          "rank": 28,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "youth",
+          "points": 10080,
+          "rank": 2,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "XD",
+          "list": "youth",
+          "points": 1540,
+          "rank": 35,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "mende rin": {
+      "country": "JPN",
+      "display_name": "Mende Rin",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T01:49:59.744583+00:00",
+      "model_eligible": false,
+      "query_name": "Rin Mende",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        },
+        {
+          "discipline": "WD",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 1,
+          "played": 1,
+          "won": 0
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_yedsvj7g",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WS",
+          "list": "senior",
+          "points": 379,
+          "rank": 91,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 250,
+          "rank": 68,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 250,
+          "rank": 69,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 590,
+          "rank": 69,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WS",
+          "list": "youth",
+          "points": 1895,
+          "rank": 87,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "youth",
+          "points": 2950,
+          "rank": 25,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "lee seungeun": {
+      "country": "KOR",
+      "display_name": "Lee Seungeun",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T01:50:12.071461+00:00",
+      "model_eligible": false,
+      "query_name": "Seungeun Lee",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        },
+        {
+          "discipline": "WD",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 1,
+          "played": 1,
+          "won": 0
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_eekjnajm",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 125,
+          "rank": 100,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "youth",
+          "points": 900,
+          "rank": 71,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "tian yeh yi": {
+      "candidate_count": 50,
+      "candidate_names": [
+        "Adriano Sebastian",
+        "Asu Sebastian",
+        "Aviles Sebastian",
+        "Bedoya Sebastian",
+        "Brizuela Sebastian",
+        "Bustamante Sebastian",
+        "Callejon Christian",
+        "Croatian Table Tennis Association 16"
+      ],
+      "identity_note": "Multiple possible provider players; no profile attached.",
+      "looked_up_at_utc": "2026-11-26T01:50:24.499033+00:00",
+      "model_eligible": false,
+      "query_name": "Yi-Tian Yeh",
+      "source": "Table Tennis API (DeveloperData)",
+      "status": "ambiguous"
+    },
+    "en tsai yun": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "giorgia piccolin": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "2005 daeun lee": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "matiunina veronika": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "orawan paranang": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "asuka sasao": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "shan xiaona": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "arapovic hana": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "wan yuan": {
+      "country": "GER",
+      "display_name": "Wan Yuan",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-25T13:50:17.150547+00:00",
+      "model_eligible": false,
+      "query_name": "Yuan Wan",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "XD",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        },
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_jdae64bg",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 195,
+          "rank": 75,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 175,
+          "rank": 88,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 432,
+          "rank": 88,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "kim seongjin": {
+      "country": "KOR",
+      "display_name": "Kim Seongjin",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-25T13:50:41.961622+00:00",
+      "model_eligible": false,
+      "query_name": "Seongjin Kim",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "XD",
+          "first_match": "2026-11-24",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 2,
+          "won": 2
+        },
+        {
+          "discipline": "WD",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_0vty9c3r",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WS",
+          "list": "senior",
+          "points": 530,
+          "rank": 69,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 470,
+          "rank": 44,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 125,
+          "rank": 99,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 620,
+          "rank": 65,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "adrien rassenfosse": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "juan perez": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "kubik maciej": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "andre bertelsmeier": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "castro rogelio": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "bobocica mihai": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "verdonschot wim": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "mizuki oikawa": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "alvaro robles": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "botond varga zoltan": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
     },
     "fanbo meng": {
       "country": "GER",
@@ -69,28 +562,11 @@
       "status": "exact_name_match_identity_unverified",
       "world_ranks": []
     },
-    "filip zeljko": {
-      "country": "CRO",
-      "display_name": "Zeljko Filip",
-      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
-      "looked_up_at_utc": "2026-11-25T19:26:07.840894+00:00",
-      "model_eligible": false,
-      "query_name": "Filip Zeljko",
-      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
-      "records_by_discipline": [
-        {
-          "discipline": "MS",
-          "first_match": "2026-11-25",
-          "last_match": "2026-11-25",
-          "lost": 1,
-          "played": 1,
-          "won": 0
-        }
-      ],
+    "abdelaziz youssef": {
+      "status": "queued_not_checked",
       "source": "Table Tennis API (DeveloperData)",
-      "source_player_id": "pl_rp31v94r",
-      "status": "exact_name_match_identity_unverified",
-      "world_ranks": []
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
     },
     "gionis panagiotis": {
       "country": "GRE",
@@ -123,6 +599,18 @@
       "status": "exact_name_match_identity_unverified",
       "world_ranks": []
     },
+    "choi jiwook": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
+    "gnanasekaran sathiyan": {
+      "status": "queued_not_checked",
+      "source": "Table Tennis API (DeveloperData)",
+      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
+      "model_eligible": false
+    },
     "niagol stoyanov": {
       "country": "ITA",
       "display_name": "Stoyanov Niagol",
@@ -145,72 +633,6 @@
       "source_player_id": "pl_xzc7he1v",
       "status": "exact_name_match_identity_unverified",
       "world_ranks": []
-    },
-    "borgar haug": {
-      "status": "queued_not_checked",
-      "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
-    },
-    "gnanasekaran sathiyan": {
-      "status": "queued_not_checked",
-      "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
-    },
-    "nikon shutov": {
-      "status": "queued_not_checked",
-      "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
-    },
-    "alvaro robles": {
-      "status": "queued_not_checked",
-      "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
-    },
-    "lee seungsoo": {
-      "status": "queued_not_checked",
-      "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
-    },
-    "botond varga zoltan": {
-      "status": "queued_not_checked",
-      "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
-    },
-    "kay stumper": {
-      "status": "queued_not_checked",
-      "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
-    },
-    "bobocica mihai": {
-      "status": "queued_not_checked",
-      "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
-    },
-    "hyuk kwon": {
-      "status": "queued_not_checked",
-      "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
-    },
-    "castro rogelio": {
-      "status": "queued_not_checked",
-      "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
-    },
-    "de heras las rafael": {
-      "status": "queued_not_checked",
-      "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
     }
   }
 }
