@@ -311,34 +311,186 @@
       "status": "ambiguous"
     },
     "en tsai yun": {
-      "status": "queued_not_checked",
+      "country": "TPE",
+      "display_name": "Tsai Yun-En",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T07:52:14.055080+00:00",
+      "model_eligible": false,
+      "query_name": "Yun-En Tsai",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        },
+        {
+          "discipline": "WD",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 1,
+          "played": 1,
+          "won": 0
+        }
+      ],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_aaraeamz",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WS",
+          "list": "senior",
+          "points": 390,
+          "rank": 89,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 335,
+          "rank": 58,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 485,
+          "rank": 81,
+          "week": "2026-48"
+        }
+      ]
     },
     "giorgia piccolin": {
-      "status": "queued_not_checked",
+      "country": "ITA",
+      "display_name": "Piccolin Giorgia",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T07:52:26.248695+00:00",
+      "model_eligible": false,
+      "query_name": "Giorgia Piccolin",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        }
+      ],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_s69dwj1d",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WS",
+          "list": "senior",
+          "points": 427,
+          "rank": 84,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 195,
+          "rank": 75,
+          "week": "2026-48"
+        }
+      ]
     },
     "2005 daeun lee": {
-      "status": "queued_not_checked",
+      "candidate_count": 4,
+      "candidate_names": [
+        "Lee Daeun",
+        "Lee Daeun",
+        "Lee Daeun",
+        "Park Daeun"
+      ],
+      "identity_note": "Multiple possible provider players; no profile attached.",
+      "looked_up_at_utc": "2026-11-26T07:52:38.860713+00:00",
+      "model_eligible": false,
+      "query_name": "Daeun (2005) Lee",
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "status": "ambiguous"
     },
     "matiunina veronika": {
-      "status": "queued_not_checked",
+      "country": "UKR",
+      "display_name": "Matiunina Veronika",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T07:52:44.869113+00:00",
+      "model_eligible": false,
+      "query_name": "Veronika Matiunina",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 2,
+          "won": 2
+        }
+      ],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_bxnb868p",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": []
     },
     "orawan paranang": {
-      "status": "queued_not_checked",
+      "country": "THA",
+      "display_name": "Paranang Orawan",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T07:52:57.294307+00:00",
+      "model_eligible": false,
+      "query_name": "Orawan Paranang",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        },
+        {
+          "discipline": "WD",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        }
+      ],
       "source": "Table Tennis API (DeveloperData)",
-      "identity_note": "Queued for a budgeted free-tier player-directory lookup.",
-      "model_eligible": false
+      "source_player_id": "pl_wnschf4z",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WS",
+          "list": "senior",
+          "points": 716,
+          "rank": 51,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 935,
+          "rank": 17,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 990,
+          "rank": 38,
+          "week": "2026-48"
+        }
+      ]
     },
     "asuka sasao": {
       "status": "queued_not_checked",

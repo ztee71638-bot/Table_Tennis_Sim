@@ -16894,7 +16894,7 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": 2,
+              "current": 3,
               "errors": null,
               "hits": null,
               "innings": {},
@@ -16905,7 +16905,7 @@
                 "period2": 11,
                 "period3": 6,
                 "period4": 9,
-                "period5": 2
+                "period5": 12
               },
               "point": null,
               "redCards": null,
@@ -16951,7 +16951,7 @@
                 "period2": 9,
                 "period3": 11,
                 "period4": 11,
-                "period5": 5
+                "period5": 10
               },
               "point": null,
               "redCards": null,
@@ -17015,7 +17015,7 @@
             "umpires": null,
             "varCheck": null,
             "venue": null,
-            "winner": null
+            "winner": "away"
           },
           {
             "aggregateWinner": null,
@@ -61394,9 +61394,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 0
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -61436,9 +61434,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 0
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -61477,15 +61473,15 @@
             "serving": null,
             "sport": "table-tennis",
             "stage": null,
-            "stale": false,
+            "stale": true,
             "startTime": "2026-11-25T19:15:00.000Z",
             "status": {
-              "code": 0,
-              "description": "Not started",
+              "code": 80,
+              "description": "Interrupted",
               "finish": null,
               "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
+              "phase": "interrupted",
+              "type": "interrupted"
             },
             "surface": null,
             "tier": null,
@@ -66009,15 +66005,15 @@
             "serving": null,
             "sport": "table-tennis",
             "stage": null,
-            "stale": true,
+            "stale": false,
             "startTime": "2026-11-25T22:30:00.000Z",
             "status": {
-              "code": 8,
-              "description": "1st set",
-              "finish": null,
-              "period": "period1",
-              "phase": "inprogress",
-              "type": "inprogress"
+              "code": 94,
+              "description": "Coverage canceled",
+              "finish": "regular",
+              "period": null,
+              "phase": "finished",
+              "type": "finished"
             },
             "surface": null,
             "tier": null,
@@ -131948,148 +131944,6 @@
             "attendance": null,
             "awarded": false,
             "away": {
-              "code": "CHA",
-              "id": 681448,
-              "image": "https://cdn.datasportsapi.com/v2/teams/681448/logo",
-              "name": "Alexey Chagaev",
-              "shortName": "A. Chagaev",
-              "slug": "alexey-chagaev"
-            },
-            "awayCurrentRanking": null,
-            "awayManager": null,
-            "awayMembers": null,
-            "awayRanking": null,
-            "awayRecord": null,
-            "awayScore": {
-              "aggregated": null,
-              "current": 3,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {
-                "period1": 11,
-                "period2": 11,
-                "period3": 9,
-                "period4": 10,
-                "period5": 11
-              },
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "awaySeed": null,
-            "battingSide": null,
-            "bonus": null,
-            "clock": null,
-            "discipline": null,
-            "downAndDistance": null,
-            "durations": null,
-            "fightCard": null,
-            "fightDiscipline": null,
-            "fightResult": null,
-            "finalResultOnly": false,
-            "firstToServe": null,
-            "group": null,
-            "home": {
-              "code": "FAL",
-              "id": 119073,
-              "image": "https://cdn.datasportsapi.com/v2/teams/119073/logo",
-              "name": "Fedorov A.",
-              "shortName": null,
-              "slug": "fedorov-aleksandr"
-            },
-            "homeCurrentRanking": null,
-            "homeManager": null,
-            "homeMembers": null,
-            "homeRanking": null,
-            "homeRecord": null,
-            "homeScore": {
-              "aggregated": null,
-              "current": 2,
-              "errors": null,
-              "hits": null,
-              "innings": {},
-              "normalTime": null,
-              "penalties": null,
-              "periods": {
-                "period1": 4,
-                "period2": 6,
-                "period3": 11,
-                "period4": 12,
-                "period5": 6
-              },
-              "point": null,
-              "redCards": null,
-              "series": null,
-              "tieBreaks": {}
-            },
-            "homeSeed": null,
-            "id": 1337112,
-            "inningState": null,
-            "league": {
-              "category": "Russia",
-              "country": {
-                "code": "RU",
-                "flag": "https://cdn.datasportsapi.com/v2/countries/RU/flag",
-                "name": "Russia"
-              },
-              "id": 4324,
-              "image": "https://cdn.datasportsapi.com/v2/leagues/4324/logo",
-              "name": "Liga Pro",
-              "priority": 0,
-              "slug": "liga-pro",
-              "sport": "table-tennis"
-            },
-            "levels": [],
-            "lineupsAvailable": null,
-            "lineupsConfirmed": null,
-            "matchFormat": null,
-            "matchesInTie": null,
-            "note": null,
-            "parentFixtureId": null,
-            "playerOfTheMatch": null,
-            "previousLegFixtureId": null,
-            "referee": null,
-            "round": null,
-            "season": {
-              "endYear": 2026,
-              "id": 4329,
-              "name": "2026",
-              "startYear": 2026,
-              "year": "2026"
-            },
-            "servedFirst": null,
-            "serving": null,
-            "sport": "table-tennis",
-            "stage": null,
-            "stale": false,
-            "startTime": "2026-11-25T23:30:00.000Z",
-            "status": {
-              "code": 100,
-              "description": "Ended",
-              "finish": "regular",
-              "period": null,
-              "phase": "finished",
-              "type": "finished"
-            },
-            "surface": null,
-            "tier": null,
-            "timeouts": null,
-            "toss": null,
-            "tvUmpire": null,
-            "umpires": null,
-            "varCheck": null,
-            "venue": null,
-            "winner": "away"
-          },
-          {
-            "aggregateWinner": null,
-            "attendance": null,
-            "awarded": false,
-            "away": {
               "code": "KRY",
               "id": 69520,
               "image": "https://cdn.datasportsapi.com/v2/teams/69520/logo",
@@ -132364,16 +132218,16 @@
         ],
         "meta": {
           "complete": true,
-          "count": 940,
+          "count": 939,
           "date": "2026-11-25",
           "hasNextPage": true,
           "leagueCount": 10,
-          "nextCursor": "l0zzEWd13T1LjPc8WODVl6w-",
+          "nextCursor": "e6Do5L8Ee-ngY6IV69U49kZV",
           "page": 0,
           "sport": "table-tennis"
         }
       },
-      "sha256": "c89195fe2aeccac7aef5688f2489760df58e27bec1fb4875e015618620b0ec0e"
+      "sha256": "c682d194d182613015e60de168295d788807807cfe34914c0be0d841cb7bc282"
     },
     {
       "page": 1,
@@ -206488,5 +206342,5 @@
       "sha256": "705910ff1b5ca63f2ddff41439430aaa1b318212f738c31f3aaa7564f58619e8"
     }
   ],
-  "retrieved_at": "2026-11-26T01:47:43.230737+00:00"
+  "retrieved_at": "2026-11-26T07:50:07.188528+00:00"
 }
