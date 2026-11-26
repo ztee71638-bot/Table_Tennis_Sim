@@ -14917,13 +14917,19 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": 0,
+              "current": 2,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 15,
+                "period2": 9,
+                "period3": 11,
+                "period4": 6,
+                "period5": 7
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -14957,13 +14963,19 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": 0,
+              "current": 3,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 13,
+                "period2": 11,
+                "period3": 6,
+                "period4": 11,
+                "period5": 11
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -15026,7 +15038,7 @@
             "umpires": null,
             "varCheck": null,
             "venue": null,
-            "winner": null
+            "winner": "home"
           },
           {
             "aggregateWinner": null,
@@ -15047,13 +15059,19 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": 0,
+              "current": 3,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 11,
+                "period2": 11,
+                "period3": 11,
+                "period4": 9,
+                "period5": 11
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -15087,13 +15105,19 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": 0,
+              "current": 2,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 13,
+                "period2": 9,
+                "period3": 3,
+                "period4": 11,
+                "period5": 6
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -15156,7 +15180,7 @@
             "umpires": null,
             "varCheck": null,
             "venue": null,
-            "winner": null
+            "winner": "away"
           },
           {
             "aggregateWinner": null,
@@ -15183,7 +15207,9 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 0
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -15223,7 +15249,9 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {},
+              "periods": {
+                "period1": 0
+              },
               "point": null,
               "redCards": null,
               "series": null,
@@ -109184,12 +109212,12 @@
           "date": "2026-11-24",
           "hasNextPage": true,
           "leagueCount": 10,
-          "nextCursor": "W96n03U2AW9jE5y82flo17JC",
+          "nextCursor": "D_egRrfGzQs_QV1szrib2bng",
           "page": 0,
           "sport": "table-tennis"
         }
       },
-      "sha256": "9df5f38d761bb61f658781aec76c63ee597464ca6afa2929663b8d5d9bd8b9e7"
+      "sha256": "6876b925439ec1e5210587245730948bd110e543e65ad7f615e39420dfc41e77"
     },
     {
       "page": 1,
@@ -124036,7 +124064,7 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": 1,
+              "current": 0,
               "errors": null,
               "hits": null,
               "innings": {},
@@ -124107,7 +124135,7 @@
             "umpires": null,
             "varCheck": null,
             "venue": null,
-            "winner": "home"
+            "winner": null
           },
           {
             "aggregateWinner": null,
@@ -180475,8 +180503,8 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "b01d1859de9ef5174db6d4858f80f4726f905ae5206b227dfe946d371c251e56"
+      "sha256": "36add3b57d2141e96fee928c9ff8208b571b3991b3d35f1680060619fa5ae0c7"
     }
   ],
-  "retrieved_at": "2026-11-26T07:49:48.828417+00:00"
+  "retrieved_at": "2026-11-26T13:45:44.740221+00:00"
 }
