@@ -1,3 +1,413 @@
 {
-  "profiles": {}
+  "profiles": {
+    "mende rin": {
+      "country": "JPN",
+      "display_name": "Mende Rin",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T01:49:59.744583+00:00",
+      "model_eligible": false,
+      "query_name": "Rin Mende",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        },
+        {
+          "discipline": "WD",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 1,
+          "played": 1,
+          "won": 0
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_yedsvj7g",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WS",
+          "list": "senior",
+          "points": 379,
+          "rank": 91,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 250,
+          "rank": 68,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 250,
+          "rank": 69,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 590,
+          "rank": 69,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WS",
+          "list": "youth",
+          "points": 1895,
+          "rank": 87,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "youth",
+          "points": 2950,
+          "rank": 25,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "shan xiaona": {
+      "country": "GER",
+      "display_name": "Shan Xiaona",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T13:49:09.295581+00:00",
+      "model_eligible": false,
+      "query_name": "Xiaona Shan",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "XD",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-26",
+          "lost": 0,
+          "played": 3,
+          "won": 3
+        },
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-26",
+          "lost": 0,
+          "played": 2,
+          "won": 2
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_akmjkac6",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WS",
+          "list": "senior",
+          "points": 485,
+          "rank": 76,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "wan yuan": {
+      "country": "GER",
+      "display_name": "Wan Yuan",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-25T13:50:17.150547+00:00",
+      "model_eligible": false,
+      "query_name": "Yuan Wan",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "XD",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        },
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_jdae64bg",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 195,
+          "rank": 75,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 175,
+          "rank": 88,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 432,
+          "rank": 88,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "asuka sasao": {
+      "country": "JPN",
+      "display_name": "Sasao Asuka",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T13:48:56.977123+00:00",
+      "model_eligible": false,
+      "query_name": "Asuka Sasao",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "WS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-26",
+          "lost": 0,
+          "played": 2,
+          "won": 2
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_5tp9end3",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 500,
+          "rank": 41,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "WD",
+          "list": "senior",
+          "points": 545,
+          "rank": 75,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "gnanasekaran sathiyan": {
+      "country": "IND",
+      "display_name": "Gnanasekaran Sathiyan",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-27T01:50:45.939995+00:00",
+      "model_eligible": false,
+      "query_name": "Sathiyan Gnanasekaran",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "MS",
+          "first_match": "2026-11-26",
+          "last_match": "2026-11-26",
+          "lost": 0,
+          "played": 2,
+          "won": 2
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_zjsw0615",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "MS",
+          "list": "senior",
+          "points": 443,
+          "rank": 80,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "MD",
+          "list": "senior",
+          "points": 440,
+          "rank": 40,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "MD",
+          "list": "senior",
+          "points": 462,
+          "rank": 78,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "andre bertelsmeier": {
+      "country": "GER",
+      "display_name": "Bertelsmeier Andre",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-27T01:50:58.263179+00:00",
+      "model_eligible": false,
+      "query_name": "Andre Bertelsmeier",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "MD",
+          "first_match": "2026-11-26",
+          "last_match": "2026-11-26",
+          "lost": 0,
+          "played": 3,
+          "won": 3
+        },
+        {
+          "discipline": "MS",
+          "first_match": "2026-11-26",
+          "last_match": "2026-11-26",
+          "lost": 0,
+          "played": 2,
+          "won": 2
+        },
+        {
+          "discipline": "XD",
+          "first_match": "2026-11-26",
+          "last_match": "2026-11-26",
+          "lost": 0,
+          "played": 1,
+          "won": 1
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_xdvrqrr7",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "MS",
+          "list": "senior",
+          "points": 665,
+          "rank": 57,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "MD",
+          "list": "senior",
+          "points": 599,
+          "rank": 25,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "MD",
+          "list": "senior",
+          "points": 599,
+          "rank": 60,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "verdonschot wim": {
+      "country": "GER",
+      "display_name": "Verdonschot Wim",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-26T13:49:34.192729+00:00",
+      "model_eligible": false,
+      "query_name": "Wim Verdonschot",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "XD",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-26",
+          "lost": 0,
+          "played": 3,
+          "won": 3
+        },
+        {
+          "discipline": "MS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-26",
+          "lost": 0,
+          "played": 2,
+          "won": 2
+        },
+        {
+          "discipline": "MD",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-26",
+          "lost": 0,
+          "played": 2,
+          "won": 2
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_mq1dd2z0",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": [
+        {
+          "discipline": "MS",
+          "list": "senior",
+          "points": 1160,
+          "rank": 41,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "MD",
+          "list": "senior",
+          "points": 599,
+          "rank": 25,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "MD",
+          "list": "senior",
+          "points": 120,
+          "rank": 98,
+          "week": "2026-48"
+        },
+        {
+          "discipline": "MD",
+          "list": "senior",
+          "points": 715,
+          "rank": 50,
+          "week": "2026-48"
+        }
+      ]
+    },
+    "gionis panagiotis": {
+      "country": "GRE",
+      "display_name": "Gionis Panagiotis",
+      "identity_note": "Unique full-token name candidate in Table Tennis API. The name match is not independent proof that this is the same athlete as the Polymarket listing.",
+      "looked_up_at_utc": "2026-11-25T19:26:20.213396+00:00",
+      "model_eligible": false,
+      "query_name": "Panagiotis Gionis",
+      "record_window_note": "Free plan visibility window only (yesterday through upcoming dates); not a career-total record.",
+      "records_by_discipline": [
+        {
+          "discipline": "MS",
+          "first_match": "2026-11-25",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 2,
+          "won": 2
+        },
+        {
+          "discipline": "MD",
+          "first_match": "2026-11-24",
+          "last_match": "2026-11-25",
+          "lost": 0,
+          "played": 2,
+          "won": 2
+        }
+      ],
+      "source": "Table Tennis API (DeveloperData)",
+      "source_player_id": "pl_deq26c55",
+      "status": "exact_name_match_identity_unverified",
+      "world_ranks": []
+    }
+  }
 }
