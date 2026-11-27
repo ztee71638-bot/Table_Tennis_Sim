@@ -51169,9 +51169,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 0
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -51212,9 +51210,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 0
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -51253,15 +51249,15 @@
             "serving": null,
             "sport": "table-tennis",
             "stage": null,
-            "stale": false,
+            "stale": true,
             "startTime": "2026-11-26T19:05:00.000Z",
             "status": {
-              "code": 0,
-              "description": "Not started",
+              "code": 80,
+              "description": "Interrupted",
               "finish": null,
               "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
+              "phase": "interrupted",
+              "type": "interrupted"
             },
             "surface": null,
             "tier": null,
@@ -51656,15 +51652,15 @@
             "serving": null,
             "sport": "table-tennis",
             "stage": null,
-            "stale": true,
+            "stale": false,
             "startTime": "2026-11-26T19:10:00.000Z",
             "status": {
-              "code": 8,
-              "description": "1st set",
-              "finish": null,
-              "period": "period1",
-              "phase": "inprogress",
-              "type": "inprogress"
+              "code": 94,
+              "description": "Coverage canceled",
+              "finish": "regular",
+              "period": null,
+              "phase": "finished",
+              "type": "finished"
             },
             "surface": null,
             "tier": null,
@@ -53218,9 +53214,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 0
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -53261,9 +53255,7 @@
               "innings": {},
               "normalTime": null,
               "penalties": null,
-              "periods": {
-                "period1": 0
-              },
+              "periods": {},
               "point": null,
               "redCards": null,
               "series": null,
@@ -53302,15 +53294,15 @@
             "serving": null,
             "sport": "table-tennis",
             "stage": null,
-            "stale": false,
+            "stale": true,
             "startTime": "2026-11-26T20:05:00.000Z",
             "status": {
-              "code": 0,
-              "description": "Not started",
+              "code": 80,
+              "description": "Interrupted",
               "finish": null,
               "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
+              "phase": "interrupted",
+              "type": "interrupted"
             },
             "surface": null,
             "tier": null,
@@ -56774,14 +56766,17 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": 0,
+              "current": 3,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 4
+                "period1": 9,
+                "period2": 11,
+                "period3": 11,
+                "period4": 11
               },
               "point": null,
               "redCards": null,
@@ -56817,14 +56812,17 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": 0,
+              "current": 1,
               "errors": null,
               "hits": null,
               "innings": {},
               "normalTime": null,
               "penalties": null,
               "periods": {
-                "period1": 0
+                "period1": 11,
+                "period2": 9,
+                "period3": 2,
+                "period4": 2
               },
               "point": null,
               "redCards": null,
@@ -56864,15 +56862,15 @@
             "serving": null,
             "sport": "table-tennis",
             "stage": null,
-            "stale": true,
+            "stale": false,
             "startTime": "2026-11-26T22:00:00.000Z",
             "status": {
-              "code": 8,
-              "description": "1st set",
-              "finish": null,
-              "period": "period1",
-              "phase": "inprogress",
-              "type": "inprogress"
+              "code": 94,
+              "description": "Coverage canceled",
+              "finish": "regular",
+              "period": null,
+              "phase": "finished",
+              "type": "finished"
             },
             "surface": null,
             "tier": null,
@@ -56882,7 +56880,7 @@
             "umpires": null,
             "varCheck": null,
             "venue": null,
-            "winner": null
+            "winner": "away"
           },
           {
             "addedTime": null,
@@ -106038,12 +106036,12 @@
           "date": "2026-11-26",
           "hasNextPage": true,
           "leagueCount": 10,
-          "nextCursor": "Rb88MmWzq8aWQvqwYinjIVbb",
+          "nextCursor": "jLybhz-jUCuAQuZLJm33BYUs",
           "page": 0,
           "sport": "table-tennis"
         }
       },
-      "sha256": "79c3039739c6623bbee6b4185fb0b304e159a391f3a57d1dad499252ed40d602"
+      "sha256": "b8fada385cd9afb369f13f3d7fdac450e0bdd734c9c4ee0fcc2d5602383ac0e9"
     },
     {
       "page": 1,
@@ -181784,5 +181782,5 @@
       "sha256": "941f518a5255dad9b0f2069069889f7e7ee08a83f2c3a8c50c6f19fb34864dd8"
     }
   ],
-  "retrieved_at": "2026-11-27T01:47:44.905008+00:00"
+  "retrieved_at": "2026-11-27T07:49:04.778770+00:00"
 }
