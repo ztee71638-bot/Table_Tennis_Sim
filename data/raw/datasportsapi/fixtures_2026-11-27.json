@@ -96405,7 +96405,7 @@
             "awayRecord": null,
             "awayScore": {
               "aggregated": null,
-              "current": null,
+              "current": 2,
               "errors": null,
               "hits": null,
               "innings": {},
@@ -96448,7 +96448,7 @@
             "homeRecord": null,
             "homeScore": {
               "aggregated": null,
-              "current": null,
+              "current": 3,
               "errors": null,
               "hits": null,
               "innings": {},
@@ -96504,12 +96504,12 @@
             "stale": false,
             "startTime": "2026-11-27T20:20:00.000Z",
             "status": {
-              "code": 0,
-              "description": "Not started",
-              "finish": null,
+              "code": 100,
+              "description": "Ended",
+              "finish": "regular",
               "period": null,
-              "phase": "notstarted",
-              "type": "notstarted"
+              "phase": "finished",
+              "type": "finished"
             },
             "surface": null,
             "tier": null,
@@ -96520,7 +96520,7 @@
             "umpires": null,
             "varCheck": null,
             "venue": null,
-            "winner": null,
+            "winner": "home",
             "xgAvailable": null
           },
           {
@@ -181404,8 +181404,8 @@
           "sport": "table-tennis"
         }
       },
-      "sha256": "34277ad3aea7349f9ca5f3827f1e8d5b3a3f1b2b3ad4b9f184e18911ac03507d"
+      "sha256": "28c636425d9fab1405f3bcc91bb7e5d8ce32a460287f426fad7afe18c1407b01"
     }
   ],
-  "retrieved_at": "2026-11-28T01:45:43.377380+00:00"
+  "retrieved_at": "2026-11-28T07:41:29.593418+00:00"
 }
